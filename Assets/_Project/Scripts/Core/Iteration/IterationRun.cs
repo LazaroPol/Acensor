@@ -52,6 +52,10 @@ namespace Specimen.Core.Iteration
 
         public void UnmarkReady(int playerId) => Signal(IterationPhase.Calm, () => _ctx.Ready.Unmark(playerId));
 
+        /// <summary>Voto de cierre anticipado de puertas (solo durante la Incursión).</summary>
+        public void VoteEarlyClose(int playerId, bool yes) =>
+            Signal(IterationPhase.Incursion, () => _ctx.EarlyClose.Cast(_ctx, playerId, yes));
+
         private void Signal(IterationPhase expected, Action apply)
         {
             if (!HasStarted || Phase != expected)

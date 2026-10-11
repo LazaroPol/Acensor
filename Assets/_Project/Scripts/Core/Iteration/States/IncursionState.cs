@@ -13,5 +13,11 @@ namespace Specimen.Core.Iteration.States
             timer.WarningReached += s => Context.Events.Publish(new DoorsClosingWarning(Context.Floor, s));
             return timer;
         }
+
+        public override void Enter()
+        {
+            Context.EarlyClose.Reset();
+            base.Enter();
+        }
     }
 }

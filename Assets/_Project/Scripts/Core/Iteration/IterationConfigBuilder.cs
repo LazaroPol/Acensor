@@ -2,7 +2,8 @@ namespace Specimen.Core.Iteration
 {
     /// <summary>
     /// Constructor fluido con los valores por defecto del GDD (§3.1): Acto de 5 pisos,
-    /// Calma 3 min, Incursión 7 min, avisos a 60 s y 15 s, asedio de 5 oleadas, 4 jugadores.
+    /// Calma 3 min, Incursión 7 min, avisos a 60 s y 15 s, asedio de 5 oleadas, 4 jugadores,
+    /// 15 s de gracia tras votar el cierre anticipado.
     /// </summary>
     public sealed class IterationConfigBuilder
     {
@@ -12,6 +13,7 @@ namespace Specimen.Core.Iteration
         private int _waves = 5;
         private int _players = IterationConfig.MaxPlayersLimit;
         private float[] _warnings = { 60f, 15f };
+        private float _grace = 15f;
 
         public static IterationConfig Default => new IterationConfigBuilder().Build();
 
@@ -22,7 +24,9 @@ namespace Specimen.Core.Iteration
         public IterationConfigBuilder WithMaxPlayers(int players) { _players = players; return this; }
         public IterationConfigBuilder WithDoorWarnings(params float[] seconds) { _warnings = seconds; return this; }
 
+        public IterationConfigBuilder WithEarlyCloseGrace(float seconds) { _grace = seconds; return this; }
+
         public IterationConfig Build() =>
-            new IterationConfig(_floors, _calm, _incursion, _waves, _players, _warnings);
+            new IterationConfig(_floors, _calm, _incursion, _waves, _players, _warnings, _grace);
     }
 }
