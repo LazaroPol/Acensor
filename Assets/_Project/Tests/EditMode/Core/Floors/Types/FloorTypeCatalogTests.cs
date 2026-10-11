@@ -52,8 +52,9 @@ namespace Specimen.Tests.Core.Floors.Types
         public void SanctuaryAndPuzzle_HaveNoCombat()
         {
             var calm = FloorTypeCatalog.Default.WithCombat(false).Select(t => t.Kind).ToList();
-            Assert.That(calm, Does.Contain(FloorTypeKind.Sanctuary).And.Contain(FloorTypeKind.Puzzle));
-            Assert.That(calm, Does.Not.Contain(FloorTypeKind.Boss));
+            Assert.That(calm, Has.Member(FloorTypeKind.Sanctuary));
+            Assert.That(calm, Has.Member(FloorTypeKind.Puzzle));
+            Assert.That(calm, Has.No.Member(FloorTypeKind.Boss));
         }
     }
 }

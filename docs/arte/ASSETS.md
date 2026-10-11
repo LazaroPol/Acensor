@@ -31,7 +31,7 @@ Categorías: `Personajes`, `Entorno`, `Ascensor`, `Objetos`, `Enemigos`, `UI`.
 3. Crearé el prefab si hace falta y lo asignaré en `CatalogoVisual`; el código no cambia.
 
 ## Cómo probar (prototipo greybox)
-Requisitos: **Unity 6000.0.23f1** (Unity Hub) y el repo clonado.
+Requisitos: **Unity 6000.6.5f1** (Unity Hub) y el repo clonado.
 1. Unity Hub › *Add project from disk* › carpeta raíz del repo. La primera importación tarda unos minutos.
 2. Si no existe `Assets/_Project/Scenes/Prototipo/Prototipo.unity`: menú **SPECIMEN › Crear escena
    Prototipo** (crea la escena, el `CatalogoVisual` vacío y la añade a *Build Settings*).

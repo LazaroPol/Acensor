@@ -7,7 +7,7 @@ namespace Specimen.Runtime.Prototype
     {
         public static void EnsureLight()
         {
-            if (Object.FindFirstObjectByType<Light>() != null) return;
+            if (Object.FindAnyObjectByType<Light>() != null) return;
             var light = new GameObject("Directional Light").AddComponent<Light>();
             light.type = LightType.Directional;
             light.transform.rotation = Quaternion.Euler(50f, -30f, 0f);
