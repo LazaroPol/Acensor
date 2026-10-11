@@ -1,0 +1,10 @@
+* text=auto eol=lf
+*.cs diff=csharp
+*.unity merge=unityyamlmerge eol=lf
+*.prefab merge=unityyamlmerge eol=lf
+*.asset merge=unityyamlmerge eol=lf
+*.meta eol=lf
+*.dll binary
+*.png binary
+*.fbx binary
+*.wav binary

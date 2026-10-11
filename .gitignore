@@ -1,0 +1,38 @@
+# Unity
+/[Ll]ibrary/
+/[Tt]emp/
+/[Oo]bj/
+/[Bb]uild/
+/[Bb]uilds/
+/[Ll]ogs/
+/[Uu]ser[Ss]ettings/
+/[Mm]emoryCaptures/
+/[Rr]ecordings/
+*.pidb.meta
+*.pdb.meta
+*.mdb.meta
+sysinfo.txt
+*.apk
+*.aab
+*.unitypackage
+crashlytics-build.properties
+
+# IDE
+.vs/
+.idea/
+.vscode/
+*.csproj.user
+*.sln.DotSettings.user
+
+# Unity-generated project files (los nuestros viven en /dotnet)
+/*.csproj
+/*.sln
+
+# dotnet (CI headless)
+dotnet/**/bin/
+dotnet/**/obj/
+TestResult*.xml
+
+# Python
+__pycache__/
+*.pyc
