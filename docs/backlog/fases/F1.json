@@ -20,9 +20,9 @@
     {
       "id": "F1-03",
       "title": "Máquina de estados de la iteración",
-      "status": "in_progress",
-      "pr": null,
-      "session": null
+      "status": "done",
+      "pr": "#4",
+      "session": 5
     },
     {
       "id": "F1-04",
