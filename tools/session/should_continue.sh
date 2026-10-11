@@ -29,7 +29,7 @@ read -r TASK _ _ <<<"$NEXT"
 # (Tareas en pausa o reanudaciones a mano: SPECIMEN_IGNORE_BRANCH=1.)
 STATUS="$(python3 -c "import json;print(json.load(open('docs/backlog/tareas/$TASK.json'))['status'])")"
 if [ "${SPECIMEN_IGNORE_BRANCH:-0}" != 1 ] && [ "$STATUS" != paused ] \
-   && git ls-remote --exit-code --heads origin "feature/$TASK-*" >/dev/null 2>&1; then
+   && git ls-remote --exit-code --heads "${SPECIMEN_REMOTE:-origin}" "feature/$TASK-*" >/dev/null 2>&1; then
   echo "👥 Otra sesión ya trabaja en $TASK (rama remota feature/$TASK-*): no se duplica" >&2
   exit 1
 fi
