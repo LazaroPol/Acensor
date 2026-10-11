@@ -1,0 +1,42 @@
+{
+  "id": "F4",
+  "name": "Ascensor-Refugio",
+  "goal": "Base móvil con módulos construibles",
+  "tasks": [
+    {
+      "id": "F4-01",
+      "title": "Ranuras de módulo y construcción con materiales",
+      "status": "todo",
+      "pr": null,
+      "session": null
+    },
+    {
+      "id": "F4-02",
+      "title": "Mejora de módulos por niveles",
+      "status": "todo",
+      "pr": null,
+      "session": null
+    },
+    {
+      "id": "F4-03",
+      "title": "Hoguera: regeneración y recuperación de fatiga",
+      "status": "todo",
+      "pr": null,
+      "session": null
+    },
+    {
+      "id": "F4-04",
+      "title": "Cocina: buffs de comida temporales",
+      "status": "todo",
+      "pr": null,
+      "session": null
+    },
+    {
+      "id": "F4-05",
+      "title": "Litera: revivir Espectros durante la Calma",
+      "status": "todo",
+      "pr": null,
+      "session": null
+    }
+  ]
+}

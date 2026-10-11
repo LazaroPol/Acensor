@@ -1,0 +1,35 @@
+{
+  "id": "F7",
+  "name": "Ecos y decisiones",
+  "goal": "Votaciones y consecuencias persistentes",
+  "tasks": [
+    {
+      "id": "F7-01",
+      "title": "Sistema de votación (mayoría y desempate)",
+      "status": "todo",
+      "pr": null,
+      "session": null
+    },
+    {
+      "id": "F7-02",
+      "title": "Registro de Ecos",
+      "status": "todo",
+      "pr": null,
+      "session": null
+    },
+    {
+      "id": "F7-03",
+      "title": "Consecuencias que alteran pisos futuros",
+      "status": "todo",
+      "pr": null,
+      "session": null
+    },
+    {
+      "id": "F7-04",
+      "title": "Decisiones secretas individuales",
+      "status": "todo",
+      "pr": null,
+      "session": null
+    }
+  ]
+}

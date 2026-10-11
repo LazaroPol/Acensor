@@ -1,0 +1,35 @@
+{
+  "id": "F8",
+  "name": "Asedio y extracción",
+  "goal": "Clímax en la azotea y puntuación",
+  "tasks": [
+    {
+      "id": "F8-01",
+      "title": "Director de oleadas del asedio",
+      "status": "todo",
+      "pr": null,
+      "session": null
+    },
+    {
+      "id": "F8-02",
+      "title": "Fortificaciones y torretas",
+      "status": "todo",
+      "pr": null,
+      "session": null
+    },
+    {
+      "id": "F8-03",
+      "title": "Puntuación y multiplicador de supervivencia colectiva",
+      "status": "todo",
+      "pr": null,
+      "session": null
+    },
+    {
+      "id": "F8-04",
+      "title": "Extracción en Osprey y conversión a puntos de ADN",
+      "status": "todo",
+      "pr": null,
+      "session": null
+    }
+  ]
+}

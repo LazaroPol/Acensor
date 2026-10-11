@@ -1,0 +1,77 @@
+{
+  "id": "F0",
+  "name": "Fundaciones del proyecto",
+  "goal": "Repositorio, arquitectura por capas, tests y flujo de PRs",
+  "tasks": [
+    {
+      "id": "F0-01",
+      "title": "Estructura del proyecto Unity y puerta de merge",
+      "status": "done",
+      "pr": "PR-001",
+      "session": 1
+    },
+    {
+      "id": "F0-02",
+      "title": "Arnés de tests C# headless (NUnit)",
+      "status": "done",
+      "pr": "PR-002",
+      "session": 1
+    },
+    {
+      "id": "F0-03",
+      "title": "GDD fusionado",
+      "status": "done",
+      "pr": "PR-003",
+      "session": 1
+    },
+    {
+      "id": "F0-04",
+      "title": "Backlog y sistema de progreso",
+      "status": "done",
+      "pr": "PR-004",
+      "session": 1
+    },
+    {
+      "id": "F0-05",
+      "title": "Integración continua (GitHub Actions)",
+      "status": "done",
+      "pr": "PR-005",
+      "session": 1
+    },
+    {
+      "id": "F0-06",
+      "title": "Núcleo: abstracciones de tiempo y aleatoriedad (IClock, IRandom)",
+      "status": "done",
+      "pr": "PR-006",
+      "session": 1
+    },
+    {
+      "id": "F0-07",
+      "title": "Núcleo: bus de eventos tipado",
+      "status": "done",
+      "pr": "PR-007",
+      "session": 1
+    },
+    {
+      "id": "F0-08",
+      "title": "Núcleo: máquina de estados genérica",
+      "status": "done",
+      "pr": "PR-008",
+      "session": 1
+    },
+    {
+      "id": "F0-09",
+      "title": "Historial de sesiones e informe de la Sesión 1",
+      "status": "done",
+      "pr": "PR-009",
+      "session": 1
+    },
+    {
+      "id": "F0-10",
+      "title": "Migración a GitHub, PRs reales y documentación modular",
+      "status": "done",
+      "pr": "#1",
+      "session": 2
+    }
+  ]
+}

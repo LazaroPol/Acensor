@@ -6,7 +6,7 @@ cd "$ROOT"
 status=0
 
 echo "▶ [1/2] Tests de arquitectura y herramientas (Python)"
-if ! python3 -m unittest discover -s tools/tests -p "test_*.py" 2>&1; then
+if ! python3 -m unittest discover -s tools/tests -t . -p "test_*.py" 2>&1; then
   status=1
 fi
 

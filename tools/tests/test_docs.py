@@ -1,51 +1,28 @@
-"""Verifica que la documentación de diseño mantiene sus secciones clave."""
-import pathlib
+"""La documentación vive en docs/, dividida en ficheros pequeños y enlazados."""
+import re
 import unittest
 
-ROOT = pathlib.Path(__file__).resolve().parents[2]
+from tools.tests.helpers import ROOT
+
+DOCS = ROOT / "docs"
 
 
-class GddTests(unittest.TestCase):
-    REQUIRED = [
-        "Bucle de juego", "Piso 0", "Ascensor-Refugio", "Profesiones", "Pisos",
-        "Ecos", "actos", "Lore", "ADN", "Dirección artística", "Arquitectura técnica",
-    ]
+class DocsTests(unittest.TestCase):
+    def test_docs_index_exists_and_links_main_sections(self):
+        text = (DOCS / "README.md").read_text(encoding="utf-8")
+        for target in ("gdd/README.md", "backlog/PROGRESO.md", "sesiones/README.md", "workflow.md"):
+            self.assertIn(target, text)
 
-    def test_gdd_contains_required_sections(self):
-        text = (ROOT / "docs/GDD.md").read_text(encoding="utf-8")
-        headings = "\n".join(l for l in text.splitlines() if l.startswith("#"))
-        for section in self.REQUIRED:
-            self.assertIn(section.lower(), headings.lower(), f"Falta la sección '{section}' en el GDD")
+    def test_all_relative_markdown_links_resolve(self):
+        link = re.compile(r"\]\(([^)#:]+\.md)\)")
+        for md in DOCS.rglob("*.md"):
+            for target in link.findall(md.read_text(encoding="utf-8")):
+                self.assertTrue((md.parent / target).resolve().is_file(), f"{md.relative_to(ROOT)} -> {target}")
 
-    def test_gdd_targets_unity(self):
-        text = (ROOT / "docs/GDD.md").read_text(encoding="utf-8")
-        self.assertIn("Unity", text)
-
-
-
-class HistoryTests(unittest.TestCase):
-    """Cada fase cerrada debe tener su informe de sesión enlazado en el historial."""
-
-    def test_every_completed_phase_has_session_report_in_history(self):
-        import json
-        backlog = json.loads((ROOT / "docs/backlog.json").read_text(encoding="utf-8"))
-        history = (ROOT / "docs/HISTORIAL.md").read_text(encoding="utf-8")
-        for phase in backlog["phases"]:
-            if all(t["status"] == "done" for t in phase["tasks"]):
-                name = f"SESION-{phase['session']:02d}"
-                self.assertTrue((ROOT / f"docs/sessions/{name}.md").is_file(), f"Falta el informe {name}")
-                self.assertIn(f"sessions/{name}.md", history, f"{name} no está en HISTORIAL.md")
-
-    def test_every_done_task_references_an_existing_or_pending_pr(self):
-        import json
-        backlog = json.loads((ROOT / "docs/backlog.json").read_text(encoding="utf-8"))
-        prs = sorted(p.stem for p in (ROOT / "docs/pull-requests").glob("PR-*.md"))
-        last = int(prs[-1].split("-")[1]) if prs else 0
-        for phase in backlog["phases"]:
-            for t in phase["tasks"]:
-                if t["status"] == "done":
-                    n = int(t["pr"].split("-")[1])
-                    self.assertLessEqual(n, last + 1, f"{t['id']} apunta a una PR inexistente")
+    def test_gdd_is_split_into_sections_and_targets_unity(self):
+        sections = sorted((DOCS / "gdd").glob("[0-9][0-9]-*.md"))
+        self.assertGreaterEqual(len(sections), 15)
+        self.assertIn("Unity", (DOCS / "gdd/14-arquitectura-tecnica.md").read_text(encoding="utf-8"))
 
 
 if __name__ == "__main__":

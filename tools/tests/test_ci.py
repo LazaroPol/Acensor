@@ -21,7 +21,7 @@ class CiTests(unittest.TestCase):
 
     def test_scripts_are_executable(self):
         import os
-        for script in ("tools/verify.sh", "tools/pr.sh"):
+        for script in ("tools/verify.sh", "tools/git/open_pr.sh", "tools/git/merge_pr.sh"):
             self.assertTrue(os.access(ROOT / script, os.X_OK), f"{script} no es ejecutable")
 
 

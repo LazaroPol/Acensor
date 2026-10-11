@@ -1,0 +1,35 @@
+{
+  "id": "F9",
+  "name": "Meta-progresión: Laboratorio",
+  "goal": "Árbol de ADN y persistencia entre clones",
+  "tasks": [
+    {
+      "id": "F9-01",
+      "title": "Árbol de ADN con ramas y Tier Lock",
+      "status": "todo",
+      "pr": null,
+      "session": null
+    },
+    {
+      "id": "F9-02",
+      "title": "Aplicación de mutaciones al nuevo clon",
+      "status": "todo",
+      "pr": null,
+      "session": null
+    },
+    {
+      "id": "F9-03",
+      "title": "Fragmentos de memoria y desbloqueo de lore",
+      "status": "todo",
+      "pr": null,
+      "session": null
+    },
+    {
+      "id": "F9-04",
+      "title": "Guardado y carga del perfil",
+      "status": "todo",
+      "pr": null,
+      "session": null
+    }
+  ]
+}
