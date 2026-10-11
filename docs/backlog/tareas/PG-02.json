@@ -2,7 +2,7 @@
   "id": "PG-02",
   "phase": "PG",
   "title": "Bootstrap del prototipo: escena Prototipo y nivel greybox desde el catálogo",
-  "status": "in_progress",
+  "status": "done",
   "type": "feature",
   "labels": [
     "greybox"
@@ -16,6 +16,6 @@
     "Editor: menú SPECIMEN › Crear escena Prototipo que crea escena, catálogo vacío y la añade a Build Settings.",
     "tools/verify.sh en verde."
   ],
-  "pr": null,
-  "session": null
+  "pr": "#32",
+  "session": 24
 }
