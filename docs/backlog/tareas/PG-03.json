@@ -2,7 +2,7 @@
   "id": "PG-03",
   "phase": "PG",
   "title": "Jugador y cámara en tercera persona (Input System)",
-  "status": "in_progress",
+  "status": "done",
   "type": "feature",
   "labels": [
     "greybox",
@@ -17,6 +17,6 @@
     "Runtime: PlayerMotor (CharacterController + Input System) y ThirdPersonCamera; el bootstrap monta el jugador del catálogo (VisualId.Jugador) y su cámara.",
     "tools/verify.sh en verde."
   ],
-  "pr": null,
-  "session": null
+  "pr": "#33",
+  "session": 25
 }
