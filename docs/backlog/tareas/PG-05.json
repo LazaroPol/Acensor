@@ -2,14 +2,19 @@
   "id": "PG-05",
   "phase": "PG",
   "title": "Guía de prueba manual en Unity y checklist de importación de assets",
-  "status": "todo",
+  "status": "in_progress",
   "type": "docs",
   "labels": [
     "greybox"
   ],
   "origin": "backlog",
-  "description": "",
-  "acceptance": [],
+  "description": "Sección «Cómo probar» en docs/arte/ASSETS.md (abrir el proyecto, crear/abrir la escena Prototipo, Play, qué debe verse y controles) y checklist de importación para cuando el usuario entregue assets.",
+  "acceptance": [
+    "ASSETS.md tiene una sección «Cómo probar» con pasos desde abrir el proyecto hasta Play y lo que debe verse (sala greybox, jugador, cámara, HUD)",
+    "Incluye controles (teclado/mando) y teclas de depuración F1/F2/F3 con el resultado esperado",
+    "Incluye un checklist de importación de assets (escala, pivote, ejes, nombres, materiales URP, asignación en CatalogoVisual, créditos)",
+    "Ningún fichero supera 120 líneas y la verificación sigue en verde"
+  ],
   "pr": null,
   "session": null
 }
