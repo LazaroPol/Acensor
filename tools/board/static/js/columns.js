@@ -3,12 +3,13 @@ export const COLUMNS = [
   { status: 'idea', title: '💡 Ideas', hint: 'Bandeja de entrada: no se trabaja hasta pasarla a Listo' },
   { status: 'todo', title: 'Listo', hint: 'El orden es la prioridad: arriba = siguiente sesión' },
   { status: 'in_progress', title: 'En curso', hint: 'Máximo una tarea' },
+  { status: 'paused', title: '⏸ En pausa', hint: 'Interrumpida por una urgente: se retoma justo después' },
   { status: 'review', title: 'Revisión', hint: 'Probar en Unity / validar' },
   { status: 'blocked', title: 'Bloqueado', hint: 'Necesita algo antes de seguir' },
   { status: 'done', title: 'Hecho', hint: 'Cerradas por las sesiones' },
 ];
 
-export const STATUS_LABEL = Object.fromEntries(COLUMNS.map((c) => [c.status, c.title.replace('💡 ', '')]));
+export const STATUS_LABEL = Object.fromEntries(COLUMNS.map((c) => [c.status, c.title.replace(/^(💡|⏸) /, '')]));
 
 export function tasksFor(state, status) {
   const rank = new Map(state.board.priority.map((id, i) => [id, i]));

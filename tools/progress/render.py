@@ -1,7 +1,7 @@
 """Renderizado Markdown del backlog: barra de progreso y una página por fase."""
 from . import model
 
-ICON = {"done": "✅", "in_progress": "🔄", "todo": "⬜", "idea": "💡", "review": "👀", "blocked": "⛔"}
+ICON = {"done": "✅", "in_progress": "🔄", "paused": "⏸️", "todo": "⬜", "idea": "💡", "review": "👀", "blocked": "⛔"}
 QUEUE_SIZE = 5
 
 

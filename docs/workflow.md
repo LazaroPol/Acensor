@@ -4,7 +4,11 @@
 1. Se toma la siguiente tarea (`python3 -m tools.progress --next`): la primera de «Listo» en la cola de
    prioridad del [tablero](tablero.md). Se leen su tarjeta (`docs/backlog/tareas/<ID>.json`) y sus criterios.
 2. Se marca en curso (`--start <ID>`) en una rama `feature/<ID>-<slug>`.
+   Si la siguiente está «En pausa», se retoma desde su rama con `tools/session/resume.sh <ID>`.
 3. Se implementa con tests (TDD cuando aplica). Principios SOLID; núcleo sin `UnityEngine`.
+   Antes de cada commit y de entregar, `tools/session/check_urgent.sh <ID>` mira si en `main` hay una
+   «Listo» con etiqueta `urgente`; si la hay, `tools/session/pause.sh <ID> <URGENTE>` deja la tarea en pausa
+   y se empieza la urgente.
 4. `tools/git/open_pr.sh` abre la PR en GitHub solo si `tools/verify.sh` pasa.
 5. Se cierra la sesión **dentro de la misma PR** con `tools/session/ship.sh` (marca la tarea, historial y resumen),
    que genera `docs/sesiones/SESION-SS.md` y su fila en `docs/sesiones/README.md`.

@@ -25,6 +25,7 @@ credenciales de Git, por eso los botones «Traer» y «Guardar y subir» se ocul
 | 💡 Ideas | `idea` | No: bandeja de entrada sin refinar (no cuenta en el %) |
 | Listo | `todo` | **Sí: la de arriba del todo es la siguiente** |
 | En curso | `in_progress` | La retoma si se quedó a medias (máximo una) |
+| ⏸ En pausa | `paused` | Sí, justo después de las urgentes (interrumpida por una urgente) |
 | Revisión | `review` | No: para probarla tú en Unity |
 | Bloqueado | `blocked` | No |
 | Hecho | `done` | Las cierran las sesiones con PR (las añadidas en el tablero puedes cerrarlas a mano) |
@@ -35,6 +36,9 @@ credenciales de Git, por eso los botones «Traer» y «Guardar y subir» se ocul
 - **Prioridad:** arrastra las tarjetas. El orden de «Listo» es el orden en que se trabajan (`#1`, `#2`…).
 - **Editar:** clic en la tarjeta → título, tipo, etiquetas, descripción y criterios de aceptación
   (un criterio por línea; la sesión los convierte en tests).
+- **Urgente:** ponle la etiqueta `urgente` a una tarea de «Listo» y súbela. La sesión lo comprueba en sus
+  puntos de control: hace commit WIP de lo que lleva en su rama, mueve esa tarea a «⏸ En pausa» (conserva
+  su prioridad y su rama) y empieza la urgente. Al acabar las urgentes, la pausada es la siguiente.
 - **Filtros:** texto, fase, etiqueta/tipo y «Ver hechas».
 - **Sincronizar:** «⟳ Traer» hace `git pull --rebase`; «⇪ Guardar y subir» hace commit de `docs/backlog`
   y push a la rama actual. Sube tus cambios antes de lanzar la siguiente sesión.
