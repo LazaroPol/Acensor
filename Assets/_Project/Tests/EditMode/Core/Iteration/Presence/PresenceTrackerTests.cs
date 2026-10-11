@@ -30,7 +30,7 @@ namespace Specimen.Tests.Core.Iteration.Presence
             _p.LeaveElevator(1); _p.LeaveElevator(3);
             Assert.That(_p.TrapThoseOutside(), Is.EqualTo(new[] { 1, 3 }));
             Assert.That(_p.With(PlayerLocation.Trapped), Is.EqualTo(new[] { 1, 3 }));
-            Assert.That(_p.NotTrapped, Is.EqualTo(new[] { 2 }));
+            Assert.That(_p.Active, Is.EqualTo(new[] { 2 }));
         }
 
         [Test]

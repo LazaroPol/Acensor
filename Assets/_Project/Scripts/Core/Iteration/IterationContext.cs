@@ -2,6 +2,7 @@ using System;
 using System.Collections.Generic;
 using Specimen.Core.Common;
 using Specimen.Core.Events;
+using Specimen.Core.Iteration.Ending;
 using Specimen.Core.Iteration.Presence;
 using Specimen.Core.Iteration.Readiness;
 using Specimen.Core.Iteration.Voting;
@@ -27,6 +28,8 @@ namespace Specimen.Core.Iteration
         public bool ArmoryCompleted { get; internal set; }
         public bool SiegeCompleted { get; internal set; }
         public bool ExtractionCompleted { get; internal set; }
+        public IterationOutcome? Outcome { get; internal set; }
+        public IReadOnlyDictionary<int, PlayerFate> Fates { get; internal set; }
 
         public bool IsLastFloor => Floor >= Config.FloorCount;
 

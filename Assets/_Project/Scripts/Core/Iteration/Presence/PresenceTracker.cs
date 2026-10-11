@@ -25,15 +25,28 @@ namespace Specimen.Core.Iteration.Presence
         public IReadOnlyList<int> With(PlayerLocation location) =>
             _locations.Where(kv => kv.Value == location).Select(kv => kv.Key).OrderBy(id => id).ToList();
 
-        /// <summary>Jugadores que no están atrapados (en el ascensor o en el piso).</summary>
-        public IReadOnlyList<int> NotTrapped =>
-            _locations.Where(kv => kv.Value != PlayerLocation.Trapped).Select(kv => kv.Key).OrderBy(id => id).ToList();
+        public IReadOnlyList<int> All => _locations.Keys.OrderBy(id => id).ToList();
+
+        /// <summary>Jugadores que pueden actuar con el grupo: en el ascensor o en el piso.</summary>
+        public IReadOnlyList<int> Active =>
+            _locations.Where(kv => IsActive(kv.Value)).Select(kv => kv.Key).OrderBy(id => id).ToList();
+
+        public bool AllEliminated => _locations.Values.All(l => l == PlayerLocation.Eliminated);
+
+        private static bool IsActive(PlayerLocation l) => l == PlayerLocation.InElevator || l == PlayerLocation.InFloor;
 
         public void LeaveElevator(int playerId) => Move(playerId, PlayerLocation.InElevator, PlayerLocation.InFloor);
 
         public void ReturnToElevator(int playerId) => Move(playerId, PlayerLocation.InFloor, PlayerLocation.InElevator);
 
         public void Rescue(int playerId) => Move(playerId, PlayerLocation.Trapped, PlayerLocation.InElevator);
+
+        public void Eliminate(int playerId)
+        {
+            if (Location(playerId) == PlayerLocation.Eliminated)
+                throw new InvalidOperationException($"Jugador {playerId} ya eliminado.");
+            _locations[playerId] = PlayerLocation.Eliminated;
+        }
 
         /// <summary>Cierra las puertas: quien esté en el piso pasa a Atrapado. Devuelve los nuevos atrapados.</summary>
         public IReadOnlyList<int> TrapThoseOutside()
