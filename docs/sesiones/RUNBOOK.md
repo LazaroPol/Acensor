@@ -17,7 +17,11 @@ en la tarjeta (campo `acceptance`) antes de programar. No toques `prioridad.json
 ```bash
 git checkout -b feature/<TAREA>-<slug>
 python3 -m tools.progress --start <TAREA>
+# si la tarjeta está «En pausa» (status paused), en vez de lo anterior:
+tools/session/resume.sh <TAREA>
 ```
+**Urgencias:** antes de cada commit y antes del paso 3 ejecuta `tools/session/check_urgent.sh <TAREA>`.
+Si imprime una tarea (sale 0): `tools/session/pause.sh <TAREA> <URGENTE>` y sigue el paso 2 con la urgente.
 Código + tests NUnit pequeños. Verifica con `tools/verify.sh 2>&1 | grep -E "error|FAIL|Test Count|VERIF"`.
 Hasta 3 intentos de arreglo; si sigue en rojo → paso 5 (fallo).
 

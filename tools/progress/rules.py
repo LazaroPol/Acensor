@@ -1,7 +1,10 @@
 """Reglas puras del backlog: estados, validación y elección de la siguiente tarea."""
 
-# idea = bandeja de entrada (sin refinar, no cuenta ni se trabaja); todo = «Listo».
-VALID_STATUS = {"idea", "todo", "in_progress", "review", "blocked", "done"}
+from . import urgency
+
+# idea = bandeja de entrada (sin refinar, no cuenta ni se trabaja); todo = «Listo»;
+# paused = interrumpida por una urgente, se retoma justo después.
+VALID_STATUS = {"idea", "todo", "in_progress", "paused", "review", "blocked", "done"}
 COUNTED = VALID_STATUS - {"idea"}
 PENDING = COUNTED - {"done"}
 
@@ -29,10 +32,13 @@ def priority_order(backlog: dict) -> list:
 
 
 def next_task(backlog: dict):
-    """La tarea en curso si la hay; si no, la primera «Listo» (todo) de la cola de prioridad."""
-    tasks = priority_order(backlog)
-    current = next((t["id"] for t in tasks if t["status"] == "in_progress"), None)
-    return current or next((t["id"] for t in tasks if t["status"] == "todo"), None)
+    """Urgentes primero; luego la tarea en curso, la pausada y la primera «Listo» de la cola."""
+    return urgency.choose(priority_order(backlog))
+
+
+def preempting(backlog: dict, current_id: str):
+    """La urgente que obliga a pausar `current_id`, o None."""
+    return urgency.preempting(priority_order(backlog), current_id)
 
 
 def validate(backlog: dict) -> None:

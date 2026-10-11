@@ -5,7 +5,10 @@
   python3 -m tools.progress --start F1-01      marca la tarea en curso
   python3 -m tools.progress --done F1-01 --pr '#12' --session 3
   python3 -m tools.progress --next             imprime la siguiente tarea (cola de prioridad del tablero)
+  python3 -m tools.progress --pause F1-01 --branch feature/F1-01-x   la deja «En pausa» con su rama
+  python3 -m tools.progress --urgent F1-01 [--dir D]  imprime la urgente que la interrumpe (sale 1 si no hay)
 """
+import pathlib
 import argparse
 import sys
 
@@ -34,9 +37,22 @@ def main(argv=None) -> int:
     ap.add_argument("--done")
     ap.add_argument("--pr")
     ap.add_argument("--session", type=int)
+    ap.add_argument("--pause")
+    ap.add_argument("--branch")
+    ap.add_argument("--urgent")
+    ap.add_argument("--dir", type=pathlib.Path)
     args = ap.parse_args(argv)
 
-    backlog = model.load()
+    backlog = model.load(args.dir) if args.dir else model.load()
+    if args.urgent:
+        urgent = model.rules.preempting(backlog, args.urgent)
+        print(urgent or "")
+        return 0 if urgent else 1
+    if args.pause:
+        task = model.set_status(backlog, args.pause, "paused")
+        task["branch"] = args.branch or task.get("branch")
+        model.validate(backlog)
+        model.save_task(task)
     if args.check:
         stale = stale_outputs(backlog)
         if stale:
