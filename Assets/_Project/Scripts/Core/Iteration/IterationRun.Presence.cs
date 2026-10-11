@@ -16,7 +16,7 @@ namespace Specimen.Core.Iteration
         /// <summary>Un atrapado alcanza el Hueco de Emergencia y trepa hasta el ascensor del piso actual.</summary>
         public void ReachEmergencyShaft(int playerId)
         {
-            Signal(IterationPhase.Calm, IterationPhase.Incursion, () => _ctx.Presence.Rescue(playerId));
+            Signal(() => _ctx.Presence.Rescue(playerId), IterationPhase.Calm, IterationPhase.Incursion, IterationPhase.Siege);
             _ctx.Events.Publish(new PlayerRescued(playerId, _ctx.Floor));
         }
     }

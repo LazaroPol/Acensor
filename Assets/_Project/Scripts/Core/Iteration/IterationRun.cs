@@ -56,11 +56,11 @@ namespace Specimen.Core.Iteration
         public void VoteEarlyClose(int playerId, bool yes) =>
             Signal(IterationPhase.Incursion, () => _ctx.EarlyClose.Cast(_ctx, playerId, yes));
 
-        private void Signal(IterationPhase expected, Action apply) => Signal(expected, expected, apply);
+        private void Signal(IterationPhase expected, Action apply) => Signal(apply, expected);
 
-        private void Signal(IterationPhase expected, IterationPhase alternative, Action apply)
+        private void Signal(Action apply, params IterationPhase[] allowed)
         {
-            if (!HasStarted || (Phase != expected && Phase != alternative))
+            if (!HasStarted || Array.IndexOf(allowed, Phase) < 0)
                 throw new InvalidOperationException($"No válido en la fase actual: {Phase}.");
             apply();
         }

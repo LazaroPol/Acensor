@@ -48,9 +48,9 @@
     {
       "id": "F1-07",
       "title": "Fin de iteración (victoria, todos caídos, abandono)",
-      "status": "todo",
-      "pr": null,
-      "session": null
+      "status": "done",
+      "pr": "#8",
+      "session": 9
     }
   ]
 }

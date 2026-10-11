@@ -5,6 +5,7 @@ namespace Specimen.Core.Iteration.Presence
     {
         InElevator,
         InFloor,
-        Trapped
+        Trapped,
+        Eliminated
     }
 }

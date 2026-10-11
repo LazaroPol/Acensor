@@ -17,14 +17,15 @@ namespace Specimen.Core.Iteration
                 .AddState(IterationPhase.Ascent, new SignalState())
                 .AddState(IterationPhase.Siege, new SignalState())
                 .AddState(IterationPhase.Extraction, new SignalState())
-                .AddState(IterationPhase.Ended, new SignalState())
+                .AddState(IterationPhase.Ended, new EndedState(ctx))
                 .AddTransition(IterationPhase.Armory, IterationPhase.Calm, () => ctx.ArmoryCompleted)
-                .AddTransition(IterationPhase.Calm, IterationPhase.Incursion, () => timerDone() || ctx.Ready.AllReadyAmong(ctx.Presence.NotTrapped))
+                .AddTransition(IterationPhase.Calm, IterationPhase.Incursion, () => timerDone() || ctx.Ready.AllReadyAmong(ctx.Presence.Active))
                 .AddTransition(IterationPhase.Incursion, IterationPhase.Ascent, timerDone)
                 .AddTransition(IterationPhase.Ascent, IterationPhase.Siege, () => ctx.IsLastFloor)
                 .AddTransition(IterationPhase.Ascent, IterationPhase.Calm, () => !ctx.IsLastFloor)
                 .AddTransition(IterationPhase.Siege, IterationPhase.Extraction, () => ctx.SiegeCompleted)
-                .AddTransition(IterationPhase.Extraction, IterationPhase.Ended, () => ctx.ExtractionCompleted);
+                .AddTransition(IterationPhase.Extraction, IterationPhase.Ended, () => ctx.ExtractionCompleted)
+                .AddAnyTransition(IterationPhase.Ended, () => ctx.Outcome.HasValue);
         }
     }
 }
