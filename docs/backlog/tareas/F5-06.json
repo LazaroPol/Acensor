@@ -2,14 +2,20 @@
   "id": "F5-06",
   "phase": "F5",
   "title": "Restos de clones anteriores y Fragmentos de memoria",
-  "status": "todo",
+  "status": "in_progress",
   "type": "feature",
   "labels": [
     "pisos"
   ],
   "origin": "backlog",
-  "description": "",
-  "acceptance": [],
+  "description": "Sembrar en las salas de un piso restos de clones anteriores (equipo roto, diarios con tu letra, cadáveres) y Fragmentos de memoria coleccionables, con un registro de los fragmentos recogidos.",
+  "acceptance": [
+    "Probabilidades por anillo (restos y fragmentos) validadas en [0,1] y no decrecientes con la profundidad.",
+    "RemnantPlacer siembra restos y fragmentos de forma reproducible desde la semilla del trazado, solo en salas de saqueo.",
+    "Un fragmento nunca se repite en el piso ni reaparece si ya está recogido en el MemoryFragmentLog.",
+    "MemoryFragmentLog registra fragmentos sin duplicados y sabe cuántos faltan.",
+    "Tests NUnit cubren reglas, determinismo, tipos de sala y unicidad de fragmentos."
+  ],
   "pr": null,
   "session": null
 }
