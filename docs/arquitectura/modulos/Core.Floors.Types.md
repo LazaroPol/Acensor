@@ -6,7 +6,7 @@ Ensamblado: `Specimen.Core` · Carpeta: `Assets/_Project/Scripts/Core/Floors/Typ
 Tests: `Assets/_Project/Tests/EditMode/Core/Floors/Types`
 
 **Depende de:** [Core.Common](Core.Common.md)
-**Lo usan:** nadie
+**Lo usan:** [Core.Floors.Omens](Core.Floors.Omens.md)
 
 | Fichero | Tipo | Resumen |
 |---|---|---|

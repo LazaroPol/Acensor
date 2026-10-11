@@ -2,14 +2,20 @@
   "id": "F5-03",
   "phase": "F5",
   "title": "Presagio y modificadores de piso",
-  "status": "todo",
+  "status": "done",
   "type": "feature",
   "labels": [
     "pisos"
   ],
   "origin": "backlog",
-  "description": "",
-  "acceptance": [],
-  "pr": null,
-  "session": null
+  "description": "El Presagio (GDD §8) anuncia al llegar el tipo de piso y sus modificadores (oscuridad, gravedad baja, enemigos ígneos…), tirados de forma reproducible a partir de la semilla del plan.",
+  "acceptance": [
+    "FloorModifier define tipo, nombre, pista del presagio y si solo aplica a pisos con combate",
+    "FloorModifierCatalog registra los modificadores del GDD, rechaza duplicados y filtra los compatibles con un IFloorType",
+    "OmenRoller tira entre 0 y N modificadores distintos y compatibles, reproducible por la semilla del FloorPlan",
+    "Omen expone tipo de piso, modificadores, Has(kind) y una inscripción legible que anuncia tipo y modificadores",
+    "Tests NUnit cubren catálogo, compatibilidad, reproducibilidad e inscripción"
+  ],
+  "pr": "#50",
+  "session": 36
 }
