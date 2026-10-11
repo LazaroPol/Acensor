@@ -8,6 +8,7 @@
 - Cada tipo de módulo se construye una sola vez por plataforma (`AlreadyBuilt`).
 - Se reutiliza `RecipeIngredient` (Crafting) como unidad de coste; la validación se hace antes de consumir, así un fallo nunca toca el inventario.
 - `Reset()` vacía la plataforma al empezar una iteración nueva.
+- `test_board_store`: el test de «done requiere PR» ya no depende de que F4-01 esté sin PR (elige una tarea del backlog sin PR).
 ## Calidad
 - 15 tests NUnit nuevos (436 en total) en verde.
 ## Siguiente sesión
