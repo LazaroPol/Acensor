@@ -10,7 +10,7 @@ if [ -f docs/sesiones/PAUSA ]; then
   exit 1
 fi
 
-python3 - <<'PY'
+NEXT="$(python3 - <<'PY'
 import sys
 from tools.progress import model
 
@@ -22,3 +22,15 @@ if not task:
     sys.exit(1)
 print(task, model.last_session(backlog) + 1, task.split("-")[0])
 PY
+)"
+read -r TASK _ _ <<<"$NEXT"
+
+# Evita cadenas duplicadas: si otra sesión ya subió la rama de esta tarea, esta no la repite.
+# (Tareas en pausa o reanudaciones a mano: SPECIMEN_IGNORE_BRANCH=1.)
+STATUS="$(python3 -c "import json;print(json.load(open('docs/backlog/tareas/$TASK.json'))['status'])")"
+if [ "${SPECIMEN_IGNORE_BRANCH:-0}" != 1 ] && [ "$STATUS" != paused ] \
+   && git ls-remote --exit-code --heads "${SPECIMEN_REMOTE:-origin}" "feature/$TASK-*" >/dev/null 2>&1; then
+  echo "👥 Otra sesión ya trabaja en $TASK (rama remota feature/$TASK-*): no se duplica" >&2
+  exit 1
+fi
+echo "$NEXT"

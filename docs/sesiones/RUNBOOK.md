@@ -9,13 +9,16 @@ git config user.name "Lazaro (via Claude)"; git config user.email "pol.lazaro.ro
 tools/setup_dotnet.sh             # una línea; el log solo se lee si falla
 tools/session/should_continue.sh   # si falla: no hay tarea o la cadena está en pausa → terminar
 ```
-`should_continue.sh` imprime la tarea (`F2-01`), el número de sesión y la fase.
+`should_continue.sh` imprime la tarea (`F2-01`), el número de sesión y la fase. También sale con 1 si
+otra sesión ya subió `feature/<TAREA>-*` (cadena duplicada): en ese caso **termina sin tocar nada ni
+disparar la siguiente sesión**. Para reanudar a mano una rama que se quedó a medias: `SPECIMEN_IGNORE_BRANCH=1`.
 
 ## 2. Implementar
 Lee la tarjeta `docs/backlog/tareas/<TAREA>.json`. Si no tiene criterios de aceptación, escríbelos
 en la tarjeta (campo `acceptance`) antes de programar. No toques `prioridad.json` (es del tablero).
 ```bash
 git checkout -b feature/<TAREA>-<slug>
+git push -u origin HEAD           # reclama la tarea: otra sesión la verá y no la duplicará
 python3 -m tools.progress --start <TAREA>
 # si la tarjeta está «En pausa» (status paused), en vez de lo anterior:
 tools/session/resume.sh <TAREA>
