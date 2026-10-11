@@ -19,11 +19,15 @@ namespace Specimen.Core.Iteration
         public int SiegeWaves { get; }
         public int MaxPlayers { get; }
 
+        /// <summary>Segundos que quedan de Incursión tras aprobarse el voto de cierre anticipado.</summary>
+        public float EarlyCloseGraceSeconds { get; }
+
         /// <summary>Segundos restantes de Incursión en los que se avisa del cierre, de mayor a menor.</summary>
         public IReadOnlyList<float> DoorWarnings { get; }
 
         public IterationConfig(int floorCount, float calmSeconds, float incursionSeconds,
-                               int siegeWaves, int maxPlayers, IEnumerable<float> doorWarnings)
+                               int siegeWaves, int maxPlayers, IEnumerable<float> doorWarnings,
+                               float earlyCloseGraceSeconds = 15f)
         {
             FloorCount = Guard.Positive(floorCount, nameof(floorCount));
             CalmSeconds = Guard.Positive(calmSeconds, nameof(calmSeconds));
@@ -32,6 +36,9 @@ namespace Specimen.Core.Iteration
             MaxPlayers = Guard.Positive(maxPlayers, nameof(maxPlayers));
             if (maxPlayers > MaxPlayersLimit)
                 throw new ArgumentOutOfRangeException(nameof(maxPlayers), maxPlayers, $"Máximo {MaxPlayersLimit}.");
+            EarlyCloseGraceSeconds = Guard.Positive(earlyCloseGraceSeconds, nameof(earlyCloseGraceSeconds));
+            if (earlyCloseGraceSeconds >= incursionSeconds)
+                throw new ArgumentOutOfRangeException(nameof(earlyCloseGraceSeconds), "Debe ser menor que la Incursión.");
             DoorWarnings = NormalizeWarnings(Guard.NotNull(doorWarnings, nameof(doorWarnings)), incursionSeconds);
         }
 

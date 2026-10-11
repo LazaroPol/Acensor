@@ -30,6 +30,16 @@ namespace Specimen.Tests.Core.Iteration
         }
 
         [Test]
+        public void EarlyCloseGrace_DefaultsTo15_AndMustFitInIncursion()
+        {
+            Assert.That(IterationConfigBuilder.Default.EarlyCloseGraceSeconds, Is.EqualTo(15f));
+            Assert.That(new IterationConfigBuilder().WithEarlyCloseGrace(30).Build().EarlyCloseGraceSeconds, Is.EqualTo(30f));
+            Assert.Throws<System.ArgumentOutOfRangeException>(() => new IterationConfigBuilder().WithEarlyCloseGrace(0).Build());
+            Assert.Throws<System.ArgumentOutOfRangeException>(() =>
+                new IterationConfigBuilder().WithIncursion(100).WithDoorWarnings(10).WithEarlyCloseGrace(100).Build());
+        }
+
+        [Test]
         public void Build_ValidatesThroughConfig() =>
             Assert.Throws<System.ArgumentOutOfRangeException>(() => new IterationConfigBuilder().WithIncursion(30).Build());
     }
