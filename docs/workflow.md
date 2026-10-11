@@ -9,7 +9,7 @@
    que genera `docs/sesiones/SESION-SS.md` y su fila en `docs/sesiones/README.md`.
 6. `tools/git/merge_pr.sh N` mergea solo si la verificación local y **todos los checks de CI** están en verde,
    y vuelve a verificar `main` tras el merge.
-7. Se abre la siguiente sesión con la siguiente tarea, sin programarla.
+7. La sesión programa el chat siguiente (una tarea programada de una sola ejecución) según [el runbook](sesiones/RUNBOOK.md).
 
 ## Reglas que imponen los tests
 - Ningún fichero de texto supera 120 líneas: muchos ficheros pequeños.
