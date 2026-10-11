@@ -2,7 +2,7 @@
   "id": "F4-02",
   "phase": "F4",
   "title": "Mejora de módulos por niveles",
-  "status": "in_progress",
+  "status": "done",
   "type": "feature",
   "labels": [
     "ascensor"
@@ -16,6 +16,6 @@
     "Se notifica cada mejora y el nivel vuelve a 0 al reiniciar la plataforma.",
     "Tests NUnit cubren éxito y cada fallo."
   ],
-  "pr": null,
-  "session": null
+  "pr": "#38",
+  "session": 30
 }
