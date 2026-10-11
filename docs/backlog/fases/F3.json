@@ -6,9 +6,9 @@
     {
       "id": "F3-01",
       "title": "Modelo de objetos, rareza y durabilidad",
-      "status": "in_progress",
-      "pr": null,
-      "session": null
+      "status": "done",
+      "pr": "#18",
+      "session": 17
     },
     {
       "id": "F3-02",
