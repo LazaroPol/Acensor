@@ -34,9 +34,9 @@
     {
       "id": "F3-05",
       "title": "Recetas de sinergia entre profesiones",
-      "status": "in_progress",
-      "pr": null,
-      "session": null
+      "status": "done",
+      "pr": "#23",
+      "session": 21
     },
     {
       "id": "F3-06",
