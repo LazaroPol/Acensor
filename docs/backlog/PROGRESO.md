@@ -25,8 +25,8 @@ TOTAL  █████████████░░░░░░░░░░░�
 
 ## Cola de prioridad (tablero)
 
-1. **PG-06** Sistema de colisiones (épico)
-2. **F4-01** Ranuras de módulo y construcción con materiales
-3. **F4-02** Mejora de módulos por niveles
-4. **F4-03** Hoguera: regeneración y recuperación de fatiga
-5. **F4-04** Cocina: buffs de comida temporales
+1. **F4-01** Ranuras de módulo y construcción con materiales
+2. **F4-02** Mejora de módulos por niveles
+3. **F4-03** Hoguera: regeneración y recuperación de fatiga
+4. **F4-04** Cocina: buffs de comida temporales
+5. **F4-05** Litera: revivir Espectros durante la Calma
