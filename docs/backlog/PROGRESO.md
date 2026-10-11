@@ -25,8 +25,8 @@ TOTAL  ████████████████████░░░░�
 
 ## Cola de prioridad (tablero)
 
-1. **F7-02** Registro de Ecos
-2. **F7-03** Consecuencias que alteran pisos futuros
-3. **F7-04** Decisiones secretas individuales
-4. **F8-01** Director de oleadas del asedio
-5. **F8-02** Fortificaciones y torretas
+1. **F7-03** Consecuencias que alteran pisos futuros
+2. **F7-04** Decisiones secretas individuales
+3. **F8-01** Director de oleadas del asedio
+4. **F8-02** Fortificaciones y torretas
+5. **F8-03** Puntuación y multiplicador de supervivencia colectiva
