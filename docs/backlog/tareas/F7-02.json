@@ -2,7 +2,7 @@
   "id": "F7-02",
   "phase": "F7",
   "title": "Registro de Ecos",
-  "status": "in_progress",
+  "status": "done",
   "type": "feature",
   "labels": [
     "ecos"
@@ -16,6 +16,6 @@
     "Clear olvida todo (nueva iteración).",
     "Núcleo sin UnityEngine, ficheros <= 120 líneas y tests NUnit en verde."
   ],
-  "pr": null,
-  "session": null
+  "pr": "#61",
+  "session": 46
 }
