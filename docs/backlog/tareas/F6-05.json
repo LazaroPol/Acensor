@@ -2,7 +2,7 @@
   "id": "F6-05",
   "phase": "F6",
   "title": "Jefe del Acto I con fases",
-  "status": "in_progress",
+  "status": "done",
   "type": "feature",
   "labels": [
     "combate",
@@ -17,6 +17,6 @@
     "ActOneBoss define el jefe del piso 5 anillo 3 con tres fases.",
     "Núcleo sin UnityEngine, ficheros <= 120 líneas y tests NUnit en verde."
   ],
-  "pr": null,
-  "session": null
+  "pr": "#59",
+  "session": 44
 }
