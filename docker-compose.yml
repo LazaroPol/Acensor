@@ -1,0 +1,12 @@
+# Herramientas del repo sin instalar Python: docker compose up board → http://localhost:8765
+services:
+  board:
+    image: python:3.12-alpine
+    working_dir: /repo
+    volumes:
+      - .:/repo
+    ports:
+      - "8765:8765"
+    environment:
+      PYTHONDONTWRITEBYTECODE: "1"
+    command: python -m tools.board --host 0.0.0.0 --no-browser --no-git

@@ -10,6 +10,15 @@ python3 -m tools.board            # abre http://127.0.0.1:8765  (--port, --no-br
 ```
 Solo necesita Python 3 (biblioteca estándar). Ciérralo con Ctrl+C.
 
+### Sin Python, con Docker
+```bash
+git checkout main && git pull
+docker compose up board           # abre tú http://localhost:8765 ; parar: Ctrl+C
+```
+Monta el repo en el contenedor, así los cambios se guardan en tus ficheros. Dentro de Docker no hay
+credenciales de Git, por eso los botones «Traer» y «Guardar y subir» se ocultan: haz commit y push de
+`docs/backlog` con tu Git habitual (o GitHub Desktop) antes de lanzar la siguiente sesión.
+
 ## Columnas
 | Columna | Estado | La coge una sesión |
 |---|---|---|
