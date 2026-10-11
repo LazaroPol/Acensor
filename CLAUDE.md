@@ -26,13 +26,7 @@ Runbook completo: [`docs/sesiones/RUNBOOK.md`](docs/sesiones/RUNBOOK.md).
 - Manda la cola de prioridad del tablero (`docs/tablero.md`); como mucho una tarea en curso.
 
 ## Git y PRs
-- Antes de tocar una rama, comprueba si necesita rebase sobre `main`; al terminar, `checkout main` y `pull`.
+- Antes de tocar una rama, comprueba si necesita rebase sobre `main`; al terminar, `checkout main` y `pull --ff-only`.
+- Responde siempre en español.
 - Si la CI pasa, mergea sin preguntar y activa el automerge en cada PR.
 - Si cambian módulos, regenera `docs/arquitectura` con `python -m tools.arch` (la CI ejecuta `--check`).
-
-## Flujo de trabajo con git y PRs
-- Responde siempre en español.
-- Antes de tocar una rama, `git fetch` y comprueba si necesita rebase sobre `main` (en ramas propias; en PRs ajenos ya publicados, merge).
-- Si cambias módulos/tipos, regenera el índice: `python3 -m tools.arch` (CI falla si está obsoleto).
-- Si la CI pasa, mergea sin preguntar; activa auto-merge en cada PR.
-- Al terminar, vuelve a `main` y haz pull (`git checkout main && git pull --ff-only`).
