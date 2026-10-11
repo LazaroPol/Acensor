@@ -2,7 +2,7 @@
   "id": "F5-02",
   "phase": "F5",
   "title": "Tipos de piso (patrón Strategy)",
-  "status": "in_progress",
+  "status": "done",
   "type": "feature",
   "labels": [
     "pisos"
@@ -16,6 +16,6 @@
     "FloorPlanner genera un FloorPlan (tipo + trazado) reproducible por semilla",
     "Tests NUnit cubren catálogo, configuraciones y planificador"
   ],
-  "pr": null,
-  "session": null
+  "pr": "#47",
+  "session": 35
 }
