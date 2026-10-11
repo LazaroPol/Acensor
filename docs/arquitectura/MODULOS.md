@@ -16,6 +16,7 @@ Un módulo = un namespace C#. Abre solo la página del módulo que vayas a tocar
 | [Core.Floors.Omens](modulos/Core.Floors.Omens.md) | 5 | `FloorModifier`, `FloorModifierCatalog`, `FloorModifierKind`, `Omen`, `OmenRoller` | Core.Common, Core.Floors.Types, Core.Randomness |
 | [Core.Floors.Paths](modulos/Core.Floors.Paths.md) | 4 | `AlternativePathPlanner`, `FloorPaths`, `SealMethod`, `SealedDoorRules` | Core.Common, Core.Professions, Core.Randomness |
 | [Core.Floors.Population](modulos/Core.Floors.Population.md) | 5 | `FloorPopulation`, `FloorPopulator`, `RingPopulationRules`, `RingQuota`, `RoomPopulation` | Core.Common, Core.Loot, Core.Randomness |
+| [Core.Floors.Remnants](modulos/Core.Floors.Remnants.md) | 8 | `FloorRemnants`, `FragmentPlacement`, `MemoryFragmentLog`, `Remnant`, `RemnantKind` … | Core.Common, Core.Loot, Core.Randomness |
 | [Core.Floors.Types](modulos/Core.Floors.Types.md) | 9 | `PuzzleFloor`, `DecisionFloor`, `SanctuaryFloor`, `ProfessionFloor`, `LootFloor` … | Core.Common |
 | [Core.Items](modulos/Core.Items.md) | 11 | `Durability`, `IDurability`, `IInventory`, `Inventory`, `ItemCategory` … | Core.Common |
 | [Core.Iteration](modulos/Core.Iteration.md) | 9 | `IterationConfig`, `IterationConfigBuilder`, `IterationContext`, `IterationPhaseChanged`, `FloorReached` … | Core.Common, Core.Events, Core.Iteration.Ending, Core.Iteration.Presence, Core.Iteration.Readiness, Core.Iteration.States, Core.Iteration.Voting, Core.StateMachines, Core.Time |
@@ -54,59 +55,61 @@ flowchart LR
   n7["Core.Floors.Omens"]
   n8["Core.Floors.Paths"]
   n9["Core.Floors.Population"]
-  n10["Core.Floors.Types"]
-  n11["Core.Items"]
-  n12["Core.Iteration"]
-  n13["Core.Iteration.Ending"]
-  n14["Core.Iteration.Presence"]
-  n15["Core.Iteration.Readiness"]
-  n16["Core.Iteration.States"]
-  n17["Core.Iteration.Voting"]
-  n18["Core.Life"]
-  n19["Core.Loot"]
-  n20["Core.Movement"]
-  n21["Core.Physics"]
-  n22["Core.Professions"]
-  n23["Core.Prototype"]
-  n24["Core.Randomness"]
-  n25["Core.Repair"]
-  n26["Core.StateMachines"]
-  n27["Core.Stats"]
-  n28["Core.Time"]
-  n29["Core.Visuals"]
-  n30["Core.Vitals"]
-  n31["Runtime.Prototype"]
-  n32["Runtime.Visuals"]
+  n10["Core.Floors.Remnants"]
+  n11["Core.Floors.Types"]
+  n12["Core.Items"]
+  n13["Core.Iteration"]
+  n14["Core.Iteration.Ending"]
+  n15["Core.Iteration.Presence"]
+  n16["Core.Iteration.Readiness"]
+  n17["Core.Iteration.States"]
+  n18["Core.Iteration.Voting"]
+  n19["Core.Life"]
+  n20["Core.Loot"]
+  n21["Core.Movement"]
+  n22["Core.Physics"]
+  n23["Core.Professions"]
+  n24["Core.Prototype"]
+  n25["Core.Randomness"]
+  n26["Core.Repair"]
+  n27["Core.StateMachines"]
+  n28["Core.Stats"]
+  n29["Core.Time"]
+  n30["Core.Visuals"]
+  n31["Core.Vitals"]
+  n32["Runtime.Prototype"]
+  n33["Runtime.Visuals"]
   n0 --> n1 & n2
-  n1 --> n2 & n27
-  n3 --> n2 & n11 & n22
-  n4 --> n2 & n3 & n11 & n12 & n18 & n27 & n28 & n30
+  n1 --> n2 & n28
+  n3 --> n2 & n12 & n23
+  n4 --> n2 & n3 & n12 & n13 & n19 & n28 & n29 & n31
   n5 --> n2
-  n6 --> n2 & n19 & n24
-  n7 --> n2 & n10 & n24
-  n8 --> n2 & n22 & n24
-  n9 --> n2 & n19 & n24
-  n10 --> n2
+  n6 --> n2 & n20 & n25
+  n7 --> n2 & n11 & n25
+  n8 --> n2 & n23 & n25
+  n9 --> n2 & n20 & n25
+  n10 --> n2 & n20 & n25
   n11 --> n2
-  n12 --> n2 & n5 & n13 & n14 & n15 & n16 & n17 & n26 & n28
-  n13 --> n14
-  n14 --> n2
+  n12 --> n2
+  n13 --> n2 & n5 & n14 & n15 & n16 & n17 & n18 & n27 & n29
+  n14 --> n15
   n15 --> n2
-  n16 --> n13 & n14 & n15 & n26 & n28
-  n17 --> n2
-  n18 --> n2 & n12 & n30
-  n19 --> n2 & n11 & n24
-  n20 --> n2 & n30
-  n21 --> n2
+  n16 --> n2
+  n17 --> n14 & n15 & n16 & n27 & n29
+  n18 --> n2
+  n19 --> n2 & n13 & n31
+  n20 --> n2 & n12 & n25
+  n21 --> n2 & n31
   n22 --> n2
-  n23 --> n2 & n21 & n28 & n29 & n30
-  n24 --> n2
-  n25 --> n2 & n11
-  n26 --> n2 & n28
-  n27 --> n2
+  n23 --> n2
+  n24 --> n2 & n22 & n29 & n30 & n31
+  n25 --> n2
+  n26 --> n2 & n12
+  n27 --> n2 & n29
   n28 --> n2
   n29 --> n2
-  n30 --> n2 & n27 & n28
-  n31 --> n20 & n23 & n27 & n28 & n29 & n30 & n32
-  n32 --> n23 & n29
+  n30 --> n2
+  n31 --> n2 & n28 & n29
+  n32 --> n21 & n24 & n28 & n29 & n30 & n31 & n33
+  n33 --> n24 & n30
 ```

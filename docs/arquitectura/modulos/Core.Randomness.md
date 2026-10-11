@@ -6,7 +6,7 @@ Ensamblado: `Specimen.Core` · Carpeta: `Assets/_Project/Scripts/Core/Randomness
 Tests: `Assets/_Project/Tests/EditMode/Core/Randomness`
 
 **Depende de:** [Core.Common](Core.Common.md)
-**Lo usan:** [Core.Floors](Core.Floors.md), [Core.Floors.Omens](Core.Floors.Omens.md), [Core.Floors.Paths](Core.Floors.Paths.md), [Core.Floors.Population](Core.Floors.Population.md), [Core.Loot](Core.Loot.md)
+**Lo usan:** [Core.Floors](Core.Floors.md), [Core.Floors.Omens](Core.Floors.Omens.md), [Core.Floors.Paths](Core.Floors.Paths.md), [Core.Floors.Population](Core.Floors.Population.md), [Core.Floors.Remnants](Core.Floors.Remnants.md), [Core.Loot](Core.Loot.md)
 
 | Fichero | Tipo | Resumen |
 |---|---|---|
