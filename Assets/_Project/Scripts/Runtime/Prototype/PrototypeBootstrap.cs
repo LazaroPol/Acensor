@@ -23,7 +23,7 @@ namespace Specimen.Runtime.Prototype
         private static void EnsureInPrototypeScene()
         {
             if (SceneManager.GetActiveScene().name != SceneName) return;
-            if (FindFirstObjectByType<PrototypeBootstrap>() != null) return;
+            if (FindAnyObjectByType<PrototypeBootstrap>() != null) return;
             new GameObject(nameof(PrototypeBootstrap)).AddComponent<PrototypeBootstrap>();
         }
 
