@@ -1,5 +1,8 @@
+using System;
+using System.Collections.Generic;
 using Specimen.Core.Common;
 using Specimen.Core.Events;
+using Specimen.Core.Iteration.Readiness;
 using Specimen.Core.Time;
 
 namespace Specimen.Core.Iteration
@@ -9,6 +12,11 @@ namespace Specimen.Core.Iteration
     {
         public IterationConfig Config { get; }
         public IEventPublisher Events { get; }
+        public ReadyCheck Ready { get; }
+        public IHasteBonusPolicy HastePolicy { get; }
+
+        /// <summary>Bonus Prisa ganado por piso (piso → fracción extra de loot).</summary>
+        public Dictionary<int, float> HasteBonuses { get; } = new Dictionary<int, float>();
 
         public int Floor { get; internal set; }
         public PhaseTimer Timer { get; internal set; }
@@ -18,10 +26,14 @@ namespace Specimen.Core.Iteration
 
         public bool IsLastFloor => Floor >= Config.FloorCount;
 
-        public IterationContext(IterationConfig config, IEventPublisher events)
+        public IterationContext(IterationConfig config, IEventPublisher events, ReadyCheck ready, IHasteBonusPolicy hastePolicy)
         {
             Config = Guard.NotNull(config, nameof(config));
             Events = Guard.NotNull(events, nameof(events));
+            Ready = Guard.NotNull(ready, nameof(ready));
+            HastePolicy = Guard.NotNull(hastePolicy, nameof(hastePolicy));
+            if (ready.Players.Count > config.MaxPlayers)
+                throw new ArgumentException($"Máximo {config.MaxPlayers} jugadores.", nameof(ready));
         }
     }
 }
