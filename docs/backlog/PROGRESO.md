@@ -22,3 +22,11 @@ TOTAL  ████████████░░░░░░░░░░░░�
 | [F10 · Presentación en Unity](fases/F10.md) | `░░░░░░░░░░░░░░░` | 0% | 0/6 |
 | [F11 · Multijugador cooperativo](fases/F11.md) | `░░░░░░░░░░░░░░░` | 0% | 0/4 |
 | [F12 · Vertical Slice — Acto I](fases/F12.md) | `░░░░░░░░░░░░░░░` | 0% | 0/5 |
+
+## Cola de prioridad (tablero)
+
+1. **PG-01** Catálogo visual: IDs lógicos y resolución asset/greybox (núcleo puro + tests)
+2. **PG-02** Bootstrap del prototipo: escena Prototipo y nivel greybox desde el catálogo
+3. **PG-03** Jugador y cámara en tercera persona (Input System)
+4. **PG-04** HUD de depuración: vida, recursos y temporizador del núcleo
+5. **PG-05** Guía de prueba manual en Unity y checklist de importación de assets

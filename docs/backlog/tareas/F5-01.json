@@ -1,0 +1,15 @@
+{
+  "id": "F5-01",
+  "phase": "F5",
+  "title": "Generador procedural de pasillos por anillos (con semilla)",
+  "status": "todo",
+  "type": "feature",
+  "labels": [
+    "pisos"
+  ],
+  "origin": "backlog",
+  "description": "",
+  "acceptance": [],
+  "pr": null,
+  "session": null
+}

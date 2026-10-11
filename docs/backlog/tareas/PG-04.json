@@ -1,0 +1,15 @@
+{
+  "id": "PG-04",
+  "phase": "PG",
+  "title": "HUD de depuración: vida, recursos y temporizador del núcleo",
+  "status": "todo",
+  "type": "feature",
+  "labels": [
+    "greybox"
+  ],
+  "origin": "backlog",
+  "description": "",
+  "acceptance": [],
+  "pr": null,
+  "session": null
+}

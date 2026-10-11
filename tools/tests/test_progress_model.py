@@ -51,10 +51,10 @@ class ValidationTests(unittest.TestCase):
 
 
 class UpdateTests(unittest.TestCase):
-    def test_set_status_updates_fields_and_returns_phase(self):
+    def test_set_status_updates_fields_and_returns_task(self):
         b = make_backlog([("F0", ["todo"])])
-        phase = model.set_status(b, "F0-01", "done", "#7", 4)
-        self.assertEqual(phase["id"], "F0")
+        task = model.set_status(b, "F0-01", "done", "#7", 4)
+        self.assertEqual(task["id"], "F0-01")
         self.assertEqual(b["phases"][0]["tasks"][0]["pr"], "#7")
         self.assertEqual(b["phases"][0]["tasks"][0]["session"], 4)
 

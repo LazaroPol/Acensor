@@ -1,49 +1,5 @@
 {
   "id": "F3",
   "name": "Inventario, loot y crafting",
-  "goal": "Objetos, rareza, durabilidad y profesiones",
-  "tasks": [
-    {
-      "id": "F3-01",
-      "title": "Modelo de objetos, rareza y durabilidad",
-      "status": "done",
-      "pr": "#18",
-      "session": 17
-    },
-    {
-      "id": "F3-02",
-      "title": "Inventario con capacidad y apilado",
-      "status": "done",
-      "pr": "#19",
-      "session": 18
-    },
-    {
-      "id": "F3-03",
-      "title": "Tablas de loot ponderadas por anillo de profundidad",
-      "status": "done",
-      "pr": "#20",
-      "session": 19
-    },
-    {
-      "id": "F3-04",
-      "title": "Recetas y crafting por profesión",
-      "status": "done",
-      "pr": "#21",
-      "session": 20
-    },
-    {
-      "id": "F3-05",
-      "title": "Recetas de sinergia entre profesiones",
-      "status": "done",
-      "pr": "#23",
-      "session": 21
-    },
-    {
-      "id": "F3-06",
-      "title": "Reparación de equipo",
-      "status": "done",
-      "pr": "#24",
-      "session": 22
-    }
-  ]
+  "goal": "Objetos, rareza, durabilidad y profesiones"
 }

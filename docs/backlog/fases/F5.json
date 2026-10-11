@@ -1,49 +1,5 @@
 {
   "id": "F5",
   "name": "Generación de pisos",
-  "goal": "Pisos procedurales con semilla, tipos y presagios",
-  "tasks": [
-    {
-      "id": "F5-01",
-      "title": "Generador procedural de pasillos por anillos (con semilla)",
-      "status": "todo",
-      "pr": null,
-      "session": null
-    },
-    {
-      "id": "F5-02",
-      "title": "Tipos de piso (patrón Strategy)",
-      "status": "todo",
-      "pr": null,
-      "session": null
-    },
-    {
-      "id": "F5-03",
-      "title": "Presagio y modificadores de piso",
-      "status": "todo",
-      "pr": null,
-      "session": null
-    },
-    {
-      "id": "F5-04",
-      "title": "Distribución de loot y enemigos por anillo",
-      "status": "todo",
-      "pr": null,
-      "session": null
-    },
-    {
-      "id": "F5-05",
-      "title": "Caminos alternativos según profesión",
-      "status": "todo",
-      "pr": null,
-      "session": null
-    },
-    {
-      "id": "F5-06",
-      "title": "Restos de clones anteriores y Fragmentos de memoria",
-      "status": "todo",
-      "pr": null,
-      "session": null
-    }
-  ]
+  "goal": "Pisos procedurales con semilla, tipos y presagios"
 }

@@ -1,0 +1,15 @@
+{
+  "id": "PG-02",
+  "phase": "PG",
+  "title": "Bootstrap del prototipo: escena Prototipo y nivel greybox desde el catálogo",
+  "status": "todo",
+  "type": "feature",
+  "labels": [
+    "greybox"
+  ],
+  "origin": "backlog",
+  "description": "",
+  "acceptance": [],
+  "pr": null,
+  "session": null
+}

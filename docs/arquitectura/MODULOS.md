@@ -22,6 +22,7 @@ Un módulo = un namespace C#. Abre solo la página del módulo que vayas a tocar
 | [Core.Loot](modulos/Core.Loot.md) | 6 | `DepthRings`, `IRingWeighting`, `LootDrop`, `LootEntry`, `LootTable` … | Core.Common, Core.Items, Core.Randomness |
 | [Core.Professions](modulos/Core.Professions.md) | 6 | `DefaultProfessionSynergies`, `ISynergyCatalog`, `ProfessionBench`, `ProfessionId`, `ProfessionSynergy` … | Core.Common |
 | [Core.Randomness](modulos/Core.Randomness.md) | 2 | `IRandom`, `Pcg32Random` | Core.Common |
+| [Core.Repair](modulos/Core.Repair.md) | 6 | `IRepairCatalog`, `RepairCatalog`, `RepairReport`, `RepairResult`, `RepairRule` … | Core.Common, Core.Items |
 | [Core.StateMachines](modulos/Core.StateMachines.md) | 3 | `IState`, `StateBase`, `StateMachine`, `Transition` | Core.Common, Core.Time |
 | [Core.Stats](modulos/Core.Stats.md) | 7 | `IStatFormula`, `ModifierKind`, `StandardStatFormula`, `Stat`, `StatModifier` … | Core.Common |
 | [Core.Time](modulos/Core.Time.md) | 4 | `IClock`, `ITickable`, `ManualClock`, `PhaseTimer` | Core.Common |
@@ -47,14 +48,15 @@ flowchart LR
   n13["Core.Loot"]
   n14["Core.Professions"]
   n15["Core.Randomness"]
-  n16["Core.StateMachines"]
-  n17["Core.Stats"]
-  n18["Core.Time"]
-  n19["Core.Vitals"]
+  n16["Core.Repair"]
+  n17["Core.StateMachines"]
+  n18["Core.Stats"]
+  n19["Core.Time"]
+  n20["Core.Vitals"]
   n0 --> n1
   n0 --> n2
   n1 --> n2
-  n1 --> n17
+  n1 --> n18
   n3 --> n2
   n3 --> n5
   n3 --> n14
@@ -67,30 +69,32 @@ flowchart LR
   n6 --> n9
   n6 --> n10
   n6 --> n11
-  n6 --> n16
-  n6 --> n18
+  n6 --> n17
+  n6 --> n19
   n7 --> n8
   n8 --> n2
   n9 --> n2
   n10 --> n7
   n10 --> n8
   n10 --> n9
-  n10 --> n16
-  n10 --> n18
+  n10 --> n17
+  n10 --> n19
   n11 --> n2
   n12 --> n2
   n12 --> n6
-  n12 --> n19
+  n12 --> n20
   n13 --> n2
   n13 --> n5
   n13 --> n15
   n14 --> n2
   n15 --> n2
   n16 --> n2
-  n16 --> n18
+  n16 --> n5
   n17 --> n2
+  n17 --> n19
   n18 --> n2
   n19 --> n2
-  n19 --> n17
-  n19 --> n18
+  n20 --> n2
+  n20 --> n18
+  n20 --> n19
 ```

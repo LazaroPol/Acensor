@@ -1,0 +1,15 @@
+{
+  "id": "F0-10",
+  "phase": "F0",
+  "title": "Migración a GitHub, PRs reales y documentación modular",
+  "status": "done",
+  "type": "infra",
+  "labels": [
+    "nucleo"
+  ],
+  "origin": "backlog",
+  "description": "",
+  "acceptance": [],
+  "pr": "#1",
+  "session": 2
+}

@@ -1,0 +1,15 @@
+{
+  "id": "F3-04",
+  "phase": "F3",
+  "title": "Recetas y crafting por profesión",
+  "status": "done",
+  "type": "feature",
+  "labels": [
+    "inventario"
+  ],
+  "origin": "backlog",
+  "description": "",
+  "acceptance": [],
+  "pr": "#21",
+  "session": 20
+}

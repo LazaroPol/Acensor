@@ -1,0 +1,15 @@
+{
+  "id": "F4-02",
+  "phase": "F4",
+  "title": "Mejora de módulos por niveles",
+  "status": "todo",
+  "type": "feature",
+  "labels": [
+    "ascensor"
+  ],
+  "origin": "backlog",
+  "description": "",
+  "acceptance": [],
+  "pr": null,
+  "session": null
+}

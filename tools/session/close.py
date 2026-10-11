@@ -21,9 +21,9 @@ def history_row(session: int, task_id: str, pr: int, done: int, total: int, date
 
 def close(task_id: str, pr: int, session: int, date: str = None) -> str:
     backlog = model.load()
-    phase = model.set_status(backlog, task_id, "done", f"#{pr}", session)
+    task = model.set_status(backlog, task_id, "done", f"#{pr}", session)
     model.validate(backlog)
-    model.save_phase(phase)
+    model.save_task(task)
     write_outputs(backlog)
     s = model.summarize(backlog)
     row = history_row(session, task_id, pr, s["done"], s["total"], date or datetime.date.today().isoformat())

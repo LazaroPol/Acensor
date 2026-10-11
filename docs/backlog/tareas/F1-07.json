@@ -1,0 +1,15 @@
+{
+  "id": "F1-07",
+  "phase": "F1",
+  "title": "Fin de iteración (victoria, todos caídos, abandono)",
+  "status": "done",
+  "type": "feature",
+  "labels": [
+    "bucle"
+  ],
+  "origin": "backlog",
+  "description": "",
+  "acceptance": [],
+  "pr": "#8",
+  "session": 9
+}

@@ -1,0 +1,15 @@
+{
+  "id": "PG-05",
+  "phase": "PG",
+  "title": "Guía de prueba manual en Unity y checklist de importación de assets",
+  "status": "todo",
+  "type": "docs",
+  "labels": [
+    "greybox"
+  ],
+  "origin": "backlog",
+  "description": "",
+  "acceptance": [],
+  "pr": null,
+  "session": null
+}

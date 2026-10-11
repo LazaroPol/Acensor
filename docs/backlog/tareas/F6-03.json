@@ -1,0 +1,16 @@
+{
+  "id": "F6-03",
+  "phase": "F6",
+  "title": "Percepción de IA (visión/oído) y modificadores de Atrapado",
+  "status": "todo",
+  "type": "feature",
+  "labels": [
+    "combate",
+    "ia"
+  ],
+  "origin": "backlog",
+  "description": "",
+  "acceptance": [],
+  "pr": null,
+  "session": null
+}

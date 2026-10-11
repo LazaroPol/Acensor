@@ -1,0 +1,15 @@
+{
+  "id": "F2-05",
+  "phase": "F2",
+  "title": "Armería con stock limitado por tipo",
+  "status": "done",
+  "type": "feature",
+  "labels": [
+    "personaje"
+  ],
+  "origin": "backlog",
+  "description": "",
+  "acceptance": [],
+  "pr": "#14",
+  "session": 14
+}

@@ -1,0 +1,15 @@
+{
+  "id": "F1-03",
+  "phase": "F1",
+  "title": "Máquina de estados de la iteración",
+  "status": "done",
+  "type": "feature",
+  "labels": [
+    "bucle"
+  ],
+  "origin": "backlog",
+  "description": "",
+  "acceptance": [],
+  "pr": "#4",
+  "session": 5
+}

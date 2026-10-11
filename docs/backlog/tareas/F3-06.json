@@ -1,0 +1,15 @@
+{
+  "id": "F3-06",
+  "phase": "F3",
+  "title": "Reparación de equipo",
+  "status": "done",
+  "type": "feature",
+  "labels": [
+    "inventario"
+  ],
+  "origin": "backlog",
+  "description": "",
+  "acceptance": [],
+  "pr": "#24",
+  "session": 22
+}

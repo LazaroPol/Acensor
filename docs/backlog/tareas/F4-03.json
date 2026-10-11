@@ -1,0 +1,15 @@
+{
+  "id": "F4-03",
+  "phase": "F4",
+  "title": "Hoguera: regeneración y recuperación de fatiga",
+  "status": "todo",
+  "type": "feature",
+  "labels": [
+    "ascensor"
+  ],
+  "origin": "backlog",
+  "description": "",
+  "acceptance": [],
+  "pr": null,
+  "session": null
+}

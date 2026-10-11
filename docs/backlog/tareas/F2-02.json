@@ -1,0 +1,15 @@
+{
+  "id": "F2-02",
+  "phase": "F2",
+  "title": "Recursos: vida, recurso de clase, stamina",
+  "status": "done",
+  "type": "feature",
+  "labels": [
+    "personaje"
+  ],
+  "origin": "backlog",
+  "description": "",
+  "acceptance": [],
+  "pr": "#11",
+  "session": 11
+}

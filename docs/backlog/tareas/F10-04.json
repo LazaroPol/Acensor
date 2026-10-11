@@ -1,0 +1,15 @@
+{
+  "id": "F10-04",
+  "phase": "F10",
+  "title": "UI del Laboratorio Genético",
+  "status": "todo",
+  "type": "feature",
+  "labels": [
+    "ui"
+  ],
+  "origin": "backlog",
+  "description": "",
+  "acceptance": [],
+  "pr": null,
+  "session": null
+}

@@ -1,0 +1,16 @@
+{
+  "id": "PG-06",
+  "phase": "PG",
+  "title": "Sistema de colisiones (épico)",
+  "status": "idea",
+  "type": "feature",
+  "labels": [
+    "fisica",
+    "greybox"
+  ],
+  "origin": "tablero",
+  "description": "Propuesta para dividir antes de pasarlo a Listo: 1) capas de física y matriz de colisiones (jugador, muros, enemigos/clones, triggers); 2) colliders del laberinto y muros generados; 3) movimiento sin atravesar paredes (CharacterController); 4) triggers de zona (ascensor, cambio de piso, día/noche); 5) tests PlayMode. Colliders independientes del modelo visual.",
+  "acceptance": [],
+  "pr": null,
+  "session": null
+}

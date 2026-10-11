@@ -1,0 +1,15 @@
+{
+  "id": "F3-05",
+  "phase": "F3",
+  "title": "Recetas de sinergia entre profesiones",
+  "status": "done",
+  "type": "feature",
+  "labels": [
+    "inventario"
+  ],
+  "origin": "backlog",
+  "description": "",
+  "acceptance": [],
+  "pr": "#23",
+  "session": 21
+}

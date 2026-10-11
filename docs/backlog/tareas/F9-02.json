@@ -1,0 +1,15 @@
+{
+  "id": "F9-02",
+  "phase": "F9",
+  "title": "Aplicación de mutaciones al nuevo clon",
+  "status": "todo",
+  "type": "feature",
+  "labels": [
+    "meta"
+  ],
+  "origin": "backlog",
+  "description": "",
+  "acceptance": [],
+  "pr": null,
+  "session": null
+}

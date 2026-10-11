@@ -1,0 +1,15 @@
+{
+  "id": "F5-04",
+  "phase": "F5",
+  "title": "Distribución de loot y enemigos por anillo",
+  "status": "todo",
+  "type": "feature",
+  "labels": [
+    "pisos"
+  ],
+  "origin": "backlog",
+  "description": "",
+  "acceptance": [],
+  "pr": null,
+  "session": null
+}

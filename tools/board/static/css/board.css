@@ -1,0 +1,68 @@
+.board {
+  flex: 1;
+  display: flex;
+  gap: 12px;
+  padding: 0 16px 16px;
+  overflow-x: auto;
+  align-items: flex-start;
+  min-height: 0;
+}
+.column {
+  flex: 1 0 230px;
+  max-width: 320px;
+  background: var(--column);
+  border-radius: var(--radius);
+  display: flex;
+  flex-direction: column;
+  max-height: 100%;
+}
+.column header { padding: 10px 12px 4px; }
+.column h2 { font-size: 13px; text-transform: uppercase; letter-spacing: .4px; margin: 0; display: flex; gap: 6px; }
+.column h2 .count { color: var(--muted); font-weight: 400; }
+.column .hint { color: var(--muted); font-size: 12px; margin-top: 2px; }
+.column.collapsed { flex-basis: 140px; }
+.column .cards {
+  padding: 6px 8px 10px;
+  overflow-y: auto;
+  min-height: 60px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+.column.over { outline: 2px dashed var(--accent); outline-offset: -2px; }
+
+.card {
+  background: var(--panel);
+  border-radius: 6px;
+  box-shadow: var(--shadow);
+  padding: 8px 10px;
+  cursor: grab;
+  border-left: 4px solid var(--type, var(--border));
+}
+.card:hover { outline: 1px solid var(--accent); }
+.card.dragging { opacity: .4; }
+.card .top { display: flex; justify-content: space-between; gap: 6px; color: var(--muted); font-size: 12px; }
+.card .id { font-weight: 600; font-variant-numeric: tabular-nums; }
+.card .rank { background: var(--accent); color: var(--accent-text); border-radius: 10px; padding: 0 7px; }
+.card .title { margin: 4px 0 6px; }
+.card .meta { display: flex; gap: 4px; flex-wrap: wrap; }
+.card .foot { color: var(--muted); font-size: 12px; margin-top: 4px; }
+.card.new { border-top: 1px dashed var(--accent); }
+
+.chip {
+  display: inline-block;
+  font-size: 11px;
+  padding: 1px 7px;
+  border-radius: 10px;
+  color: #fff;
+  background: var(--c, #6b778c);
+  white-space: nowrap;
+}
+.chip.phase { background: transparent; color: var(--muted); border: 1px solid var(--border); }
+.placeholder { height: 4px; border-radius: 2px; background: var(--accent); }
+
+@media (max-width: 700px) {
+  .board { flex-direction: column; overflow-x: hidden; }
+  .column { flex: none; width: 100%; max-height: none; }
+  .column.collapsed { flex-basis: auto; }
+}

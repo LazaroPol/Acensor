@@ -4,7 +4,7 @@
   python3 -m tools.progress --check            falla si los ficheros generados no están al día
   python3 -m tools.progress --start F1-01      marca la tarea en curso
   python3 -m tools.progress --done F1-01 --pr '#12' --session 3
-  python3 -m tools.progress --next             imprime la siguiente tarea pendiente
+  python3 -m tools.progress --next             imprime la siguiente tarea (cola de prioridad del tablero)
 """
 import argparse
 import sys
@@ -12,9 +12,9 @@ import sys
 from . import model, render
 
 
-def write_outputs(backlog: dict) -> None:
+def write_outputs(backlog: dict, backlog_dir=None) -> None:
     for rel, content in render.outputs(backlog).items():
-        (model.BACKLOG_DIR / rel).write_text(content, encoding="utf-8")
+        ((backlog_dir or model.BACKLOG_DIR) / rel).write_text(content, encoding="utf-8")
 
 
 def stale_outputs(backlog: dict) -> list:
@@ -48,9 +48,9 @@ def main(argv=None) -> int:
     if args.start or args.done:
         tid = args.start or args.done
         status = "in_progress" if args.start else "done"
-        phase = model.set_status(backlog, tid, status, args.pr, args.session)
+        task = model.set_status(backlog, tid, status, args.pr, args.session)
         model.validate(backlog)
-        model.save_phase(phase)
+        model.save_task(task)
     write_outputs(backlog)
     s = model.summarize(backlog)
     print(f"{render.bar(s['pct'])} {s['pct']}% ({s['done']}/{s['total']})")

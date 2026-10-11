@@ -1,0 +1,15 @@
+{
+  "id": "F1-06",
+  "phase": "F1",
+  "title": "Estado Atrapado y Hueco de Emergencia",
+  "status": "done",
+  "type": "feature",
+  "labels": [
+    "bucle"
+  ],
+  "origin": "backlog",
+  "description": "",
+  "acceptance": [],
+  "pr": "#7",
+  "session": 8
+}

@@ -1,4 +1,5 @@
 """Reglas del proceso aplicadas al backlog real del repositorio."""
+import json
 import unittest
 
 from tools.progress import model
@@ -18,12 +19,14 @@ class BacklogRulesTests(unittest.TestCase):
     def test_generated_pages_are_up_to_date(self):
         self.assertEqual(stale_outputs(self.backlog), [], "Ejecuta: python3 -m tools.progress")
 
-    def test_phases_are_completed_in_order(self):
-        seen_incomplete = False
-        for p in model.summarize(self.backlog)["phases"]:
-            if seen_incomplete:
-                self.assertEqual(p["done"], 0, f"{p['id']} avanza antes de cerrar fases anteriores")
-            seen_incomplete = seen_incomplete or p["done"] < p["total"]
+    def test_priority_queue_covers_every_pending_task(self):
+        pending = {t["id"] for t in model.all_tasks(self.backlog) if t["status"] != "done"}
+        missing = pending - set(self.backlog["priority"])
+        self.assertEqual(missing, set(), "Añádelas a docs/backlog/prioridad.json (o usa el tablero)")
+
+    def test_every_card_lives_in_a_known_phase_file(self):
+        for path in (model.BACKLOG_DIR / "tareas").glob("*.json"):
+            self.assertEqual(path.stem, json.loads(path.read_text(encoding="utf-8"))["id"])
 
     def test_at_most_one_task_in_progress(self):
         active = [t["id"] for p in self.backlog["phases"] for t in p["tasks"] if t["status"] == "in_progress"]

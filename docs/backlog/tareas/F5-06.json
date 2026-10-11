@@ -1,0 +1,15 @@
+{
+  "id": "F5-06",
+  "phase": "F5",
+  "title": "Restos de clones anteriores y Fragmentos de memoria",
+  "status": "todo",
+  "type": "feature",
+  "labels": [
+    "pisos"
+  ],
+  "origin": "backlog",
+  "description": "",
+  "acceptance": [],
+  "pr": null,
+  "session": null
+}

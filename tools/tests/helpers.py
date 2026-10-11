@@ -11,7 +11,7 @@ def make_backlog(tasks_by_phase):
         tasks = []
         for n, st in enumerate(statuses, 1):
             done = st == "done"
-            tasks.append({"id": f"{pid}-{n:02d}", "title": "t", "status": st,
+            tasks.append({"id": f"{pid}-{n:02d}", "phase": pid, "title": "t", "status": st, "origin": "backlog",
                           "pr": "#1" if done else None, "session": n if done else None})
         phases.append({"id": pid, "name": pid, "goal": "", "tasks": tasks})
-    return {"project": "T", "engine": "Unity", "phases": phases}
+    return {"project": "T", "engine": "Unity", "phases": phases, "priority": []}

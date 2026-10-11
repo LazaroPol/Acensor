@@ -1,0 +1,15 @@
+{
+  "id": "F9-03",
+  "phase": "F9",
+  "title": "Fragmentos de memoria y desbloqueo de lore",
+  "status": "todo",
+  "type": "feature",
+  "labels": [
+    "meta"
+  ],
+  "origin": "backlog",
+  "description": "",
+  "acceptance": [],
+  "pr": null,
+  "session": null
+}

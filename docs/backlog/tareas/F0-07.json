@@ -1,0 +1,15 @@
+{
+  "id": "F0-07",
+  "phase": "F0",
+  "title": "Núcleo: bus de eventos tipado",
+  "status": "done",
+  "type": "infra",
+  "labels": [
+    "nucleo"
+  ],
+  "origin": "backlog",
+  "description": "",
+  "acceptance": [],
+  "pr": "PR-007",
+  "session": 1
+}

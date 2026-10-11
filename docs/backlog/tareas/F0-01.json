@@ -1,0 +1,15 @@
+{
+  "id": "F0-01",
+  "phase": "F0",
+  "title": "Estructura del proyecto Unity y puerta de merge",
+  "status": "done",
+  "type": "infra",
+  "labels": [
+    "nucleo"
+  ],
+  "origin": "backlog",
+  "description": "",
+  "acceptance": [],
+  "pr": "PR-001",
+  "session": 1
+}

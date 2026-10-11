@@ -1,0 +1,15 @@
+{
+  "id": "F2-03",
+  "phase": "F2",
+  "title": "Fatiga entre pisos",
+  "status": "done",
+  "type": "feature",
+  "labels": [
+    "personaje"
+  ],
+  "origin": "backlog",
+  "description": "",
+  "acceptance": [],
+  "pr": "#12",
+  "session": 12
+}

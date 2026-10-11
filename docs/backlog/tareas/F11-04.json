@@ -1,0 +1,15 @@
+{
+  "id": "F11-04",
+  "phase": "F11",
+  "title": "Replicación de jugadores, combate y loot",
+  "status": "todo",
+  "type": "feature",
+  "labels": [
+    "red"
+  ],
+  "origin": "backlog",
+  "description": "",
+  "acceptance": [],
+  "pr": null,
+  "session": null
+}

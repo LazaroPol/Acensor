@@ -8,8 +8,8 @@ Cada chat hace **solo la siguiente tarea** del backlog y al terminar programa el
 Runbook completo: [`docs/sesiones/RUNBOOK.md`](docs/sesiones/RUNBOOK.md).
 
 ## Ahorro de tokens (obligatorio)
-- No leas el repo entero. Empieza por `python3 -m tools.progress --next` y la página de su fase en
-  `docs/backlog/fases/<FASE>.md`; del GDD lee **solo** la sección que toque (`docs/gdd/README.md` es el índice).
+- No leas el repo entero. Empieza por `python3 -m tools.progress --next` y su tarjeta
+  `docs/backlog/tareas/<ID>.json` (descripción y criterios); del GDD lee **solo** la sección que toque (`docs/gdd/README.md` es el índice).
 - **Mapa del código**: [`docs/arquitectura/README.md`](docs/arquitectura/README.md) (C4) y [`MODULOS.md`](docs/arquitectura/MODULOS.md) (índice
   por módulo, generado). Localiza el módulo y lee solo su página en `modulos/`. Si añades/mueves tipos: `python3 -m tools.arch`.
 - Lee solo los ficheros que vas a tocar o de los que dependes directamente (usa `grep -rl` para encontrarlos).
@@ -23,4 +23,4 @@ Runbook completo: [`docs/sesiones/RUNBOOK.md`](docs/sesiones/RUNBOOK.md).
 - Ningún fichero de texto supera 120 líneas: divide en clases/ficheros pequeños (clases parciales si hace falta).
 - SOLID: interfaces pequeñas, inyección por constructor, estados/estrategias en clases propias.
 - Warnings = errores. Todo cambio de lógica lleva tests NUnit.
-- Fases en orden; como mucho una tarea en curso.
+- Manda la cola de prioridad del tablero (`docs/tablero.md`); como mucho una tarea en curso.

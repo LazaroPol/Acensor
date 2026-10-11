@@ -1,0 +1,15 @@
+{
+  "id": "F0-05",
+  "phase": "F0",
+  "title": "Integración continua (GitHub Actions)",
+  "status": "done",
+  "type": "infra",
+  "labels": [
+    "nucleo"
+  ],
+  "origin": "backlog",
+  "description": "",
+  "acceptance": [],
+  "pr": "PR-005",
+  "session": 1
+}

@@ -1,0 +1,15 @@
+{
+  "id": "F0-03",
+  "phase": "F0",
+  "title": "GDD fusionado",
+  "status": "done",
+  "type": "docs",
+  "labels": [
+    "nucleo"
+  ],
+  "origin": "backlog",
+  "description": "",
+  "acceptance": [],
+  "pr": "PR-003",
+  "session": 1
+}

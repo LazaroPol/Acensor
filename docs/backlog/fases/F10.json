@@ -1,49 +1,5 @@
 {
   "id": "F10",
   "name": "Presentación en Unity",
-  "goal": "Escenas, control, HUD y estilo visual",
-  "tasks": [
-    {
-      "id": "F10-01",
-      "title": "Bootstrap de escenas e inyección de dependencias",
-      "status": "todo",
-      "pr": null,
-      "session": null
-    },
-    {
-      "id": "F10-02",
-      "title": "Controlador del jugador y cámara",
-      "status": "todo",
-      "pr": null,
-      "session": null
-    },
-    {
-      "id": "F10-03",
-      "title": "HUD: temporizador, recursos, avisos",
-      "status": "todo",
-      "pr": null,
-      "session": null
-    },
-    {
-      "id": "F10-04",
-      "title": "UI del Laboratorio Genético",
-      "status": "todo",
-      "pr": null,
-      "session": null
-    },
-    {
-      "id": "F10-05",
-      "title": "Dualidad cromática: Volumes URP y shader toon con contornos",
-      "status": "todo",
-      "pr": null,
-      "session": null
-    },
-    {
-      "id": "F10-06",
-      "title": "Escena del Ascensor y Armería jugables",
-      "status": "todo",
-      "pr": null,
-      "session": null
-    }
-  ]
+  "goal": "Escenas, control, HUD y estilo visual"
 }

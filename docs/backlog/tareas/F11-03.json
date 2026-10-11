@@ -1,0 +1,15 @@
+{
+  "id": "F11-03",
+  "phase": "F11",
+  "title": "Lobby y conexión",
+  "status": "todo",
+  "type": "feature",
+  "labels": [
+    "red"
+  ],
+  "origin": "backlog",
+  "description": "",
+  "acceptance": [],
+  "pr": null,
+  "session": null
+}

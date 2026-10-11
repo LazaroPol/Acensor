@@ -1,0 +1,15 @@
+{
+  "id": "F2-07",
+  "phase": "F2",
+  "title": "Muerte, Espectro y revivir",
+  "status": "done",
+  "type": "feature",
+  "labels": [
+    "personaje"
+  ],
+  "origin": "backlog",
+  "description": "",
+  "acceptance": [],
+  "pr": "#16",
+  "session": 16
+}

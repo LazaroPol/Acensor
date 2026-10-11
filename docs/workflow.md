@@ -1,7 +1,8 @@
 # Flujo de trabajo
 
 ## Una tarea = una sesión
-1. Se toma la siguiente tarea del backlog (`python3 -m tools.progress --next`). Siempre en orden.
+1. Se toma la siguiente tarea (`python3 -m tools.progress --next`): la primera de «Listo» en la cola de
+   prioridad del [tablero](tablero.md). Se leen su tarjeta (`docs/backlog/tareas/<ID>.json`) y sus criterios.
 2. Se marca en curso (`--start <ID>`) en una rama `feature/<ID>-<slug>`.
 3. Se implementa con tests (TDD cuando aplica). Principios SOLID; núcleo sin `UnityEngine`.
 4. `tools/git/open_pr.sh` abre la PR en GitHub solo si `tools/verify.sh` pasa.
@@ -14,7 +15,7 @@
 ## Reglas que imponen los tests
 - Ningún fichero de texto supera 120 líneas: muchos ficheros pequeños.
 - `Specimen.Core` no usa `UnityEngine` ni depende de `Specimen.Runtime`.
-- Las fases se completan en orden y solo hay una tarea en curso.
+- La cola `prioridad.json` contiene todas las tareas pendientes y solo hay una tarea en curso.
 - Cada sesión cerrada tiene informe y aparece en el historial; desde la sesión 2, una sola tarea por sesión.
 - Las páginas generadas del backlog están al día.
 
