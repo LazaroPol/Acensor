@@ -34,9 +34,9 @@
     {
       "id": "F2-05",
       "title": "Armería con stock limitado por tipo",
-      "status": "in_progress",
-      "pr": null,
-      "session": null
+      "status": "done",
+      "pr": "#14",
+      "session": 14
     },
     {
       "id": "F2-06",
