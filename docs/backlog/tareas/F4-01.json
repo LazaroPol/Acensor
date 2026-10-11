@@ -2,7 +2,7 @@
   "id": "F4-01",
   "phase": "F4",
   "title": "Ranuras de módulo y construcción con materiales",
-  "status": "in_progress",
+  "status": "done",
   "type": "feature",
   "labels": [
     "ascensor"
@@ -17,6 +17,6 @@
     "Los módulos construidos persisten hasta que se reinicia la plataforma (nueva iteración) y se notifica cada construcción.",
     "Tests NUnit cubren éxito y cada fallo."
   ],
-  "pr": null,
-  "session": null
+  "pr": "#37",
+  "session": 29
 }
