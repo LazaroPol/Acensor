@@ -12,7 +12,8 @@ namespace Specimen.Tests.Core.Elevator
             new ItemDefinition("piedra", "Piedra", ItemCategory.Material, Rarity.Common, 0, 10);
 
         public static ModuleBlueprint BonfirePlan() => new ModuleBlueprint(ModuleType.Bonfire,
-            new[] { new RecipeIngredient(Wood, 3), new RecipeIngredient(Stone, 2) });
+            new[] { new RecipeIngredient(Wood, 3), new RecipeIngredient(Stone, 2) },
+            new[] { new[] { new RecipeIngredient(Wood, 2) }, new[] { new RecipeIngredient(Stone, 3) } });
 
         public static ModuleBlueprint ForgePlan() => new ModuleBlueprint(ModuleType.Forge,
             new[] { new RecipeIngredient(Stone, 4) });

@@ -10,7 +10,7 @@ namespace Specimen.Core.Elevator
     /// Plataforma del Ascensor-Refugio (GDD §6): ranuras donde se construyen módulos pagando
     /// materiales. Cada tipo de módulo se construye una sola vez y persiste hasta <see cref="Reset"/>.
     /// </summary>
-    public sealed class ElevatorPlatform
+    public sealed partial class ElevatorPlatform
     {
         private readonly ModuleSlot[] _slots;
         private readonly IBlueprintCatalog _catalog;
@@ -35,7 +35,7 @@ namespace Specimen.Core.Elevator
             Guard.NotNull(inventory, nameof(inventory));
             var check = Validate(slotIndex, type, inventory, out var blueprint);
             if (check != BuildResult.Built) return check;
-            foreach (var c in blueprint.Cost) inventory.Remove(c.ItemId, c.Quantity);
+            ModuleBlueprint.Pay(blueprint.Cost, inventory);
             _slots[slotIndex].Place(type);
             ModuleBuilt?.Invoke(_slots[slotIndex]);
             return BuildResult.Built;

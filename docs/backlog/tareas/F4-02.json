@@ -2,14 +2,20 @@
   "id": "F4-02",
   "phase": "F4",
   "title": "Mejora de módulos por niveles",
-  "status": "todo",
+  "status": "done",
   "type": "feature",
   "labels": [
     "ascensor"
   ],
   "origin": "backlog",
-  "description": "",
-  "acceptance": [],
-  "pr": null,
-  "session": null
+  "description": "Algunos módulos del Ascensor-Refugio pueden subir de nivel (GDD §6) pagando materiales; el plano define el coste de cada mejora y el nivel máximo.",
+  "acceptance": [
+    "Los módulos se construyen a nivel 1; el plano define una lista opcional de costes de mejora (nivel máximo = 1 + nº de mejoras).",
+    "Mejorar una ranura con módulo consume de forma atómica el coste del siguiente nivel y sube su nivel.",
+    "Mejorar falla sin tocar el inventario si la ranura no existe, está vacía, el módulo está al nivel máximo o faltan materiales.",
+    "Se notifica cada mejora y el nivel vuelve a 0 al reiniciar la plataforma.",
+    "Tests NUnit cubren éxito y cada fallo."
+  ],
+  "pr": "#38",
+  "session": 30
 }
