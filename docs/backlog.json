@@ -53,8 +53,8 @@
         {
           "id": "F0-08",
           "title": "Núcleo: máquina de estados genérica",
-          "status": "todo",
-          "pr": null
+          "status": "done",
+          "pr": "PR-008"
         },
         {
           "id": "F0-09",
