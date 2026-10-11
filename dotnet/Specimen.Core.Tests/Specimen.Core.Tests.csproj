@@ -1,0 +1,18 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <!-- Ejecuta los tests EditMode de Unity fuera del editor (NUnitLite), sin licencia ni NuGet -->
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>net8.0</TargetFramework>
+    <AssemblyName>Specimen.Core.Tests</AssemblyName>
+    <RootNamespace>Specimen.Tests</RootNamespace>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="Program.cs" />
+    <Compile Include="../../Assets/_Project/Tests/EditMode/Core/**/*.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="../Specimen.Core/Specimen.Core.csproj" />
+    <Reference Include="nunit.framework"><HintPath>../../tools/nunit/nunit.framework.dll</HintPath></Reference>
+    <Reference Include="nunitlite"><HintPath>../../tools/nunit/nunitlite.dll</HintPath></Reference>
+  </ItemGroup>
+</Project>

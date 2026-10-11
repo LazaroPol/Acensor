@@ -1,0 +1,11 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <!-- Compila EXACTAMENTE las mismas fuentes que el asmdef Specimen.Core de Unity -->
+  <PropertyGroup>
+    <TargetFramework>netstandard2.1</TargetFramework>
+    <AssemblyName>Specimen.Core</AssemblyName>
+    <RootNamespace>Specimen.Core</RootNamespace>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="../../Assets/_Project/Scripts/Core/**/*.cs" />
+  </ItemGroup>
+</Project>
