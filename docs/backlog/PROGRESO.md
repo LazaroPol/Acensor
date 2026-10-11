@@ -25,8 +25,8 @@ TOTAL  ███████████████████░░░░░�
 
 ## Cola de prioridad (tablero)
 
-1. **F6-04** Habilidades de clase y rasgos de movilidad
-2. **F6-05** Jefe del Acto I con fases
-3. **F7-01** Sistema de votación (mayoría y desempate)
-4. **F7-02** Registro de Ecos
-5. **F7-03** Consecuencias que alteran pisos futuros
+1. **F6-05** Jefe del Acto I con fases
+2. **F7-01** Sistema de votación (mayoría y desempate)
+3. **F7-02** Registro de Ecos
+4. **F7-03** Consecuencias que alteran pisos futuros
+5. **F7-04** Decisiones secretas individuales
