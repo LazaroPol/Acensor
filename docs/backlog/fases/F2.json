@@ -41,9 +41,9 @@
     {
       "id": "F2-06",
       "title": "Selección de profesión",
-      "status": "in_progress",
-      "pr": null,
-      "session": null
+      "status": "done",
+      "pr": "#15",
+      "session": 15
     },
     {
       "id": "F2-07",
