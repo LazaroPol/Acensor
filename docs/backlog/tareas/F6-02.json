@@ -2,15 +2,21 @@
   "id": "F6-02",
   "phase": "F6",
   "title": "Enemigos con escalado por profundidad",
-  "status": "todo",
+  "status": "done",
   "type": "feature",
   "labels": [
     "combate",
     "ia"
   ],
   "origin": "backlog",
-  "description": "",
-  "acceptance": [],
-  "pr": null,
-  "session": null
+  "description": "Estadísticas de enemigo (vida, daño, armadura) escaladas por piso y anillo de profundidad, con arquetipos que producen instancias listas para el combate.",
+  "acceptance": [
+    "EnemyStats valida vida/daño > 0 y armadura >= 0.",
+    "EnemyDepth valida piso >= 1 y anillo en [1, 3].",
+    "IDepthScaling + LinearDepthScaling: piso 1 anillo 1 deja las estadísticas base; crecen con el piso y con el anillo; la armadura con su propio ritmo.",
+    "EnemyFactory crea un Enemy a partir de un arquetipo y una profundidad, con DefenseProfile que conserva las resistencias del arquetipo.",
+    "Tests NUnit para validación, monotonía y fábrica."
+  ],
+  "pr": "#56",
+  "session": 41
 }

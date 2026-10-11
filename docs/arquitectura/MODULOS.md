@@ -9,6 +9,7 @@ Un módulo = un namespace C#. Abre solo la página del módulo que vayas a tocar
 | [Core.Armory](modulos/Core.Armory.md) | 3 | `ArmoryStock`, `ClassKitArmory`, `IArmoryStock` | Core.Classes, Core.Common |
 | [Core.Classes](modulos/Core.Classes.md) | 8 | `ClassKit`, `ClassKitCatalog`, `ClassKitId`, `ClassResourceType`, `ClassRole` … | Core.Common, Core.Stats |
 | [Core.Combat](modulos/Core.Combat.md) | 8 | `ArmorMitigation`, `CritRules`, `DamageCalculator`, `DamageResult`, `DamageType` … | Core.Common, Core.Randomness |
+| [Core.Combat.Enemies](modulos/Core.Combat.Enemies.md) | 8 | `DepthScalingConfig`, `Enemy`, `EnemyArchetype`, `EnemyDepth`, `EnemyFactory` … | Core.Common, Core.Loot |
 | [Core.Common](modulos/Core.Common.md) | 1 | `Guard` | — |
 | [Core.Crafting](modulos/Core.Crafting.md) | 11 | `CraftResult`, `CraftTransaction`, `Crafter`, `IRecipeBook`, `ISynergyRecipeBook` … | Core.Common, Core.Items, Core.Professions |
 | [Core.Elevator](modulos/Core.Elevator.md) | 18 | `BlueprintCatalog`, `BonfireConfig`, `BonfireRest`, `BuildResult`, `Bunk` … | Core.Common, Core.Crafting, Core.Items, Core.Iteration, Core.Life, Core.Stats, Core.Time, Core.Vitals |
@@ -42,77 +43,4 @@ Un módulo = un namespace C#. Abre solo la página del módulo que vayas a tocar
 | [Runtime.Prototype](modulos/Runtime.Prototype.md) | 7 | `DebugHud`, `PlayerMotor`, `PrototypeBootstrap`, `PrototypeInput`, `PrototypePlayer` … | Core.Movement, Core.Prototype, Core.Stats, Core.Time, Core.Visuals, Core.Vitals, Runtime.Visuals |
 | [Runtime.Visuals](modulos/Runtime.Visuals.md) | 3 | `CatalogoVisual`, `GreyboxFactory`, `VisualSpawner` | Core.Prototype, Core.Visuals |
 
-## Grafo de dependencias (flecha = «usa a»)
-
-```mermaid
-flowchart LR
-  n0["Core.Armory"]
-  n1["Core.Classes"]
-  n2["Core.Combat"]
-  n3["Core.Common"]
-  n4["Core.Crafting"]
-  n5["Core.Elevator"]
-  n6["Core.Events"]
-  n7["Core.Floors"]
-  n8["Core.Floors.Omens"]
-  n9["Core.Floors.Paths"]
-  n10["Core.Floors.Population"]
-  n11["Core.Floors.Remnants"]
-  n12["Core.Floors.Types"]
-  n13["Core.Items"]
-  n14["Core.Iteration"]
-  n15["Core.Iteration.Ending"]
-  n16["Core.Iteration.Presence"]
-  n17["Core.Iteration.Readiness"]
-  n18["Core.Iteration.States"]
-  n19["Core.Iteration.Voting"]
-  n20["Core.Life"]
-  n21["Core.Loot"]
-  n22["Core.Movement"]
-  n23["Core.Physics"]
-  n24["Core.Professions"]
-  n25["Core.Prototype"]
-  n26["Core.Randomness"]
-  n27["Core.Repair"]
-  n28["Core.StateMachines"]
-  n29["Core.Stats"]
-  n30["Core.Time"]
-  n31["Core.Visuals"]
-  n32["Core.Vitals"]
-  n33["Runtime.Prototype"]
-  n34["Runtime.Visuals"]
-  n0 --> n1 & n3
-  n1 --> n3 & n29
-  n2 --> n3 & n26
-  n4 --> n3 & n13 & n24
-  n5 --> n3 & n4 & n13 & n14 & n20 & n29 & n30 & n32
-  n6 --> n3
-  n7 --> n3 & n21 & n26
-  n8 --> n3 & n12 & n26
-  n9 --> n3 & n24 & n26
-  n10 --> n3 & n21 & n26
-  n11 --> n3 & n21 & n26
-  n12 --> n3
-  n13 --> n3
-  n14 --> n3 & n6 & n15 & n16 & n17 & n18 & n19 & n28 & n30
-  n15 --> n16
-  n16 --> n3
-  n17 --> n3
-  n18 --> n15 & n16 & n17 & n28 & n30
-  n19 --> n3
-  n20 --> n3 & n14 & n32
-  n21 --> n3 & n13 & n26
-  n22 --> n3 & n32
-  n23 --> n3
-  n24 --> n3
-  n25 --> n3 & n23 & n30 & n31 & n32
-  n26 --> n3
-  n27 --> n3 & n13
-  n28 --> n3 & n30
-  n29 --> n3
-  n30 --> n3
-  n31 --> n3
-  n32 --> n3 & n29 & n30
-  n33 --> n22 & n25 & n29 & n30 & n31 & n32 & n34
-  n34 --> n25 & n31
-```
+Grafo de dependencias entre módulos: [GRAFO.md](GRAFO.md).

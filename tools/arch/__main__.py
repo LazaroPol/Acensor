@@ -1,6 +1,6 @@
 """CLI del índice de arquitectura.
 
-  python3 -m tools.arch           regenera docs/arquitectura/MODULOS.md y modulos/*.md
+  python3 -m tools.arch           regenera docs/arquitectura/MODULOS.md, GRAFO.md y modulos/*.md
   python3 -m tools.arch --check   falla si lo generado no está al día
 """
 import argparse

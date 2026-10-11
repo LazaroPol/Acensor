@@ -6,7 +6,7 @@ Mapa para **no leer el repo entero**: elige el nivel que necesitas y baja solo h
 |---|---|---|
 | 1 Contexto | Quién usa el sistema y con qué se relaciona | este fichero |
 | 2 Contenedores | Ensamblados, proyectos y herramientas | este fichero |
-| 3 Componentes | Módulos (namespaces), tipos y dependencias | [MODULOS.md](MODULOS.md) (generado) |
+| 3 Componentes | Módulos (namespaces), tipos y dependencias | [MODULOS.md](MODULOS.md) y [GRAFO.md](GRAFO.md) (generados) |
 | 4 Código | Un fichero concreto | `modulos/<Módulo>.md` indica carpeta, tests y qué hace cada fichero |
 
 ## Nivel 1 · Contexto
