@@ -64,12 +64,17 @@ def render_index(modules: dict) -> str:
         shown = ", ".join(f"`{n}`" for n in names[:5]) + (" …" if len(names) > 5 else "")
         deps = ", ".join(short(d) for d in sorted(mod["deps"])) or "—"
         out.append(f"| {link(ns, 'modulos/')} | {len(mod['files'])} | {shown} | {deps} |")
-    out += ["", "## Grafo de dependencias (flecha = «usa a»)\n", mermaid(modules)]
+    out += ["", "Grafo de dependencias entre módulos: [GRAFO.md](GRAFO.md)."]
+    return "\n".join(out) + "\n"
+
+
+def render_graph(modules: dict) -> str:
+    out = [HEADER, "# Grafo de dependencias (flecha = «usa a»)\n", mermaid(modules)]
     return "\n".join(out) + "\n"
 
 
 def outputs(modules: dict) -> dict:
-    files = {"MODULOS.md": render_index(modules)}
+    files = {"MODULOS.md": render_index(modules), "GRAFO.md": render_graph(modules)}
     for ns in modules:
         files["modulos/" + page_name(ns)] = render_module(modules, ns)
     return files

@@ -48,9 +48,9 @@ class ScanTests(unittest.TestCase):
             modules = build(pathlib.Path(d))
         text = render.render_index(modules)
         self.assertIn("[Core.A](modulos/Core.A.md) | 1 | `Thing`, `Kind` | Core.B", text)
-        self.assertIn("n0 --> n1", text)
+        self.assertIn("n0 --> n1", render.render_graph(modules))
         self.assertEqual(sorted(render.outputs(modules)),
-                         ["MODULOS.md", "modulos/Core.A.md", "modulos/Core.B.md"])
+                         ["GRAFO.md", "MODULOS.md", "modulos/Core.A.md", "modulos/Core.B.md"])
 
 
 class RepoIndexTests(unittest.TestCase):
