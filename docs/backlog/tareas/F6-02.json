@@ -2,7 +2,7 @@
   "id": "F6-02",
   "phase": "F6",
   "title": "Enemigos con escalado por profundidad",
-  "status": "in_progress",
+  "status": "done",
   "type": "feature",
   "labels": [
     "combate",
@@ -17,6 +17,6 @@
     "EnemyFactory crea un Enemy a partir de un arquetipo y una profundidad, con DefenseProfile que conserva las resistencias del arquetipo.",
     "Tests NUnit para validación, monotonía y fábrica."
   ],
-  "pr": null,
-  "session": null
+  "pr": "#56",
+  "session": 41
 }
