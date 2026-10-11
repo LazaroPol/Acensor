@@ -13,9 +13,9 @@
     {
       "id": "F1-02",
       "title": "Temporizador de fase con avisos (60 s / 15 s)",
-      "status": "todo",
-      "pr": null,
-      "session": null
+      "status": "done",
+      "pr": "#3",
+      "session": 4
     },
     {
       "id": "F1-03",
