@@ -34,9 +34,9 @@
     {
       "id": "F1-05",
       "title": "Voto de cierre anticipado de puertas",
-      "status": "in_progress",
-      "pr": null,
-      "session": null
+      "status": "done",
+      "pr": "#6",
+      "session": 7
     },
     {
       "id": "F1-06",

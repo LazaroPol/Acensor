@@ -10,3 +10,4 @@ Cada sesión finalizada tiene su resumen. Desde la sesión 2, **una sesión = un
 | 4 | F1-02 | 2026-10-11 | [#3](https://github.com/LazaroPol/Acensor/pull/3) | 12/73 · 16,4 % | [SESION-04](SESION-04.md) |
 | 5 | F1-03 | 2026-10-11 | [#4](https://github.com/LazaroPol/Acensor/pull/4) | 13/73 · 17,8 % | [SESION-05](SESION-05.md) |
 | 6 | F1-04 | 2026-10-11 | [#5](https://github.com/LazaroPol/Acensor/pull/5) | 14/73 · 19,2 % | [SESION-06](SESION-06.md) |
+| 7 | F1-05 | 2026-10-11 | [#6](https://github.com/LazaroPol/Acensor/pull/6) | 15/73 · 20,5 % | [SESION-07](SESION-07.md) |
