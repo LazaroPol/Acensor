@@ -15,7 +15,7 @@ _Repositorio, arquitectura por capas, tests y flujo de PRs_
 - ✅ **F0-06** Núcleo: abstracciones de tiempo y aleatoriedad (IClock, IRandom) — PR-006
 - ✅ **F0-07** Núcleo: bus de eventos tipado — PR-007
 - ✅ **F0-08** Núcleo: máquina de estados genérica — PR-008
-- ⬜ **F0-09** Historial de sesiones e informe de la Sesión 1
+- ✅ **F0-09** Historial de sesiones e informe de la Sesión 1 — PR-009
 
 ## F1 — Bucle de iteración (Sesión 2)
 
