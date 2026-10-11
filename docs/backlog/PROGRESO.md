@@ -1,10 +1,10 @@
 # Progreso — SPECIMEN
 
 ```
-TOTAL  ████████████████░░░░░░░░░░░░░░  54.4%  (43/79 tareas)
+TOTAL  █████████████████░░░░░░░░░░░░░  55.7%  (44/79 tareas)
 ```
 
-**Fase en curso:** F5 · **Siguiente tarea:** F5-03
+**Fase en curso:** F5 · **Siguiente tarea:** F5-04
 
 | Fase | Progreso | % | Tareas |
 |---|---|---|---|
@@ -14,7 +14,7 @@ TOTAL  ████████████████░░░░░░░░�
 | [F3 · Inventario, loot y crafting](fases/F3.md) | `███████████████` | 100% | 6/6 |
 | [PG · Prototipo greybox](fases/PG.md) | `███████████████` | 100% | 6/6 |
 | [F4 · Ascensor-Refugio](fases/F4.md) | `███████████████` | 100% | 5/5 |
-| [F5 · Generación de pisos](fases/F5.md) | `█████░░░░░░░░░░` | 33% | 2/6 |
+| [F5 · Generación de pisos](fases/F5.md) | `████████░░░░░░░` | 50% | 3/6 |
 | [F6 · Combate e IA](fases/F6.md) | `░░░░░░░░░░░░░░░` | 0% | 0/5 |
 | [F7 · Ecos y decisiones](fases/F7.md) | `░░░░░░░░░░░░░░░` | 0% | 0/4 |
 | [F8 · Asedio y extracción](fases/F8.md) | `░░░░░░░░░░░░░░░` | 0% | 0/4 |

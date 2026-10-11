@@ -2,7 +2,7 @@
   "id": "F5-03",
   "phase": "F5",
   "title": "Presagio y modificadores de piso",
-  "status": "in_progress",
+  "status": "done",
   "type": "feature",
   "labels": [
     "pisos"
@@ -16,6 +16,6 @@
     "Omen expone tipo de piso, modificadores, Has(kind) y una inscripción legible que anuncia tipo y modificadores",
     "Tests NUnit cubren catálogo, compatibilidad, reproducibilidad e inscripción"
   ],
-  "pr": null,
-  "session": null
+  "pr": "#50",
+  "session": 36
 }
