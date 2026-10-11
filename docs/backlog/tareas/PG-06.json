@@ -2,7 +2,7 @@
   "id": "PG-06",
   "phase": "PG",
   "title": "Sistema de colisiones (épico)",
-  "status": "in_progress",
+  "status": "done",
   "type": "feature",
   "labels": [
     "fisica",
@@ -16,6 +16,6 @@
     "Los colliders de muro se generan desde el layout del nivel (un bloque de 1 m por muro, grosor configurable) sin depender del modelo visual; las puertas no generan collider.",
     "Tests NUnit en verde. Pendiente para tareas posteriores: movimiento con CharacterController, triggers de zona y tests PlayMode."
   ],
-  "pr": null,
-  "session": null
+  "pr": "#36",
+  "session": 28
 }

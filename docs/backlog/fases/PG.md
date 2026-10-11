@@ -9,4 +9,4 @@ _Primer Play en Unity con cubos y HUD, preparado para sustituir por assets reale
 | ✅ | **PG-03** Jugador y cámara en tercera persona (Input System) | S25 | #33 |
 | ✅ | **PG-04** HUD de depuración: vida, recursos y temporizador del núcleo | S26 | #34 |
 | ✅ | **PG-05** Guía de prueba manual en Unity y checklist de importación de assets | S27 | #35 |
-| 🔄 | **PG-06** Sistema de colisiones (épico) |  |  |
+| ✅ | **PG-06** Sistema de colisiones (épico) | S28 | #36 |
