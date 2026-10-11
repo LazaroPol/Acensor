@@ -2,14 +2,20 @@
   "id": "F5-02",
   "phase": "F5",
   "title": "Tipos de piso (patrón Strategy)",
-  "status": "todo",
+  "status": "done",
   "type": "feature",
   "labels": [
     "pisos"
   ],
   "origin": "backlog",
-  "description": "",
-  "acceptance": [],
-  "pr": null,
-  "session": null
+  "description": "Cada tipo de piso del GDD §8 es una estrategia (IFloorType) que define qué pone a prueba, su objetivo, si hay combate y la configuración de anillos con la que se genera su trazado.",
+  "acceptance": [
+    "IFloorType expone Kind, nombre, reto, objetivo, si hay combate y RingLayoutConfig",
+    "Una clase por tipo del GDD (Saqueo, Jefe, Oleadas, Laberinto de trampas, Puzzle, Decisión, Santuario, Profesión, Híbrido)",
+    "FloorTypeCatalog resuelve cada FloorTypeKind a su estrategia y lista todos",
+    "FloorPlanner genera un FloorPlan (tipo + trazado) reproducible por semilla",
+    "Tests NUnit cubren catálogo, configuraciones y planificador"
+  ],
+  "pr": "#47",
+  "session": 35
 }
