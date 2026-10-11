@@ -10,7 +10,7 @@ from tools.progress import model
 from tools.progress.__main__ import write_outputs
 
 INDEX = model.ROOT / "docs/sesiones/README.md"
-REPO_URL = "https://github.com/LazaroPol/Acensor"
+REPO_URL = "https://github.com/MenaDeFerro/Project-Especimen"
 
 
 def history_row(session: int, task_id: str, pr: int, done: int, total: int, date: str) -> str:

@@ -8,7 +8,7 @@ class HistoryRowTests(unittest.TestCase):
         row = history_row(3, "F1-01", 2, 11, 73, "2026-10-11")
         self.assertEqual(
             row,
-            "| 3 | F1-01 | 2026-10-11 | [#2](https://github.com/LazaroPol/Acensor/pull/2) | "
+            "| 3 | F1-01 | 2026-10-11 | [#2](https://github.com/MenaDeFerro/Project-Especimen/pull/2) | "
             "11/73 · 15,1 % | [SESION-03](SESION-03.md) |")
 
 

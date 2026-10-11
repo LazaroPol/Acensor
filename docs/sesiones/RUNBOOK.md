@@ -4,7 +4,7 @@ Cada sesión es un chat nuevo que hace **una tarea** y programa el siguiente. Pa
 
 ## 1. Preparar (sin leer de más)
 ```bash
-git clone https://github.com/LazaroPol/Acensor /home/claude/acensor && cd /home/claude/acensor
+git clone https://github.com/MenaDeFerro/Project-Especimen /home/claude/project-especimen && cd /home/claude/project-especimen
 git config user.name "Lazaro (via Claude)"; git config user.email "pol.lazaro.rosas@gmail.com"
 command -v dotnet || sudo apt-get install -y dotnet-sdk-8.0 >/dev/null
 tools/session/should_continue.sh   # si falla: no hay tarea o la cadena está en pausa → terminar
@@ -51,7 +51,7 @@ Crear `docs/sesiones/PAUSA` en `main` detiene la cadena al inicio de la siguient
 ```markdown
 # Sesión N — <TAREA> <título>
 
-- **Fecha:** AAAA-MM-DD · **PR:** [#{PR}](https://github.com/LazaroPol/Acensor/pull/{PR}) · **Estado:** ✅ cerrada
+- **Fecha:** AAAA-MM-DD · **PR:** [#{PR}](https://github.com/MenaDeFerro/Project-Especimen/pull/{PR}) · **Estado:** ✅ cerrada
 
 ## Qué se hizo
 - …
