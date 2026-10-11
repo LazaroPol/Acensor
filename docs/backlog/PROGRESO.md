@@ -1,10 +1,10 @@
 # Progreso — SPECIMEN
 
 ```
-TOTAL  █████████████░░░░░░░░░░░░░░░░░  43.0%  (34/79 tareas)
+TOTAL  █████████████░░░░░░░░░░░░░░░░░  44.3%  (35/79 tareas)
 ```
 
-**Fase en curso:** PG · **Siguiente tarea:** PG-05
+**Fase en curso:** PG · **Siguiente tarea:** PG-06
 
 | Fase | Progreso | % | Tareas |
 |---|---|---|---|
@@ -12,7 +12,7 @@ TOTAL  █████████████░░░░░░░░░░░�
 | [F1 · Bucle de iteración](fases/F1.md) | `███████████████` | 100% | 7/7 |
 | [F2 · Personaje y recursos](fases/F2.md) | `███████████████` | 100% | 7/7 |
 | [F3 · Inventario, loot y crafting](fases/F3.md) | `███████████████` | 100% | 6/6 |
-| [PG · Prototipo greybox](fases/PG.md) | `██████████░░░░░` | 67% | 4/6 |
+| [PG · Prototipo greybox](fases/PG.md) | `████████████░░░` | 83% | 5/6 |
 | [F4 · Ascensor-Refugio](fases/F4.md) | `░░░░░░░░░░░░░░░` | 0% | 0/5 |
 | [F5 · Generación de pisos](fases/F5.md) | `░░░░░░░░░░░░░░░` | 0% | 0/6 |
 | [F6 · Combate e IA](fases/F6.md) | `░░░░░░░░░░░░░░░` | 0% | 0/5 |
@@ -25,8 +25,8 @@ TOTAL  █████████████░░░░░░░░░░░�
 
 ## Cola de prioridad (tablero)
 
-1. **PG-05** Guía de prueba manual en Unity y checklist de importación de assets
-2. **PG-06** Sistema de colisiones (épico)
-3. **F4-01** Ranuras de módulo y construcción con materiales
-4. **F4-02** Mejora de módulos por niveles
-5. **F4-03** Hoguera: regeneración y recuperación de fatiga
+1. **PG-06** Sistema de colisiones (épico)
+2. **F4-01** Ranuras de módulo y construcción con materiales
+3. **F4-02** Mejora de módulos por niveles
+4. **F4-03** Hoguera: regeneración y recuperación de fatiga
+5. **F4-04** Cocina: buffs de comida temporales
