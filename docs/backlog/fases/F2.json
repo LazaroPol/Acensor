@@ -48,9 +48,9 @@
     {
       "id": "F2-07",
       "title": "Muerte, Espectro y revivir",
-      "status": "todo",
-      "pr": null,
-      "session": null
+      "status": "done",
+      "pr": "#16",
+      "session": 16
     }
   ]
 }
