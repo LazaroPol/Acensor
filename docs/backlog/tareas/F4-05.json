@@ -2,14 +2,20 @@
   "id": "F4-05",
   "phase": "F4",
   "title": "Litera: revivir Espectros durante la Calma",
-  "status": "todo",
+  "status": "in_progress",
   "type": "feature",
   "labels": [
     "ascensor"
   ],
   "origin": "backlog",
-  "description": "",
-  "acceptance": [],
+  "description": "La Litera del Ascensor-Refugio (GDD §3.3, §6) revive a los Espectros durante la Calma pagando materiales del alijo común; el coste baja con el nivel del módulo.",
+  "acceptance": [
+    "La Litera define un coste en materiales por revivir y una rebaja de unidades por nivel por encima del primero (mínimo 1 por material).",
+    "Revivir en la Litera exige Litera construida (nivel > 0), un Espectro y fase de Calma; si falla no se consume nada.",
+    "Al revivir se cobra el coste del nivel actual del inventario común y el Espectro vuelve con la vida de las reglas de la Litera.",
+    "El revivir en campo se delega en el coste de objeto de campo si se proporciona; si no, no se puede pagar.",
+    "Tests NUnit cubren sin Litera, fase incorrecta, sin materiales, revivir con cobro y la rebaja por nivel."
+  ],
   "pr": null,
   "session": null
 }

@@ -5,7 +5,7 @@
 Ensamblado: `Specimen.Core` · Carpeta: `Assets/_Project/Scripts/Core/Elevator`
 Tests: `Assets/_Project/Tests/EditMode/Core/Elevator`
 
-**Depende de:** [Core.Common](Core.Common.md), [Core.Crafting](Core.Crafting.md), [Core.Items](Core.Items.md), [Core.Stats](Core.Stats.md), [Core.Time](Core.Time.md), [Core.Vitals](Core.Vitals.md)
+**Depende de:** [Core.Common](Core.Common.md), [Core.Crafting](Core.Crafting.md), [Core.Items](Core.Items.md), [Core.Iteration](Core.Iteration.md), [Core.Life](Core.Life.md), [Core.Stats](Core.Stats.md), [Core.Time](Core.Time.md), [Core.Vitals](Core.Vitals.md)
 **Lo usan:** nadie
 
 | Fichero | Tipo | Resumen |
@@ -14,6 +14,8 @@ Tests: `Assets/_Project/Tests/EditMode/Core/Elevator`
 | `BonfireConfig.cs` | class `BonfireConfig` | Parámetros de la Hoguera por nivel: vida y stamina regeneradas por segundo y segundos de descanso para recuperar un punto de fatiga (a nivel |
 | `BonfireRest.cs` | class `BonfireRest` | Descanso de un personaje junto a la Hoguera (GDD §5-§6): regenera vida y stamina y recupera fatiga a un ritmo que escala con el nivel del mó |
 | `BuildResult.cs` | enum `BuildResult` | Resultado de un intento de construir un módulo en una ranura. |
+| `Bunk.cs` | class `Bunk` | Litera del Ascensor-Refugio (GDD §3.3, §6): revive Espectros durante la Calma cobrando materiales del alijo común. |
+| `BunkConfig.cs` | class `BunkConfig` | Parámetros de la Litera (GDD §3.3, §6): materiales que cuesta revivir a un Espectro y cuántas unidades de cada material se rebajan por nivel |
 | `ElevatorPlatform.Levels.cs` | class `ElevatorPlatform` |  |
 | `ElevatorPlatform.Upgrade.cs` | class `ElevatorPlatform` |  |
 | `ElevatorPlatform.cs` | class `ElevatorPlatform` | Plataforma del Ascensor-Refugio (GDD §6): ranuras donde se construyen módulos pagando materiales. |
