@@ -41,9 +41,9 @@
     {
       "id": "F1-06",
       "title": "Estado Atrapado y Hueco de Emergencia",
-      "status": "in_progress",
-      "pr": null,
-      "session": null
+      "status": "done",
+      "pr": "#7",
+      "session": 8
     },
     {
       "id": "F1-07",
