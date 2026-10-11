@@ -25,8 +25,8 @@ TOTAL  ███████████████░░░░░░░░░�
 
 ## Cola de prioridad (tablero)
 
-1. **F4-04** Cocina: buffs de comida temporales
-2. **F4-05** Litera: revivir Espectros durante la Calma
-3. **F5-01** Generador procedural de pasillos por anillos (con semilla)
-4. **F5-02** Tipos de piso (patrón Strategy)
-5. **F5-03** Presagio y modificadores de piso
+1. **F4-05** Litera: revivir Espectros durante la Calma
+2. **F5-01** Generador procedural de pasillos por anillos (con semilla)
+3. **F5-02** Tipos de piso (patrón Strategy)
+4. **F5-03** Presagio y modificadores de piso
+5. **F5-04** Distribución de loot y enemigos por anillo

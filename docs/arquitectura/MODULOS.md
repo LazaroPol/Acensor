@@ -10,7 +10,7 @@ Un módulo = un namespace C#. Abre solo la página del módulo que vayas a tocar
 | [Core.Classes](modulos/Core.Classes.md) | 8 | `ClassKit`, `ClassKitCatalog`, `ClassKitId`, `ClassResourceType`, `ClassRole` … | Core.Common, Core.Stats |
 | [Core.Common](modulos/Core.Common.md) | 1 | `Guard` | — |
 | [Core.Crafting](modulos/Core.Crafting.md) | 11 | `CraftResult`, `CraftTransaction`, `Crafter`, `IRecipeBook`, `ISynergyRecipeBook` … | Core.Common, Core.Items, Core.Professions |
-| [Core.Elevator](modulos/Core.Elevator.md) | 13 | `BlueprintCatalog`, `BonfireConfig`, `BonfireRest`, `BuildResult`, `ElevatorPlatform` … | Core.Common, Core.Crafting, Core.Items, Core.Time, Core.Vitals |
+| [Core.Elevator](modulos/Core.Elevator.md) | 16 | `BlueprintCatalog`, `BonfireConfig`, `BonfireRest`, `BuildResult`, `ElevatorPlatform` … | Core.Common, Core.Crafting, Core.Items, Core.Stats, Core.Time, Core.Vitals |
 | [Core.Events](modulos/Core.Events.md) | 2 | `EventBus`, `IEventPublisher`, `IEventSubscriber`, `IEventBus` | Core.Common |
 | [Core.Items](modulos/Core.Items.md) | 11 | `Durability`, `IDurability`, `IInventory`, `Inventory`, `ItemCategory` … | Core.Common |
 | [Core.Iteration](modulos/Core.Iteration.md) | 9 | `IterationConfig`, `IterationConfigBuilder`, `IterationContext`, `IterationPhaseChanged`, `FloorReached` … | Core.Common, Core.Events, Core.Iteration.Ending, Core.Iteration.Presence, Core.Iteration.Readiness, Core.Iteration.States, Core.Iteration.Voting, Core.StateMachines, Core.Time |
@@ -70,7 +70,7 @@ flowchart LR
   n0 --> n1 & n2
   n1 --> n2 & n22
   n3 --> n2 & n6 & n17
-  n4 --> n2 & n3 & n6 & n23 & n25
+  n4 --> n2 & n3 & n6 & n22 & n23 & n25
   n5 --> n2
   n6 --> n2
   n7 --> n2 & n5 & n8 & n9 & n10 & n11 & n12 & n21 & n23
