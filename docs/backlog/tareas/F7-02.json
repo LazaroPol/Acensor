@@ -2,14 +2,20 @@
   "id": "F7-02",
   "phase": "F7",
   "title": "Registro de Ecos",
-  "status": "todo",
+  "status": "done",
   "type": "feature",
   "labels": [
     "ecos"
   ],
   "origin": "backlog",
-  "description": "",
-  "acceptance": [],
-  "pr": null,
-  "session": null
+  "description": "Núcleo puro del registro de Ecos (GDD 09): qué Eco se decidió, en qué piso y con qué opción, para consultarlo después.",
+  "acceptance": [
+    "EchoDecision valida id no vacío, piso >= 1 y opción >= 0.",
+    "EchoRegistry.Record guarda las decisiones en orden y rechaza nulos y Ecos ya decididos.",
+    "Consultas: IsDecided, ChosenOption (null si no decidido), Chose y DecidedOnFloor.",
+    "Clear olvida todo (nueva iteración).",
+    "Núcleo sin UnityEngine, ficheros <= 120 líneas y tests NUnit en verde."
+  ],
+  "pr": "#61",
+  "session": 46
 }

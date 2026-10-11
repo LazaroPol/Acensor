@@ -1,10 +1,10 @@
 # Progreso — SPECIMEN
 
 ```
-TOTAL  ████████████████████░░░░░░░░░░  67.1%  (53/79 tareas)
+TOTAL  █████████████████████░░░░░░░░░  68.4%  (54/79 tareas)
 ```
 
-**Fase en curso:** F7 · **Siguiente tarea:** F7-02
+**Fase en curso:** F7 · **Siguiente tarea:** F7-03
 
 | Fase | Progreso | % | Tareas |
 |---|---|---|---|
@@ -16,7 +16,7 @@ TOTAL  ████████████████████░░░░�
 | [F4 · Ascensor-Refugio](fases/F4.md) | `███████████████` | 100% | 5/5 |
 | [F5 · Generación de pisos](fases/F5.md) | `███████████████` | 100% | 6/6 |
 | [F6 · Combate e IA](fases/F6.md) | `███████████████` | 100% | 5/5 |
-| [F7 · Ecos y decisiones](fases/F7.md) | `████░░░░░░░░░░░` | 25% | 1/4 |
+| [F7 · Ecos y decisiones](fases/F7.md) | `████████░░░░░░░` | 50% | 2/4 |
 | [F8 · Asedio y extracción](fases/F8.md) | `░░░░░░░░░░░░░░░` | 0% | 0/4 |
 | [F9 · Meta-progresión: Laboratorio](fases/F9.md) | `░░░░░░░░░░░░░░░` | 0% | 0/4 |
 | [F10 · Presentación en Unity](fases/F10.md) | `░░░░░░░░░░░░░░░` | 0% | 0/6 |
@@ -25,8 +25,8 @@ TOTAL  ████████████████████░░░░�
 
 ## Cola de prioridad (tablero)
 
-1. **F7-02** Registro de Ecos
-2. **F7-03** Consecuencias que alteran pisos futuros
-3. **F7-04** Decisiones secretas individuales
-4. **F8-01** Director de oleadas del asedio
-5. **F8-02** Fortificaciones y torretas
+1. **F7-03** Consecuencias que alteran pisos futuros
+2. **F7-04** Decisiones secretas individuales
+3. **F8-01** Director de oleadas del asedio
+4. **F8-02** Fortificaciones y torretas
+5. **F8-03** Puntuación y multiplicador de supervivencia colectiva
