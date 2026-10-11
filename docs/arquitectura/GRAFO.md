@@ -14,73 +14,75 @@ flowchart LR
   n7["Core.Combat.Perception"]
   n8["Core.Common"]
   n9["Core.Crafting"]
-  n10["Core.Elevator"]
-  n11["Core.Events"]
-  n12["Core.Floors"]
-  n13["Core.Floors.Omens"]
-  n14["Core.Floors.Paths"]
-  n15["Core.Floors.Population"]
-  n16["Core.Floors.Remnants"]
-  n17["Core.Floors.Types"]
-  n18["Core.Items"]
-  n19["Core.Iteration"]
-  n20["Core.Iteration.Ending"]
-  n21["Core.Iteration.Presence"]
-  n22["Core.Iteration.Readiness"]
-  n23["Core.Iteration.States"]
-  n24["Core.Iteration.Voting"]
-  n25["Core.Life"]
-  n26["Core.Loot"]
-  n27["Core.Movement"]
-  n28["Core.Physics"]
-  n29["Core.Professions"]
-  n30["Core.Prototype"]
-  n31["Core.Randomness"]
-  n32["Core.Repair"]
-  n33["Core.StateMachines"]
-  n34["Core.Stats"]
-  n35["Core.Time"]
-  n36["Core.Visuals"]
-  n37["Core.Vitals"]
-  n38["Runtime.Prototype"]
-  n39["Runtime.Visuals"]
-  n0 --> n3 & n8 & n37
-  n1 --> n3 & n8 & n27
+  n10["Core.Echoes.Voting"]
+  n11["Core.Elevator"]
+  n12["Core.Events"]
+  n13["Core.Floors"]
+  n14["Core.Floors.Omens"]
+  n15["Core.Floors.Paths"]
+  n16["Core.Floors.Population"]
+  n17["Core.Floors.Remnants"]
+  n18["Core.Floors.Types"]
+  n19["Core.Items"]
+  n20["Core.Iteration"]
+  n21["Core.Iteration.Ending"]
+  n22["Core.Iteration.Presence"]
+  n23["Core.Iteration.Readiness"]
+  n24["Core.Iteration.States"]
+  n25["Core.Iteration.Voting"]
+  n26["Core.Life"]
+  n27["Core.Loot"]
+  n28["Core.Movement"]
+  n29["Core.Physics"]
+  n30["Core.Professions"]
+  n31["Core.Prototype"]
+  n32["Core.Randomness"]
+  n33["Core.Repair"]
+  n34["Core.StateMachines"]
+  n35["Core.Stats"]
+  n36["Core.Time"]
+  n37["Core.Visuals"]
+  n38["Core.Vitals"]
+  n39["Runtime.Prototype"]
+  n40["Runtime.Visuals"]
+  n0 --> n3 & n8 & n38
+  n1 --> n3 & n8 & n28
   n2 --> n3 & n8
-  n3 --> n8 & n34
-  n4 --> n8 & n31
+  n3 --> n8 & n35
+  n4 --> n8 & n32
   n5 --> n6 & n8
-  n6 --> n8 & n26
-  n7 --> n21 & n27
-  n9 --> n8 & n18 & n29
-  n10 --> n8 & n9 & n18 & n19 & n25 & n34 & n35 & n37
-  n11 --> n8
-  n12 --> n8 & n26 & n31
-  n13 --> n8 & n17 & n31
-  n14 --> n8 & n29 & n31
-  n15 --> n8 & n26 & n31
-  n16 --> n8 & n26 & n31
-  n17 --> n8
+  n6 --> n8 & n27
+  n7 --> n22 & n28
+  n9 --> n8 & n19 & n30
+  n10 --> n8
+  n11 --> n8 & n9 & n19 & n20 & n26 & n35 & n36 & n38
+  n12 --> n8
+  n13 --> n8 & n27 & n32
+  n14 --> n8 & n18 & n32
+  n15 --> n8 & n30 & n32
+  n16 --> n8 & n27 & n32
+  n17 --> n8 & n27 & n32
   n18 --> n8
-  n19 --> n8 & n11 & n20 & n21 & n22 & n23 & n24 & n33 & n35
-  n20 --> n21
-  n21 --> n8
+  n19 --> n8
+  n20 --> n8 & n12 & n21 & n22 & n23 & n24 & n25 & n34 & n36
+  n21 --> n22
   n22 --> n8
-  n23 --> n20 & n21 & n22 & n33 & n35
-  n24 --> n8
-  n25 --> n8 & n19 & n37
-  n26 --> n8 & n18 & n31
-  n27 --> n8 & n37
-  n28 --> n8
+  n23 --> n8
+  n24 --> n21 & n22 & n23 & n34 & n36
+  n25 --> n8
+  n26 --> n8 & n20 & n38
+  n27 --> n8 & n19 & n32
+  n28 --> n8 & n38
   n29 --> n8
-  n30 --> n8 & n28 & n35 & n36 & n37
-  n31 --> n8
-  n32 --> n8 & n18
-  n33 --> n8 & n35
-  n34 --> n8
+  n30 --> n8
+  n31 --> n8 & n29 & n36 & n37 & n38
+  n32 --> n8
+  n33 --> n8 & n19
+  n34 --> n8 & n36
   n35 --> n8
   n36 --> n8
-  n37 --> n8 & n34 & n35
-  n38 --> n27 & n30 & n34 & n35 & n36 & n37 & n39
-  n39 --> n30 & n36
+  n37 --> n8
+  n38 --> n8 & n35 & n36
+  n39 --> n28 & n31 & n35 & n36 & n37 & n38 & n40
+  n40 --> n31 & n37
 ```

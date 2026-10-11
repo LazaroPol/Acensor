@@ -2,14 +2,19 @@
   "id": "F7-01",
   "phase": "F7",
   "title": "Sistema de votación (mayoría y desempate)",
-  "status": "todo",
+  "status": "done",
   "type": "feature",
   "labels": [
     "ecos"
   ],
   "origin": "backlog",
-  "description": "",
-  "acceptance": [],
-  "pr": null,
-  "session": null
+  "description": "Núcleo puro de la votación de Ecos (GDD 09): opciones múltiples, mayoría y desempate por Fragmentos de Memoria.",
+  "acceptance": [
+    "EchoVote con censo y N>=2 opciones: cada votante emite (y puede cambiar) un voto válido; votante u opción inválidos fallan pronto.",
+    "Resolve() devuelve la opción más votada; sin votos falla.",
+    "En empate decide el votante con más Fragmentos (IFragmentSource) entre los de las opciones empatadas; si persiste, la opción de menor índice; el resultado indica si hubo desempate.",
+    "Núcleo sin UnityEngine, ficheros <= 120 líneas y tests NUnit en verde."
+  ],
+  "pr": "#60",
+  "session": 45
 }
