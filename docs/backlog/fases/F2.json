@@ -20,9 +20,9 @@
     {
       "id": "F2-03",
       "title": "Fatiga entre pisos",
-      "status": "todo",
-      "pr": null,
-      "session": null
+      "status": "done",
+      "pr": "#12",
+      "session": 12
     },
     {
       "id": "F2-04",
