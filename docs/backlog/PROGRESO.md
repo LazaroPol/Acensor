@@ -25,8 +25,8 @@ TOTAL  ████████████████░░░░░░░░�
 
 ## Cola de prioridad (tablero)
 
-1. **F5-03** Presagio y modificadores de piso
-2. **F5-04** Distribución de loot y enemigos por anillo
-3. **F5-05** Caminos alternativos según profesión
-4. **F5-06** Restos de clones anteriores y Fragmentos de memoria
-5. **F6-01** Modelo de daño, resistencias y críticos
+1. **F5-04** Distribución de loot y enemigos por anillo
+2. **F5-05** Caminos alternativos según profesión
+3. **F5-06** Restos de clones anteriores y Fragmentos de memoria
+4. **F6-01** Modelo de daño, resistencias y críticos
+5. **F6-02** Enemigos con escalado por profundidad
