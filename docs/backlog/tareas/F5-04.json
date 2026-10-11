@@ -2,14 +2,20 @@
   "id": "F5-04",
   "phase": "F5",
   "title": "Distribución de loot y enemigos por anillo",
-  "status": "todo",
+  "status": "in_progress",
   "type": "feature",
   "labels": [
     "pisos"
   ],
   "origin": "backlog",
-  "description": "",
-  "acceptance": [],
+  "description": "Poblar cada sala de un FloorLayout con tiradas de loot y enemigos según su anillo de profundidad: más lejos = mejor loot y peores enemigos.",
+  "acceptance": [
+    "Cuotas por anillo (loot, enemigos, amenaza) validadas y con valores por defecto crecientes con la profundidad.",
+    "FloorPopulator puebla todas las salas de forma reproducible desde la semilla del trazado.",
+    "La entrada queda vacía; el Hueco de Emergencia tiene enemigos pero no loot.",
+    "Los pisos sin combate no generan enemigos; el loot usa la LootTable del anillo de la sala.",
+    "Tests NUnit cubren cuotas, determinismo y reglas por tipo de sala."
+  ],
   "pr": null,
   "session": null
 }
