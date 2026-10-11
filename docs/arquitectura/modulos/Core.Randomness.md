@@ -6,7 +6,7 @@ Ensamblado: `Specimen.Core` · Carpeta: `Assets/_Project/Scripts/Core/Randomness
 Tests: `Assets/_Project/Tests/EditMode/Core/Randomness`
 
 **Depende de:** [Core.Common](Core.Common.md)
-**Lo usan:** [Core.Loot](Core.Loot.md)
+**Lo usan:** [Core.Floors](Core.Floors.md), [Core.Loot](Core.Loot.md)
 
 | Fichero | Tipo | Resumen |
 |---|---|---|
