@@ -34,7 +34,9 @@ class BoardStoreTests(unittest.TestCase):
         snap = self.store.snapshot()
         self.assertGreater(len(snap["tasks"]), 70)
         self.assertIn("tipos", snap["catalog"])
-        self.assertEqual(snap["priority"][0], snap["summary"]["next_task"])
+        status = {t["id"]: t["status"] for t in snap["tasks"]}
+        pending = [tid for tid in snap["priority"] if status.get(tid) != "done"]
+        self.assertEqual(pending[0], snap["summary"]["next_task"])
 
     def test_quick_task_gets_next_id_in_phase_and_goes_to_inbox(self):
         task = self.store.create({"phase": "F4", "title": "Rampa", "position": "top"})
