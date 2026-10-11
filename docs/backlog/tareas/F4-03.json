@@ -2,14 +2,20 @@
   "id": "F4-03",
   "phase": "F4",
   "title": "Hoguera: regeneración y recuperación de fatiga",
-  "status": "todo",
+  "status": "in_progress",
   "type": "feature",
   "labels": [
     "ascensor"
   ],
   "origin": "backlog",
-  "description": "",
-  "acceptance": [],
+  "description": "La Hoguera del Ascensor-Refugio (GDD §5-§6) regenera vida y stamina y recupera fatiga a quien descansa junto a ella; su efecto escala con el nivel del módulo.",
+  "acceptance": [
+    "La plataforma expone el nivel de cada tipo de módulo (0 si no está construido) mediante una interfaz pequeña.",
+    "Descansar en la Hoguera regenera vida y stamina por segundo proporcional a su nivel, sin pasar del máximo.",
+    "Cada cierto tiempo de descanso (más corto a mayor nivel) se recupera un punto de fatiga y se notifica.",
+    "Sin Hoguera construida (nivel 0) o con un tick de 0 s no ocurre nada; deltas negativos se rechazan.",
+    "Tests NUnit cubren regeneración, escalado por nivel, recuperación de fatiga y el caso sin Hoguera."
+  ],
   "pr": null,
   "session": null
 }
