@@ -1,10 +1,10 @@
 # Progreso — SPECIMEN
 
 ```
-TOTAL  ███████████████████░░░░░░░░░░░  64.6%  (51/79 tareas)
+TOTAL  ████████████████████░░░░░░░░░░  65.8%  (52/79 tareas)
 ```
 
-**Fase en curso:** F6 · **Siguiente tarea:** F6-05
+**Fase en curso:** F7 · **Siguiente tarea:** F7-01
 
 | Fase | Progreso | % | Tareas |
 |---|---|---|---|
@@ -15,7 +15,7 @@ TOTAL  ███████████████████░░░░░�
 | [PG · Prototipo greybox](fases/PG.md) | `███████████████` | 100% | 6/6 |
 | [F4 · Ascensor-Refugio](fases/F4.md) | `███████████████` | 100% | 5/5 |
 | [F5 · Generación de pisos](fases/F5.md) | `███████████████` | 100% | 6/6 |
-| [F6 · Combate e IA](fases/F6.md) | `████████████░░░` | 80% | 4/5 |
+| [F6 · Combate e IA](fases/F6.md) | `███████████████` | 100% | 5/5 |
 | [F7 · Ecos y decisiones](fases/F7.md) | `░░░░░░░░░░░░░░░` | 0% | 0/4 |
 | [F8 · Asedio y extracción](fases/F8.md) | `░░░░░░░░░░░░░░░` | 0% | 0/4 |
 | [F9 · Meta-progresión: Laboratorio](fases/F9.md) | `░░░░░░░░░░░░░░░` | 0% | 0/4 |
@@ -25,8 +25,8 @@ TOTAL  ███████████████████░░░░░�
 
 ## Cola de prioridad (tablero)
 
-1. **F6-05** Jefe del Acto I con fases
-2. **F7-01** Sistema de votación (mayoría y desempate)
-3. **F7-02** Registro de Ecos
-4. **F7-03** Consecuencias que alteran pisos futuros
-5. **F7-04** Decisiones secretas individuales
+1. **F7-01** Sistema de votación (mayoría y desempate)
+2. **F7-02** Registro de Ecos
+3. **F7-03** Consecuencias que alteran pisos futuros
+4. **F7-04** Decisiones secretas individuales
+5. **F8-01** Director de oleadas del asedio

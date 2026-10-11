@@ -11,6 +11,7 @@ Un módulo = un namespace C#. Abre solo la página del módulo que vayas a tocar
 | [Core.Armory](modulos/Core.Armory.md) | 3 | `ArmoryStock`, `ClassKitArmory`, `IArmoryStock` | Core.Classes, Core.Common |
 | [Core.Classes](modulos/Core.Classes.md) | 8 | `ClassKit`, `ClassKitCatalog`, `ClassKitId`, `ClassResourceType`, `ClassRole` … | Core.Common, Core.Stats |
 | [Core.Combat](modulos/Core.Combat.md) | 8 | `ArmorMitigation`, `CritRules`, `DamageCalculator`, `DamageResult`, `DamageType` … | Core.Common, Core.Randomness |
+| [Core.Combat.Bosses](modulos/Core.Combat.Bosses.md) | 3 | `ActOneBoss`, `BossEncounter`, `BossPhase` | Core.Combat.Enemies, Core.Common |
 | [Core.Combat.Enemies](modulos/Core.Combat.Enemies.md) | 8 | `DepthScalingConfig`, `Enemy`, `EnemyArchetype`, `EnemyDepth`, `EnemyFactory` … | Core.Common, Core.Loot |
 | [Core.Combat.Perception](modulos/Core.Combat.Perception.md) | 7 | `EnemyPerception`, `IPerceptionModifiers`, `Observer`, `PerceivedTarget`, `PerceptionConfig` … | Core.Iteration.Presence, Core.Movement |
 | [Core.Common](modulos/Core.Common.md) | 1 | `Guard` | — |
