@@ -41,8 +41,8 @@
         {
           "id": "F0-06",
           "title": "Núcleo: abstracciones de tiempo y aleatoriedad (IClock, IRandom)",
-          "status": "todo",
-          "pr": null
+          "status": "done",
+          "pr": "PR-006"
         },
         {
           "id": "F0-07",

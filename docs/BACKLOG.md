@@ -12,7 +12,7 @@ _Repositorio, arquitectura por capas, tests y flujo de PRs_
 - ✅ **F0-03** GDD fusionado — PR-003
 - ✅ **F0-04** Backlog y sistema de progreso — PR-004
 - ✅ **F0-05** Integración continua (GitHub Actions) — PR-005
-- ⬜ **F0-06** Núcleo: abstracciones de tiempo y aleatoriedad (IClock, IRandom)
+- ✅ **F0-06** Núcleo: abstracciones de tiempo y aleatoriedad (IClock, IRandom) — PR-006
 - ⬜ **F0-07** Núcleo: bus de eventos tipado
 - ⬜ **F0-08** Núcleo: máquina de estados genérica
 - ⬜ **F0-09** Historial de sesiones e informe de la Sesión 1
