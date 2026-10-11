@@ -27,9 +27,9 @@
     {
       "id": "F3-04",
       "title": "Recetas y crafting por profesión",
-      "status": "in_progress",
-      "pr": null,
-      "session": null
+      "status": "done",
+      "pr": "#21",
+      "session": 20
     },
     {
       "id": "F3-05",
