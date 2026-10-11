@@ -6,7 +6,7 @@ Ensamblado: `Specimen.Core` · Carpeta: `Assets/_Project/Scripts/Core/Movement`
 Tests: `Assets/_Project/Tests/EditMode/Core/Movement`
 
 **Depende de:** [Core.Common](Core.Common.md), [Core.Vitals](Core.Vitals.md)
-**Lo usan:** [Core.Combat.Perception](Core.Combat.Perception.md), [Runtime.Prototype](Runtime.Prototype.md)
+**Lo usan:** [Core.Abilities.Mobility](Core.Abilities.Mobility.md), [Core.Combat.Perception](Core.Combat.Perception.md), [Runtime.Prototype](Runtime.Prototype.md)
 
 | Fichero | Tipo | Resumen |
 |---|---|---|

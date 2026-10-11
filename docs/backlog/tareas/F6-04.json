@@ -2,14 +2,20 @@
   "id": "F6-04",
   "phase": "F6",
   "title": "Habilidades de clase y rasgos de movilidad",
-  "status": "todo",
+  "status": "done",
   "type": "feature",
   "labels": [
     "combate"
   ],
   "origin": "backlog",
-  "description": "",
-  "acceptance": [],
-  "pr": null,
-  "session": null
+  "description": "Habilidades de clase en el núcleo (coste de recurso de clase y/o stamina, enfriamiento, una habilidad de firma por kit del GDD §4) y rasgos de movilidad derivados del kit: dash, doble salto, planeo, trepar y teletransporte corto.",
+  "acceptance": [
+    "Una habilidad solo se activa si está lista y hay recurso de clase y stamina suficientes; cobra ambos de forma atómica e inicia su enfriamiento.",
+    "El enfriamiento avanza con Tick y la habilidad vuelve a estar lista al agotarse.",
+    "Cada uno de los 6 kits tiene una habilidad de firma por defecto.",
+    "El perfil de movilidad se deriva de los rasgos del kit: saltos aéreos (doble salto), dash, planeo (caída reducida), trepar (coste de stamina) y teletransporte con alcance limitado.",
+    "Tests NUnit cubren activación, costes, enfriamiento, perfil por kit, saltos aéreos, planeo y teletransporte."
+  ],
+  "pr": "#58",
+  "session": 43
 }
