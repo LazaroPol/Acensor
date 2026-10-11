@@ -1,56 +1,5 @@
 {
   "id": "F1",
   "name": "Bucle de iteración",
-  "goal": "Armería → Calma → Incursión → Ascenso → Asedio → Extracción",
-  "tasks": [
-    {
-      "id": "F1-01",
-      "title": "Modelo de configuración de iteración (pisos, duraciones)",
-      "status": "done",
-      "pr": "#2",
-      "session": 3
-    },
-    {
-      "id": "F1-02",
-      "title": "Temporizador de fase con avisos (60 s / 15 s)",
-      "status": "done",
-      "pr": "#3",
-      "session": 4
-    },
-    {
-      "id": "F1-03",
-      "title": "Máquina de estados de la iteración",
-      "status": "done",
-      "pr": "#4",
-      "session": 5
-    },
-    {
-      "id": "F1-04",
-      "title": "Sistema de 'Listos' y bonus Prisa",
-      "status": "done",
-      "pr": "#5",
-      "session": 6
-    },
-    {
-      "id": "F1-05",
-      "title": "Voto de cierre anticipado de puertas",
-      "status": "done",
-      "pr": "#6",
-      "session": 7
-    },
-    {
-      "id": "F1-06",
-      "title": "Estado Atrapado y Hueco de Emergencia",
-      "status": "done",
-      "pr": "#7",
-      "session": 8
-    },
-    {
-      "id": "F1-07",
-      "title": "Fin de iteración (victoria, todos caídos, abandono)",
-      "status": "done",
-      "pr": "#8",
-      "session": 9
-    }
-  ]
+  "goal": "Armería → Calma → Incursión → Ascenso → Asedio → Extracción"
 }

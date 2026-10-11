@@ -1,0 +1,15 @@
+{
+  "id": "F3-01",
+  "phase": "F3",
+  "title": "Modelo de objetos, rareza y durabilidad",
+  "status": "done",
+  "type": "feature",
+  "labels": [
+    "inventario"
+  ],
+  "origin": "backlog",
+  "description": "",
+  "acceptance": [],
+  "pr": "#18",
+  "session": 17
+}

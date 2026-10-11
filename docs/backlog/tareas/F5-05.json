@@ -1,0 +1,15 @@
+{
+  "id": "F5-05",
+  "phase": "F5",
+  "title": "Caminos alternativos según profesión",
+  "status": "todo",
+  "type": "feature",
+  "labels": [
+    "pisos"
+  ],
+  "origin": "backlog",
+  "description": "",
+  "acceptance": [],
+  "pr": null,
+  "session": null
+}

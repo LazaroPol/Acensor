@@ -1,0 +1,15 @@
+{
+  "id": "F3-02",
+  "phase": "F3",
+  "title": "Inventario con capacidad y apilado",
+  "status": "done",
+  "type": "feature",
+  "labels": [
+    "inventario"
+  ],
+  "origin": "backlog",
+  "description": "",
+  "acceptance": [],
+  "pr": "#19",
+  "session": 18
+}

@@ -1,0 +1,15 @@
+{
+  "id": "F9-01",
+  "phase": "F9",
+  "title": "Árbol de ADN con ramas y Tier Lock",
+  "status": "todo",
+  "type": "feature",
+  "labels": [
+    "meta"
+  ],
+  "origin": "backlog",
+  "description": "",
+  "acceptance": [],
+  "pr": null,
+  "session": null
+}

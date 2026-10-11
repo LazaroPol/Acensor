@@ -1,0 +1,15 @@
+{
+  "id": "F12-03",
+  "phase": "F12",
+  "title": "Audio y feedback",
+  "status": "todo",
+  "type": "arte",
+  "labels": [
+    "contenido"
+  ],
+  "origin": "backlog",
+  "description": "",
+  "acceptance": [],
+  "pr": null,
+  "session": null
+}

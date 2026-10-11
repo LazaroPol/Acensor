@@ -1,0 +1,15 @@
+{
+  "id": "F10-06",
+  "phase": "F10",
+  "title": "Escena del Ascensor y Armería jugables",
+  "status": "todo",
+  "type": "feature",
+  "labels": [
+    "ui"
+  ],
+  "origin": "backlog",
+  "description": "",
+  "acceptance": [],
+  "pr": null,
+  "session": null
+}

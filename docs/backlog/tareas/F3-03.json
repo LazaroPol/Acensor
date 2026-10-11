@@ -1,0 +1,15 @@
+{
+  "id": "F3-03",
+  "phase": "F3",
+  "title": "Tablas de loot ponderadas por anillo de profundidad",
+  "status": "done",
+  "type": "feature",
+  "labels": [
+    "inventario"
+  ],
+  "origin": "backlog",
+  "description": "",
+  "acceptance": [],
+  "pr": "#20",
+  "session": 19
+}

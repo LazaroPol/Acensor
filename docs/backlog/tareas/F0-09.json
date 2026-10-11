@@ -1,0 +1,15 @@
+{
+  "id": "F0-09",
+  "phase": "F0",
+  "title": "Historial de sesiones e informe de la Sesión 1",
+  "status": "done",
+  "type": "docs",
+  "labels": [
+    "nucleo"
+  ],
+  "origin": "backlog",
+  "description": "",
+  "acceptance": [],
+  "pr": "PR-009",
+  "session": 1
+}

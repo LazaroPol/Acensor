@@ -1,0 +1,15 @@
+{
+  "id": "F8-03",
+  "phase": "F8",
+  "title": "Puntuación y multiplicador de supervivencia colectiva",
+  "status": "todo",
+  "type": "feature",
+  "labels": [
+    "asedio"
+  ],
+  "origin": "backlog",
+  "description": "",
+  "acceptance": [],
+  "pr": null,
+  "session": null
+}

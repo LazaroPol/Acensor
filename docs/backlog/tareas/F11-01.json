@@ -1,0 +1,15 @@
+{
+  "id": "F11-01",
+  "phase": "F11",
+  "title": "Integración de Netcode for GameObjects",
+  "status": "todo",
+  "type": "feature",
+  "labels": [
+    "red"
+  ],
+  "origin": "backlog",
+  "description": "",
+  "acceptance": [],
+  "pr": null,
+  "session": null
+}

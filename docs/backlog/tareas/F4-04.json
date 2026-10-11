@@ -1,0 +1,15 @@
+{
+  "id": "F4-04",
+  "phase": "F4",
+  "title": "Cocina: buffs de comida temporales",
+  "status": "todo",
+  "type": "feature",
+  "labels": [
+    "ascensor"
+  ],
+  "origin": "backlog",
+  "description": "",
+  "acceptance": [],
+  "pr": null,
+  "session": null
+}

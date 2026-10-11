@@ -1,0 +1,30 @@
+{
+  "tipos": {
+    "feature": "#3b82f6",
+    "bug": "#ef4444",
+    "deuda": "#a855f7",
+    "infra": "#64748b",
+    "arte": "#ec4899",
+    "docs": "#14b8a6"
+  },
+  "etiquetas": {
+    "nucleo": "#475569",
+    "bucle": "#0ea5e9",
+    "personaje": "#22c55e",
+    "inventario": "#eab308",
+    "greybox": "#94a3b8",
+    "fisica": "#f97316",
+    "ascensor": "#8b5cf6",
+    "pisos": "#84cc16",
+    "combate": "#dc2626",
+    "ia": "#d946ef",
+    "ecos": "#06b6d4",
+    "asedio": "#b45309",
+    "meta": "#10b981",
+    "ui": "#6366f1",
+    "arte": "#ec4899",
+    "red": "#0891b2",
+    "contenido": "#ca8a04",
+    "urgente": "#e11d48"
+  }
+}

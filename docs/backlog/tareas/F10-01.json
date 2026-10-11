@@ -1,0 +1,15 @@
+{
+  "id": "F10-01",
+  "phase": "F10",
+  "title": "Bootstrap de escenas e inyección de dependencias",
+  "status": "todo",
+  "type": "feature",
+  "labels": [
+    "ui"
+  ],
+  "origin": "backlog",
+  "description": "",
+  "acceptance": [],
+  "pr": null,
+  "session": null
+}

@@ -1,0 +1,15 @@
+{
+  "id": "PG-01",
+  "phase": "PG",
+  "title": "Catálogo visual: IDs lógicos y resolución asset/greybox (núcleo puro + tests)",
+  "status": "todo",
+  "type": "feature",
+  "labels": [
+    "greybox"
+  ],
+  "origin": "backlog",
+  "description": "",
+  "acceptance": [],
+  "pr": null,
+  "session": null
+}

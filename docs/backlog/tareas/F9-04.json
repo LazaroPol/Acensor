@@ -1,0 +1,15 @@
+{
+  "id": "F9-04",
+  "phase": "F9",
+  "title": "Guardado y carga del perfil",
+  "status": "todo",
+  "type": "feature",
+  "labels": [
+    "meta"
+  ],
+  "origin": "backlog",
+  "description": "",
+  "acceptance": [],
+  "pr": null,
+  "session": null
+}

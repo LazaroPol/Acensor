@@ -1,0 +1,16 @@
+{
+  "id": "F6-02",
+  "phase": "F6",
+  "title": "Enemigos con escalado por profundidad",
+  "status": "todo",
+  "type": "feature",
+  "labels": [
+    "combate",
+    "ia"
+  ],
+  "origin": "backlog",
+  "description": "",
+  "acceptance": [],
+  "pr": null,
+  "session": null
+}

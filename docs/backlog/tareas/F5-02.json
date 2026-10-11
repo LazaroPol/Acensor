@@ -1,0 +1,15 @@
+{
+  "id": "F5-02",
+  "phase": "F5",
+  "title": "Tipos de piso (patrón Strategy)",
+  "status": "todo",
+  "type": "feature",
+  "labels": [
+    "pisos"
+  ],
+  "origin": "backlog",
+  "description": "",
+  "acceptance": [],
+  "pr": null,
+  "session": null
+}

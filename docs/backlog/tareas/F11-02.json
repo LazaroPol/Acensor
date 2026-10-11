@@ -1,0 +1,15 @@
+{
+  "id": "F11-02",
+  "phase": "F11",
+  "title": "Sincronización del estado de iteración (servidor autoritativo)",
+  "status": "todo",
+  "type": "feature",
+  "labels": [
+    "red"
+  ],
+  "origin": "backlog",
+  "description": "",
+  "acceptance": [],
+  "pr": null,
+  "session": null
+}

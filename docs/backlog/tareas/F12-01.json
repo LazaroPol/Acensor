@@ -1,0 +1,15 @@
+{
+  "id": "F12-01",
+  "phase": "F12",
+  "title": "Cinco pisos del Acto I + jefe",
+  "status": "todo",
+  "type": "feature",
+  "labels": [
+    "contenido"
+  ],
+  "origin": "backlog",
+  "description": "",
+  "acceptance": [],
+  "pr": null,
+  "session": null
+}

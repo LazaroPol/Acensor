@@ -1,0 +1,16 @@
+{
+  "id": "PG-03",
+  "phase": "PG",
+  "title": "Jugador y cámara en tercera persona (Input System)",
+  "status": "todo",
+  "type": "feature",
+  "labels": [
+    "greybox",
+    "fisica"
+  ],
+  "origin": "backlog",
+  "description": "",
+  "acceptance": [],
+  "pr": null,
+  "session": null
+}

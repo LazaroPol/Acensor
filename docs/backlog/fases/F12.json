@@ -1,42 +1,5 @@
 {
   "id": "F12",
   "name": "Vertical Slice — Acto I",
-  "goal": "Contenido jugable completo y pulido",
-  "tasks": [
-    {
-      "id": "F12-01",
-      "title": "Cinco pisos del Acto I + jefe",
-      "status": "todo",
-      "pr": null,
-      "session": null
-    },
-    {
-      "id": "F12-02",
-      "title": "Tutorial con la mentora Ilse",
-      "status": "todo",
-      "pr": null,
-      "session": null
-    },
-    {
-      "id": "F12-03",
-      "title": "Audio y feedback",
-      "status": "todo",
-      "pr": null,
-      "session": null
-    },
-    {
-      "id": "F12-04",
-      "title": "Balanceo con telemetría",
-      "status": "todo",
-      "pr": null,
-      "session": null
-    },
-    {
-      "id": "F12-05",
-      "title": "Build jugable",
-      "status": "todo",
-      "pr": null,
-      "session": null
-    }
-  ]
+  "goal": "Contenido jugable completo y pulido"
 }

@@ -1,0 +1,15 @@
+{
+  "id": "F0-02",
+  "phase": "F0",
+  "title": "Arnés de tests C# headless (NUnit)",
+  "status": "done",
+  "type": "infra",
+  "labels": [
+    "nucleo"
+  ],
+  "origin": "backlog",
+  "description": "",
+  "acceptance": [],
+  "pr": "PR-002",
+  "session": 1
+}

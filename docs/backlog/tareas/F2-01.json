@@ -1,0 +1,15 @@
+{
+  "id": "F2-01",
+  "phase": "F2",
+  "title": "Atributos y modificadores (aditivos / multiplicativos)",
+  "status": "done",
+  "type": "feature",
+  "labels": [
+    "personaje"
+  ],
+  "origin": "backlog",
+  "description": "",
+  "acceptance": [],
+  "pr": "#10",
+  "session": 10
+}

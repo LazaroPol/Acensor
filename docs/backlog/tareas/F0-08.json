@@ -1,0 +1,15 @@
+{
+  "id": "F0-08",
+  "phase": "F0",
+  "title": "Núcleo: máquina de estados genérica",
+  "status": "done",
+  "type": "infra",
+  "labels": [
+    "nucleo"
+  ],
+  "origin": "backlog",
+  "description": "",
+  "acceptance": [],
+  "pr": "PR-008",
+  "session": 1
+}

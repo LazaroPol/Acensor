@@ -12,6 +12,8 @@ tools/session/should_continue.sh   # si falla: no hay tarea o la cadena está en
 `should_continue.sh` imprime la tarea (`F2-01`), el número de sesión y la fase.
 
 ## 2. Implementar
+Lee la tarjeta `docs/backlog/tareas/<TAREA>.json`. Si no tiene criterios de aceptación, escríbelos
+en la tarjeta (campo `acceptance`) antes de programar. No toques `prioridad.json` (es del tablero).
 ```bash
 git checkout -b feature/<TAREA>-<slug>
 python3 -m tools.progress --start <TAREA>

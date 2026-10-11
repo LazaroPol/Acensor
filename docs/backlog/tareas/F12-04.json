@@ -1,0 +1,15 @@
+{
+  "id": "F12-04",
+  "phase": "F12",
+  "title": "Balanceo con telemetría",
+  "status": "todo",
+  "type": "feature",
+  "labels": [
+    "contenido"
+  ],
+  "origin": "backlog",
+  "description": "",
+  "acceptance": [],
+  "pr": null,
+  "session": null
+}

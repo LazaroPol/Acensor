@@ -1,35 +1,5 @@
 {
   "id": "F11",
   "name": "Multijugador cooperativo",
-  "goal": "Netcode for GameObjects, 2-4 jugadores",
-  "tasks": [
-    {
-      "id": "F11-01",
-      "title": "Integración de Netcode for GameObjects",
-      "status": "todo",
-      "pr": null,
-      "session": null
-    },
-    {
-      "id": "F11-02",
-      "title": "Sincronización del estado de iteración (servidor autoritativo)",
-      "status": "todo",
-      "pr": null,
-      "session": null
-    },
-    {
-      "id": "F11-03",
-      "title": "Lobby y conexión",
-      "status": "todo",
-      "pr": null,
-      "session": null
-    },
-    {
-      "id": "F11-04",
-      "title": "Replicación de jugadores, combate y loot",
-      "status": "todo",
-      "pr": null,
-      "session": null
-    }
-  ]
+  "goal": "Netcode for GameObjects, 2-4 jugadores"
 }

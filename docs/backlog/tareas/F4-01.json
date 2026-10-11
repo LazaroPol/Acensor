@@ -1,0 +1,15 @@
+{
+  "id": "F4-01",
+  "phase": "F4",
+  "title": "Ranuras de módulo y construcción con materiales",
+  "status": "todo",
+  "type": "feature",
+  "labels": [
+    "ascensor"
+  ],
+  "origin": "backlog",
+  "description": "",
+  "acceptance": [],
+  "pr": null,
+  "session": null
+}

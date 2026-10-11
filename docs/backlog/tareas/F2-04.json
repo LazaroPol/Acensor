@@ -1,0 +1,15 @@
+{
+  "id": "F2-04",
+  "phase": "F2",
+  "title": "Definición de los 6 kits de clase",
+  "status": "done",
+  "type": "feature",
+  "labels": [
+    "personaje"
+  ],
+  "origin": "backlog",
+  "description": "",
+  "acceptance": [],
+  "pr": "#13",
+  "session": 13
+}

@@ -1,0 +1,20 @@
+dialog#editor {
+  width: min(640px, calc(100vw - 32px));
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  background: var(--panel);
+  color: var(--text);
+  padding: 0;
+}
+dialog#editor::backdrop { background: rgba(9, 30, 66, .5); }
+.editor { display: flex; flex-direction: column; gap: 12px; padding: 16px; }
+.editor .head { display: flex; justify-content: space-between; color: var(--muted); font-size: 12px; }
+.editor input[name=title] { font-size: 16px; font-weight: 600; width: 100%; }
+.editor .row { display: flex; gap: 10px; flex-wrap: wrap; }
+.editor label { display: flex; flex-direction: column; gap: 4px; color: var(--muted); font-size: 12px; flex: 1; }
+.editor textarea { min-height: 90px; resize: vertical; width: 100%; }
+.editor .labels { display: flex; gap: 6px; flex-wrap: wrap; }
+.editor .labels .chip { cursor: pointer; opacity: .35; border: 0; }
+.editor .labels .chip.on { opacity: 1; }
+.editor .actions { display: flex; justify-content: space-between; gap: 8px; }
+.editor .actions div { display: flex; gap: 8px; }

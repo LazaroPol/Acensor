@@ -1,0 +1,15 @@
+{
+  "id": "F2-06",
+  "phase": "F2",
+  "title": "Selección de profesión",
+  "status": "done",
+  "type": "feature",
+  "labels": [
+    "personaje"
+  ],
+  "origin": "backlog",
+  "description": "",
+  "acceptance": [],
+  "pr": "#15",
+  "session": 15
+}

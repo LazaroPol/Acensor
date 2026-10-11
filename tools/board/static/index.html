@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Tablero SPECIMEN</title>
+  <link rel="stylesheet" href="/css/base.css">
+  <link rel="stylesheet" href="/css/board.css">
+  <link rel="stylesheet" href="/css/modal.css">
+</head>
+<body>
+  <header class="topbar">
+    <div class="brand">
+      <h1>SPECIMEN <span>tablero</span></h1>
+      <div class="progress" id="progress"></div>
+    </div>
+    <div class="git" id="git"></div>
+  </header>
+
+  <section class="toolbar">
+    <form id="quick" class="quick" autocomplete="off">
+      <input id="q-title" placeholder="Tarea rápida… (Enter para añadir)" required>
+      <select id="q-phase" title="Fase"></select>
+      <select id="q-type" title="Tipo"></select>
+      <select id="q-status" title="Columna">
+        <option value="idea">a Ideas</option>
+        <option value="todo">a Listo</option>
+      </select>
+      <select id="q-pos" title="Posición en la cola">
+        <option value="top">arriba</option>
+        <option value="bottom">abajo</option>
+      </select>
+      <button type="submit" class="primary">Añadir</button>
+    </form>
+    <div class="filters">
+      <input id="f-text" type="search" placeholder="Buscar…">
+      <select id="f-phase"><option value="">Todas las fases</option></select>
+      <select id="f-label"><option value="">Todas las etiquetas</option></select>
+      <label class="check"><input id="f-done" type="checkbox"> Ver hechas</label>
+    </div>
+  </section>
+
+  <main class="board" id="board"></main>
+
+  <dialog id="editor"></dialog>
+  <div class="toast" id="toast" role="status"></div>
+  <script type="module" src="/js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,15 @@
+{
+  "id": "F1-02",
+  "phase": "F1",
+  "title": "Temporizador de fase con avisos (60 s / 15 s)",
+  "status": "done",
+  "type": "feature",
+  "labels": [
+    "bucle"
+  ],
+  "origin": "backlog",
+  "description": "",
+  "acceptance": [],
+  "pr": "#3",
+  "session": 4
+}

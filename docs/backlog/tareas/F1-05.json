@@ -1,0 +1,15 @@
+{
+  "id": "F1-05",
+  "phase": "F1",
+  "title": "Voto de cierre anticipado de puertas",
+  "status": "done",
+  "type": "feature",
+  "labels": [
+    "bucle"
+  ],
+  "origin": "backlog",
+  "description": "",
+  "acceptance": [],
+  "pr": "#6",
+  "session": 7
+}

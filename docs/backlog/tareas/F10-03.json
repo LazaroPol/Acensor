@@ -1,0 +1,15 @@
+{
+  "id": "F10-03",
+  "phase": "F10",
+  "title": "HUD: temporizador, recursos, avisos",
+  "status": "todo",
+  "type": "feature",
+  "labels": [
+    "ui"
+  ],
+  "origin": "backlog",
+  "description": "",
+  "acceptance": [],
+  "pr": null,
+  "session": null
+}

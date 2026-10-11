@@ -1,42 +1,5 @@
 {
   "id": "PG",
   "name": "Prototipo greybox",
-  "goal": "Primer Play en Unity con cubos y HUD, preparado para sustituir por assets reales",
-  "tasks": [
-    {
-      "id": "PG-01",
-      "title": "Catálogo visual: IDs lógicos y resolución asset/greybox (núcleo puro + tests)",
-      "status": "todo",
-      "pr": null,
-      "session": null
-    },
-    {
-      "id": "PG-02",
-      "title": "Bootstrap del prototipo: escena Prototipo y nivel greybox desde el catálogo",
-      "status": "todo",
-      "pr": null,
-      "session": null
-    },
-    {
-      "id": "PG-03",
-      "title": "Jugador y cámara en tercera persona (Input System)",
-      "status": "todo",
-      "pr": null,
-      "session": null
-    },
-    {
-      "id": "PG-04",
-      "title": "HUD de depuración: vida, recursos y temporizador del núcleo",
-      "status": "todo",
-      "pr": null,
-      "session": null
-    },
-    {
-      "id": "PG-05",
-      "title": "Guía de prueba manual en Unity y checklist de importación de assets",
-      "status": "todo",
-      "pr": null,
-      "session": null
-    }
-  ]
+  "goal": "Primer Play en Unity con cubos y HUD, preparado para sustituir por assets reales"
 }

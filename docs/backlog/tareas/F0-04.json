@@ -1,0 +1,15 @@
+{
+  "id": "F0-04",
+  "phase": "F0",
+  "title": "Backlog y sistema de progreso",
+  "status": "done",
+  "type": "infra",
+  "labels": [
+    "nucleo"
+  ],
+  "origin": "backlog",
+  "description": "",
+  "acceptance": [],
+  "pr": "PR-004",
+  "session": 1
+}

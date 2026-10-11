@@ -1,0 +1,15 @@
+{
+  "id": "F12-02",
+  "phase": "F12",
+  "title": "Tutorial con la mentora Ilse",
+  "status": "todo",
+  "type": "feature",
+  "labels": [
+    "contenido"
+  ],
+  "origin": "backlog",
+  "description": "",
+  "acceptance": [],
+  "pr": null,
+  "session": null
+}

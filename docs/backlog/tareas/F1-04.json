@@ -1,0 +1,15 @@
+{
+  "id": "F1-04",
+  "phase": "F1",
+  "title": "Sistema de 'Listos' y bonus Prisa",
+  "status": "done",
+  "type": "feature",
+  "labels": [
+    "bucle"
+  ],
+  "origin": "backlog",
+  "description": "",
+  "acceptance": [],
+  "pr": "#5",
+  "session": 6
+}

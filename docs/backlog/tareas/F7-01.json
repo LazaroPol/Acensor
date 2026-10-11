@@ -1,0 +1,15 @@
+{
+  "id": "F7-01",
+  "phase": "F7",
+  "title": "Sistema de votación (mayoría y desempate)",
+  "status": "todo",
+  "type": "feature",
+  "labels": [
+    "ecos"
+  ],
+  "origin": "backlog",
+  "description": "",
+  "acceptance": [],
+  "pr": null,
+  "session": null
+}

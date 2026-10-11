@@ -1,0 +1,15 @@
+{
+  "id": "F0-06",
+  "phase": "F0",
+  "title": "Núcleo: abstracciones de tiempo y aleatoriedad (IClock, IRandom)",
+  "status": "done",
+  "type": "infra",
+  "labels": [
+    "nucleo"
+  ],
+  "origin": "backlog",
+  "description": "",
+  "acceptance": [],
+  "pr": "PR-006",
+  "session": 1
+}

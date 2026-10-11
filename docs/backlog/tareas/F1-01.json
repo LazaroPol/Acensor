@@ -1,0 +1,15 @@
+{
+  "id": "F1-01",
+  "phase": "F1",
+  "title": "Modelo de configuración de iteración (pisos, duraciones)",
+  "status": "done",
+  "type": "feature",
+  "labels": [
+    "bucle"
+  ],
+  "origin": "backlog",
+  "description": "",
+  "acceptance": [],
+  "pr": "#2",
+  "session": 3
+}

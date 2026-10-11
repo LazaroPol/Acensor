@@ -1,7 +1,8 @@
 """Renderizado Markdown del backlog: barra de progreso y una página por fase."""
 from . import model
 
-ICON = {"done": "✅", "in_progress": "🔄", "todo": "⬜"}
+ICON = {"done": "✅", "in_progress": "🔄", "todo": "⬜", "idea": "💡", "review": "👀", "blocked": "⛔"}
+QUEUE_SIZE = 5
 
 
 def bar(pct: float, width: int = 30) -> str:
@@ -25,7 +26,15 @@ def render_progress(backlog: dict) -> str:
     for p in s["phases"]:
         link = f"[{p['id']} · {p['name']}](fases/{p['id']}.md)"
         lines.append(f"| {link} | `{bar(p['pct'], 15)}` | {p['pct']:.0f}% | {p['done']}/{p['total']} |")
-    return "\n".join(lines) + "\n"
+    return "\n".join(lines + render_queue(backlog)) + "\n"
+
+
+def render_queue(backlog: dict) -> list:
+    """Las próximas tareas «Listo» según la cola de prioridad del tablero."""
+    ready = [t for t in model.rules.priority_order(backlog) if t["status"] == "todo"][:QUEUE_SIZE]
+    lines = ["", "## Cola de prioridad (tablero)", ""]
+    lines += [f"{n}. **{t['id']}** {t['title']}" for n, t in enumerate(ready, 1)] or ["_Vacía_"]
+    return lines
 
 
 def render_phase(phase: dict) -> str:

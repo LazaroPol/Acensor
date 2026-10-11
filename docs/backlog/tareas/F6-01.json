@@ -1,0 +1,15 @@
+{
+  "id": "F6-01",
+  "phase": "F6",
+  "title": "Modelo de daño, resistencias y críticos",
+  "status": "todo",
+  "type": "feature",
+  "labels": [
+    "combate"
+  ],
+  "origin": "backlog",
+  "description": "",
+  "acceptance": [],
+  "pr": null,
+  "session": null
+}
