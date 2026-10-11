@@ -1,0 +1,42 @@
+{
+  "id": "F6",
+  "name": "Combate e IA",
+  "goal": "Daño, enemigos, percepción y jefe del Acto I",
+  "tasks": [
+    {
+      "id": "F6-01",
+      "title": "Modelo de daño, resistencias y críticos",
+      "status": "todo",
+      "pr": null,
+      "session": null
+    },
+    {
+      "id": "F6-02",
+      "title": "Enemigos con escalado por profundidad",
+      "status": "todo",
+      "pr": null,
+      "session": null
+    },
+    {
+      "id": "F6-03",
+      "title": "Percepción de IA (visión/oído) y modificadores de Atrapado",
+      "status": "todo",
+      "pr": null,
+      "session": null
+    },
+    {
+      "id": "F6-04",
+      "title": "Habilidades de clase y rasgos de movilidad",
+      "status": "todo",
+      "pr": null,
+      "session": null
+    },
+    {
+      "id": "F6-05",
+      "title": "Jefe del Acto I con fases",
+      "status": "todo",
+      "pr": null,
+      "session": null
+    }
+  ]
+}

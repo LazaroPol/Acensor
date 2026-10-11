@@ -14,8 +14,8 @@ namespace Specimen.Core.StateMachines
     public sealed class StateMachine<TStateId> : ITickable where TStateId : struct, Enum
     {
         private readonly Dictionary<TStateId, IState> _states = new Dictionary<TStateId, IState>();
-        private readonly Dictionary<TStateId, List<Transition>> _transitions = new Dictionary<TStateId, List<Transition>>();
-        private readonly List<Transition> _anyTransitions = new List<Transition>();
+        private readonly Dictionary<TStateId, List<Transition<TStateId>>> _transitions = new Dictionary<TStateId, List<Transition<TStateId>>>();
+        private readonly List<Transition<TStateId>> _anyTransitions = new List<Transition<TStateId>>();
         private bool _changing;
 
         public TStateId CurrentId { get; private set; }
@@ -36,15 +36,15 @@ namespace Specimen.Core.StateMachines
             EnsureExists(from);
             EnsureExists(to);
             if (!_transitions.TryGetValue(from, out var list))
-                _transitions[from] = list = new List<Transition>();
-            list.Add(new Transition(to, Guard.NotNull(condition, nameof(condition))));
+                _transitions[from] = list = new List<Transition<TStateId>>();
+            list.Add(new Transition<TStateId>(to, Guard.NotNull(condition, nameof(condition))));
             return this;
         }
 
         public StateMachine<TStateId> AddAnyTransition(TStateId to, Func<bool> condition)
         {
             EnsureExists(to);
-            _anyTransitions.Add(new Transition(to, Guard.NotNull(condition, nameof(condition))));
+            _anyTransitions.Add(new Transition<TStateId>(to, Guard.NotNull(condition, nameof(condition))));
             return this;
         }
 
@@ -109,18 +109,6 @@ namespace Specimen.Core.StateMachines
         private void EnsureExists(TStateId id)
         {
             if (!_states.ContainsKey(id)) throw new InvalidOperationException($"El estado {id} no está registrado.");
-        }
-
-        private readonly struct Transition
-        {
-            public readonly TStateId To;
-            public readonly Func<bool> Condition;
-
-            public Transition(TStateId to, Func<bool> condition)
-            {
-                To = to;
-                Condition = condition;
-            }
         }
     }
 }

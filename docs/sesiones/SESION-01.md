@@ -22,15 +22,15 @@ Dejar un repositorio Unity listo para crecer con seguridad: diseño unificado, a
 ## Pull requests
 | PR | Tarea | Resultado |
 |---|---|---|
-| [PR-001](../pull-requests/PR-001.md) | F0-01 Estructura Unity y puerta de merge | ✅ |
-| [PR-002](../pull-requests/PR-002.md) | F0-02 Arnés de tests C# headless | ✅ |
-| [PR-003](../pull-requests/PR-003.md) | F0-03 GDD fusionado | ✅ |
-| [PR-004](../pull-requests/PR-004.md) | F0-04 Backlog y progreso | ✅ |
-| [PR-005](../pull-requests/PR-005.md) | F0-05 CI GitHub Actions | ✅ |
-| [PR-006](../pull-requests/PR-006.md) | F0-06 IClock / IRandom (PCG32) | ✅ |
-| [PR-007](../pull-requests/PR-007.md) | F0-07 Bus de eventos | ✅ |
-| [PR-008](../pull-requests/PR-008.md) | F0-08 Máquina de estados | ✅ |
-| [PR-009](../pull-requests/PR-009.md) | F0-09 Historial de sesiones | ✅ |
+| [PR-001](../historico/pull-requests-locales/PR-001.md) | F0-01 Estructura Unity y puerta de merge | ✅ |
+| [PR-002](../historico/pull-requests-locales/PR-002.md) | F0-02 Arnés de tests C# headless | ✅ |
+| [PR-003](../historico/pull-requests-locales/PR-003.md) | F0-03 GDD fusionado | ✅ |
+| [PR-004](../historico/pull-requests-locales/PR-004.md) | F0-04 Backlog y progreso | ✅ |
+| [PR-005](../historico/pull-requests-locales/PR-005.md) | F0-05 CI GitHub Actions | ✅ |
+| [PR-006](../historico/pull-requests-locales/PR-006.md) | F0-06 IClock / IRandom (PCG32) | ✅ |
+| [PR-007](../historico/pull-requests-locales/PR-007.md) | F0-07 Bus de eventos | ✅ |
+| [PR-008](../historico/pull-requests-locales/PR-008.md) | F0-08 Máquina de estados | ✅ |
+| [PR-009](../historico/pull-requests-locales/PR-009.md) | F0-09 Historial de sesiones | ✅ |
 
 ## Calidad
 - **40 tests C# (NUnit)** sobre el núcleo + **27 tests de arquitectura y herramientas (Python)**.

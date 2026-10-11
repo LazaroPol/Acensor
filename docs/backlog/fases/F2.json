@@ -1,0 +1,56 @@
+{
+  "id": "F2",
+  "name": "Personaje y recursos",
+  "goal": "Stats, recursos, kits de clase y la Armería",
+  "tasks": [
+    {
+      "id": "F2-01",
+      "title": "Atributos y modificadores (aditivos / multiplicativos)",
+      "status": "todo",
+      "pr": null,
+      "session": null
+    },
+    {
+      "id": "F2-02",
+      "title": "Recursos: vida, recurso de clase, stamina",
+      "status": "todo",
+      "pr": null,
+      "session": null
+    },
+    {
+      "id": "F2-03",
+      "title": "Fatiga entre pisos",
+      "status": "todo",
+      "pr": null,
+      "session": null
+    },
+    {
+      "id": "F2-04",
+      "title": "Definición de los 6 kits de clase",
+      "status": "todo",
+      "pr": null,
+      "session": null
+    },
+    {
+      "id": "F2-05",
+      "title": "Armería con stock limitado por tipo",
+      "status": "todo",
+      "pr": null,
+      "session": null
+    },
+    {
+      "id": "F2-06",
+      "title": "Selección de profesión",
+      "status": "todo",
+      "pr": null,
+      "session": null
+    },
+    {
+      "id": "F2-07",
+      "title": "Muerte, Espectro y revivir",
+      "status": "todo",
+      "pr": null,
+      "session": null
+    }
+  ]
+}
