@@ -1,0 +1,58 @@
+# Runbook de una sesión automática
+
+Cada sesión es un chat nuevo que hace **una tarea** y programa el siguiente. Pasos:
+
+## 1. Preparar (sin leer de más)
+```bash
+git clone https://github.com/LazaroPol/Acensor /home/claude/acensor && cd /home/claude/acensor
+git config user.name "Lazaro (via Claude)"; git config user.email "pol.lazaro.rosas@gmail.com"
+command -v dotnet || sudo apt-get install -y dotnet-sdk-8.0 >/dev/null
+tools/session/should_continue.sh   # si falla: no hay tarea o la cadena está en pausa → terminar
+```
+`should_continue.sh` imprime la tarea (`F2-01`), el número de sesión y la fase.
+
+## 2. Implementar
+```bash
+git checkout -b feature/<TAREA>-<slug>
+python3 -m tools.progress --start <TAREA>
+```
+Código + tests NUnit pequeños. Verifica con `tools/verify.sh 2>&1 | grep -E "error|FAIL|Test Count|VERIF"`.
+Hasta 3 intentos de arreglo; si sigue en rojo → paso 5 (fallo).
+
+## 3. Entregar y cerrar (una sola PR)
+Escribe dos ficheros cortos en el scratchpad:
+- `pr.md`: Tarea, Cambios (3-5 viñetas), Verificación (nº de tests).
+- `ses.md`: plantilla de abajo, con `{PR}` donde va el número de PR.
+```bash
+git add -A && git commit -m "feat(<TAREA>): <título>" -m "<trailer de atribución>"
+tools/session/ship.sh <TAREA> <SESIÓN> "<TAREA> <título>" pr.md ses.md
+```
+`ship.sh` solo mergea con la verificación local y la CI de GitHub en verde.
+
+## 4. Encadenar
+Si `ship.sh` terminó con 🏁 y `tools/session/should_continue.sh` sigue dando tarea, programa **una**
+tarea programada de una sola ejecución para dentro de 2 minutos con el prompt de
+[`NEXT_PROMPT.md`](NEXT_PROMPT.md) (literal). Al cerrar una **fase**, republica además el panel de progreso.
+
+## 5. Si algo falla
+No mergees ni programes nada. Deja la rama subida, escribe el motivo en un comentario de la PR
+(si existe) y termina con un mensaje claro al usuario. La cadena se reanuda cuando él lo pida.
+
+## Pausar la cadena
+Crear `docs/sesiones/PAUSA` en `main` detiene la cadena al inicio de la siguiente sesión.
+
+## Plantilla `ses.md`
+```markdown
+# Sesión N — <TAREA> <título>
+
+- **Fecha:** AAAA-MM-DD · **PR:** [#{PR}](https://github.com/LazaroPol/Acensor/pull/{PR}) · **Estado:** ✅ cerrada
+
+## Qué se hizo
+- …
+## Decisiones
+- …
+## Calidad
+- N tests NUnit nuevos (T en total) en verde.
+## Siguiente sesión
+**<SIGUIENTE TAREA>** <título>.
+```

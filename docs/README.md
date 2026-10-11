@@ -7,6 +7,7 @@
 | [Backlog por fases](backlog/PROGRESO.md) | Una página por fase en `backlog/fases/` |
 | [Historial de sesiones](sesiones/README.md) | Resumen de cada sesión finalizada |
 | [Flujo de trabajo](workflow.md) | Ramas, PRs, tests y cierre de sesión |
+| [Runbook de sesión automática](sesiones/RUNBOOK.md) | Lo que hace cada chat encadenado |
 | [Histórico](historico/) | Registros de la etapa previa a GitHub |
 
 Los ficheros de `backlog/` terminados en `.md` se generan con `python3 -m tools.progress`; la fuente de verdad son los `.json`.
