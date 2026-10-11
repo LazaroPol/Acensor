@@ -6,7 +6,7 @@ Ensamblado: `Specimen.Core` · Carpeta: `Assets/_Project/Scripts/Core/Life`
 Tests: `Assets/_Project/Tests/EditMode/Core/Life`
 
 **Depende de:** [Core.Common](Core.Common.md), [Core.Iteration](Core.Iteration.md), [Core.Vitals](Core.Vitals.md)
-**Lo usan:** nadie
+**Lo usan:** [Core.Elevator](Core.Elevator.md)
 
 | Fichero | Tipo | Resumen |
 |---|---|---|

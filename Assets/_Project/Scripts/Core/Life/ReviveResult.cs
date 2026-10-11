@@ -6,6 +6,9 @@ namespace Specimen.Core.Life
         Revived,
         NotSpectre,
         WrongPhase,
-        CannotPay
+        CannotPay,
+
+        /// <summary>No hay Litera construida en el ascensor.</summary>
+        NoBunk
     }
 }
