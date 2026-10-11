@@ -6,7 +6,7 @@ Cada sesión es un chat nuevo que hace **una tarea** y programa el siguiente. Pa
 ```bash
 git clone https://github.com/MenaDeFerro/Project-Especimen /home/claude/project-especimen && cd /home/claude/project-especimen
 git config user.name "Lazaro (via Claude)"; git config user.email "pol.lazaro.rosas@gmail.com"
-command -v dotnet || sudo apt-get install -y dotnet-sdk-8.0 >/dev/null
+tools/setup_dotnet.sh             # una línea; el log solo se lee si falla
 tools/session/should_continue.sh   # si falla: no hay tarea o la cadena está en pausa → terminar
 ```
 `should_continue.sh` imprime la tarea (`F2-01`), el número de sesión y la fase.
