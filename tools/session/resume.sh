@@ -9,7 +9,8 @@ BRANCH="$(python3 -c 'import json, sys; print(json.load(open(sys.argv[1])).get("
   "docs/backlog/tareas/$TASK.json")"
 [ -n "$BRANCH" ] || die "$TASK no tiene rama guardada: empiézala de cero (checkout -b + --start)"
 
-git fetch -q --depth=200 origin "+refs/heads/main:refs/remotes/origin/main" \
+DEPTH="${RESUME_FETCH_DEPTH-200}"  # clones superficiales: historia suficiente para el merge
+git fetch -q ${DEPTH:+--depth=$DEPTH} origin "+refs/heads/main:refs/remotes/origin/main" \
   "+refs/heads/$BRANCH:refs/remotes/origin/$BRANCH"
 git checkout -q -B "$BRANCH" "origin/$BRANCH"
 git merge -q --no-edit -m "merge: main en $BRANCH al retomar $TASK" origin/main
