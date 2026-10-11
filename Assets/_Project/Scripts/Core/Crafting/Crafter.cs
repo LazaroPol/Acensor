@@ -31,20 +31,7 @@ namespace Specimen.Core.Crafting
             var check = Check(recipeId, crafter, inventory);
             if (check != CraftResult.Crafted) return check;
             _book.TryGet(recipeId, out var recipe);
-            foreach (var i in recipe.Ingredients) inventory.Remove(i.ItemId, i.Quantity);
-            if (TryAddOutput(recipe, inventory)) return CraftResult.Crafted;
-            foreach (var i in recipe.Ingredients) inventory.Add(ItemInstance.CreateNew(i.Item), i.Quantity);
-            return CraftResult.NoSpace;
-        }
-
-        private static bool TryAddOutput(Recipe recipe, IInventory inventory)
-        {
-            int added = 0;
-            for (int n = 0; n < recipe.OutputQuantity; n++)
-                added += inventory.Add(ItemInstance.CreateNew(recipe.Output));
-            if (added == recipe.OutputQuantity) return true;
-            if (added > 0) inventory.Remove(recipe.Output.Id, added);
-            return false;
+            return CraftTransaction.Apply(recipe.Ingredients, recipe.Output, recipe.OutputQuantity, inventory);
         }
     }
 }

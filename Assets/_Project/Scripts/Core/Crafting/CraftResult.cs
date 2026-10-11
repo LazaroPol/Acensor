@@ -7,6 +7,7 @@ namespace Specimen.Core.Crafting
         UnknownRecipe,
         WrongProfession,
         MissingIngredients,
-        NoSpace
+        NoSpace,
+        SynergyLocked
     }
 }
