@@ -24,3 +24,8 @@ Runbook completo: [`docs/sesiones/RUNBOOK.md`](docs/sesiones/RUNBOOK.md).
 - SOLID: interfaces pequeñas, inyección por constructor, estados/estrategias en clases propias.
 - Warnings = errores. Todo cambio de lógica lleva tests NUnit.
 - Manda la cola de prioridad del tablero (`docs/tablero.md`); como mucho una tarea en curso.
+
+## Git y PRs
+- Antes de tocar una rama, comprueba si necesita rebase sobre `main`; al terminar, `checkout main` y `pull`.
+- Si la CI pasa, mergea sin preguntar y activa el automerge en cada PR.
+- Si cambian módulos, regenera `docs/arquitectura` con `python -m tools.arch` (la CI ejecuta `--check`).
