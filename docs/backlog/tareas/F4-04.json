@@ -2,14 +2,20 @@
   "id": "F4-04",
   "phase": "F4",
   "title": "Cocina: buffs de comida temporales",
-  "status": "todo",
+  "status": "done",
   "type": "feature",
   "labels": [
     "ascensor"
   ],
   "origin": "backlog",
-  "description": "",
-  "acceptance": [],
-  "pr": null,
-  "session": null
+  "description": "La Cocina del Ascensor-Refugio (GDD §6-§7) permite comer platos que otorgan buffs temporales de atributo; su duración escala con el nivel del módulo.",
+  "acceptance": [
+    "Un plato define atributo, tipo y valor del modificador y una duración base positiva.",
+    "Comer aplica el modificador a la hoja de atributos solo si hay Cocina construida (nivel > 0); la duración crece con el nivel.",
+    "Al agotarse la duración el modificador se retira y se notifica; volver a comer el mismo plato renueva la duración sin apilar.",
+    "Platos distintos se acumulan; deltas negativos se rechazan.",
+    "Tests NUnit cubren aplicación, expiración, renovación, escalado por nivel y el caso sin Cocina."
+  ],
+  "pr": "#43",
+  "session": 32
 }

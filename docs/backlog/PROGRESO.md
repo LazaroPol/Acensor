@@ -1,10 +1,10 @@
 # Progreso — SPECIMEN
 
 ```
-TOTAL  ███████████████░░░░░░░░░░░░░░░  49.4%  (39/79 tareas)
+TOTAL  ███████████████░░░░░░░░░░░░░░░  50.6%  (40/79 tareas)
 ```
 
-**Fase en curso:** F4 · **Siguiente tarea:** F4-04
+**Fase en curso:** F4 · **Siguiente tarea:** F4-05
 
 | Fase | Progreso | % | Tareas |
 |---|---|---|---|
@@ -13,7 +13,7 @@ TOTAL  ███████████████░░░░░░░░░�
 | [F2 · Personaje y recursos](fases/F2.md) | `███████████████` | 100% | 7/7 |
 | [F3 · Inventario, loot y crafting](fases/F3.md) | `███████████████` | 100% | 6/6 |
 | [PG · Prototipo greybox](fases/PG.md) | `███████████████` | 100% | 6/6 |
-| [F4 · Ascensor-Refugio](fases/F4.md) | `█████████░░░░░░` | 60% | 3/5 |
+| [F4 · Ascensor-Refugio](fases/F4.md) | `████████████░░░` | 80% | 4/5 |
 | [F5 · Generación de pisos](fases/F5.md) | `░░░░░░░░░░░░░░░` | 0% | 0/6 |
 | [F6 · Combate e IA](fases/F6.md) | `░░░░░░░░░░░░░░░` | 0% | 0/5 |
 | [F7 · Ecos y decisiones](fases/F7.md) | `░░░░░░░░░░░░░░░` | 0% | 0/4 |
@@ -25,8 +25,8 @@ TOTAL  ███████████████░░░░░░░░░�
 
 ## Cola de prioridad (tablero)
 
-1. **F4-04** Cocina: buffs de comida temporales
-2. **F4-05** Litera: revivir Espectros durante la Calma
-3. **F5-01** Generador procedural de pasillos por anillos (con semilla)
-4. **F5-02** Tipos de piso (patrón Strategy)
-5. **F5-03** Presagio y modificadores de piso
+1. **F4-05** Litera: revivir Espectros durante la Calma
+2. **F5-01** Generador procedural de pasillos por anillos (con semilla)
+3. **F5-02** Tipos de piso (patrón Strategy)
+4. **F5-03** Presagio y modificadores de piso
+5. **F5-04** Distribución de loot y enemigos por anillo

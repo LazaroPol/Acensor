@@ -5,7 +5,7 @@
 Ensamblado: `Specimen.Core` · Carpeta: `Assets/_Project/Scripts/Core/Elevator`
 Tests: `Assets/_Project/Tests/EditMode/Core/Elevator`
 
-**Depende de:** [Core.Common](Core.Common.md), [Core.Crafting](Core.Crafting.md), [Core.Items](Core.Items.md), [Core.Time](Core.Time.md), [Core.Vitals](Core.Vitals.md)
+**Depende de:** [Core.Common](Core.Common.md), [Core.Crafting](Core.Crafting.md), [Core.Items](Core.Items.md), [Core.Stats](Core.Stats.md), [Core.Time](Core.Time.md), [Core.Vitals](Core.Vitals.md)
 **Lo usan:** nadie
 
 | Fichero | Tipo | Resumen |
@@ -17,8 +17,11 @@ Tests: `Assets/_Project/Tests/EditMode/Core/Elevator`
 | `ElevatorPlatform.Levels.cs` | class `ElevatorPlatform` |  |
 | `ElevatorPlatform.Upgrade.cs` | class `ElevatorPlatform` |  |
 | `ElevatorPlatform.cs` | class `ElevatorPlatform` | Plataforma del Ascensor-Refugio (GDD §6): ranuras donde se construyen módulos pagando materiales. |
+| `FoodBuffs.cs` | class `FoodBuffs` | Buffs de comida activos de un personaje (GDD §6-§7). |
 | `IBlueprintCatalog.cs` | interface `IBlueprintCatalog` | Catálogo de planos de módulo consultable por tipo. |
 | `IModuleLevels.cs` | interface `IModuleLevels` | Consulta del nivel de cada módulo del Ascensor-Refugio (0 si no está construido). |
+| `KitchenConfig.cs` | class `KitchenConfig` | Parámetros de la Cocina: fracción de duración extra por cada nivel por encima del primero (con 0,5 un plato dura ×1 a nivel 1, ×1,5 a nivel  |
+| `Meal.cs` | class `Meal` | Plato cocinable en la Cocina (GDD §6-§7): otorga un modificador temporal a un atributo durante (antes de aplicar el nivel de la Cocina). |
 | `ModuleBlueprint.cs` | class `ModuleBlueprint` | Plano inmutable de un módulo: qué materiales cuesta construirlo y, opcionalmente, cuánto cuesta cada mejora de nivel (GDD §6: algunos módulo |
 | `ModuleSlot.cs` | class `ModuleSlot` | Ranura de la plataforma: vacía (nivel 0) o con un módulo construido y su nivel. |
 | `ModuleType.cs` | enum `ModuleType` | Módulos construibles en las ranuras del Ascensor-Refugio (GDD §6). |
