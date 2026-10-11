@@ -20,3 +20,8 @@ Cada sesión finalizada tiene su resumen. Desde la sesión 2, **una sesión = un
 | 14 | F2-05 | 2026-10-11 | [#14](https://github.com/LazaroPol/Acensor/pull/14) | 22/73 · 30,1 % | [SESION-14](SESION-14.md) |
 | 15 | F2-06 | 2026-10-11 | [#15](https://github.com/LazaroPol/Acensor/pull/15) | 23/73 · 31,5 % | [SESION-15](SESION-15.md) |
 | 16 | F2-07 | 2026-10-11 | [#16](https://github.com/LazaroPol/Acensor/pull/16) | 24/73 · 32,9 % | [SESION-16](SESION-16.md) |
+| 17 | F3-01 | 2026-10-11 | [#18](https://github.com/LazaroPol/Acensor/pull/18) | 25/73 · 34,2 % | [SESION-17](SESION-17.md) |
+| 18 | F3-02 | 2026-10-11 | [#19](https://github.com/LazaroPol/Acensor/pull/19) | 26/73 · 35,6 % | [SESION-18](SESION-18.md) |
+| 19 | F3-03 | 2026-10-11 | [#20](https://github.com/LazaroPol/Acensor/pull/20) | 27/73 · 37,0 % | [SESION-19](SESION-19.md) |
+| 20 | F3-04 | 2026-10-11 | [#21](https://github.com/LazaroPol/Acensor/pull/21) | 28/73 · 38,4 % | [SESION-20](SESION-20.md) |
+| 21 | F3-05 | 2026-10-11 | [#23](https://github.com/LazaroPol/Acensor/pull/23) | 29/73 · 39,7 % | [SESION-21](SESION-21.md) |

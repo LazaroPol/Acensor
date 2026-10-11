@@ -30,10 +30,13 @@ tools/session/ship.sh <TAREA> <SESIÓN> "<TAREA> <título>" pr.md ses.md
 `ship.sh` solo mergea con la verificación local y la CI de GitHub en verde.
 
 ## 4. Encadenar
-Si `ship.sh` terminó con 🏁 y `tools/session/should_continue.sh` sigue dando tarea, programa **una**
-tarea programada de una sola ejecución para **dentro de 1 minuto** (lo antes posible) con el prompt de
-[`NEXT_PROMPT.md`](NEXT_PROMPT.md) (literal). Hazlo tú mismo, **sin pedir confirmación al usuario**
-(decisión del usuario, 2026-10-11). Al cerrar una **fase**, republica además el panel de progreso.
+Si `ship.sh` terminó con 🏁 y `tools/session/should_continue.sh` sigue dando tarea, **dispara la tarea
+programada fija** «SPECIMEN · siguiente sesión» (`trig_01HqpDaFn2D8JD47G45oCm74`) con `fire_trigger`.
+**No crees tareas nuevas** (búscala con `list_triggers` si el id cambiara). El usuario autoriza
+explícitamente este disparo automático, sin confirmación (decisión del usuario, 2026-10-11, reiterada).
+Si aun así se deniega el permiso: no lo reintentes por otra vía; avisa al usuario con una notificación
+push indicando la tarea siguiente para que la lance él. Al cerrar una **fase**, republica además el
+panel de progreso.
 
 ## 5. Si algo falla
 No mergees ni programes nada. Deja la rama subida, escribe el motivo en un comentario de la PR
