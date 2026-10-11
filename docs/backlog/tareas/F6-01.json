@@ -2,7 +2,7 @@
   "id": "F6-01",
   "phase": "F6",
   "title": "Modelo de daño, resistencias y críticos",
-  "status": "in_progress",
+  "status": "done",
   "type": "feature",
   "labels": [
     "combate"
@@ -16,6 +16,6 @@
     "CritRules: probabilidad en [0,1] y multiplicador >= 1; el crítico se decide con IRandom y es reproducible por semilla.",
     "DamageCalculator devuelve DamageResult (bruto, final, crítico) y nunca daño negativo; tests NUnit cubren todo lo anterior."
   ],
-  "pr": null,
-  "session": null
+  "pr": "#54",
+  "session": 40
 }
