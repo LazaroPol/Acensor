@@ -10,6 +10,7 @@ namespace Specimen.Tests.Core.Iteration
         protected const float Calm = 10f;
         protected const float Incursion = 30f;
 
+        protected static readonly int[] Players = { 1, 2 };
         protected RecordingPublisher Events;
         protected IterationRun Run;
 
@@ -19,13 +20,20 @@ namespace Specimen.Tests.Core.Iteration
             var config = new IterationConfigBuilder()
                 .WithFloors(2).WithCalm(Calm).WithIncursion(Incursion).WithDoorWarnings(20f, 5f).Build();
             Events = new RecordingPublisher();
-            Run = new IterationRun(config, Events);
+            Run = new IterationRun(config, Events, Players);
         }
 
         /// <summary>Avanza el tiempo y deja que la máquina evalúe transiciones en el tick siguiente.</summary>
         protected void Advance(float seconds)
         {
             Run.Tick(seconds);
+            Run.Tick(0f);
+        }
+
+        protected void EnterFirstCalm()
+        {
+            Run.Start();
+            Run.LeaveArmory();
             Run.Tick(0f);
         }
 
