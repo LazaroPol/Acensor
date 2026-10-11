@@ -2,7 +2,7 @@
   "id": "PG-06",
   "phase": "PG",
   "title": "Sistema de colisiones (épico)",
-  "status": "todo",
+  "status": "done",
   "type": "feature",
   "labels": [
     "fisica",
@@ -10,7 +10,12 @@
   ],
   "origin": "tablero",
   "description": "Propuesta para dividir antes de pasarlo a Listo: 1) capas de física y matriz de colisiones (jugador, muros, enemigos/clones, triggers); 2) colliders del laberinto y muros generados; 3) movimiento sin atravesar paredes (CharacterController); 4) triggers de zona (ascensor, cambio de piso, día/noche); 5) tests PlayMode. Colliders independientes del modelo visual.",
-  "acceptance": [],
-  "pr": null,
-  "session": null
+  "acceptance": [
+    "Núcleo puro (Core.Physics): capas Jugador, Muro, Enemigo, Clon y Trigger.",
+    "Matriz de colisiones simétrica: los muros bloquean a jugadores, enemigos y clones; los triggers solo detectan jugadores; los jugadores no se bloquean entre sí; muros y triggers no chocan entre ellos.",
+    "Los colliders de muro se generan desde el layout del nivel (un bloque de 1 m por muro, grosor configurable) sin depender del modelo visual; las puertas no generan collider.",
+    "Tests NUnit en verde. Pendiente para tareas posteriores: movimiento con CharacterController, triggers de zona y tests PlayMode."
+  ],
+  "pr": "#36",
+  "session": 28
 }

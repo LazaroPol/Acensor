@@ -21,8 +21,9 @@ Un módulo = un namespace C#. Abre solo la página del módulo que vayas a tocar
 | [Core.Life](modulos/Core.Life.md) | 7 | `CharacterLife`, `IReviveCost`, `LifeState`, `PartyLife`, `ReviveMethod` … | Core.Common, Core.Iteration, Core.Vitals |
 | [Core.Loot](modulos/Core.Loot.md) | 6 | `DepthRings`, `IRingWeighting`, `LootDrop`, `LootEntry`, `LootTable` … | Core.Common, Core.Items, Core.Randomness |
 | [Core.Movement](modulos/Core.Movement.md) | 6 | `CameraPoint`, `MovementConfig`, `PlanarMover`, `PlanarVector`, `SprintController` … | Core.Common, Core.Vitals |
+| [Core.Physics](modulos/Core.Physics.md) | 4 | `ColliderBox`, `CollisionLayer`, `CollisionMatrix`, `DefaultCollisionMatrix` | Core.Common |
 | [Core.Professions](modulos/Core.Professions.md) | 6 | `DefaultProfessionSynergies`, `ISynergyCatalog`, `ProfessionBench`, `ProfessionId`, `ProfessionSynergy` … | Core.Common |
-| [Core.Prototype](modulos/Core.Prototype.md) | 6 | `DebugCommands`, `DebugHudPresenter`, `GreyboxRoomLayout`, `HudTime`, `ILevelLayout` … | Core.Common, Core.Time, Core.Visuals, Core.Vitals |
+| [Core.Prototype](modulos/Core.Prototype.md) | 7 | `DebugCommands`, `DebugHudPresenter`, `GreyboxRoomLayout`, `HudTime`, `ILevelLayout` … | Core.Common, Core.Physics, Core.Time, Core.Visuals, Core.Vitals |
 | [Core.Randomness](modulos/Core.Randomness.md) | 2 | `IRandom`, `Pcg32Random` | Core.Common |
 | [Core.Repair](modulos/Core.Repair.md) | 6 | `IRepairCatalog`, `RepairCatalog`, `RepairReport`, `RepairResult`, `RepairRule` … | Core.Common, Core.Items |
 | [Core.StateMachines](modulos/Core.StateMachines.md) | 3 | `IState`, `StateBase`, `StateMachine`, `Transition` | Core.Common, Core.Time |
@@ -52,40 +53,42 @@ flowchart LR
   n12["Core.Life"]
   n13["Core.Loot"]
   n14["Core.Movement"]
-  n15["Core.Professions"]
-  n16["Core.Prototype"]
-  n17["Core.Randomness"]
-  n18["Core.Repair"]
-  n19["Core.StateMachines"]
-  n20["Core.Stats"]
-  n21["Core.Time"]
-  n22["Core.Visuals"]
-  n23["Core.Vitals"]
-  n24["Runtime.Prototype"]
-  n25["Runtime.Visuals"]
+  n15["Core.Physics"]
+  n16["Core.Professions"]
+  n17["Core.Prototype"]
+  n18["Core.Randomness"]
+  n19["Core.Repair"]
+  n20["Core.StateMachines"]
+  n21["Core.Stats"]
+  n22["Core.Time"]
+  n23["Core.Visuals"]
+  n24["Core.Vitals"]
+  n25["Runtime.Prototype"]
+  n26["Runtime.Visuals"]
   n0 --> n1 & n2
-  n1 --> n2 & n20
-  n3 --> n2 & n5 & n15
+  n1 --> n2 & n21
+  n3 --> n2 & n5 & n16
   n4 --> n2
   n5 --> n2
-  n6 --> n2 & n4 & n7 & n8 & n9 & n10 & n11 & n19 & n21
+  n6 --> n2 & n4 & n7 & n8 & n9 & n10 & n11 & n20 & n22
   n7 --> n8
   n8 --> n2
   n9 --> n2
-  n10 --> n7 & n8 & n9 & n19 & n21
+  n10 --> n7 & n8 & n9 & n20 & n22
   n11 --> n2
-  n12 --> n2 & n6 & n23
-  n13 --> n2 & n5 & n17
-  n14 --> n2 & n23
+  n12 --> n2 & n6 & n24
+  n13 --> n2 & n5 & n18
+  n14 --> n2 & n24
   n15 --> n2
-  n16 --> n2 & n21 & n22 & n23
-  n17 --> n2
-  n18 --> n2 & n5
-  n19 --> n2 & n21
-  n20 --> n2
+  n16 --> n2
+  n17 --> n2 & n15 & n22 & n23 & n24
+  n18 --> n2
+  n19 --> n2 & n5
+  n20 --> n2 & n22
   n21 --> n2
   n22 --> n2
-  n23 --> n2 & n20 & n21
-  n24 --> n14 & n16 & n20 & n21 & n22 & n23 & n25
-  n25 --> n16 & n22
+  n23 --> n2
+  n24 --> n2 & n21 & n22
+  n25 --> n14 & n17 & n21 & n22 & n23 & n24 & n26
+  n26 --> n17 & n23
 ```
