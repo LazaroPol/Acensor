@@ -27,6 +27,12 @@ class BoardStoreTests(unittest.TestCase):
                 data["status"] = "todo"
                 card.write_text(json.dumps(data, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
 
+    def _task_without_pr(self):
+        """Primera tarea del backlog real que aún no tiene PR (cambia según avanza el proyecto)."""
+        cards = sorted((self.tmp / "tareas").glob("*.json"))
+        data = [json.loads(c.read_text(encoding="utf-8")) for c in cards]
+        return next(d["id"] for d in data if d.get("origin") == "backlog" and d.get("pr") is None)
+
     def backlog(self):
         return model.load(self.tmp)
 
@@ -61,7 +67,7 @@ class BoardStoreTests(unittest.TestCase):
         self.assertRaises(BoardError, self.store.update, "F4-02", {"status": "wip"})
 
     def test_backlog_tasks_need_pr_to_be_done_but_board_tasks_do_not(self):
-        self.assertRaises(BoardError, self.store.move, "F4-01", "done")
+        self.assertRaises(BoardError, self.store.move, self._task_without_pr(), "done")
         task = self.store.create({"phase": "F4", "title": "Manual"})
         self.store.move(task["id"], "done")
         self.assertNotIn(task["id"], self.backlog()["priority"])

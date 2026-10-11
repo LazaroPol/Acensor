@@ -2,14 +2,21 @@
   "id": "F4-01",
   "phase": "F4",
   "title": "Ranuras de módulo y construcción con materiales",
-  "status": "todo",
+  "status": "done",
   "type": "feature",
   "labels": [
     "ascensor"
   ],
   "origin": "backlog",
-  "description": "",
-  "acceptance": [],
-  "pr": null,
-  "session": null
+  "description": "Plataforma del Ascensor-Refugio con ranuras de módulo (GDD §6) que se construyen pagando materiales del inventario; los módulos persisten durante la iteración.",
+  "acceptance": [
+    "Tipos de módulo del GDD §6 (Hoguera, Forja, Telar, Cocina, Alambique, Banco de ingeniero, Peana de escultor, Litera).",
+    "Planos de construcción: coste en materiales por tipo de módulo, en un catálogo consultable.",
+    "Plataforma con N ranuras: construir en una ranura vacía consume los materiales de forma atómica.",
+    "Construir falla sin tocar el inventario si la ranura no existe, está ocupada, el módulo ya está construido, no hay plano o faltan materiales.",
+    "Los módulos construidos persisten hasta que se reinicia la plataforma (nueva iteración) y se notifica cada construcción.",
+    "Tests NUnit cubren éxito y cada fallo."
+  ],
+  "pr": "#37",
+  "session": 29
 }

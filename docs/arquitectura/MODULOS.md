@@ -10,6 +10,7 @@ Un módulo = un namespace C#. Abre solo la página del módulo que vayas a tocar
 | [Core.Classes](modulos/Core.Classes.md) | 8 | `ClassKit`, `ClassKitCatalog`, `ClassKitId`, `ClassResourceType`, `ClassRole` … | Core.Common, Core.Stats |
 | [Core.Common](modulos/Core.Common.md) | 1 | `Guard` | — |
 | [Core.Crafting](modulos/Core.Crafting.md) | 11 | `CraftResult`, `CraftTransaction`, `Crafter`, `IRecipeBook`, `ISynergyRecipeBook` … | Core.Common, Core.Items, Core.Professions |
+| [Core.Elevator](modulos/Core.Elevator.md) | 7 | `BlueprintCatalog`, `BuildResult`, `ElevatorPlatform`, `IBlueprintCatalog`, `ModuleBlueprint` … | Core.Common, Core.Crafting, Core.Items |
 | [Core.Events](modulos/Core.Events.md) | 2 | `EventBus`, `IEventPublisher`, `IEventSubscriber`, `IEventBus` | Core.Common |
 | [Core.Items](modulos/Core.Items.md) | 11 | `Durability`, `IDurability`, `IInventory`, `Inventory`, `ItemCategory` … | Core.Common |
 | [Core.Iteration](modulos/Core.Iteration.md) | 9 | `IterationConfig`, `IterationConfigBuilder`, `IterationContext`, `IterationPhaseChanged`, `FloorReached` … | Core.Common, Core.Events, Core.Iteration.Ending, Core.Iteration.Presence, Core.Iteration.Readiness, Core.Iteration.States, Core.Iteration.Voting, Core.StateMachines, Core.Time |
@@ -42,53 +43,55 @@ flowchart LR
   n1["Core.Classes"]
   n2["Core.Common"]
   n3["Core.Crafting"]
-  n4["Core.Events"]
-  n5["Core.Items"]
-  n6["Core.Iteration"]
-  n7["Core.Iteration.Ending"]
-  n8["Core.Iteration.Presence"]
-  n9["Core.Iteration.Readiness"]
-  n10["Core.Iteration.States"]
-  n11["Core.Iteration.Voting"]
-  n12["Core.Life"]
-  n13["Core.Loot"]
-  n14["Core.Movement"]
-  n15["Core.Physics"]
-  n16["Core.Professions"]
-  n17["Core.Prototype"]
-  n18["Core.Randomness"]
-  n19["Core.Repair"]
-  n20["Core.StateMachines"]
-  n21["Core.Stats"]
-  n22["Core.Time"]
-  n23["Core.Visuals"]
-  n24["Core.Vitals"]
-  n25["Runtime.Prototype"]
-  n26["Runtime.Visuals"]
+  n4["Core.Elevator"]
+  n5["Core.Events"]
+  n6["Core.Items"]
+  n7["Core.Iteration"]
+  n8["Core.Iteration.Ending"]
+  n9["Core.Iteration.Presence"]
+  n10["Core.Iteration.Readiness"]
+  n11["Core.Iteration.States"]
+  n12["Core.Iteration.Voting"]
+  n13["Core.Life"]
+  n14["Core.Loot"]
+  n15["Core.Movement"]
+  n16["Core.Physics"]
+  n17["Core.Professions"]
+  n18["Core.Prototype"]
+  n19["Core.Randomness"]
+  n20["Core.Repair"]
+  n21["Core.StateMachines"]
+  n22["Core.Stats"]
+  n23["Core.Time"]
+  n24["Core.Visuals"]
+  n25["Core.Vitals"]
+  n26["Runtime.Prototype"]
+  n27["Runtime.Visuals"]
   n0 --> n1 & n2
-  n1 --> n2 & n21
-  n3 --> n2 & n5 & n16
-  n4 --> n2
+  n1 --> n2 & n22
+  n3 --> n2 & n6 & n17
+  n4 --> n2 & n3 & n6
   n5 --> n2
-  n6 --> n2 & n4 & n7 & n8 & n9 & n10 & n11 & n20 & n22
-  n7 --> n8
-  n8 --> n2
+  n6 --> n2
+  n7 --> n2 & n5 & n8 & n9 & n10 & n11 & n12 & n21 & n23
+  n8 --> n9
   n9 --> n2
-  n10 --> n7 & n8 & n9 & n20 & n22
-  n11 --> n2
-  n12 --> n2 & n6 & n24
-  n13 --> n2 & n5 & n18
-  n14 --> n2 & n24
-  n15 --> n2
+  n10 --> n2
+  n11 --> n8 & n9 & n10 & n21 & n23
+  n12 --> n2
+  n13 --> n2 & n7 & n25
+  n14 --> n2 & n6 & n19
+  n15 --> n2 & n25
   n16 --> n2
-  n17 --> n2 & n15 & n22 & n23 & n24
-  n18 --> n2
-  n19 --> n2 & n5
-  n20 --> n2 & n22
-  n21 --> n2
+  n17 --> n2
+  n18 --> n2 & n16 & n23 & n24 & n25
+  n19 --> n2
+  n20 --> n2 & n6
+  n21 --> n2 & n23
   n22 --> n2
   n23 --> n2
-  n24 --> n2 & n21 & n22
-  n25 --> n14 & n17 & n21 & n22 & n23 & n24 & n26
-  n26 --> n17 & n23
+  n24 --> n2
+  n25 --> n2 & n22 & n23
+  n26 --> n15 & n18 & n22 & n23 & n24 & n25 & n27
+  n27 --> n18 & n24
 ```
