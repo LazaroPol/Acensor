@@ -27,6 +27,16 @@ namespace Specimen.Tests.Core.Iteration.Readiness
         }
 
         [Test]
+        public void AllReadyAmong_IgnoresOthers_ButNeedsSomeone()
+        {
+            var r = new ReadyCheck(new[] { 1, 2 });
+            r.MarkReady(2);
+            Assert.That(r.AllReadyAmong(new[] { 2 }), Is.True);
+            Assert.That(r.AllReadyAmong(new[] { 1, 2 }), Is.False);
+            Assert.That(r.AllReadyAmong(new int[0]), Is.False);
+        }
+
+        [Test]
         public void Reset_ClearsEveryone()
         {
             var r = new ReadyCheck(new[] { 1 });

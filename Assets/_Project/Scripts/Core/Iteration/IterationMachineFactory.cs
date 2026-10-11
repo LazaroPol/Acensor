@@ -19,7 +19,7 @@ namespace Specimen.Core.Iteration
                 .AddState(IterationPhase.Extraction, new SignalState())
                 .AddState(IterationPhase.Ended, new SignalState())
                 .AddTransition(IterationPhase.Armory, IterationPhase.Calm, () => ctx.ArmoryCompleted)
-                .AddTransition(IterationPhase.Calm, IterationPhase.Incursion, () => timerDone() || ctx.Ready.AllReady)
+                .AddTransition(IterationPhase.Calm, IterationPhase.Incursion, () => timerDone() || ctx.Ready.AllReadyAmong(ctx.Presence.NotTrapped))
                 .AddTransition(IterationPhase.Incursion, IterationPhase.Ascent, timerDone)
                 .AddTransition(IterationPhase.Ascent, IterationPhase.Siege, () => ctx.IsLastFloor)
                 .AddTransition(IterationPhase.Ascent, IterationPhase.Calm, () => !ctx.IsLastFloor)

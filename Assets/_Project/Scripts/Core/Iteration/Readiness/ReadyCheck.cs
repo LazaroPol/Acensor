@@ -21,6 +21,18 @@ namespace Specimen.Core.Iteration.Readiness
         public int ReadyCount => _ready.Count;
         public bool AllReady => _ready.Count == _players.Count;
 
+        /// <summary>True si hay alguien en el grupo dado y todos están listos (p. ej. ignorando a los atrapados).</summary>
+        public bool AllReadyAmong(IEnumerable<int> playerIds)
+        {
+            bool any = false;
+            foreach (var id in playerIds)
+            {
+                any = true;
+                if (!_ready.Contains(id)) return false;
+            }
+            return any;
+        }
+
         public bool IsReady(int playerId) => _ready.Contains(playerId);
 
         public void MarkReady(int playerId) => _ready.Add(Known(playerId));

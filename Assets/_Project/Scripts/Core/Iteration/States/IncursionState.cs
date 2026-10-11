@@ -1,3 +1,4 @@
+using Specimen.Core.Iteration.Presence;
 using Specimen.Core.Time;
 
 namespace Specimen.Core.Iteration.States
@@ -18,6 +19,13 @@ namespace Specimen.Core.Iteration.States
         {
             Context.EarlyClose.Reset();
             base.Enter();
+        }
+
+        public override void Exit()
+        {
+            var trapped = Context.Presence.TrapThoseOutside();
+            if (trapped.Count > 0) Context.Events.Publish(new PlayersTrapped(Context.Floor, trapped));
+            base.Exit();
         }
     }
 }
