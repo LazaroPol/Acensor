@@ -8,7 +8,7 @@ namespace Specimen.Runtime.Prototype
 {
     /// <summary>
     /// Arranque de la escena Prototipo: construye la sala greybox desde el catálogo visual
-    /// y monta el jugador con su cámara en tercera persona (PG-03).
+    /// y monta el jugador con su cámara en tercera persona (PG-03) y el HUD de depuración (PG-04).
     /// Si la escena no trae bootstrap, se crea solo (la escena puede quedar casi vacía).
     /// </summary>
     public sealed class PrototypeBootstrap : MonoBehaviour
@@ -37,10 +37,13 @@ namespace Specimen.Runtime.Prototype
             spawner.Init(catalog);
             foreach (var placement in new GreyboxRoomLayout(anchoSala, fondoSala).Build())
             {
-                if (placement.Id == VisualId.Jugador) PrototypePlayer.Spawn(spawner, placement);
+                if (placement.Id == VisualId.Jugador) MountHud(PrototypePlayer.Spawn(spawner, placement));
                 else spawner.Spawn(placement);
             }
             PrototypeScenery.EnsureLight();
         }
+
+        private static void MountHud(PlayerMotor player) =>
+            new GameObject(nameof(DebugHud)).AddComponent<DebugHud>().Init(player.Vitals);
     }
 }

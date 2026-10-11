@@ -2,14 +2,20 @@
   "id": "PG-04",
   "phase": "PG",
   "title": "HUD de depuración: vida, recursos y temporizador del núcleo",
-  "status": "todo",
+  "status": "in_progress",
   "type": "feature",
   "labels": [
     "greybox"
   ],
   "origin": "backlog",
-  "description": "",
-  "acceptance": [],
+  "description": "Presentador C# puro (Core.Prototype) que formatea vida, recurso de clase, Aguante, estado vital y temporizador de fase; comandos de depuración (dañar, curar, avanzar tiempo) en el núcleo. DebugHud (IMGUI) solo pinta el texto y lee teclas F1/F2/F3 del Input System.",
+  "acceptance": [
+    "DebugHudPresenter formatea vida, recurso de clase y Aguante como actual/máx redondeados, marca ESPECTRO sin vida y muestra la fase con su tiempo restante mm:ss o EXPIRADA (tests).",
+    "HudTime formatea segundos a mm:ss redondeando hacia arriba y sin negativos (tests).",
+    "DebugCommands daña y cura por cantidades fijas sin salir de [0, máx] y avanza el temporizador de fase, disparando su expiración (tests).",
+    "Runtime: DebugHud (IMGUI) pinta el texto del presentador, hace Tick del temporizador y atiende F1 dañar, F2 curar, F3 avanzar tiempo; el bootstrap lo monta con las Vitals del jugador.",
+    "tools/verify.sh en verde."
+  ],
   "pr": null,
   "session": null
 }

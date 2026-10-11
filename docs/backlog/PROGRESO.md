@@ -25,8 +25,8 @@ TOTAL  █████████████░░░░░░░░░░░�
 
 ## Cola de prioridad (tablero)
 
-1. **PG-04** HUD de depuración: vida, recursos y temporizador del núcleo
-2. **PG-05** Guía de prueba manual en Unity y checklist de importación de assets
-3. **PG-06** Sistema de colisiones (épico)
-4. **F4-01** Ranuras de módulo y construcción con materiales
-5. **F4-02** Mejora de módulos por niveles
+1. **PG-05** Guía de prueba manual en Unity y checklist de importación de assets
+2. **PG-06** Sistema de colisiones (épico)
+3. **F4-01** Ranuras de módulo y construcción con materiales
+4. **F4-02** Mejora de módulos por niveles
+5. **F4-03** Hoguera: regeneración y recuperación de fatiga

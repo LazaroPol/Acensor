@@ -6,7 +6,7 @@ Ensamblado: `Specimen.Core` · Carpeta: `Assets/_Project/Scripts/Core/Time`
 Tests: `Assets/_Project/Tests/EditMode/Core/Time`
 
 **Depende de:** [Core.Common](Core.Common.md)
-**Lo usan:** [Core.Iteration](Core.Iteration.md), [Core.Iteration.States](Core.Iteration.States.md), [Core.StateMachines](Core.StateMachines.md), [Core.Vitals](Core.Vitals.md)
+**Lo usan:** [Core.Iteration](Core.Iteration.md), [Core.Iteration.States](Core.Iteration.States.md), [Core.Prototype](Core.Prototype.md), [Core.StateMachines](Core.StateMachines.md), [Core.Vitals](Core.Vitals.md), [Runtime.Prototype](Runtime.Prototype.md)
 
 | Fichero | Tipo | Resumen |
 |---|---|---|
