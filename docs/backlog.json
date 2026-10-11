@@ -47,8 +47,8 @@
         {
           "id": "F0-07",
           "title": "Núcleo: bus de eventos tipado",
-          "status": "todo",
-          "pr": null
+          "status": "done",
+          "pr": "PR-007"
         },
         {
           "id": "F0-08",
