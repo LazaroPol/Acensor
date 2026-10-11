@@ -2,7 +2,7 @@
   "id": "PG-06",
   "phase": "PG",
   "title": "Sistema de colisiones (épico)",
-  "status": "idea",
+  "status": "todo",
   "type": "feature",
   "labels": [
     "fisica",
