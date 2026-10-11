@@ -2,7 +2,7 @@
   "id": "F5-01",
   "phase": "F5",
   "title": "Generador procedural de pasillos por anillos (con semilla)",
-  "status": "in_progress",
+  "status": "done",
   "type": "feature",
   "labels": [
     "pisos"
@@ -16,6 +16,6 @@
     "Hay exactamente un Hueco de Emergencia y está en el anillo más profundo.",
     "Configuración inválida (anillos fuera de 1-3, salas no positivas, probabilidad fuera de [0,1]) lanza excepción; tests NUnit."
   ],
-  "pr": null,
-  "session": null
+  "pr": "#46",
+  "session": 34
 }
