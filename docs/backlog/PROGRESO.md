@@ -1,10 +1,10 @@
 # Progreso — SPECIMEN
 
 ```
-TOTAL  ████████████░░░░░░░░░░░░░░░░░░  38.5%  (30/78 tareas)
+TOTAL  ████████████░░░░░░░░░░░░░░░░░░  39.7%  (31/78 tareas)
 ```
 
-**Fase en curso:** PG · **Siguiente tarea:** PG-01
+**Fase en curso:** PG · **Siguiente tarea:** PG-02
 
 | Fase | Progreso | % | Tareas |
 |---|---|---|---|
@@ -12,7 +12,7 @@ TOTAL  ████████████░░░░░░░░░░░░�
 | [F1 · Bucle de iteración](fases/F1.md) | `███████████████` | 100% | 7/7 |
 | [F2 · Personaje y recursos](fases/F2.md) | `███████████████` | 100% | 7/7 |
 | [F3 · Inventario, loot y crafting](fases/F3.md) | `███████████████` | 100% | 6/6 |
-| [PG · Prototipo greybox](fases/PG.md) | `░░░░░░░░░░░░░░░` | 0% | 0/5 |
+| [PG · Prototipo greybox](fases/PG.md) | `███░░░░░░░░░░░░` | 20% | 1/5 |
 | [F4 · Ascensor-Refugio](fases/F4.md) | `░░░░░░░░░░░░░░░` | 0% | 0/5 |
 | [F5 · Generación de pisos](fases/F5.md) | `░░░░░░░░░░░░░░░` | 0% | 0/6 |
 | [F6 · Combate e IA](fases/F6.md) | `░░░░░░░░░░░░░░░` | 0% | 0/5 |

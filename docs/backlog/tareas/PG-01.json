@@ -2,7 +2,7 @@
   "id": "PG-01",
   "phase": "PG",
   "title": "Catálogo visual: IDs lógicos y resolución asset/greybox (núcleo puro + tests)",
-  "status": "in_progress",
+  "status": "done",
   "type": "feature",
   "labels": [
     "greybox"
@@ -16,6 +16,6 @@
     "Asignar, reasignar y desasignar assets cambia la resolución; asignar null falla pronto.",
     "Núcleo sin UnityEngine, ficheros <= 120 líneas y tests NUnit en verde."
   ],
-  "pr": null,
-  "session": null
+  "pr": "#31",
+  "session": 23
 }
