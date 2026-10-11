@@ -2,15 +2,21 @@
   "id": "F6-03",
   "phase": "F6",
   "title": "Percepción de IA (visión/oído) y modificadores de Atrapado",
-  "status": "todo",
+  "status": "done",
   "type": "feature",
   "labels": [
     "combate",
     "ia"
   ],
   "origin": "backlog",
-  "description": "",
-  "acceptance": [],
-  "pr": null,
-  "session": null
+  "description": "Percepción de enemigos en el núcleo: visión en cono con alcance y oído por ruido del objetivo, con modificadores inyectables que aplican los de Atrapado (GDD §3.2: ×1,5 velocidad, ×2 radio de visión).",
+  "acceptance": [
+    "La visión detecta objetivos dentro del alcance y del semiángulo del cono, y no los que están detrás o lejos.",
+    "El oído detecta objetivos cuyo ruido (0-1) × alcance auditivo cubre la distancia; ruido 0 no se oye.",
+    "Un objetivo Atrapado se ve al doble de alcance y el enemigo lo persigue a ×1,5 de velocidad (TrappedModifiers).",
+    "Ver tiene prioridad sobre oír; la configuración valida valores negativos o ángulos fuera de rango.",
+    "Tests NUnit cubren visión, oído, prioridad, modificadores de Atrapado y validación."
+  ],
+  "pr": "#57",
+  "session": 42
 }
