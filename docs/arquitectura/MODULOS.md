@@ -22,7 +22,7 @@ Un módulo = un namespace C#. Abre solo la página del módulo que vayas a tocar
 | [Core.Loot](modulos/Core.Loot.md) | 6 | `DepthRings`, `IRingWeighting`, `LootDrop`, `LootEntry`, `LootTable` … | Core.Common, Core.Items, Core.Randomness |
 | [Core.Movement](modulos/Core.Movement.md) | 6 | `CameraPoint`, `MovementConfig`, `PlanarMover`, `PlanarVector`, `SprintController` … | Core.Common, Core.Vitals |
 | [Core.Professions](modulos/Core.Professions.md) | 6 | `DefaultProfessionSynergies`, `ISynergyCatalog`, `ProfessionBench`, `ProfessionId`, `ProfessionSynergy` … | Core.Common |
-| [Core.Prototype](modulos/Core.Prototype.md) | 3 | `GreyboxRoomLayout`, `ILevelLayout`, `LevelPlacement` | Core.Common, Core.Visuals |
+| [Core.Prototype](modulos/Core.Prototype.md) | 6 | `DebugCommands`, `DebugHudPresenter`, `GreyboxRoomLayout`, `HudTime`, `ILevelLayout` … | Core.Common, Core.Time, Core.Visuals, Core.Vitals |
 | [Core.Randomness](modulos/Core.Randomness.md) | 2 | `IRandom`, `Pcg32Random` | Core.Common |
 | [Core.Repair](modulos/Core.Repair.md) | 6 | `IRepairCatalog`, `RepairCatalog`, `RepairReport`, `RepairResult`, `RepairRule` … | Core.Common, Core.Items |
 | [Core.StateMachines](modulos/Core.StateMachines.md) | 3 | `IState`, `StateBase`, `StateMachine`, `Transition` | Core.Common, Core.Time |
@@ -30,7 +30,7 @@ Un módulo = un namespace C#. Abre solo la página del módulo que vayas a tocar
 | [Core.Time](modulos/Core.Time.md) | 4 | `IClock`, `ITickable`, `ManualClock`, `PhaseTimer` | Core.Common |
 | [Core.Visuals](modulos/Core.Visuals.md) | 14 | `DefaultGreyboxStyles`, `GreyboxColor`, `GreyboxOffset`, `GreyboxPrimitive`, `GreyboxStyle` … | Core.Common |
 | [Core.Vitals](modulos/Core.Vitals.md) | 6 | `CharacterVitals`, `Fatigue`, `FatigueConfig`, `ResourceKind`, `ResourcePool` … | Core.Common, Core.Stats, Core.Time |
-| [Runtime.Prototype](modulos/Runtime.Prototype.md) | 6 | `PlayerMotor`, `PrototypeBootstrap`, `PrototypeInput`, `PrototypePlayer`, `PrototypeScenery` … | Core.Movement, Core.Prototype, Core.Stats, Core.Visuals, Core.Vitals, Runtime.Visuals |
+| [Runtime.Prototype](modulos/Runtime.Prototype.md) | 7 | `DebugHud`, `PlayerMotor`, `PrototypeBootstrap`, `PrototypeInput`, `PrototypePlayer` … | Core.Movement, Core.Prototype, Core.Stats, Core.Time, Core.Visuals, Core.Vitals, Runtime.Visuals |
 | [Runtime.Visuals](modulos/Runtime.Visuals.md) | 3 | `CatalogoVisual`, `GreyboxFactory`, `VisualSpawner` | Core.Prototype, Core.Visuals |
 
 ## Grafo de dependencias (flecha = «usa a»)
@@ -78,7 +78,7 @@ flowchart LR
   n13 --> n2 & n5 & n17
   n14 --> n2 & n23
   n15 --> n2
-  n16 --> n2 & n22
+  n16 --> n2 & n21 & n22 & n23
   n17 --> n2
   n18 --> n2 & n5
   n19 --> n2 & n21
@@ -86,6 +86,6 @@ flowchart LR
   n21 --> n2
   n22 --> n2
   n23 --> n2 & n20 & n21
-  n24 --> n14 & n16 & n20 & n22 & n23 & n25
+  n24 --> n14 & n16 & n20 & n21 & n22 & n23 & n25
   n25 --> n16 & n22
 ```
