@@ -30,7 +30,7 @@ class SessionChainTests(unittest.TestCase):
 
     def test_next_prompt_points_to_runbook_and_token_rules(self):
         text = (ROOT / "docs/sesiones/NEXT_PROMPT.md").read_text(encoding="utf-8")
-        for needle in ("LazaroPol/Acensor", "RUNBOOK.md", "CLAUDE.md", "ship.sh"):
+        for needle in ("MenaDeFerro/Project-Especimen", "RUNBOOK.md", "CLAUDE.md", "ship.sh"):
             self.assertIn(needle, text)
 
     def test_claude_md_has_token_saving_rules(self):

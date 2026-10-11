@@ -2,7 +2,7 @@
 # Utilidades compartidas por los scripts de PR.
 set -euo pipefail
 ROOT="$(cd "$(dirname "${BASH_SOURCE[0]}")/../.." && pwd)"
-REPO="${SPECIMEN_REPO:-LazaroPol/Acensor}"
+REPO="${SPECIMEN_REPO:-MenaDeFerro/Project-Especimen}"
 TRAILER=$'Co-Authored-By: Claude Opus 5.5 <noreply@anthropic.com>\nClaude-Session: https://claude.ai/code/session_01TAZqtMuKi59Z6RaTqSmwBL'
 PR_FOOTER=$'\n\n🤖 Generated with [Claude Code](https://claude.com/claude-code)\n\nhttps://claude.ai/code/session_01TAZqtMuKi59Z6RaTqSmwBL'
 
