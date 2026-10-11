@@ -2,7 +2,7 @@
   "id": "F6-04",
   "phase": "F6",
   "title": "Habilidades de clase y rasgos de movilidad",
-  "status": "in_progress",
+  "status": "done",
   "type": "feature",
   "labels": [
     "combate"
@@ -16,6 +16,6 @@
     "El perfil de movilidad se deriva de los rasgos del kit: saltos aéreos (doble salto), dash, planeo (caída reducida), trepar (coste de stamina) y teletransporte con alcance limitado.",
     "Tests NUnit cubren activación, costes, enfriamiento, perfil por kit, saltos aéreos, planeo y teletransporte."
   ],
-  "pr": null,
-  "session": null
+  "pr": "#58",
+  "session": 43
 }
