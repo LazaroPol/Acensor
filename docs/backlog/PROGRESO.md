@@ -1,10 +1,10 @@
 # Progreso — SPECIMEN
 
 ```
-TOTAL  ████████████████░░░░░░░░░░░░░░  51.9%  (41/79 tareas)
+TOTAL  ████████████████░░░░░░░░░░░░░░  53.2%  (42/79 tareas)
 ```
 
-**Fase en curso:** F5 · **Siguiente tarea:** F5-01
+**Fase en curso:** F5 · **Siguiente tarea:** F5-02
 
 | Fase | Progreso | % | Tareas |
 |---|---|---|---|
@@ -14,7 +14,7 @@ TOTAL  ████████████████░░░░░░░░�
 | [F3 · Inventario, loot y crafting](fases/F3.md) | `███████████████` | 100% | 6/6 |
 | [PG · Prototipo greybox](fases/PG.md) | `███████████████` | 100% | 6/6 |
 | [F4 · Ascensor-Refugio](fases/F4.md) | `███████████████` | 100% | 5/5 |
-| [F5 · Generación de pisos](fases/F5.md) | `░░░░░░░░░░░░░░░` | 0% | 0/6 |
+| [F5 · Generación de pisos](fases/F5.md) | `███░░░░░░░░░░░░` | 17% | 1/6 |
 | [F6 · Combate e IA](fases/F6.md) | `░░░░░░░░░░░░░░░` | 0% | 0/5 |
 | [F7 · Ecos y decisiones](fases/F7.md) | `░░░░░░░░░░░░░░░` | 0% | 0/4 |
 | [F8 · Asedio y extracción](fases/F8.md) | `░░░░░░░░░░░░░░░` | 0% | 0/4 |
@@ -25,8 +25,8 @@ TOTAL  ████████████████░░░░░░░░�
 
 ## Cola de prioridad (tablero)
 
-1. **F5-01** Generador procedural de pasillos por anillos (con semilla)
-2. **F5-02** Tipos de piso (patrón Strategy)
-3. **F5-03** Presagio y modificadores de piso
-4. **F5-04** Distribución de loot y enemigos por anillo
-5. **F5-05** Caminos alternativos según profesión
+1. **F5-02** Tipos de piso (patrón Strategy)
+2. **F5-03** Presagio y modificadores de piso
+3. **F5-04** Distribución de loot y enemigos por anillo
+4. **F5-05** Caminos alternativos según profesión
+5. **F5-06** Restos de clones anteriores y Fragmentos de memoria

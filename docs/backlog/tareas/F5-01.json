@@ -2,14 +2,20 @@
   "id": "F5-01",
   "phase": "F5",
   "title": "Generador procedural de pasillos por anillos (con semilla)",
-  "status": "todo",
+  "status": "done",
   "type": "feature",
   "labels": [
     "pisos"
   ],
   "origin": "backlog",
-  "description": "",
-  "acceptance": [],
-  "pr": null,
-  "session": null
+  "description": "Generador C# puro y determinista (semilla) del grafo de salas y pasillos de un piso, organizado en anillos de profundidad 1-3 alrededor del ascensor; el Hueco de Emergencia aparece en el anillo más profundo.",
+  "acceptance": [
+    "Misma semilla y configuración producen exactamente el mismo trazado; semillas distintas lo varían.",
+    "Cada anillo tiene el número de salas configurado y los pasillos solo unen salas del mismo anillo o de anillos adyacentes.",
+    "Todas las salas son alcanzables desde la entrada (ascensor, anillo 0).",
+    "Hay exactamente un Hueco de Emergencia y está en el anillo más profundo.",
+    "Configuración inválida (anillos fuera de 1-3, salas no positivas, probabilidad fuera de [0,1]) lanza excepción; tests NUnit."
+  ],
+  "pr": "#46",
+  "session": 34
 }
