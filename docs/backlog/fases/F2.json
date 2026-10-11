@@ -13,9 +13,9 @@
     {
       "id": "F2-02",
       "title": "Recursos: vida, recurso de clase, stamina",
-      "status": "todo",
-      "pr": null,
-      "session": null
+      "status": "done",
+      "pr": "#11",
+      "session": 11
     },
     {
       "id": "F2-03",
