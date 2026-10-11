@@ -27,9 +27,9 @@
     {
       "id": "F2-04",
       "title": "Definición de los 6 kits de clase",
-      "status": "in_progress",
-      "pr": null,
-      "session": null
+      "status": "done",
+      "pr": "#13",
+      "session": 13
     },
     {
       "id": "F2-05",
