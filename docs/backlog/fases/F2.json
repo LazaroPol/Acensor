@@ -6,9 +6,9 @@
     {
       "id": "F2-01",
       "title": "Atributos y modificadores (aditivos / multiplicativos)",
-      "status": "in_progress",
-      "pr": null,
-      "session": null
+      "status": "done",
+      "pr": "#10",
+      "session": 10
     },
     {
       "id": "F2-02",
