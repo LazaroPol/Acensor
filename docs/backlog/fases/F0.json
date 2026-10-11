@@ -69,9 +69,9 @@
     {
       "id": "F0-10",
       "title": "Migración a GitHub, PRs reales y documentación modular",
-      "status": "in_progress",
-      "pr": null,
-      "session": null
+      "status": "done",
+      "pr": "#1",
+      "session": 2
     }
   ]
 }
