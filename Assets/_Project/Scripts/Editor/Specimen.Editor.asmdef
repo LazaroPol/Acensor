@@ -1,0 +1,14 @@
+{
+  "name": "Specimen.Editor",
+  "rootNamespace": "Specimen.Editor",
+  "references": ["Specimen.Core", "Specimen.Runtime"],
+  "includePlatforms": ["Editor"],
+  "excludePlatforms": [],
+  "allowUnsafeCode": false,
+  "overrideReferences": false,
+  "precompiledReferences": [],
+  "autoReferenced": false,
+  "defineConstraints": [],
+  "versionDefines": [],
+  "noEngineReferences": false
+}

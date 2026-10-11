@@ -25,8 +25,8 @@ TOTAL  ████████████░░░░░░░░░░░░�
 
 ## Cola de prioridad (tablero)
 
-1. **PG-02** Bootstrap del prototipo: escena Prototipo y nivel greybox desde el catálogo
-2. **PG-03** Jugador y cámara en tercera persona (Input System)
-3. **PG-04** HUD de depuración: vida, recursos y temporizador del núcleo
-4. **PG-05** Guía de prueba manual en Unity y checklist de importación de assets
-5. **PG-06** Sistema de colisiones (épico)
+1. **PG-03** Jugador y cámara en tercera persona (Input System)
+2. **PG-04** HUD de depuración: vida, recursos y temporizador del núcleo
+3. **PG-05** Guía de prueba manual en Unity y checklist de importación de assets
+4. **PG-06** Sistema de colisiones (épico)
+5. **F4-01** Ranuras de módulo y construcción con materiales
