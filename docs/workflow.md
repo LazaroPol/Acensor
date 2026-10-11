@@ -5,8 +5,8 @@
 2. Se marca en curso (`--start <ID>`) en una rama `feature/<ID>-<slug>`.
 3. Se implementa con tests (TDD cuando aplica). Principios SOLID; núcleo sin `UnityEngine`.
 4. `tools/git/open_pr.sh` abre la PR en GitHub solo si `tools/verify.sh` pasa.
-5. Se cierra la sesión **dentro de la misma PR**: `--done <ID> --pr '#N' --session S`,
-   `docs/sesiones/SESION-SS.md` y su fila en `docs/sesiones/README.md`.
+5. Se cierra la sesión **dentro de la misma PR** con `tools/session/ship.sh` (marca la tarea, historial y resumen),
+   que genera `docs/sesiones/SESION-SS.md` y su fila en `docs/sesiones/README.md`.
 6. `tools/git/merge_pr.sh N` mergea solo si la verificación local y **todos los checks de CI** están en verde,
    y vuelve a verificar `main` tras el merge.
 7. Se abre la siguiente sesión con la siguiente tarea, sin programarla.
