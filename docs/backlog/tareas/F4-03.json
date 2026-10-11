@@ -2,7 +2,7 @@
   "id": "F4-03",
   "phase": "F4",
   "title": "Hoguera: regeneración y recuperación de fatiga",
-  "status": "in_progress",
+  "status": "done",
   "type": "feature",
   "labels": [
     "ascensor"
@@ -16,6 +16,6 @@
     "Sin Hoguera construida (nivel 0) o con un tick de 0 s no ocurre nada; deltas negativos se rechazan.",
     "Tests NUnit cubren regeneración, escalado por nivel, recuperación de fatiga y el caso sin Hoguera."
   ],
-  "pr": null,
-  "session": null
+  "pr": "#39",
+  "session": 31
 }
