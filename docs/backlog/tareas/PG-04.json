@@ -2,7 +2,7 @@
   "id": "PG-04",
   "phase": "PG",
   "title": "HUD de depuración: vida, recursos y temporizador del núcleo",
-  "status": "in_progress",
+  "status": "done",
   "type": "feature",
   "labels": [
     "greybox"
@@ -16,6 +16,6 @@
     "Runtime: DebugHud (IMGUI) pinta el texto del presentador, hace Tick del temporizador y atiende F1 dañar, F2 curar, F3 avanzar tiempo; el bootstrap lo monta con las Vitals del jugador.",
     "tools/verify.sh en verde."
   ],
-  "pr": null,
-  "session": null
+  "pr": "#34",
+  "session": 26
 }
