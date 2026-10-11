@@ -2,7 +2,7 @@
   "id": "F6-03",
   "phase": "F6",
   "title": "Percepción de IA (visión/oído) y modificadores de Atrapado",
-  "status": "in_progress",
+  "status": "done",
   "type": "feature",
   "labels": [
     "combate",
@@ -17,6 +17,6 @@
     "Ver tiene prioridad sobre oír; la configuración valida valores negativos o ángulos fuera de rango.",
     "Tests NUnit cubren visión, oído, prioridad, modificadores de Atrapado y validación."
   ],
-  "pr": null,
-  "session": null
+  "pr": "#57",
+  "session": 42
 }
