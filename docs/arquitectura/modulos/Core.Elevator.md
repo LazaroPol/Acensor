@@ -5,16 +5,20 @@
 Ensamblado: `Specimen.Core` · Carpeta: `Assets/_Project/Scripts/Core/Elevator`
 Tests: `Assets/_Project/Tests/EditMode/Core/Elevator`
 
-**Depende de:** [Core.Common](Core.Common.md), [Core.Crafting](Core.Crafting.md), [Core.Items](Core.Items.md)
+**Depende de:** [Core.Common](Core.Common.md), [Core.Crafting](Core.Crafting.md), [Core.Items](Core.Items.md), [Core.Time](Core.Time.md), [Core.Vitals](Core.Vitals.md)
 **Lo usan:** nadie
 
 | Fichero | Tipo | Resumen |
 |---|---|---|
 | `BlueprintCatalog.cs` | class `BlueprintCatalog` | Catálogo de planos en memoria; como mucho un plano por tipo de módulo. |
+| `BonfireConfig.cs` | class `BonfireConfig` | Parámetros de la Hoguera por nivel: vida y stamina regeneradas por segundo y segundos de descanso para recuperar un punto de fatiga (a nivel |
+| `BonfireRest.cs` | class `BonfireRest` | Descanso de un personaje junto a la Hoguera (GDD §5-§6): regenera vida y stamina y recupera fatiga a un ritmo que escala con el nivel del mó |
 | `BuildResult.cs` | enum `BuildResult` | Resultado de un intento de construir un módulo en una ranura. |
+| `ElevatorPlatform.Levels.cs` | class `ElevatorPlatform` |  |
 | `ElevatorPlatform.Upgrade.cs` | class `ElevatorPlatform` |  |
 | `ElevatorPlatform.cs` | class `ElevatorPlatform` | Plataforma del Ascensor-Refugio (GDD §6): ranuras donde se construyen módulos pagando materiales. |
 | `IBlueprintCatalog.cs` | interface `IBlueprintCatalog` | Catálogo de planos de módulo consultable por tipo. |
+| `IModuleLevels.cs` | interface `IModuleLevels` | Consulta del nivel de cada módulo del Ascensor-Refugio (0 si no está construido). |
 | `ModuleBlueprint.cs` | class `ModuleBlueprint` | Plano inmutable de un módulo: qué materiales cuesta construirlo y, opcionalmente, cuánto cuesta cada mejora de nivel (GDD §6: algunos módulo |
 | `ModuleSlot.cs` | class `ModuleSlot` | Ranura de la plataforma: vacía (nivel 0) o con un módulo construido y su nivel. |
 | `ModuleType.cs` | enum `ModuleType` | Módulos construibles en las ranuras del Ascensor-Refugio (GDD §6). |
