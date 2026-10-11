@@ -13,9 +13,9 @@
     {
       "id": "F3-02",
       "title": "Inventario con capacidad y apilado",
-      "status": "in_progress",
-      "pr": null,
-      "session": null
+      "status": "done",
+      "pr": "#19",
+      "session": 18
     },
     {
       "id": "F3-03",
