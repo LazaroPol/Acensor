@@ -6,11 +6,13 @@ from tools.tests.helpers import ROOT
 MAX_LINES = 120
 EXTENSIONS = {".cs", ".py", ".md", ".sh", ".json", ".yml", ".asmdef", ".csproj"}
 EXCLUDED_DIRS = {"bin", "obj", "Library", "Temp", ".git", "historico"}
+GENERATED_FILES = {"packages-lock.json"}  # lo escribe Unity
 
 
 def tracked_text_files():
     for path in ROOT.rglob("*"):
-        if path.is_file() and path.suffix in EXTENSIONS and not EXCLUDED_DIRS & set(path.parts):
+        if path.is_file() and path.suffix in EXTENSIONS and path.name not in GENERATED_FILES \
+                and not EXCLUDED_DIRS & set(path.parts):
             yield path
 
 
