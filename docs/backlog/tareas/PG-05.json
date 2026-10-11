@@ -2,7 +2,7 @@
   "id": "PG-05",
   "phase": "PG",
   "title": "Guía de prueba manual en Unity y checklist de importación de assets",
-  "status": "in_progress",
+  "status": "done",
   "type": "docs",
   "labels": [
     "greybox"
@@ -15,6 +15,6 @@
     "Incluye un checklist de importación de assets (escala, pivote, ejes, nombres, materiales URP, asignación en CatalogoVisual, créditos)",
     "Ningún fichero supera 120 líneas y la verificación sigue en verde"
   ],
-  "pr": null,
-  "session": null
+  "pr": "#35",
+  "session": 27
 }
