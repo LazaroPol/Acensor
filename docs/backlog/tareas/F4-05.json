@@ -2,7 +2,7 @@
   "id": "F4-05",
   "phase": "F4",
   "title": "Litera: revivir Espectros durante la Calma",
-  "status": "in_progress",
+  "status": "done",
   "type": "feature",
   "labels": [
     "ascensor"
@@ -16,6 +16,6 @@
     "El revivir en campo se delega en el coste de objeto de campo si se proporciona; si no, no se puede pagar.",
     "Tests NUnit cubren sin Litera, fase incorrecta, sin materiales, revivir con cobro y la rebaja por nivel."
   ],
-  "pr": null,
-  "session": null
+  "pr": "#45",
+  "session": 33
 }
