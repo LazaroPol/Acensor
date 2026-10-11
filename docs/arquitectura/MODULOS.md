@@ -14,6 +14,7 @@ Un módulo = un namespace C#. Abre solo la página del módulo que vayas a tocar
 | [Core.Events](modulos/Core.Events.md) | 2 | `EventBus`, `IEventPublisher`, `IEventSubscriber`, `IEventBus` | Core.Common |
 | [Core.Floors](modulos/Core.Floors.md) | 8 | `Corridor`, `FloorConnectivity`, `FloorLayout`, `FloorRoom`, `IFloorGenerator` … | Core.Common, Core.Loot, Core.Randomness |
 | [Core.Floors.Omens](modulos/Core.Floors.Omens.md) | 5 | `FloorModifier`, `FloorModifierCatalog`, `FloorModifierKind`, `Omen`, `OmenRoller` | Core.Common, Core.Floors.Types, Core.Randomness |
+| [Core.Floors.Paths](modulos/Core.Floors.Paths.md) | 4 | `AlternativePathPlanner`, `FloorPaths`, `SealMethod`, `SealedDoorRules` | Core.Common, Core.Professions, Core.Randomness |
 | [Core.Floors.Population](modulos/Core.Floors.Population.md) | 5 | `FloorPopulation`, `FloorPopulator`, `RingPopulationRules`, `RingQuota`, `RoomPopulation` | Core.Common, Core.Loot, Core.Randomness |
 | [Core.Floors.Types](modulos/Core.Floors.Types.md) | 9 | `PuzzleFloor`, `DecisionFloor`, `SanctuaryFloor`, `ProfessionFloor`, `LootFloor` … | Core.Common |
 | [Core.Items](modulos/Core.Items.md) | 11 | `Durability`, `IDurability`, `IInventory`, `Inventory`, `ItemCategory` … | Core.Common |
@@ -51,59 +52,61 @@ flowchart LR
   n5["Core.Events"]
   n6["Core.Floors"]
   n7["Core.Floors.Omens"]
-  n8["Core.Floors.Population"]
-  n9["Core.Floors.Types"]
-  n10["Core.Items"]
-  n11["Core.Iteration"]
-  n12["Core.Iteration.Ending"]
-  n13["Core.Iteration.Presence"]
-  n14["Core.Iteration.Readiness"]
-  n15["Core.Iteration.States"]
-  n16["Core.Iteration.Voting"]
-  n17["Core.Life"]
-  n18["Core.Loot"]
-  n19["Core.Movement"]
-  n20["Core.Physics"]
-  n21["Core.Professions"]
-  n22["Core.Prototype"]
-  n23["Core.Randomness"]
-  n24["Core.Repair"]
-  n25["Core.StateMachines"]
-  n26["Core.Stats"]
-  n27["Core.Time"]
-  n28["Core.Visuals"]
-  n29["Core.Vitals"]
-  n30["Runtime.Prototype"]
-  n31["Runtime.Visuals"]
+  n8["Core.Floors.Paths"]
+  n9["Core.Floors.Population"]
+  n10["Core.Floors.Types"]
+  n11["Core.Items"]
+  n12["Core.Iteration"]
+  n13["Core.Iteration.Ending"]
+  n14["Core.Iteration.Presence"]
+  n15["Core.Iteration.Readiness"]
+  n16["Core.Iteration.States"]
+  n17["Core.Iteration.Voting"]
+  n18["Core.Life"]
+  n19["Core.Loot"]
+  n20["Core.Movement"]
+  n21["Core.Physics"]
+  n22["Core.Professions"]
+  n23["Core.Prototype"]
+  n24["Core.Randomness"]
+  n25["Core.Repair"]
+  n26["Core.StateMachines"]
+  n27["Core.Stats"]
+  n28["Core.Time"]
+  n29["Core.Visuals"]
+  n30["Core.Vitals"]
+  n31["Runtime.Prototype"]
+  n32["Runtime.Visuals"]
   n0 --> n1 & n2
-  n1 --> n2 & n26
-  n3 --> n2 & n10 & n21
-  n4 --> n2 & n3 & n10 & n11 & n17 & n26 & n27 & n29
+  n1 --> n2 & n27
+  n3 --> n2 & n11 & n22
+  n4 --> n2 & n3 & n11 & n12 & n18 & n27 & n28 & n30
   n5 --> n2
-  n6 --> n2 & n18 & n23
-  n7 --> n2 & n9 & n23
-  n8 --> n2 & n18 & n23
-  n9 --> n2
+  n6 --> n2 & n19 & n24
+  n7 --> n2 & n10 & n24
+  n8 --> n2 & n22 & n24
+  n9 --> n2 & n19 & n24
   n10 --> n2
-  n11 --> n2 & n5 & n12 & n13 & n14 & n15 & n16 & n25 & n27
-  n12 --> n13
-  n13 --> n2
+  n11 --> n2
+  n12 --> n2 & n5 & n13 & n14 & n15 & n16 & n17 & n26 & n28
+  n13 --> n14
   n14 --> n2
-  n15 --> n12 & n13 & n14 & n25 & n27
-  n16 --> n2
-  n17 --> n2 & n11 & n29
-  n18 --> n2 & n10 & n23
-  n19 --> n2 & n29
-  n20 --> n2
+  n15 --> n2
+  n16 --> n13 & n14 & n15 & n26 & n28
+  n17 --> n2
+  n18 --> n2 & n12 & n30
+  n19 --> n2 & n11 & n24
+  n20 --> n2 & n30
   n21 --> n2
-  n22 --> n2 & n20 & n27 & n28 & n29
-  n23 --> n2
-  n24 --> n2 & n10
-  n25 --> n2 & n27
-  n26 --> n2
+  n22 --> n2
+  n23 --> n2 & n21 & n28 & n29 & n30
+  n24 --> n2
+  n25 --> n2 & n11
+  n26 --> n2 & n28
   n27 --> n2
   n28 --> n2
-  n29 --> n2 & n26 & n27
-  n30 --> n19 & n22 & n26 & n27 & n28 & n29 & n31
-  n31 --> n22 & n28
+  n29 --> n2
+  n30 --> n2 & n27 & n28
+  n31 --> n20 & n23 & n27 & n28 & n29 & n30 & n32
+  n32 --> n23 & n29
 ```

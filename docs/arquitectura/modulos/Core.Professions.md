@@ -6,7 +6,7 @@ Ensamblado: `Specimen.Core` · Carpeta: `Assets/_Project/Scripts/Core/Profession
 Tests: `Assets/_Project/Tests/EditMode/Core/Professions`
 
 **Depende de:** [Core.Common](Core.Common.md)
-**Lo usan:** [Core.Crafting](Core.Crafting.md)
+**Lo usan:** [Core.Crafting](Core.Crafting.md), [Core.Floors.Paths](Core.Floors.Paths.md)
 
 | Fichero | Tipo | Resumen |
 |---|---|---|

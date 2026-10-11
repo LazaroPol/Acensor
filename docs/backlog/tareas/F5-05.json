@@ -2,14 +2,19 @@
   "id": "F5-05",
   "phase": "F5",
   "title": "Caminos alternativos según profesión",
-  "status": "todo",
+  "status": "in_progress",
   "type": "feature",
   "labels": [
     "pisos"
   ],
   "origin": "backlog",
-  "description": "",
-  "acceptance": [],
+  "description": "Puertas selladas en pasillos redundantes del piso que abren Manitas (forzar), Químico (disolver) o Escultor (restaurar estatua); son atajos, ninguna profesión es obligatoria (GDD §7).",
+  "acceptance": [
+    "Manitas, Químico y Escultor abren puertas selladas, cada uno con su método; el resto no.",
+    "Sellar nunca desconecta el piso: sin profesiones se alcanzan todas las salas.",
+    "El plan de puertas es reproducible por semilla del trazado.",
+    "Un grupo con una profesión que abre cruza los pasillos sellados; sin ella no."
+  ],
   "pr": null,
   "session": null
 }

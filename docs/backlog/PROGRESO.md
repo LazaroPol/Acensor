@@ -25,8 +25,8 @@ TOTAL  █████████████████░░░░░░░�
 
 ## Cola de prioridad (tablero)
 
-1. **F5-05** Caminos alternativos según profesión
-2. **F5-06** Restos de clones anteriores y Fragmentos de memoria
-3. **F6-01** Modelo de daño, resistencias y críticos
-4. **F6-02** Enemigos con escalado por profundidad
-5. **F6-03** Percepción de IA (visión/oído) y modificadores de Atrapado
+1. **F5-06** Restos de clones anteriores y Fragmentos de memoria
+2. **F6-01** Modelo de daño, resistencias y críticos
+3. **F6-02** Enemigos con escalado por profundidad
+4. **F6-03** Percepción de IA (visión/oído) y modificadores de Atrapado
+5. **F6-04** Habilidades de clase y rasgos de movilidad
