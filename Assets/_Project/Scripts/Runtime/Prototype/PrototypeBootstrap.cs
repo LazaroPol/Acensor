@@ -7,7 +7,8 @@ using UnityEngine.SceneManagement;
 namespace Specimen.Runtime.Prototype
 {
     /// <summary>
-    /// Arranque de la escena Prototipo: construye la sala greybox desde el catálogo visual.
+    /// Arranque de la escena Prototipo: construye la sala greybox desde el catálogo visual
+    /// y monta el jugador con su cámara en tercera persona (PG-03).
     /// Si la escena no trae bootstrap, se crea solo (la escena puede quedar casi vacía).
     /// </summary>
     public sealed class PrototypeBootstrap : MonoBehaviour
@@ -35,8 +36,11 @@ namespace Specimen.Runtime.Prototype
             var spawner = new GameObject("Nivel").AddComponent<VisualSpawner>();
             spawner.Init(catalog);
             foreach (var placement in new GreyboxRoomLayout(anchoSala, fondoSala).Build())
-                spawner.Spawn(placement);
-            PrototypeScenery.EnsureCameraAndLight(anchoSala, fondoSala);
+            {
+                if (placement.Id == VisualId.Jugador) PrototypePlayer.Spawn(spawner, placement);
+                else spawner.Spawn(placement);
+            }
+            PrototypeScenery.EnsureLight();
         }
     }
 }
