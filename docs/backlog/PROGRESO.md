@@ -1,16 +1,16 @@
 # Progreso — SPECIMEN
 
 ```
-TOTAL  █████████░░░░░░░░░░░░░░░░░░░░░  30.1%  (22/73 tareas)
+TOTAL  █████████░░░░░░░░░░░░░░░░░░░░░  31.5%  (23/73 tareas)
 ```
 
-**Fase en curso:** F2 · **Siguiente tarea:** F2-06
+**Fase en curso:** F2 · **Siguiente tarea:** F2-07
 
 | Fase | Progreso | % | Tareas |
 |---|---|---|---|
 | [F0 · Fundaciones del proyecto](fases/F0.md) | `███████████████` | 100% | 10/10 |
 | [F1 · Bucle de iteración](fases/F1.md) | `███████████████` | 100% | 7/7 |
-| [F2 · Personaje y recursos](fases/F2.md) | `███████████░░░░` | 71% | 5/7 |
+| [F2 · Personaje y recursos](fases/F2.md) | `█████████████░░` | 86% | 6/7 |
 | [F3 · Inventario, loot y crafting](fases/F3.md) | `░░░░░░░░░░░░░░░` | 0% | 0/6 |
 | [F4 · Ascensor-Refugio](fases/F4.md) | `░░░░░░░░░░░░░░░` | 0% | 0/5 |
 | [F5 · Generación de pisos](fases/F5.md) | `░░░░░░░░░░░░░░░` | 0% | 0/6 |
