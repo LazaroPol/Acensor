@@ -71,7 +71,7 @@ class CliTests(unittest.TestCase):
         self.assertEqual(cli.main(["--urgent", first, "--dir", str(self.backlog)]), 1)
 
     def test_urgent_flag_reports_the_urgent_task(self):
-        order = model.load(self.backlog)["priority"]
+        order = [t for t in model.load(self.backlog)["priority"] if self._card(t)["status"] == "todo"]
         card = self._card(order[1])
         card["labels"] = card["labels"] + ["urgente"]
         (self.backlog / "tareas" / f"{order[1]}.json").write_text(json.dumps(card), encoding="utf-8")

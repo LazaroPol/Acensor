@@ -1,10 +1,10 @@
 # Progreso — SPECIMEN
 
 ```
-TOTAL  ████████████░░░░░░░░░░░░░░░░░░  39.2%  (31/79 tareas)
+TOTAL  ████████████░░░░░░░░░░░░░░░░░░  40.5%  (32/79 tareas)
 ```
 
-**Fase en curso:** PG · **Siguiente tarea:** PG-02
+**Fase en curso:** PG · **Siguiente tarea:** PG-03
 
 | Fase | Progreso | % | Tareas |
 |---|---|---|---|
@@ -12,7 +12,7 @@ TOTAL  ████████████░░░░░░░░░░░░�
 | [F1 · Bucle de iteración](fases/F1.md) | `███████████████` | 100% | 7/7 |
 | [F2 · Personaje y recursos](fases/F2.md) | `███████████████` | 100% | 7/7 |
 | [F3 · Inventario, loot y crafting](fases/F3.md) | `███████████████` | 100% | 6/6 |
-| [PG · Prototipo greybox](fases/PG.md) | `███░░░░░░░░░░░░` | 17% | 1/6 |
+| [PG · Prototipo greybox](fases/PG.md) | `█████░░░░░░░░░░` | 33% | 2/6 |
 | [F4 · Ascensor-Refugio](fases/F4.md) | `░░░░░░░░░░░░░░░` | 0% | 0/5 |
 | [F5 · Generación de pisos](fases/F5.md) | `░░░░░░░░░░░░░░░` | 0% | 0/6 |
 | [F6 · Combate e IA](fases/F6.md) | `░░░░░░░░░░░░░░░` | 0% | 0/5 |
@@ -25,8 +25,8 @@ TOTAL  ████████████░░░░░░░░░░░░�
 
 ## Cola de prioridad (tablero)
 
-1. **PG-02** Bootstrap del prototipo: escena Prototipo y nivel greybox desde el catálogo
-2. **PG-03** Jugador y cámara en tercera persona (Input System)
-3. **PG-04** HUD de depuración: vida, recursos y temporizador del núcleo
-4. **PG-05** Guía de prueba manual en Unity y checklist de importación de assets
-5. **PG-06** Sistema de colisiones (épico)
+1. **PG-03** Jugador y cámara en tercera persona (Input System)
+2. **PG-04** HUD de depuración: vida, recursos y temporizador del núcleo
+3. **PG-05** Guía de prueba manual en Unity y checklist de importación de assets
+4. **PG-06** Sistema de colisiones (épico)
+5. **F4-01** Ranuras de módulo y construcción con materiales

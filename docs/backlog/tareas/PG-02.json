@@ -2,14 +2,20 @@
   "id": "PG-02",
   "phase": "PG",
   "title": "Bootstrap del prototipo: escena Prototipo y nivel greybox desde el catálogo",
-  "status": "todo",
+  "status": "done",
   "type": "feature",
   "labels": [
     "greybox"
   ],
   "origin": "backlog",
-  "description": "",
-  "acceptance": [],
-  "pr": null,
-  "session": null
+  "description": "Escena Prototipo con bootstrap que construye una sala greybox (suelo, muros, puerta, jugador) desde el catálogo visual; layout y pivotes en el núcleo puro con tests.",
+  "acceptance": [
+    "Core.Prototype: GreyboxRoomLayout genera suelo por celda, perímetro de muros con una puerta y el punto del jugador (tests NUnit).",
+    "Core.Visuals: pivote por ID (base/esquina) y desplazamiento de la primitiva greybox respetándolo (tests NUnit).",
+    "Runtime: CatalogoVisual (ScriptableObject), VisualSpawner y PrototypeBootstrap que se autoinstala en la escena Prototipo.",
+    "Editor: menú SPECIMEN › Crear escena Prototipo que crea escena, catálogo vacío y la añade a Build Settings.",
+    "tools/verify.sh en verde."
+  ],
+  "pr": "#32",
+  "session": 24
 }
