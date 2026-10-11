@@ -23,3 +23,4 @@
 13. [Dirección artística — "Dualidad cromática"](13-direccion-artistica.md)
 14. [Arquitectura técnica](14-arquitectura-tecnica.md)
 15. [Alcance del Vertical Slice (objetivo)](15-vertical-slice.md)
+16. [Prototipo greybox (fase PG)](16-prototipo-greybox.md)
