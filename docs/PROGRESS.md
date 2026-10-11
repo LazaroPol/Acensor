@@ -1,14 +1,14 @@
 # Progreso — SPECIMEN
 
 ```
-TOTAL  ███░░░░░░░░░░░░░░░░░░░░░░░░░░░  11.1%  (8/72 tareas)
+TOTAL  ████░░░░░░░░░░░░░░░░░░░░░░░░░░  12.5%  (9/72 tareas)
 ```
 
-**Fase en curso:** F0
+**Fase en curso:** F1
 
 | Fase | Sesión | Progreso | % | Tareas |
 |---|---|---|---|---|
-| F0 · Fundaciones del proyecto | 1 | `█████████████░░` | 89% | 8/9 |
+| F0 · Fundaciones del proyecto | 1 | `███████████████` | 100% | 9/9 |
 | F1 · Bucle de iteración | 2 | `░░░░░░░░░░░░░░░` | 0% | 0/7 |
 | F2 · Personaje y recursos | 3 | `░░░░░░░░░░░░░░░` | 0% | 0/7 |
 | F3 · Inventario, loot y crafting | 4 | `░░░░░░░░░░░░░░░` | 0% | 0/6 |

@@ -59,8 +59,8 @@
         {
           "id": "F0-09",
           "title": "Historial de sesiones e informe de la Sesión 1",
-          "status": "todo",
-          "pr": null
+          "status": "done",
+          "pr": "PR-009"
         }
       ]
     },
