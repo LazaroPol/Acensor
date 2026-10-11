@@ -2,7 +2,7 @@
   "id": "F5-04",
   "phase": "F5",
   "title": "Distribución de loot y enemigos por anillo",
-  "status": "in_progress",
+  "status": "done",
   "type": "feature",
   "labels": [
     "pisos"
@@ -16,6 +16,6 @@
     "Los pisos sin combate no generan enemigos; el loot usa la LootTable del anillo de la sala.",
     "Tests NUnit cubren cuotas, determinismo y reglas por tipo de sala."
   ],
-  "pr": null,
-  "session": null
+  "pr": "#51",
+  "session": 37
 }
