@@ -11,7 +11,7 @@ namespace Specimen.Core.Iteration
     /// Orquesta una iteración: Armería → (Calma → Incursión → Ascenso) × pisos → Asedio → Extracción → Fin.
     /// Las fases sin temporizador avanzan con señales explícitas (salir de la armería, asedio superado…).
     /// </summary>
-    public sealed class IterationRun : ITickable
+    public sealed partial class IterationRun : ITickable
     {
         private readonly IterationContext _ctx;
         private readonly StateMachine<IterationPhase> _machine;
@@ -56,10 +56,12 @@ namespace Specimen.Core.Iteration
         public void VoteEarlyClose(int playerId, bool yes) =>
             Signal(IterationPhase.Incursion, () => _ctx.EarlyClose.Cast(_ctx, playerId, yes));
 
-        private void Signal(IterationPhase expected, Action apply)
+        private void Signal(IterationPhase expected, Action apply) => Signal(expected, expected, apply);
+
+        private void Signal(IterationPhase expected, IterationPhase alternative, Action apply)
         {
-            if (!HasStarted || Phase != expected)
-                throw new InvalidOperationException($"Solo válido en {expected}; fase actual: {Phase}.");
+            if (!HasStarted || (Phase != expected && Phase != alternative))
+                throw new InvalidOperationException($"No válido en la fase actual: {Phase}.");
             apply();
         }
     }

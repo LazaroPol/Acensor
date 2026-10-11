@@ -2,6 +2,7 @@ using System;
 using System.Collections.Generic;
 using Specimen.Core.Common;
 using Specimen.Core.Events;
+using Specimen.Core.Iteration.Presence;
 using Specimen.Core.Iteration.Readiness;
 using Specimen.Core.Iteration.Voting;
 using Specimen.Core.Time;
@@ -16,6 +17,7 @@ namespace Specimen.Core.Iteration
         public ReadyCheck Ready { get; }
         public IHasteBonusPolicy HastePolicy { get; }
         public EarlyCloseVote EarlyClose { get; }
+        public PresenceTracker Presence { get; }
 
         /// <summary>Bonus Prisa ganado por piso (piso → fracción extra de loot).</summary>
         public Dictionary<int, float> HasteBonuses { get; } = new Dictionary<int, float>();
@@ -35,6 +37,7 @@ namespace Specimen.Core.Iteration
             Ready = Guard.NotNull(ready, nameof(ready));
             HastePolicy = Guard.NotNull(hastePolicy, nameof(hastePolicy));
             EarlyClose = new EarlyCloseVote(new MajorityVote(ready.Players));
+            Presence = new PresenceTracker(ready.Players);
             if (ready.Players.Count > config.MaxPlayers)
                 throw new ArgumentException($"Máximo {config.MaxPlayers} jugadores.", nameof(ready));
         }
