@@ -41,9 +41,9 @@
     {
       "id": "F3-06",
       "title": "Reparación de equipo",
-      "status": "in_progress",
-      "pr": null,
-      "session": null
+      "status": "done",
+      "pr": "#24",
+      "session": 22
     }
   ]
 }
