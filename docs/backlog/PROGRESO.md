@@ -25,8 +25,8 @@ TOTAL  ██████████████████░░░░░░�
 
 ## Cola de prioridad (tablero)
 
-1. **F6-01** Modelo de daño, resistencias y críticos
-2. **F6-02** Enemigos con escalado por profundidad
-3. **F6-03** Percepción de IA (visión/oído) y modificadores de Atrapado
-4. **F6-04** Habilidades de clase y rasgos de movilidad
-5. **F6-05** Jefe del Acto I con fases
+1. **F6-02** Enemigos con escalado por profundidad
+2. **F6-03** Percepción de IA (visión/oído) y modificadores de Atrapado
+3. **F6-04** Habilidades de clase y rasgos de movilidad
+4. **F6-05** Jefe del Acto I con fases
+5. **F7-01** Sistema de votación (mayoría y desempate)

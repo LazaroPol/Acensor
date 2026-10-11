@@ -2,14 +2,20 @@
   "id": "F6-01",
   "phase": "F6",
   "title": "Modelo de daño, resistencias y críticos",
-  "status": "todo",
+  "status": "in_progress",
   "type": "feature",
   "labels": [
     "combate"
   ],
   "origin": "backlog",
-  "description": "",
-  "acceptance": [],
+  "description": "Resolver un golpe en el núcleo: tipo de daño, mitigación por armadura (solo físico) y resistencias por tipo, y críticos con probabilidad y multiplicador, de forma determinista con IRandom inyectado.",
+  "acceptance": [
+    "DamageType define físico y elementales; un golpe (Hit) valida cantidad >= 0.",
+    "Resistances acota cada resistencia a [-1, 0.9]: negativa amplifica, positiva reduce; sin entrada = 0.",
+    "La armadura reduce solo el daño físico con rendimientos decrecientes armor/(armor+K).",
+    "CritRules: probabilidad en [0,1] y multiplicador >= 1; el crítico se decide con IRandom y es reproducible por semilla.",
+    "DamageCalculator devuelve DamageResult (bruto, final, crítico) y nunca daño negativo; tests NUnit cubren todo lo anterior."
+  ],
   "pr": null,
   "session": null
 }
