@@ -11,7 +11,7 @@ _Repositorio, arquitectura por capas, tests y flujo de PRs_
 - ✅ **F0-02** Arnés de tests C# headless (NUnit) — PR-002
 - ✅ **F0-03** GDD fusionado — PR-003
 - ✅ **F0-04** Backlog y sistema de progreso — PR-004
-- ⬜ **F0-05** Integración continua (GitHub Actions)
+- ✅ **F0-05** Integración continua (GitHub Actions) — PR-005
 - ⬜ **F0-06** Núcleo: abstracciones de tiempo y aleatoriedad (IClock, IRandom)
 - ⬜ **F0-07** Núcleo: bus de eventos tipado
 - ⬜ **F0-08** Núcleo: máquina de estados genérica

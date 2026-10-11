@@ -35,8 +35,8 @@
         {
           "id": "F0-05",
           "title": "Integración continua (GitHub Actions)",
-          "status": "todo",
-          "pr": null
+          "status": "done",
+          "pr": "PR-005"
         },
         {
           "id": "F0-06",
