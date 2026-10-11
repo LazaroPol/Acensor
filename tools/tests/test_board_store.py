@@ -1,4 +1,5 @@
 """El tablero escribe tarjetas y prioridad válidas sobre una copia del backlog real."""
+import json
 import shutil
 import tempfile
 import unittest
@@ -12,10 +13,19 @@ class BoardStoreTests(unittest.TestCase):
     def setUp(self):
         self.tmp = pathlib.Path(tempfile.mkdtemp()) / "backlog"
         shutil.copytree(model.BACKLOG_DIR, self.tmp)
+        self._without_tasks_in_progress()
         self.store = BoardStore(self.tmp)
 
     def tearDown(self):
         shutil.rmtree(self.tmp.parent)
+
+    def _without_tasks_in_progress(self):
+        """Aísla los tests de la sesión activa: en la copia no queda ninguna tarea en curso."""
+        for card in (self.tmp / "tareas").glob("*.json"):
+            data = json.loads(card.read_text(encoding="utf-8"))
+            if data.get("status") == "in_progress":
+                data["status"] = "todo"
+                card.write_text(json.dumps(data, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
 
     def backlog(self):
         return model.load(self.tmp)
