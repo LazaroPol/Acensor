@@ -1,10 +1,10 @@
 # Progreso — SPECIMEN
 
 ```
-TOTAL  ██████████████████░░░░░░░░░░░░  59.5%  (47/79 tareas)
+TOTAL  ██████████████████░░░░░░░░░░░░  60.8%  (48/79 tareas)
 ```
 
-**Fase en curso:** F6 · **Siguiente tarea:** F6-01
+**Fase en curso:** F6 · **Siguiente tarea:** F6-02
 
 | Fase | Progreso | % | Tareas |
 |---|---|---|---|
@@ -15,7 +15,7 @@ TOTAL  ██████████████████░░░░░░�
 | [PG · Prototipo greybox](fases/PG.md) | `███████████████` | 100% | 6/6 |
 | [F4 · Ascensor-Refugio](fases/F4.md) | `███████████████` | 100% | 5/5 |
 | [F5 · Generación de pisos](fases/F5.md) | `███████████████` | 100% | 6/6 |
-| [F6 · Combate e IA](fases/F6.md) | `░░░░░░░░░░░░░░░` | 0% | 0/5 |
+| [F6 · Combate e IA](fases/F6.md) | `███░░░░░░░░░░░░` | 20% | 1/5 |
 | [F7 · Ecos y decisiones](fases/F7.md) | `░░░░░░░░░░░░░░░` | 0% | 0/4 |
 | [F8 · Asedio y extracción](fases/F8.md) | `░░░░░░░░░░░░░░░` | 0% | 0/4 |
 | [F9 · Meta-progresión: Laboratorio](fases/F9.md) | `░░░░░░░░░░░░░░░` | 0% | 0/4 |
@@ -25,8 +25,8 @@ TOTAL  ██████████████████░░░░░░�
 
 ## Cola de prioridad (tablero)
 
-1. **F6-01** Modelo de daño, resistencias y críticos
-2. **F6-02** Enemigos con escalado por profundidad
-3. **F6-03** Percepción de IA (visión/oído) y modificadores de Atrapado
-4. **F6-04** Habilidades de clase y rasgos de movilidad
-5. **F6-05** Jefe del Acto I con fases
+1. **F6-02** Enemigos con escalado por profundidad
+2. **F6-03** Percepción de IA (visión/oído) y modificadores de Atrapado
+3. **F6-04** Habilidades de clase y rasgos de movilidad
+4. **F6-05** Jefe del Acto I con fases
+5. **F7-01** Sistema de votación (mayoría y desempate)

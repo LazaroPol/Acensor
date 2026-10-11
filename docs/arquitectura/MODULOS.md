@@ -8,6 +8,7 @@ Un módulo = un namespace C#. Abre solo la página del módulo que vayas a tocar
 |---|---|---|---|
 | [Core.Armory](modulos/Core.Armory.md) | 3 | `ArmoryStock`, `ClassKitArmory`, `IArmoryStock` | Core.Classes, Core.Common |
 | [Core.Classes](modulos/Core.Classes.md) | 8 | `ClassKit`, `ClassKitCatalog`, `ClassKitId`, `ClassResourceType`, `ClassRole` … | Core.Common, Core.Stats |
+| [Core.Combat](modulos/Core.Combat.md) | 8 | `ArmorMitigation`, `CritRules`, `DamageCalculator`, `DamageResult`, `DamageType` … | Core.Common, Core.Randomness |
 | [Core.Common](modulos/Core.Common.md) | 1 | `Guard` | — |
 | [Core.Crafting](modulos/Core.Crafting.md) | 11 | `CraftResult`, `CraftTransaction`, `Crafter`, `IRecipeBook`, `ISynergyRecipeBook` … | Core.Common, Core.Items, Core.Professions |
 | [Core.Elevator](modulos/Core.Elevator.md) | 18 | `BlueprintCatalog`, `BonfireConfig`, `BonfireRest`, `BuildResult`, `Bunk` … | Core.Common, Core.Crafting, Core.Items, Core.Iteration, Core.Life, Core.Stats, Core.Time, Core.Vitals |
@@ -47,69 +48,71 @@ Un módulo = un namespace C#. Abre solo la página del módulo que vayas a tocar
 flowchart LR
   n0["Core.Armory"]
   n1["Core.Classes"]
-  n2["Core.Common"]
-  n3["Core.Crafting"]
-  n4["Core.Elevator"]
-  n5["Core.Events"]
-  n6["Core.Floors"]
-  n7["Core.Floors.Omens"]
-  n8["Core.Floors.Paths"]
-  n9["Core.Floors.Population"]
-  n10["Core.Floors.Remnants"]
-  n11["Core.Floors.Types"]
-  n12["Core.Items"]
-  n13["Core.Iteration"]
-  n14["Core.Iteration.Ending"]
-  n15["Core.Iteration.Presence"]
-  n16["Core.Iteration.Readiness"]
-  n17["Core.Iteration.States"]
-  n18["Core.Iteration.Voting"]
-  n19["Core.Life"]
-  n20["Core.Loot"]
-  n21["Core.Movement"]
-  n22["Core.Physics"]
-  n23["Core.Professions"]
-  n24["Core.Prototype"]
-  n25["Core.Randomness"]
-  n26["Core.Repair"]
-  n27["Core.StateMachines"]
-  n28["Core.Stats"]
-  n29["Core.Time"]
-  n30["Core.Visuals"]
-  n31["Core.Vitals"]
-  n32["Runtime.Prototype"]
-  n33["Runtime.Visuals"]
-  n0 --> n1 & n2
-  n1 --> n2 & n28
-  n3 --> n2 & n12 & n23
-  n4 --> n2 & n3 & n12 & n13 & n19 & n28 & n29 & n31
-  n5 --> n2
-  n6 --> n2 & n20 & n25
-  n7 --> n2 & n11 & n25
-  n8 --> n2 & n23 & n25
-  n9 --> n2 & n20 & n25
-  n10 --> n2 & n20 & n25
-  n11 --> n2
-  n12 --> n2
-  n13 --> n2 & n5 & n14 & n15 & n16 & n17 & n18 & n27 & n29
-  n14 --> n15
-  n15 --> n2
-  n16 --> n2
-  n17 --> n14 & n15 & n16 & n27 & n29
-  n18 --> n2
-  n19 --> n2 & n13 & n31
-  n20 --> n2 & n12 & n25
-  n21 --> n2 & n31
-  n22 --> n2
-  n23 --> n2
-  n24 --> n2 & n22 & n29 & n30 & n31
-  n25 --> n2
-  n26 --> n2 & n12
-  n27 --> n2 & n29
-  n28 --> n2
-  n29 --> n2
-  n30 --> n2
-  n31 --> n2 & n28 & n29
-  n32 --> n21 & n24 & n28 & n29 & n30 & n31 & n33
-  n33 --> n24 & n30
+  n2["Core.Combat"]
+  n3["Core.Common"]
+  n4["Core.Crafting"]
+  n5["Core.Elevator"]
+  n6["Core.Events"]
+  n7["Core.Floors"]
+  n8["Core.Floors.Omens"]
+  n9["Core.Floors.Paths"]
+  n10["Core.Floors.Population"]
+  n11["Core.Floors.Remnants"]
+  n12["Core.Floors.Types"]
+  n13["Core.Items"]
+  n14["Core.Iteration"]
+  n15["Core.Iteration.Ending"]
+  n16["Core.Iteration.Presence"]
+  n17["Core.Iteration.Readiness"]
+  n18["Core.Iteration.States"]
+  n19["Core.Iteration.Voting"]
+  n20["Core.Life"]
+  n21["Core.Loot"]
+  n22["Core.Movement"]
+  n23["Core.Physics"]
+  n24["Core.Professions"]
+  n25["Core.Prototype"]
+  n26["Core.Randomness"]
+  n27["Core.Repair"]
+  n28["Core.StateMachines"]
+  n29["Core.Stats"]
+  n30["Core.Time"]
+  n31["Core.Visuals"]
+  n32["Core.Vitals"]
+  n33["Runtime.Prototype"]
+  n34["Runtime.Visuals"]
+  n0 --> n1 & n3
+  n1 --> n3 & n29
+  n2 --> n3 & n26
+  n4 --> n3 & n13 & n24
+  n5 --> n3 & n4 & n13 & n14 & n20 & n29 & n30 & n32
+  n6 --> n3
+  n7 --> n3 & n21 & n26
+  n8 --> n3 & n12 & n26
+  n9 --> n3 & n24 & n26
+  n10 --> n3 & n21 & n26
+  n11 --> n3 & n21 & n26
+  n12 --> n3
+  n13 --> n3
+  n14 --> n3 & n6 & n15 & n16 & n17 & n18 & n19 & n28 & n30
+  n15 --> n16
+  n16 --> n3
+  n17 --> n3
+  n18 --> n15 & n16 & n17 & n28 & n30
+  n19 --> n3
+  n20 --> n3 & n14 & n32
+  n21 --> n3 & n13 & n26
+  n22 --> n3 & n32
+  n23 --> n3
+  n24 --> n3
+  n25 --> n3 & n23 & n30 & n31 & n32
+  n26 --> n3
+  n27 --> n3 & n13
+  n28 --> n3 & n30
+  n29 --> n3
+  n30 --> n3
+  n31 --> n3
+  n32 --> n3 & n29 & n30
+  n33 --> n22 & n25 & n29 & n30 & n31 & n32 & n34
+  n34 --> n25 & n31
 ```
