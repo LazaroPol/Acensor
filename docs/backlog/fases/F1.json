@@ -6,9 +6,9 @@
     {
       "id": "F1-01",
       "title": "Modelo de configuración de iteración (pisos, duraciones)",
-      "status": "todo",
-      "pr": null,
-      "session": null
+      "status": "done",
+      "pr": "#2",
+      "session": 3
     },
     {
       "id": "F1-02",
