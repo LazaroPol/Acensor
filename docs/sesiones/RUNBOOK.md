@@ -31,8 +31,9 @@ tools/session/ship.sh <TAREA> <SESIÓN> "<TAREA> <título>" pr.md ses.md
 
 ## 4. Encadenar
 Si `ship.sh` terminó con 🏁 y `tools/session/should_continue.sh` sigue dando tarea, programa **una**
-tarea programada de una sola ejecución para dentro de 2 minutos con el prompt de
-[`NEXT_PROMPT.md`](NEXT_PROMPT.md) (literal). Al cerrar una **fase**, republica además el panel de progreso.
+tarea programada de una sola ejecución para **dentro de 1 minuto** (lo antes posible) con el prompt de
+[`NEXT_PROMPT.md`](NEXT_PROMPT.md) (literal). Hazlo tú mismo, **sin pedir confirmación al usuario**
+(decisión del usuario, 2026-10-11). Al cerrar una **fase**, republica además el panel de progreso.
 
 ## 5. Si algo falla
 No mergees ni programes nada. Deja la rama subida, escribe el motivo en un comentario de la PR
