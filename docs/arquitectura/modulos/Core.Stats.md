@@ -6,7 +6,7 @@ Ensamblado: `Specimen.Core` · Carpeta: `Assets/_Project/Scripts/Core/Stats`
 Tests: `Assets/_Project/Tests/EditMode/Core/Stats`
 
 **Depende de:** [Core.Common](Core.Common.md)
-**Lo usan:** [Core.Classes](Core.Classes.md), [Core.Vitals](Core.Vitals.md)
+**Lo usan:** [Core.Classes](Core.Classes.md), [Core.Vitals](Core.Vitals.md), [Runtime.Prototype](Runtime.Prototype.md)
 
 | Fichero | Tipo | Resumen |
 |---|---|---|

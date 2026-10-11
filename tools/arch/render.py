@@ -49,7 +49,8 @@ def mermaid(modules: dict) -> str:
     ids = {ns: f"n{i}" for i, ns in enumerate(sorted(modules))}
     lines = ["```mermaid", "flowchart LR"]
     lines += [f'  {ids[ns]}["{short(ns)}"]' for ns in sorted(modules)]
-    lines += [f"  {ids[ns]} --> {ids[d]}" for ns in sorted(modules) for d in sorted(modules[ns]["deps"])]
+    lines += [f"  {ids[ns]} --> " + " & ".join(ids[d] for d in sorted(modules[ns]["deps"]))
+              for ns in sorted(modules) if modules[ns]["deps"]]
     return "\n".join(lines + ["```"])
 
 

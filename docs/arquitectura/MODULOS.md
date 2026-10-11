@@ -20,6 +20,7 @@ Un módulo = un namespace C#. Abre solo la página del módulo que vayas a tocar
 | [Core.Iteration.Voting](modulos/Core.Iteration.Voting.md) | 2 | `EarlyCloseVote`, `EarlyCloseApproved`, `MajorityVote` | Core.Common |
 | [Core.Life](modulos/Core.Life.md) | 7 | `CharacterLife`, `IReviveCost`, `LifeState`, `PartyLife`, `ReviveMethod` … | Core.Common, Core.Iteration, Core.Vitals |
 | [Core.Loot](modulos/Core.Loot.md) | 6 | `DepthRings`, `IRingWeighting`, `LootDrop`, `LootEntry`, `LootTable` … | Core.Common, Core.Items, Core.Randomness |
+| [Core.Movement](modulos/Core.Movement.md) | 6 | `CameraPoint`, `MovementConfig`, `PlanarMover`, `PlanarVector`, `SprintController` … | Core.Common, Core.Vitals |
 | [Core.Professions](modulos/Core.Professions.md) | 6 | `DefaultProfessionSynergies`, `ISynergyCatalog`, `ProfessionBench`, `ProfessionId`, `ProfessionSynergy` … | Core.Common |
 | [Core.Prototype](modulos/Core.Prototype.md) | 3 | `GreyboxRoomLayout`, `ILevelLayout`, `LevelPlacement` | Core.Common, Core.Visuals |
 | [Core.Randomness](modulos/Core.Randomness.md) | 2 | `IRandom`, `Pcg32Random` | Core.Common |
@@ -29,7 +30,7 @@ Un módulo = un namespace C#. Abre solo la página del módulo que vayas a tocar
 | [Core.Time](modulos/Core.Time.md) | 4 | `IClock`, `ITickable`, `ManualClock`, `PhaseTimer` | Core.Common |
 | [Core.Visuals](modulos/Core.Visuals.md) | 14 | `DefaultGreyboxStyles`, `GreyboxColor`, `GreyboxOffset`, `GreyboxPrimitive`, `GreyboxStyle` … | Core.Common |
 | [Core.Vitals](modulos/Core.Vitals.md) | 6 | `CharacterVitals`, `Fatigue`, `FatigueConfig`, `ResourceKind`, `ResourcePool` … | Core.Common, Core.Stats, Core.Time |
-| [Runtime.Prototype](modulos/Runtime.Prototype.md) | 2 | `PrototypeBootstrap`, `PrototypeScenery` | Core.Prototype, Core.Visuals, Runtime.Visuals |
+| [Runtime.Prototype](modulos/Runtime.Prototype.md) | 6 | `PlayerMotor`, `PrototypeBootstrap`, `PrototypeInput`, `PrototypePlayer`, `PrototypeScenery` … | Core.Movement, Core.Prototype, Core.Stats, Core.Visuals, Core.Vitals, Runtime.Visuals |
 | [Runtime.Visuals](modulos/Runtime.Visuals.md) | 3 | `CatalogoVisual`, `GreyboxFactory`, `VisualSpawner` | Core.Prototype, Core.Visuals |
 
 ## Grafo de dependencias (flecha = «usa a»)
@@ -50,67 +51,41 @@ flowchart LR
   n11["Core.Iteration.Voting"]
   n12["Core.Life"]
   n13["Core.Loot"]
-  n14["Core.Professions"]
-  n15["Core.Prototype"]
-  n16["Core.Randomness"]
-  n17["Core.Repair"]
-  n18["Core.StateMachines"]
-  n19["Core.Stats"]
-  n20["Core.Time"]
-  n21["Core.Visuals"]
-  n22["Core.Vitals"]
-  n23["Runtime.Prototype"]
-  n24["Runtime.Visuals"]
-  n0 --> n1
-  n0 --> n2
-  n1 --> n2
-  n1 --> n19
-  n3 --> n2
-  n3 --> n5
-  n3 --> n14
+  n14["Core.Movement"]
+  n15["Core.Professions"]
+  n16["Core.Prototype"]
+  n17["Core.Randomness"]
+  n18["Core.Repair"]
+  n19["Core.StateMachines"]
+  n20["Core.Stats"]
+  n21["Core.Time"]
+  n22["Core.Visuals"]
+  n23["Core.Vitals"]
+  n24["Runtime.Prototype"]
+  n25["Runtime.Visuals"]
+  n0 --> n1 & n2
+  n1 --> n2 & n20
+  n3 --> n2 & n5 & n15
   n4 --> n2
   n5 --> n2
-  n6 --> n2
-  n6 --> n4
-  n6 --> n7
-  n6 --> n8
-  n6 --> n9
-  n6 --> n10
-  n6 --> n11
-  n6 --> n18
-  n6 --> n20
+  n6 --> n2 & n4 & n7 & n8 & n9 & n10 & n11 & n19 & n21
   n7 --> n8
   n8 --> n2
   n9 --> n2
-  n10 --> n7
-  n10 --> n8
-  n10 --> n9
-  n10 --> n18
-  n10 --> n20
+  n10 --> n7 & n8 & n9 & n19 & n21
   n11 --> n2
-  n12 --> n2
-  n12 --> n6
-  n12 --> n22
-  n13 --> n2
-  n13 --> n5
-  n13 --> n16
-  n14 --> n2
+  n12 --> n2 & n6 & n23
+  n13 --> n2 & n5 & n17
+  n14 --> n2 & n23
   n15 --> n2
-  n15 --> n21
-  n16 --> n2
+  n16 --> n2 & n22
   n17 --> n2
-  n17 --> n5
-  n18 --> n2
-  n18 --> n20
-  n19 --> n2
+  n18 --> n2 & n5
+  n19 --> n2 & n21
   n20 --> n2
   n21 --> n2
   n22 --> n2
-  n22 --> n19
-  n22 --> n20
-  n23 --> n15
-  n23 --> n21
-  n23 --> n24
-  n24 --> n15
-  n24 --> n21
+  n23 --> n2 & n20 & n21
+  n24 --> n14 & n16 & n20 & n22 & n23 & n25
+  n25 --> n16 & n22
 ```

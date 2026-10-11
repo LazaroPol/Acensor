@@ -2,15 +2,21 @@
   "id": "PG-03",
   "phase": "PG",
   "title": "Jugador y cámara en tercera persona (Input System)",
-  "status": "todo",
+  "status": "in_progress",
   "type": "feature",
   "labels": [
     "greybox",
     "fisica"
   ],
   "origin": "backlog",
-  "description": "",
-  "acceptance": [],
+  "description": "PlayerMotor con CharacterController e Input System (WASD/stick, sprint que consume Aguante del núcleo) y cámara en tercera persona cenital-oblicua que sigue al jugador. Lógica pura en Core.Movement con tests; MonoBehaviours finos.",
+  "acceptance": [
+    "Core.Movement calcula la velocidad plana relativa al giro de la cámara, con la entrada limitada a módulo 1 (tests).",
+    "El sprint solo se activa con entrada de movimiento y Aguante suficiente, consume Aguante por segundo y se corta al agotarse (tests).",
+    "La cámara calcula su desplazamiento desde distancia, inclinación y giro, y sigue al objetivo con suavizado exponencial (tests).",
+    "Runtime: PlayerMotor (CharacterController + Input System) y ThirdPersonCamera; el bootstrap monta el jugador del catálogo (VisualId.Jugador) y su cámara.",
+    "tools/verify.sh en verde."
+  ],
   "pr": null,
   "session": null
 }
