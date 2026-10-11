@@ -10,6 +10,8 @@ Runbook completo: [`docs/sesiones/RUNBOOK.md`](docs/sesiones/RUNBOOK.md).
 ## Ahorro de tokens (obligatorio)
 - No leas el repo entero. Empieza por `python3 -m tools.progress --next` y su tarjeta
   `docs/backlog/tareas/<ID>.json` (descripción y criterios); del GDD lee **solo** la sección que toque (`docs/gdd/README.md` es el índice).
+- **Mapa del código**: [`docs/arquitectura/README.md`](docs/arquitectura/README.md) (C4) y [`MODULOS.md`](docs/arquitectura/MODULOS.md) (índice
+  por módulo, generado). Localiza el módulo y lee solo su página en `modulos/`. Si añades/mueves tipos: `python3 -m tools.arch`.
 - Lee solo los ficheros que vas a tocar o de los que dependes directamente (usa `grep -rl` para encontrarlos).
 - No vuelvas a leer un fichero que acabas de escribir; no imprimas ficheros completos en la terminal.
 - Filtra las salidas: `tools/verify.sh 2>&1 | grep -E "error|FAIL|Test Count|VERIF"`.
