@@ -27,9 +27,9 @@
     {
       "id": "F1-04",
       "title": "Sistema de 'Listos' y bonus Prisa",
-      "status": "in_progress",
-      "pr": null,
-      "session": null
+      "status": "done",
+      "pr": "#5",
+      "session": 6
     },
     {
       "id": "F1-05",
