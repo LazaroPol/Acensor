@@ -1,4 +1,5 @@
 """El tablero escribe tarjetas y prioridad válidas sobre una copia del backlog real."""
+import json
 import shutil
 import tempfile
 import unittest
@@ -12,10 +13,19 @@ class BoardStoreTests(unittest.TestCase):
     def setUp(self):
         self.tmp = pathlib.Path(tempfile.mkdtemp()) / "backlog"
         shutil.copytree(model.BACKLOG_DIR, self.tmp)
+        self._without_tasks_in_progress()
         self.store = BoardStore(self.tmp)
 
     def tearDown(self):
         shutil.rmtree(self.tmp.parent)
+
+    def _without_tasks_in_progress(self):
+        """Aísla los tests de la sesión activa: en la copia no queda ninguna tarea en curso."""
+        for card in (self.tmp / "tareas").glob("*.json"):
+            data = json.loads(card.read_text(encoding="utf-8"))
+            if data.get("status") == "in_progress":
+                data["status"] = "todo"
+                card.write_text(json.dumps(data, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
 
     def backlog(self):
         return model.load(self.tmp)
@@ -24,7 +34,9 @@ class BoardStoreTests(unittest.TestCase):
         snap = self.store.snapshot()
         self.assertGreater(len(snap["tasks"]), 70)
         self.assertIn("tipos", snap["catalog"])
-        self.assertEqual(snap["priority"][0], snap["summary"]["next_task"])
+        status = {t["id"]: t["status"] for t in snap["tasks"]}
+        pending = [tid for tid in snap["priority"] if status.get(tid) != "done"]
+        self.assertEqual(pending[0], snap["summary"]["next_task"])
 
     def test_quick_task_gets_next_id_in_phase_and_goes_to_inbox(self):
         task = self.store.create({"phase": "F4", "title": "Rampa", "position": "top"})

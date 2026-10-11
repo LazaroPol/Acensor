@@ -26,6 +26,7 @@ Un módulo = un namespace C#. Abre solo la página del módulo que vayas a tocar
 | [Core.StateMachines](modulos/Core.StateMachines.md) | 3 | `IState`, `StateBase`, `StateMachine`, `Transition` | Core.Common, Core.Time |
 | [Core.Stats](modulos/Core.Stats.md) | 7 | `IStatFormula`, `ModifierKind`, `StandardStatFormula`, `Stat`, `StatModifier` … | Core.Common |
 | [Core.Time](modulos/Core.Time.md) | 4 | `IClock`, `ITickable`, `ManualClock`, `PhaseTimer` | Core.Common |
+| [Core.Visuals](modulos/Core.Visuals.md) | 10 | `DefaultGreyboxStyles`, `GreyboxColor`, `GreyboxPrimitive`, `GreyboxStyle`, `IGreyboxDefaults` … | Core.Common |
 | [Core.Vitals](modulos/Core.Vitals.md) | 6 | `CharacterVitals`, `Fatigue`, `FatigueConfig`, `ResourceKind`, `ResourcePool` … | Core.Common, Core.Stats, Core.Time |
 
 ## Grafo de dependencias (flecha = «usa a»)
@@ -52,7 +53,8 @@ flowchart LR
   n17["Core.StateMachines"]
   n18["Core.Stats"]
   n19["Core.Time"]
-  n20["Core.Vitals"]
+  n20["Core.Visuals"]
+  n21["Core.Vitals"]
   n0 --> n1
   n0 --> n2
   n1 --> n2
@@ -82,7 +84,7 @@ flowchart LR
   n11 --> n2
   n12 --> n2
   n12 --> n6
-  n12 --> n20
+  n12 --> n21
   n13 --> n2
   n13 --> n5
   n13 --> n15
@@ -95,6 +97,7 @@ flowchart LR
   n18 --> n2
   n19 --> n2
   n20 --> n2
-  n20 --> n18
-  n20 --> n19
+  n21 --> n2
+  n21 --> n18
+  n21 --> n19
 ```

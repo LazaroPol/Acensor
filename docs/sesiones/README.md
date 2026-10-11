@@ -26,3 +26,4 @@ Cada sesión finalizada tiene su resumen. Desde la sesión 2, **una sesión = un
 | 20 | F3-04 | 2026-10-11 | [#21](https://github.com/LazaroPol/Acensor/pull/21) | 28/73 · 38,4 % | [SESION-20](SESION-20.md) |
 | 21 | F3-05 | 2026-10-11 | [#23](https://github.com/LazaroPol/Acensor/pull/23) | 29/73 · 39,7 % | [SESION-21](SESION-21.md) |
 | 22 | F3-06 | 2026-10-11 | [#24](https://github.com/LazaroPol/Acensor/pull/24) | 30/78 · 38,5 % | [SESION-22](SESION-22.md) |
+| 23 | PG-01 | 2026-10-11 | [#31](https://github.com/MenaDeFerro/Project-Especimen/pull/31) | 31/78 · 39,7 % | [SESION-23](SESION-23.md) |

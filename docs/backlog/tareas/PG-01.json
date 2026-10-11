@@ -2,14 +2,20 @@
   "id": "PG-01",
   "phase": "PG",
   "title": "Catálogo visual: IDs lógicos y resolución asset/greybox (núcleo puro + tests)",
-  "status": "todo",
+  "status": "done",
   "type": "feature",
   "labels": [
     "greybox"
   ],
   "origin": "backlog",
-  "description": "",
-  "acceptance": [],
-  "pr": null,
-  "session": null
+  "description": "Núcleo puro del catálogo visual (GDD 16): IDs lógicos estables y resolución de cada ID a asset asignado o fallback greybox (primitiva + color + escala).",
+  "acceptance": [
+    "VisualId con valores numéricos explícitos y estables (Jugador, Suelo, Muro, Puerta, Ascensor, Loot, Enemigo).",
+    "IVisualCatalog<TAsset>.Resolve(id) devuelve VisualResolution: asset si está asignado, si no greybox por defecto.",
+    "Todo VisualId tiene estilo greybox por defecto (primitiva, color RGB 0..1, escala > 0).",
+    "Asignar, reasignar y desasignar assets cambia la resolución; asignar null falla pronto.",
+    "Núcleo sin UnityEngine, ficheros <= 120 líneas y tests NUnit en verde."
+  ],
+  "pr": "#31",
+  "session": 23
 }
