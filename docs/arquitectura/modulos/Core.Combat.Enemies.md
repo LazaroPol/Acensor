@@ -6,7 +6,7 @@ Ensamblado: `Specimen.Core` · Carpeta: `Assets/_Project/Scripts/Core/Combat/Ene
 Tests: `Assets/_Project/Tests/EditMode/Core/Combat/Enemies`
 
 **Depende de:** [Core.Common](Core.Common.md), [Core.Loot](Core.Loot.md)
-**Lo usan:** nadie
+**Lo usan:** [Core.Combat.Bosses](Core.Combat.Bosses.md)
 
 | Fichero | Tipo | Resumen |
 |---|---|---|

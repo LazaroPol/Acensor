@@ -25,8 +25,8 @@ TOTAL  ███████████████████░░░░░�
 
 ## Cola de prioridad (tablero)
 
-1. **F6-05** Jefe del Acto I con fases
-2. **F7-01** Sistema de votación (mayoría y desempate)
-3. **F7-02** Registro de Ecos
-4. **F7-03** Consecuencias que alteran pisos futuros
-5. **F7-04** Decisiones secretas individuales
+1. **F7-01** Sistema de votación (mayoría y desempate)
+2. **F7-02** Registro de Ecos
+3. **F7-03** Consecuencias que alteran pisos futuros
+4. **F7-04** Decisiones secretas individuales
+5. **F8-01** Director de oleadas del asedio

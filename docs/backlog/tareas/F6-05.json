@@ -2,15 +2,21 @@
   "id": "F6-05",
   "phase": "F6",
   "title": "Jefe del Acto I con fases",
-  "status": "todo",
+  "status": "in_progress",
   "type": "feature",
   "labels": [
     "combate",
     "ia"
   ],
   "origin": "backlog",
-  "description": "",
-  "acceptance": [],
+  "description": "Núcleo puro del jefe del Acto I (GDD 08/10): combate por fases que avanzan al perder vida y endurecen su ataque.",
+  "acceptance": [
+    "BossPhase con id, fracción de vida de entrada (0..1) y multiplicador de daño > 0.",
+    "BossEncounter exige fases con vida decreciente, la primera a 1; lleva la vida del jefe y avanza de fase al recibir daño, disparando PhaseEntered por cada fase cruzada en orden.",
+    "Attack() aplica el multiplicador de la fase actual; derrotado ignora más daño.",
+    "ActOneBoss define el jefe del piso 5 anillo 3 con tres fases.",
+    "Núcleo sin UnityEngine, ficheros <= 120 líneas y tests NUnit en verde."
+  ],
   "pr": null,
   "session": null
 }
