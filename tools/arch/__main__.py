@@ -32,7 +32,7 @@ def main(argv=None) -> int:
     for old in stale_outputs({}):
         (OUT_DIR / old).unlink()
     for rel, content in files.items():
-        (OUT_DIR / rel).write_text(content, encoding="utf-8")
+        (OUT_DIR / rel).write_text(content, encoding="utf-8", newline="\n")
     return 0
 
 

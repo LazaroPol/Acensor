@@ -13,8 +13,8 @@ Tests: `Assets/_Project/Tests/EditMode/Core/Items`
 | `Durability.cs` | class `Durability` | Durabilidad acotada a [0, Max]. |
 | `IDurability.cs` | interface `IDurability` | Desgaste de un objeto. |
 | `IInventory.cs` | interface `IInventory` | Inventario de ranuras con capacidad fija y apilado por objeto. |
-| `Inventory.cs` | class `Inventory` | Inventario por ranuras: cada ranura guarda una pila. |
 | `Inventory.Transfer.cs` | class `Inventory` |  |
+| `Inventory.cs` | class `Inventory` | Inventario por ranuras: cada ranura guarda una pila. |
 | `ItemCategory.cs` | enum `ItemCategory` | Categoría funcional de un objeto. |
 | `ItemDefinition.cs` | class `ItemDefinition` | Plantilla inmutable de un objeto. |
 | `ItemInstance.cs` | class `ItemInstance` | Objeto concreto en el mundo o en un inventario: su plantilla más su propio desgaste. |

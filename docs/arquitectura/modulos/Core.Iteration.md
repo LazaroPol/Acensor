@@ -18,6 +18,6 @@ Tests: `Assets/_Project/Tests/EditMode/Core/Iteration`
 | `IterationEvents.cs` | struct `DoorsClosingWarning` | Quedan segundos para que se cierren las puertas. |
 | `IterationMachineFactory.cs` | class `IterationMachineFactory` | Define los estados y transiciones del bucle de iteración en un único sitio. |
 | `IterationPhase.cs` | enum `IterationPhase` | Fases de una iteración (GDD §3.1). |
-| `IterationRun.cs` | class `IterationRun` | Orquesta una iteración: Armería → (Calma → Incursión → Ascenso) × pisos → Asedio → Extracción → Fin. |
 | `IterationRun.Ending.cs` | class `IterationRun` | Condiciones de fin: victoria por extracción, grupo eliminado o abandono. |
 | `IterationRun.Presence.cs` | class `IterationRun` | Entradas y salidas del ascensor, y rescate por el Hueco de Emergencia. |
+| `IterationRun.cs` | class `IterationRun` | Orquesta una iteración: Armería → (Calma → Incursión → Ascenso) × pisos → Asedio → Extracción → Fin. |

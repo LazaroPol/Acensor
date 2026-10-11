@@ -10,9 +10,9 @@ Tests: `Assets/_Project/Tests/EditMode/Core/Crafting`
 
 | Fichero | Tipo | Resumen |
 |---|---|---|
-| `Crafter.cs` | class `Crafter` | Fabrica recetas sobre un inventario. |
 | `CraftResult.cs` | enum `CraftResult` | Resultado de un intento de fabricación. |
 | `CraftTransaction.cs` | class `CraftTransaction` | Consume ingredientes y añade el resultado de forma atómica: si el resultado no cabe (ni con el hueco que liberan los ingredientes) el invent |
+| `Crafter.cs` | class `Crafter` | Fabrica recetas sobre un inventario. |
 | `IRecipeBook.cs` | interface `IRecipeBook` | Catálogo de recetas consultable por id o por profesión. |
 | `ISynergyRecipeBook.cs` | interface `ISynergyRecipeBook` | Catálogo de recetas de sinergia consultable por id o por grupo. |
 | `Recipe.cs` | class `Recipe` | Receta inmutable de una profesión: ingredientes → resultado (GDD §7). |

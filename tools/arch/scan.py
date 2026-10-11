@@ -42,7 +42,7 @@ def scan_all(scripts: pathlib.Path = SCRIPTS) -> dict:
     """namespace -> {'assembly', 'files': [scan_file...], 'deps': set(namespace)}."""
     modules = {}
     for folder, assembly in ASSEMBLIES.items():
-        for path in sorted((scripts / folder).rglob("*.cs")):
+        for path in sorted((scripts / folder).rglob("*.cs"), key=lambda q: q.as_posix()):
             info = scan_file(path)
             if not info["namespace"]:
                 continue
