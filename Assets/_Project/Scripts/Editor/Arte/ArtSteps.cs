@@ -12,6 +12,7 @@ namespace Specimen.Editor.Arte
 
         public static IReadOnlyList<ICharacterDecorator> CharacterDecorators => new ICharacterDecorator[]
         {
+            new WeaponDecorator()
         };
     }
 }

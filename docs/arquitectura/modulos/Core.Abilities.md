@@ -6,7 +6,7 @@ Ensamblado: `Specimen.Core` · Carpeta: `Assets/_Project/Scripts/Core/Abilities`
 Tests: `Assets/_Project/Tests/EditMode/Core/Abilities`
 
 **Depende de:** [Core.Classes](Core.Classes.md), [Core.Common](Core.Common.md), [Core.Vitals](Core.Vitals.md)
-**Lo usan:** nadie
+**Lo usan:** [Core.Combat.Attacks](Core.Combat.Attacks.md)
 
 | Fichero | Tipo | Resumen |
 |---|---|---|
