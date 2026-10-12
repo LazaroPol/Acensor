@@ -4,7 +4,7 @@ _Sustituir el greybox por los packs de arte (personajes por clase, animaciones, 
 
 | | Tarea | Sesión | PR |
 |---|---|---|---|
-| 👀 | **AR-01** Pipeline de importación de assets de terceros |  |  |
+| ✅ | **AR-01** Pipeline de importación de assets de terceros | S95 | #80 |
 | ⬜ | **AR-02** Personajes del kit de clases |  |  |
 | ⬜ | **AR-03** Kit de animaciones: locomoción, melé y hechizos |  |  |
 | ⬜ | **AR-04** Armas y equipo por clase |  |  |
