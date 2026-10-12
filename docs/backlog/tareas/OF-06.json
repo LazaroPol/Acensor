@@ -2,7 +2,7 @@
   "id": "OF-06",
   "phase": "OF",
   "title": "RecipeDefinition: estación, niveles, piezas, tiempo, XP y desbloqueo",
-  "status": "todo",
+  "status": "in_progress",
   "type": "feature",
   "labels": [
     "oficios",
