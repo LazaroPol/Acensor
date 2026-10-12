@@ -27,8 +27,8 @@ TOTAL  ███████████████████████░�
 
 ## Cola de prioridad (tablero)
 
-1. **OF-01** Diseño de oficios: GDD §17 y backlog de la fase
-2. **OF-02** Materiales: tier, peso, etiquetas e icono en ItemDefinition
-3. **OF-03** Ingredientes por objeto o etiqueta y consumo por etiqueta
-4. **OF-04** Nivel y XP por oficio con curva configurable e hitos
-5. **OF-05** Calidad del objeto: grados, tirada y huecos de mod
+1. **OF-02** Materiales: tier, peso, etiquetas e icono en ItemDefinition
+2. **OF-03** Ingredientes por objeto o etiqueta y consumo por etiqueta
+3. **OF-04** Nivel y XP por oficio con curva configurable e hitos
+4. **OF-05** Calidad del objeto: grados, tirada y huecos de mod
+5. **OF-06** RecipeDefinition: estación, niveles, piezas, tiempo, XP y desbloqueo
