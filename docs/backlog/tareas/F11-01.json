@@ -2,7 +2,7 @@
   "id": "F11-01",
   "phase": "F11",
   "title": "Integración de Netcode for GameObjects",
-  "status": "review",
+  "status": "done",
   "type": "feature",
   "labels": [
     "red"
@@ -17,6 +17,6 @@
     "NgoNetworkTransport adapta NetworkManager/UnityTransport a INetworkTransport.",
     "Tests NUnit cubren endpoint, ajustes, autoridad y transiciones de la sesión."
   ],
-  "pr": null,
-  "session": null
+  "pr": "#121",
+  "session": 119
 }
