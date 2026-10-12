@@ -1,10 +1,10 @@
 # Progreso — SPECIMEN
 
 ```
-TOTAL  ██████████████████████████░░░░  87.3%  (69/79 tareas)
+TOTAL  ███████████████████████████░░░  88.6%  (70/79 tareas)
 ```
 
-**Fase en curso:** F10 · **Siguiente tarea:** F10-06
+**Fase en curso:** F11 · **Siguiente tarea:** F11-01
 
 | Fase | Progreso | % | Tareas |
 |---|---|---|---|
@@ -19,7 +19,7 @@ TOTAL  ████████████████████████�
 | [F7 · Ecos y decisiones](fases/F7.md) | `███████████████` | 100% | 4/4 |
 | [F8 · Asedio y extracción](fases/F8.md) | `███████████████` | 100% | 4/4 |
 | [F9 · Meta-progresión: Laboratorio](fases/F9.md) | `███████████████` | 100% | 4/4 |
-| [F10 · Presentación en Unity](fases/F10.md) | `████████████░░░` | 83% | 5/6 |
+| [F10 · Presentación en Unity](fases/F10.md) | `███████████████` | 100% | 6/6 |
 | [F11 · Multijugador cooperativo](fases/F11.md) | `░░░░░░░░░░░░░░░` | 0% | 0/4 |
 | [F12 · Vertical Slice — Acto I](fases/F12.md) | `░░░░░░░░░░░░░░░` | 0% | 0/5 |
 

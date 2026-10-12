@@ -2,7 +2,7 @@
   "id": "F10-06",
   "phase": "F10",
   "title": "Escena del Ascensor y Armería jugables",
-  "status": "in_progress",
+  "status": "done",
   "type": "feature",
   "labels": [
     "ui"
@@ -15,6 +15,6 @@
     "GameComposition registra catálogo de kits, armería, IterationRun y plataforma del Ascensor.",
     "HubBootstrap monta ArmoryScreen/ElevatorScreen en las escenas Armeria y Ascensor y avanza la iteración."
   ],
-  "pr": null,
-  "session": null
+  "pr": "78",
+  "session": 86
 }
