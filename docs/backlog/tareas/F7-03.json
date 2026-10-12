@@ -2,14 +2,19 @@
   "id": "F7-03",
   "phase": "F7",
   "title": "Consecuencias que alteran pisos futuros",
-  "status": "todo",
+  "status": "done",
   "type": "feature",
   "labels": [
     "ecos"
   ],
   "origin": "backlog",
-  "description": "",
-  "acceptance": [],
-  "pr": null,
-  "session": null
+  "description": "Núcleo puro de consecuencias de Ecos (GDD 09): lo decidido en un Eco añade modificadores al Presagio de pisos posteriores.",
+  "acceptance": [
+    "EchoConsequence (Eco, opción, piso desde el que aplica, modificador) valida sus datos.",
+    "EchoConsequenceTable.ModifiersFor devuelve, sin repetir, los modificadores de las opciones elegidas desde su piso; ignora Ecos sin decidir.",
+    "EchoOmenAdjuster.Apply devuelve un Presagio con los modificadores forzados añadidos, sin duplicar ni forzar modificadores de combate en pisos sin combate, y sin mutar el original.",
+    "Núcleo sin UnityEngine, ficheros <= 120 líneas y tests NUnit en verde."
+  ],
+  "pr": "#62",
+  "session": 47
 }
