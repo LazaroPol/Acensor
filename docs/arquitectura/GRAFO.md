@@ -4,81 +4,81 @@
 
 ```mermaid
 flowchart LR
-  n0["Core.Abilities"]; n1["Core.Abilities.Mobility"]; n2["Core.Armory"]; n3["Core.Art"]
-  n4["Core.Classes"]; n5["Core.Combat"]; n6["Core.Combat.Bosses"]; n7["Core.Combat.Enemies"]
-  n8["Core.Combat.Perception"]; n9["Core.Common"]; n10["Core.Composition"]; n11["Core.Crafting"]
-  n12["Core.Dna"]; n13["Core.Echoes"]; n14["Core.Echoes.Consequences"]; n15["Core.Echoes.Secrets"]
-  n16["Core.Echoes.Voting"]; n17["Core.Elevator"]; n18["Core.Events"]; n19["Core.Floors"]
-  n20["Core.Floors.Omens"]; n21["Core.Floors.Paths"]; n22["Core.Floors.Population"]; n23["Core.Floors.Remnants"]
-  n24["Core.Floors.Types"]; n25["Core.Hubs"]; n26["Core.Hud"]; n27["Core.Items"]
-  n28["Core.Iteration"]; n29["Core.Iteration.Ending"]; n30["Core.Iteration.Presence"]; n31["Core.Iteration.Readiness"]
-  n32["Core.Iteration.States"]; n33["Core.Iteration.Voting"]; n34["Core.Lab"]; n35["Core.Life"]
-  n36["Core.Loot"]; n37["Core.Lore"]; n38["Core.Movement"]; n39["Core.Physics"]
-  n40["Core.Professions"]; n41["Core.Profile"]; n42["Core.Prototype"]; n43["Core.Randomness"]
-  n44["Core.Repair"]; n45["Core.Siege"]; n46["Core.Siege.Defenses"]; n47["Core.Siege.Extraction"]
-  n48["Core.Siege.Scoring"]; n49["Core.StateMachines"]; n50["Core.Stats"]; n51["Core.Time"]
-  n52["Core.Visuals"]; n53["Core.Vitals"]; n54["Runtime.Art"]; n55["Runtime.Bootstrap"]
-  n56["Runtime.Hubs"]; n57["Runtime.Hud"]; n58["Runtime.Lab"]; n59["Runtime.Player"]
-  n60["Runtime.Prototype"]; n61["Runtime.Visuals"]
-  n0 --> n4 & n9 & n53
-  n1 --> n4 & n9 & n38
-  n2 --> n4 & n9
-  n3 --> n9 & n10 & n30 & n51
-  n4 --> n9 & n50
-  n5 --> n9 & n43
-  n6 --> n7 & n9
-  n7 --> n9 & n36
-  n8 --> n30 & n38
-  n10 --> n2 & n4 & n9 & n17 & n18 & n28
-  n11 --> n9 & n27 & n40
-  n12 --> n50
-  n13 --> n9
-  n14 --> n9 & n20
-  n15 --> n9
-  n16 --> n9
-  n17 --> n9 & n11 & n27 & n28 & n35 & n50 & n51 & n53
-  n18 --> n9
-  n19 --> n9 & n36 & n43
-  n20 --> n9 & n24 & n43
-  n21 --> n9 & n40 & n43
-  n22 --> n9 & n36 & n43
-  n23 --> n9 & n36 & n43
-  n24 --> n9
-  n25 --> n2 & n4 & n9 & n17 & n28
-  n26 --> n9 & n18 & n28 & n42 & n51 & n53
-  n27 --> n9
-  n28 --> n9 & n18 & n29 & n30 & n31 & n32 & n33 & n49 & n51
-  n29 --> n30
-  n30 --> n9
-  n31 --> n9
-  n32 --> n29 & n30 & n31 & n49 & n51
-  n33 --> n9
-  n34 --> n9 & n12
-  n35 --> n9 & n28 & n53
-  n36 --> n9 & n27 & n43
-  n37 --> n16
-  n38 --> n9 & n53
-  n39 --> n9
-  n40 --> n9
-  n41 --> n12 & n37
-  n42 --> n9 & n39 & n51 & n52 & n53
-  n43 --> n9
-  n44 --> n9 & n27
-  n45 --> n9
-  n46 --> n9
-  n47 --> n9 & n48
-  n48 --> n9
-  n49 --> n9 & n51
-  n50 --> n9
-  n51 --> n9
-  n52 --> n9
-  n53 --> n9 & n50 & n51
-  n54 --> n3
-  n55 --> n10
-  n56 --> n2 & n4 & n10 & n17 & n25 & n28 & n55
-  n57 --> n26
-  n58 --> n10 & n12 & n34
-  n59 --> n38 & n50 & n53
-  n60 --> n38 & n42 & n50 & n51 & n52 & n53 & n61
-  n61 --> n42 & n52
+  n0["Core.Abilities"]; n1["Core.Abilities.Mobility"]; n2["Core.Animation"]; n3["Core.Armory"]
+  n4["Core.Art"]; n5["Core.Classes"]; n6["Core.Combat"]; n7["Core.Combat.Bosses"]
+  n8["Core.Combat.Enemies"]; n9["Core.Combat.Perception"]; n10["Core.Common"]; n11["Core.Composition"]
+  n12["Core.Crafting"]; n13["Core.Dna"]; n14["Core.Echoes"]; n15["Core.Echoes.Consequences"]
+  n16["Core.Echoes.Secrets"]; n17["Core.Echoes.Voting"]; n18["Core.Elevator"]; n19["Core.Events"]
+  n20["Core.Floors"]; n21["Core.Floors.Omens"]; n22["Core.Floors.Paths"]; n23["Core.Floors.Population"]
+  n24["Core.Floors.Remnants"]; n25["Core.Floors.Types"]; n26["Core.Hubs"]; n27["Core.Hud"]
+  n28["Core.Items"]; n29["Core.Iteration"]; n30["Core.Iteration.Ending"]; n31["Core.Iteration.Presence"]
+  n32["Core.Iteration.Readiness"]; n33["Core.Iteration.States"]; n34["Core.Iteration.Voting"]; n35["Core.Lab"]
+  n36["Core.Life"]; n37["Core.Loot"]; n38["Core.Lore"]; n39["Core.Movement"]
+  n40["Core.Physics"]; n41["Core.Professions"]; n42["Core.Profile"]; n43["Core.Prototype"]
+  n44["Core.Randomness"]; n45["Core.Repair"]; n46["Core.Siege"]; n47["Core.Siege.Defenses"]
+  n48["Core.Siege.Extraction"]; n49["Core.Siege.Scoring"]; n50["Core.StateMachines"]; n51["Core.Stats"]
+  n52["Core.Time"]; n53["Core.Visuals"]; n54["Core.Visuals.Packs"]; n55["Core.Vitals"]
+  n56["Runtime.Art"]; n57["Runtime.Bootstrap"]; n58["Runtime.Hubs"]; n59["Runtime.Hud"]
+  n60["Runtime.Lab"]; n61["Runtime.Player"]; n62["Runtime.Prototype"]; n63["Runtime.Visuals"]
+  n0 --> n5 & n10 & n55
+  n1 --> n5 & n10 & n39
+  n3 --> n5 & n10
+  n4 --> n10 & n11 & n31 & n52
+  n5 --> n10 & n51
+  n6 --> n10 & n44
+  n7 --> n8 & n10
+  n8 --> n10 & n37
+  n9 --> n31 & n39
+  n11 --> n3 & n5 & n10 & n18 & n19 & n29
+  n12 --> n10 & n28 & n41
+  n13 --> n51
+  n14 --> n10
+  n15 --> n10 & n21
+  n16 --> n10
+  n17 --> n10
+  n18 --> n10 & n12 & n28 & n29 & n36 & n51 & n52 & n55
+  n19 --> n10
+  n20 --> n10 & n37 & n44
+  n21 --> n10 & n25 & n44
+  n22 --> n10 & n41 & n44
+  n23 --> n10 & n37 & n44
+  n24 --> n10 & n37 & n44
+  n25 --> n10
+  n26 --> n3 & n5 & n10 & n18 & n29
+  n27 --> n10 & n19 & n29 & n43 & n52 & n55
+  n28 --> n10
+  n29 --> n10 & n19 & n30 & n31 & n32 & n33 & n34 & n50 & n52
+  n30 --> n31
+  n31 --> n10
+  n32 --> n10
+  n33 --> n30 & n31 & n32 & n50 & n52
+  n34 --> n10
+  n35 --> n10 & n13
+  n36 --> n10 & n29 & n55
+  n37 --> n10 & n28 & n44
+  n38 --> n17
+  n39 --> n10 & n55
+  n40 --> n10
+  n41 --> n10
+  n42 --> n13 & n38
+  n43 --> n10 & n40 & n52 & n53 & n55
+  n44 --> n10
+  n45 --> n10 & n28
+  n46 --> n10
+  n47 --> n10
+  n48 --> n10 & n49
+  n49 --> n10
+  n50 --> n10 & n52
+  n51 --> n10
+  n52 --> n10
+  n53 --> n10
+  n55 --> n10 & n51 & n52
+  n56 --> n4
+  n57 --> n11
+  n58 --> n3 & n5 & n11 & n18 & n26 & n29 & n57
+  n59 --> n27
+  n60 --> n11 & n13 & n35
+  n61 --> n39 & n51 & n55
+  n62 --> n39 & n43 & n51 & n52 & n53 & n55 & n63
+  n63 --> n43 & n53
 ```

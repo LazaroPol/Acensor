@@ -36,3 +36,14 @@ TestResult*.xml
 # Python
 __pycache__/
 *.pyc
+
+# Arte de terceros: vive solo en local (licencias + tamaño). Ver docs/arte/ASSETS.md
+/Assets/_Project/Art/ThirdParty/
+/Assets/_Project/Art/ThirdParty.meta
+/Assets/_Project/Art/Generado/
+/Assets/_Project/Art/Generado.meta
+/Assets/_Project/Data/Arte/
+/Assets/_Project/Data/Arte.meta
+/Assets/Kevin Iglesias/
+/Assets/Kevin Iglesias.meta
+/ThirdPartyPackages/

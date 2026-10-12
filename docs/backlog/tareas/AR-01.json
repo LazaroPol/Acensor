@@ -2,7 +2,7 @@
   "id": "AR-01",
   "phase": "AR",
   "title": "Pipeline de importación de assets de terceros",
-  "status": "review",
+  "status": "done",
   "type": "infra",
   "labels": [
     "arte"
@@ -15,6 +15,6 @@
     "Los modelos de personajes, atuendos, animaciones y bestiario se importan como Humanoid; los clips *_Loop en bucle.",
     "Menú SPECIMEN › Arte › Importar paquetes Kevin Iglesias importa los .unitypackage sin diálogo."
   ],
-  "pr": null,
-  "session": null
+  "pr": "#80",
+  "session": 95
 }
