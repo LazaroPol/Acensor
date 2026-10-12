@@ -45,6 +45,7 @@ Un módulo = un namespace C#. Abre solo la página del módulo que vayas a tocar
 | [Core.Repair](modulos/Core.Repair.md) | 6 | `IRepairCatalog`, `RepairCatalog`, `RepairReport`, `RepairResult`, `RepairRule` … | Core.Common, Core.Items |
 | [Core.Siege](modulos/Core.Siege.md) | 3 | `WaveConfig`, `WaveDirector`, `WaveState` | Core.Common |
 | [Core.Siege.Defenses](modulos/Core.Siege.Defenses.md) | 2 | `Fortification`, `Turret` | Core.Common |
+| [Core.Siege.Scoring](modulos/Core.Siege.Scoring.md) | 3 | `IterationScore`, `ScoreConfig`, `ScoreResult` | Core.Common |
 | [Core.StateMachines](modulos/Core.StateMachines.md) | 3 | `IState`, `StateBase`, `StateMachine`, `Transition` | Core.Common, Core.Time |
 | [Core.Stats](modulos/Core.Stats.md) | 7 | `IStatFormula`, `ModifierKind`, `StandardStatFormula`, `Stat`, `StatModifier` … | Core.Common |
 | [Core.Time](modulos/Core.Time.md) | 4 | `IClock`, `ITickable`, `ManualClock`, `PhaseTimer` | Core.Common |

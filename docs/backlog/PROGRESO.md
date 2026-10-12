@@ -25,8 +25,8 @@ TOTAL  ██████████████████████░░�
 
 ## Cola de prioridad (tablero)
 
-1. **F8-03** Puntuación y multiplicador de supervivencia colectiva
-2. **F8-04** Extracción en Osprey y conversión a puntos de ADN
-3. **F9-01** Árbol de ADN con ramas y Tier Lock
-4. **F9-02** Aplicación de mutaciones al nuevo clon
-5. **F9-03** Fragmentos de memoria y desbloqueo de lore
+1. **F8-04** Extracción en Osprey y conversión a puntos de ADN
+2. **F9-01** Árbol de ADN con ramas y Tier Lock
+3. **F9-02** Aplicación de mutaciones al nuevo clon
+4. **F9-03** Fragmentos de memoria y desbloqueo de lore
+5. **F9-04** Guardado y carga del perfil

@@ -43,17 +43,18 @@ flowchart LR
   n36["Core.Repair"]
   n37["Core.Siege"]
   n38["Core.Siege.Defenses"]
-  n39["Core.StateMachines"]
-  n40["Core.Stats"]
-  n41["Core.Time"]
-  n42["Core.Visuals"]
-  n43["Core.Vitals"]
-  n44["Runtime.Prototype"]
-  n45["Runtime.Visuals"]
-  n0 --> n3 & n8 & n43
+  n39["Core.Siege.Scoring"]
+  n40["Core.StateMachines"]
+  n41["Core.Stats"]
+  n42["Core.Time"]
+  n43["Core.Visuals"]
+  n44["Core.Vitals"]
+  n45["Runtime.Prototype"]
+  n46["Runtime.Visuals"]
+  n0 --> n3 & n8 & n44
   n1 --> n3 & n8 & n31
   n2 --> n3 & n8
-  n3 --> n8 & n40
+  n3 --> n8 & n41
   n4 --> n8 & n35
   n5 --> n6 & n8
   n6 --> n8 & n30
@@ -63,7 +64,7 @@ flowchart LR
   n11 --> n8 & n17
   n12 --> n8
   n13 --> n8
-  n14 --> n8 & n9 & n22 & n23 & n29 & n40 & n41 & n43
+  n14 --> n8 & n9 & n22 & n23 & n29 & n41 & n42 & n44
   n15 --> n8
   n16 --> n8 & n30 & n35
   n17 --> n8 & n21 & n35
@@ -72,27 +73,28 @@ flowchart LR
   n20 --> n8 & n30 & n35
   n21 --> n8
   n22 --> n8
-  n23 --> n8 & n15 & n24 & n25 & n26 & n27 & n28 & n39 & n41
+  n23 --> n8 & n15 & n24 & n25 & n26 & n27 & n28 & n40 & n42
   n24 --> n25
   n25 --> n8
   n26 --> n8
-  n27 --> n24 & n25 & n26 & n39 & n41
+  n27 --> n24 & n25 & n26 & n40 & n42
   n28 --> n8
-  n29 --> n8 & n23 & n43
+  n29 --> n8 & n23 & n44
   n30 --> n8 & n22 & n35
-  n31 --> n8 & n43
+  n31 --> n8 & n44
   n32 --> n8
   n33 --> n8
-  n34 --> n8 & n32 & n41 & n42 & n43
+  n34 --> n8 & n32 & n42 & n43 & n44
   n35 --> n8
   n36 --> n8 & n22
   n37 --> n8
   n38 --> n8
-  n39 --> n8 & n41
-  n40 --> n8
+  n39 --> n8
+  n40 --> n8 & n42
   n41 --> n8
   n42 --> n8
-  n43 --> n8 & n40 & n41
-  n44 --> n31 & n34 & n40 & n41 & n42 & n43 & n45
-  n45 --> n34 & n42
+  n43 --> n8
+  n44 --> n8 & n41 & n42
+  n45 --> n31 & n34 & n41 & n42 & n43 & n44 & n46
+  n46 --> n34 & n43
 ```
