@@ -2,14 +2,20 @@
   "id": "F9-04",
   "phase": "F9",
   "title": "Guardado y carga del perfil",
-  "status": "todo",
+  "status": "done",
   "type": "feature",
   "labels": [
     "meta"
   ],
   "origin": "backlog",
-  "description": "",
-  "acceptance": [],
-  "pr": null,
-  "session": null
+  "description": "Persistencia del perfil entre iteraciones: puntos de ADN libres, mutaciones desbloqueadas y fragmentos de memoria, en formato de texto versionado tras una interfaz de almacén.",
+  "acceptance": [
+    "Guardar y cargar restaura puntos, nodos (con ramas invertidas) y fragmentos/lore",
+    "Sin perfil guardado, cargar devuelve false y no toca el estado",
+    "Texto corrupto, versión desconocida o nodos inexistentes se rechazan sin dejar estado a medias",
+    "Serialización determinista",
+    "Tests NUnit"
+  ],
+  "pr": "#77",
+  "session": 94
 }
