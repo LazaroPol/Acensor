@@ -2,14 +2,19 @@
   "id": "F8-02",
   "phase": "F8",
   "title": "Fortificaciones y torretas",
-  "status": "todo",
+  "status": "in_progress",
   "type": "feature",
   "labels": [
     "asedio"
   ],
   "origin": "backlog",
-  "description": "",
-  "acceptance": [],
+  "description": "Núcleo puro de las defensas del asedio (GDD 03 §3.4, 07): fortificaciones que absorben daño y torretas con munición y cadencia.",
+  "acceptance": [
+    "Fortification absorbe daño hasta destruirse, devuelve la vida perdida/recuperada y se repara solo hasta su máximo y mientras no esté destruida.",
+    "Turret dispara solo con objetivo en alcance, munición y sin enfriamiento; cada disparo gasta munición y reinicia la cadencia (Tick).",
+    "Turret.Reload repone munición sin pasar del máximo; parámetros inválidos fallan pronto.",
+    "Núcleo sin UnityEngine, ficheros <= 120 líneas y tests NUnit en verde."
+  ],
   "pr": null,
   "session": null
 }
