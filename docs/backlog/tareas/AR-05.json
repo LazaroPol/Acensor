@@ -2,7 +2,7 @@
   "id": "AR-05",
   "phase": "AR",
   "title": "Bestiario",
-  "status": "todo",
+  "status": "done",
   "type": "feature",
   "labels": [
     "arte",
@@ -15,6 +15,6 @@
     "EnemyBrain pasa de esperar a perseguir, atacar con enfriamiento y soltar al alejarse.",
     "EnemyHealth muere una sola vez y no baja de 0."
   ],
-  "pr": null,
-  "session": null
+  "pr": "#84",
+  "session": 99
 }

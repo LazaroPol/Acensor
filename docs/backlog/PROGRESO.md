@@ -1,10 +1,10 @@
 # Progreso — SPECIMEN
 
 ```
-TOTAL  █████████████████████████░░░░░  83.9%  (73/87 tareas)
+TOTAL  ██████████████████████████░░░░  86.2%  (75/87 tareas)
 ```
 
-**Fase en curso:** AR · **Siguiente tarea:** AR-05
+**Fase en curso:** AR · **Siguiente tarea:** AR-06
 
 | Fase | Progreso | % | Tareas |
 |---|---|---|---|
@@ -20,14 +20,14 @@ TOTAL  ████████████████████████�
 | [F8 · Asedio y extracción](fases/F8.md) | `███████████████` | 100% | 4/4 |
 | [F9 · Meta-progresión: Laboratorio](fases/F9.md) | `███████████████` | 100% | 4/4 |
 | [F10 · Presentación en Unity](fases/F10.md) | `███████████████` | 100% | 6/6 |
-| [AR · Arte e integración de assets](fases/AR.md) | `██████░░░░░░░░░` | 38% | 3/8 |
+| [AR · Arte e integración de assets](fases/AR.md) | `█████████░░░░░░` | 62% | 5/8 |
 | [F11 · Multijugador cooperativo](fases/F11.md) | `░░░░░░░░░░░░░░░` | 0% | 0/4 |
 | [F12 · Vertical Slice — Acto I](fases/F12.md) | `░░░░░░░░░░░░░░░` | 0% | 0/5 |
 
 ## Cola de prioridad (tablero)
 
-1. **AR-05** Bestiario
-2. **AR-06** Entorno modular
-3. **AR-07** Mobiliario de profesiones
-4. **AR-08** Campo de pruebas jugable
-5. **F11-01** Integración de Netcode for GameObjects
+1. **AR-06** Entorno modular
+2. **AR-07** Mobiliario de profesiones
+3. **AR-08** Campo de pruebas jugable
+4. **F11-01** Integración de Netcode for GameObjects
+5. **F11-02** Sincronización del estado de iteración (servidor autoritativo)
