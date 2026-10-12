@@ -1,7 +1,7 @@
 # Progreso — SPECIMEN
 
 ```
-TOTAL  ████████████████████████░░░░░░  81.6%  (84/103 tareas)
+TOTAL  █████████████████████████░░░░░  82.5%  (85/103 tareas)
 ```
 
 **Fase en curso:** OF · **Siguiente tarea:** OF-08
@@ -21,7 +21,7 @@ TOTAL  ████████████████████████�
 | [F9 · Meta-progresión: Laboratorio](fases/F9.md) | `███████████████` | 100% | 4/4 |
 | [F10 · Presentación en Unity](fases/F10.md) | `███████████████` | 100% | 6/6 |
 | [AR · Arte e integración de assets](fases/AR.md) | `███████████████` | 100% | 8/8 |
-| [OF · Oficios: artesanía, conocimiento y mods](fases/OF.md) | `██████░░░░░░░░░` | 38% | 6/16 |
+| [OF · Oficios: artesanía, conocimiento y mods](fases/OF.md) | `███████░░░░░░░░` | 44% | 7/16 |
 | [F11 · Multijugador cooperativo](fases/F11.md) | `░░░░░░░░░░░░░░░` | 0% | 0/4 |
 | [F12 · Vertical Slice — Acto I](fases/F12.md) | `░░░░░░░░░░░░░░░` | 0% | 0/5 |
 
