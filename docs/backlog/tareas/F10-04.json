@@ -2,14 +2,19 @@
   "id": "F10-04",
   "phase": "F10",
   "title": "UI del Laboratorio Genético",
-  "status": "todo",
+  "status": "done",
   "type": "feature",
   "labels": [
     "ui"
   ],
   "origin": "backlog",
-  "description": "",
-  "acceptance": [],
-  "pr": null,
-  "session": null
+  "description": "Pantalla del Laboratorio Genético: las cinco ramas del árbol de ADN, estado de cada nodo, selección y desbloqueo.",
+  "acceptance": [
+    "LabPresenter lista las 5 ramas con nodos por tier y su estado (desbloqueado, disponible, sin puntos, tier bloqueado).",
+    "Seleccionar y desbloquear muestra el mensaje en español y gasta puntos vía DnaAllocation.",
+    "Se muestran los puntos que faltan en la rama para abrir el tier del nodo seleccionado.",
+    "LabScreen (Runtime/Lab) solo dibuja el presenter."
+  ],
+  "pr": "76",
+  "session": 85
 }

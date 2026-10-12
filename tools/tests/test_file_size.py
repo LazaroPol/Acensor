@@ -6,7 +6,7 @@ from tools.tests.helpers import ROOT
 MAX_LINES = 120
 EXTENSIONS = {".cs", ".py", ".md", ".sh", ".json", ".yml", ".asmdef", ".csproj"}
 EXCLUDED_DIRS = {"bin", "obj", "Library", "Temp", ".git", "historico"}
-GENERATED_FILES = {"packages-lock.json"}  # lo escribe Unity
+GENERATED_FILES = {"packages-lock.json", "GRAFO.md"}  # los escribe Unity / tools.arch
 
 
 def tracked_text_files():
