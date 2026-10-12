@@ -77,7 +77,7 @@ Un módulo = un namespace C#. Abre solo la página del módulo que vayas a tocar
 | [Runtime.Lab](modulos/Runtime.Lab.md) | 2 | `LabBootstrap`, `LabScreen` | Core.Composition, Core.Dna, Core.Lab |
 | [Runtime.Player](modulos/Runtime.Player.md) | 3 | `GameCamera`, `PlayerController`, `PlayerInput` | Core.Movement, Core.Stats, Core.Vitals |
 | [Runtime.Prototype](modulos/Runtime.Prototype.md) | 7 | `DebugHud`, `PlayerMotor`, `PrototypeBootstrap`, `PrototypeInput`, `PrototypePlayer` … | Core.Movement, Core.Prototype, Core.Stats, Core.Time, Core.Visuals, Core.Vitals, Runtime.Visuals |
-| [Runtime.Sandbox](modulos/Runtime.Sandbox.md) | 20 | `BenchStation`, `CombatFeed`, `DamageColors`, `EnemyRegistry`, `HitResolver` … | Core.Abilities, Core.Animation, Core.Bestiary, Core.Classes, Core.Combat, Core.Combat.Attacks, Core.Combat.Enemies, Core.Items, Core.Loot, Core.Movement, Core.Professions, Core.Randomness, Core.Sandbox, Core.Stats, Core.Visuals, Core.Vitals, Runtime.Characters, Runtime.Player, Runtime.Prototype, Runtime.Visuals |
+| [Runtime.Sandbox](modulos/Runtime.Sandbox.md) | 21 | `BenchStation`, `CombatFeed`, `DamageColors`, `EnemyRegistry`, `HitResolver` … | Core.Abilities, Core.Animation, Core.Bestiary, Core.Classes, Core.Combat, Core.Combat.Attacks, Core.Combat.Enemies, Core.Items, Core.Loot, Core.Movement, Core.Professions, Core.Randomness, Core.Sandbox, Core.Stats, Core.Visuals, Core.Vitals, Runtime.Characters, Runtime.Player, Runtime.Visuals |
 | [Runtime.Visuals](modulos/Runtime.Visuals.md) | 5 | `CatalogoArte`, `CatalogoVisual`, `GreyboxFactory`, `VisualSpawner` | Core.Classes, Core.Professions, Core.Prototype, Core.Visuals |
 
 Grafo de dependencias entre módulos: [GRAFO.md](GRAFO.md).

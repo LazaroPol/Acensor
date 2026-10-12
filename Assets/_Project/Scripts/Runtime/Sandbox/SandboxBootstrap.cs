@@ -1,7 +1,6 @@
 using Specimen.Core.Classes;
 using Specimen.Core.Visuals;
 using Specimen.Runtime.Player;
-using Specimen.Runtime.Prototype;
 using Specimen.Runtime.Visuals;
 using UnityEngine;
 using UnityEngine.SceneManagement;
@@ -40,12 +39,13 @@ namespace Specimen.Runtime.Sandbox
             _context = new SandboxContext(arte, visuals, new SandboxInput(), (ulong)System.Environment.TickCount);
             _world = new SandboxWorld(_context);
             _world.BuildRoom();
-            _player = _world.SpawnPlayer(EnsureCamera());
+            var camera = EnsureCamera();
+            _player = _world.SpawnPlayer(camera);
             var benches = _world.PlaceBenches(_player);
             _player.Equip(_kits.All[0]);
             _world.SpawnBestiary(_player);
             new GameObject(nameof(SandboxHud)).AddComponent<SandboxHud>().Init(_context, _player, benches);
-            PrototypeScenery.EnsureLight();
+            SandboxLighting.Apply(camera.GetComponent<Camera>());
             if (arte == null) _context.Feed.Add("Sin CatalogoArte: todo en greybox (SPECIMEN › Arte › 2 · Generar).");
         }
 

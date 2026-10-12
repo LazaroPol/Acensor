@@ -11,7 +11,7 @@ namespace Specimen.Editor.Arte
     public sealed class ThirdPartyImportRules : AssetPostprocessor
     {
         // Sube este número si cambias las reglas: Unity reimporta los modelos afectados.
-        public override uint GetVersion() => 1;
+        public override uint GetVersion() => 2;
 
         private void OnPreprocessModel()
         {

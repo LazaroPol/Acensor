@@ -40,8 +40,8 @@ namespace Specimen.Editor.Arte
             if (table != null)
             {
                 MaterialRemapper.Apply(table, _villageTextures, "Pueblo");
-                ModelFitting.FitToSize(table, BenchSize);
-                ModelFitting.AlignMinTo(table, new Vector3(0f, 0f, 0f), true);
+                var fit = ModelFitting.FitToSize(table, BenchSize);
+                ModelFitting.AlignMinTo(fit, Vector3.zero, true);
             }
             var tools = ProfessionFurniture.ToolsFor(profession);
             for (int i = 0; i < tools.Count; i++) PlaceTool(root, tools[i], i, tools.Count);
