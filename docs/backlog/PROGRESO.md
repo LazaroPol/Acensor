@@ -27,8 +27,8 @@ TOTAL  ████████████████████████�
 
 ## Cola de prioridad (tablero)
 
-1. **OF-09** Cola de fabricación con temporizador y combustible
-2. **OF-10** Mods de equipo: definición, instalación y stats efectivos
-3. **OF-11** Contenido I: materiales, combustibles, piezas de estación y mods
-4. **OF-12** Contenido II: recetario medieval por oficio y conocimientos
-5. **OF-13** Guardado y carga del progreso de oficios e inventario
+1. **OF-10** Mods de equipo: definición, instalación y stats efectivos
+2. **OF-11** Contenido I: materiales, combustibles, piezas de estación y mods
+3. **OF-12** Contenido II: recetario medieval por oficio y conocimientos
+4. **OF-13** Guardado y carga del progreso de oficios e inventario
+5. **OF-14** Authoring en Unity: ScriptableObjects, base de datos y validación
