@@ -2,7 +2,7 @@
   "id": "F10-04",
   "phase": "F10",
   "title": "UI del Laboratorio Genético",
-  "status": "in_progress",
+  "status": "done",
   "type": "feature",
   "labels": [
     "ui"
@@ -15,6 +15,6 @@
     "Se muestran los puntos que faltan en la rama para abrir el tier del nodo seleccionado.",
     "LabScreen (Runtime/Lab) solo dibuja el presenter."
   ],
-  "pr": null,
-  "session": null
+  "pr": "76",
+  "session": 85
 }
