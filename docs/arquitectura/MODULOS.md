@@ -8,6 +8,7 @@ Un módulo = un namespace C#. Abre solo la página del módulo que vayas a tocar
 |---|---|---|---|
 | [Core.Abilities](modulos/Core.Abilities.md) | 7 | `AbilityCooldown`, `AbilityDefinition`, `AbilityResult`, `AbilitySlot`, `DefaultClassAbilities` … | Core.Classes, Core.Common, Core.Vitals |
 | [Core.Abilities.Mobility](modulos/Core.Abilities.Mobility.md) | 4 | `AirJumpCounter`, `MobilityConfig`, `MobilityProfile`, `ShortTeleport` | Core.Classes, Core.Common, Core.Movement |
+| [Core.Animation](modulos/Core.Animation.md) | 1 | `ClipLoopRule` | — |
 | [Core.Armory](modulos/Core.Armory.md) | 3 | `ArmoryStock`, `ClassKitArmory`, `IArmoryStock` | Core.Classes, Core.Common |
 | [Core.Art](modulos/Core.Art.md) | 6 | `ColorMood`, `MoodColor`, `MoodProfile`, `MoodProfiles`, `MoodSelector` … | Core.Common, Core.Composition, Core.Iteration.Presence, Core.Time |
 | [Core.Classes](modulos/Core.Classes.md) | 8 | `ClassKit`, `ClassKitCatalog`, `ClassKitId`, `ClassResourceType`, `ClassRole` … | Core.Common, Core.Stats |
@@ -59,6 +60,7 @@ Un módulo = un namespace C#. Abre solo la página del módulo que vayas a tocar
 | [Core.Stats](modulos/Core.Stats.md) | 7 | `IStatFormula`, `ModifierKind`, `StandardStatFormula`, `Stat`, `StatModifier` … | Core.Common |
 | [Core.Time](modulos/Core.Time.md) | 4 | `IClock`, `ITickable`, `ManualClock`, `PhaseTimer` | Core.Common |
 | [Core.Visuals](modulos/Core.Visuals.md) | 14 | `DefaultGreyboxStyles`, `GreyboxColor`, `GreyboxOffset`, `GreyboxPrimitive`, `GreyboxStyle` … | Core.Common |
+| [Core.Visuals.Packs](modulos/Core.Visuals.Packs.md) | 1 | `MaterialTextureNames` | — |
 | [Core.Vitals](modulos/Core.Vitals.md) | 6 | `CharacterVitals`, `Fatigue`, `FatigueConfig`, `ResourceKind`, `ResourcePool` … | Core.Common, Core.Stats, Core.Time |
 | [Runtime.Art](modulos/Runtime.Art.md) | 1 | `MoodVolumeDriver` | Core.Art |
 | [Runtime.Bootstrap](modulos/Runtime.Bootstrap.md) | 2 | `GameBootstrap`, `UnitySceneLoader` | Core.Composition |
