@@ -53,8 +53,9 @@ flowchart LR
   n46["Core.Visuals"]
   n47["Core.Vitals"]
   n48["Runtime.Bootstrap"]
-  n49["Runtime.Prototype"]
-  n50["Runtime.Visuals"]
+  n49["Runtime.Player"]
+  n50["Runtime.Prototype"]
+  n51["Runtime.Visuals"]
   n0 --> n3 & n8 & n47
   n1 --> n3 & n8 & n33
   n2 --> n3 & n8
@@ -102,6 +103,7 @@ flowchart LR
   n46 --> n8
   n47 --> n8 & n44 & n45
   n48 --> n9
-  n49 --> n33 & n36 & n44 & n45 & n46 & n47 & n50
-  n50 --> n36 & n46
+  n49 --> n33 & n44 & n47
+  n50 --> n33 & n36 & n44 & n45 & n46 & n47 & n51
+  n51 --> n36 & n46
 ```

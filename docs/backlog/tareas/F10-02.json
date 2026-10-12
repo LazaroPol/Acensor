@@ -2,14 +2,18 @@
   "id": "F10-02",
   "phase": "F10",
   "title": "Controlador del jugador y cámara",
-  "status": "todo",
+  "status": "in_progress",
   "type": "feature",
   "labels": [
     "ui"
   ],
   "origin": "backlog",
-  "description": "",
-  "acceptance": [],
+  "description": "Controlador de jugador de producción (caminar, esprintar, esquivar) y cámara cenital-oblicua con zoom, sobre el núcleo de movimiento.",
+  "acceptance": [
+    "DodgeController: gasta Aguante, impulso de duración fija, enfriamiento; rechaza sin dirección o sin Aguante.",
+    "CameraZoom: distancia acotada [min,max] ajustable con la rueda.",
+    "PlayerController y GameCamera (Runtime/Player) solo traducen el núcleo a Unity; las estadísticas se inyectan."
+  ],
   "pr": null,
   "session": null
 }
