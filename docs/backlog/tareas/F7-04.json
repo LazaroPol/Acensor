@@ -2,14 +2,20 @@
   "id": "F7-04",
   "phase": "F7",
   "title": "Decisiones secretas individuales",
-  "status": "todo",
+  "status": "done",
   "type": "feature",
   "labels": [
     "ecos"
   ],
   "origin": "backlog",
-  "description": "",
-  "acceptance": [],
-  "pr": null,
-  "session": null
+  "description": "Núcleo puro de decisiones secretas e individuales de Ecos (GDD 09): se ocultan al resto y se revelan pisos después.",
+  "acceptance": [
+    "SecretDecision valida jugador, Eco, piso, opción y exige revelación en un piso posterior.",
+    "SecretEchoLedger.Record rechaza nulos y una segunda decisión del mismo jugador sobre el mismo Eco.",
+    "ChoiceVisibleTo: el autor ve siempre su opción; los demás solo desde el piso de revelación; null si oculta o inexistente.",
+    "RevealedAt y RevealedOn listan las decisiones reveladas hasta/en un piso; Clear reinicia.",
+    "Núcleo sin UnityEngine, ficheros <= 120 líneas y tests NUnit en verde."
+  ],
+  "pr": "#63",
+  "session": 48
 }

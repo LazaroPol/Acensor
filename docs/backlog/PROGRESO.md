@@ -1,10 +1,10 @@
 # Progreso — SPECIMEN
 
 ```
-TOTAL  █████████████████████░░░░░░░░░  69.6%  (55/79 tareas)
+TOTAL  █████████████████████░░░░░░░░░  70.9%  (56/79 tareas)
 ```
 
-**Fase en curso:** F7 · **Siguiente tarea:** F7-04
+**Fase en curso:** F8 · **Siguiente tarea:** F8-01
 
 | Fase | Progreso | % | Tareas |
 |---|---|---|---|
@@ -16,7 +16,7 @@ TOTAL  █████████████████████░░░�
 | [F4 · Ascensor-Refugio](fases/F4.md) | `███████████████` | 100% | 5/5 |
 | [F5 · Generación de pisos](fases/F5.md) | `███████████████` | 100% | 6/6 |
 | [F6 · Combate e IA](fases/F6.md) | `███████████████` | 100% | 5/5 |
-| [F7 · Ecos y decisiones](fases/F7.md) | `███████████░░░░` | 75% | 3/4 |
+| [F7 · Ecos y decisiones](fases/F7.md) | `███████████████` | 100% | 4/4 |
 | [F8 · Asedio y extracción](fases/F8.md) | `░░░░░░░░░░░░░░░` | 0% | 0/4 |
 | [F9 · Meta-progresión: Laboratorio](fases/F9.md) | `░░░░░░░░░░░░░░░` | 0% | 0/4 |
 | [F10 · Presentación en Unity](fases/F10.md) | `░░░░░░░░░░░░░░░` | 0% | 0/6 |
@@ -25,8 +25,8 @@ TOTAL  █████████████████████░░░�
 
 ## Cola de prioridad (tablero)
 
-1. **F7-04** Decisiones secretas individuales
-2. **F8-01** Director de oleadas del asedio
-3. **F8-02** Fortificaciones y torretas
-4. **F8-03** Puntuación y multiplicador de supervivencia colectiva
-5. **F8-04** Extracción en Osprey y conversión a puntos de ADN
+1. **F8-01** Director de oleadas del asedio
+2. **F8-02** Fortificaciones y torretas
+3. **F8-03** Puntuación y multiplicador de supervivencia colectiva
+4. **F8-04** Extracción en Osprey y conversión a puntos de ADN
+5. **F9-01** Árbol de ADN con ramas y Tier Lock
