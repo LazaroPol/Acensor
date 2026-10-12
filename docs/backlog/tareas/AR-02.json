@@ -2,7 +2,7 @@
   "id": "AR-02",
   "phase": "AR",
   "title": "Personajes del kit de clases",
-  "status": "review",
+  "status": "done",
   "type": "feature",
   "labels": [
     "arte"
@@ -14,6 +14,6 @@
     "AppearanceModels resuelve modelo base, atuendo y textura de variante.",
     "El generador crea un prefab por kit en Art/Generado/Personajes con Animator Humanoid."
   ],
-  "pr": null,
-  "session": null
+  "pr": "#82",
+  "session": 97
 }
