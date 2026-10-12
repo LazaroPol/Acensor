@@ -6,7 +6,7 @@ Ensamblado: `Specimen.Core` · Carpeta: `Assets/_Project/Scripts/Core/Siege`
 Tests: `Assets/_Project/Tests/EditMode/Core/Siege`
 
 **Depende de:** [Core.Common](Core.Common.md)
-**Lo usan:** nadie
+**Lo usan:** [Runtime.Atico](Runtime.Atico.md)
 
 | Fichero | Tipo | Resumen |
 |---|---|---|

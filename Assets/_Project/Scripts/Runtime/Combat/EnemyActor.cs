@@ -14,6 +14,8 @@ namespace Specimen.Runtime.Combat
         private CharacterVitals _targetVitals;
         private EnemyHealth _health;
 
+        public event System.Action Died;
+
         public bool IsDead => _health.IsDead;
         public DefenseProfile Defense => _enemy.Defense;
 
@@ -28,7 +30,9 @@ namespace Specimen.Runtime.Combat
 
         public void Hurt(float amount)
         {
-            if (_health.TakeDamage(amount)) Destroy(gameObject);
+            if (!_health.TakeDamage(amount)) return;
+            Died?.Invoke();
+            Destroy(gameObject);
         }
 
         private void Update()
