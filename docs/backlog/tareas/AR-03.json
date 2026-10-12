@@ -2,7 +2,7 @@
   "id": "AR-03",
   "phase": "AR",
   "title": "Kit de animaciones: locomoción, melé y hechizos",
-  "status": "review",
+  "status": "done",
   "type": "feature",
   "labels": [
     "arte"
@@ -14,6 +14,6 @@
     "LocomotionBlend normaliza la velocidad a [0,1] con umbrales andar/trotar/esprintar.",
     "El generador crea Heroe.controller y Monstruo.controller con los parámetros de AnimParams."
   ],
-  "pr": null,
-  "session": null
+  "pr": "#81",
+  "session": 96
 }
