@@ -2,7 +2,7 @@
   "id": "OF-02",
   "phase": "OF",
   "title": "Materiales: tier, peso, etiquetas e icono en ItemDefinition",
-  "status": "review",
+  "status": "done",
   "type": "feature",
   "labels": [
     "oficios",
@@ -17,6 +17,6 @@
     "Los materiales existentes de ItemCatalog reciben tier, peso y etiquetas coherentes.",
     "Inventory expone el peso total; todos los tests anteriores siguen en verde."
   ],
-  "pr": null,
-  "session": null
+  "pr": "#106",
+  "session": 104
 }
