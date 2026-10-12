@@ -26,8 +26,8 @@ TOTAL  ████████████████████████�
 
 ## Cola de prioridad (tablero)
 
-1. **AR-06** Entorno modular
-2. **AR-07** Mobiliario de profesiones
-3. **AR-08** Campo de pruebas jugable
-4. **F11-01** Integración de Netcode for GameObjects
-5. **F11-02** Sincronización del estado de iteración (servidor autoritativo)
+1. **AR-07** Mobiliario de profesiones
+2. **AR-08** Campo de pruebas jugable
+3. **F11-01** Integración de Netcode for GameObjects
+4. **F11-02** Sincronización del estado de iteración (servidor autoritativo)
+5. **F11-03** Lobby y conexión
