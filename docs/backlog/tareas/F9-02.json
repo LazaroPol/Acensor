@@ -2,7 +2,7 @@
   "id": "F9-02",
   "phase": "F9",
   "title": "Aplicación de mutaciones al nuevo clon",
-  "status": "in_progress",
+  "status": "done",
   "type": "feature",
   "labels": [
     "meta"
@@ -16,6 +16,6 @@
     "Atributos no definidos en la hoja se omiten",
     "Tests NUnit"
   ],
-  "pr": null,
-  "session": null
+  "pr": "#69",
+  "session": 92
 }
