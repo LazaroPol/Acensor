@@ -6,7 +6,7 @@ Ensamblado: `Specimen.Core` · Carpeta: `Assets/_Project/Scripts/Core/Iteration/
 Tests: `Assets/_Project/Tests/EditMode/Core/Iteration/Ending`
 
 **Depende de:** [Core.Iteration.Presence](Core.Iteration.Presence.md)
-**Lo usan:** [Core.Iteration](Core.Iteration.md), [Core.Iteration.States](Core.Iteration.States.md)
+**Lo usan:** [Core.Dna](Core.Dna.md), [Core.Iteration](Core.Iteration.md), [Core.Iteration.States](Core.Iteration.States.md), [Runtime.Atico](Runtime.Atico.md), [Runtime.Extraction](Runtime.Extraction.md)
 
 | Fichero | Tipo | Resumen |
 |---|---|---|

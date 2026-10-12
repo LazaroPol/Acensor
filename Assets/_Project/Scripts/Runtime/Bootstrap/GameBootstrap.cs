@@ -12,7 +12,7 @@ namespace Specimen.Runtime.Bootstrap
     {
         private static ServiceContainer _services;
 
-        public static IServiceResolver Services => _services ??= GameComposition.Build(new UnitySceneLoader());
+        public static IServiceResolver Services => _services ??= GameComposition.Build(new UnitySceneLoader(), new PlayerPrefsProfileStore());
 
         /// <summary>Descarta la partida actual: el siguiente acceso a <see cref="Services"/> crea una nueva.</summary>
         public static void NewGame() => _services = null;

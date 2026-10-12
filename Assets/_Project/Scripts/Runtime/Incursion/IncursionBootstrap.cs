@@ -56,7 +56,7 @@ namespace Specimen.Runtime.Incursion
             var (sx, sz) = layout.ShaftPoint;
             _shaft = new Vector3(sx, 0f, sz);
             var kit = KitOf(s);
-            var player = IncursionPlayer.Spawn(new Vector3(x, 1.2f, z), kit.CreateStatSheet(), _run,
+            var player = IncursionPlayer.Spawn(new Vector3(x, 1.2f, z), KitStats.For(kit, s), _run,
                 new HudNotices(s.Resolve<IEventBus>()));
             _player = player.transform;
             _vitals = player.Vitals;

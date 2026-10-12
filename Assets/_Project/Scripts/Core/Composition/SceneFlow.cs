@@ -23,9 +23,10 @@ namespace Specimen.Core.Composition
             [SceneId.Boot] = new[] { SceneId.Ascensor },
             [SceneId.Ascensor] = new[] { SceneId.Armeria, SceneId.Laboratorio, SceneId.Incursion, SceneId.Atico },
             [SceneId.Armeria] = new[] { SceneId.Ascensor },
-            [SceneId.Laboratorio] = new[] { SceneId.Ascensor },
+            [SceneId.Laboratorio] = new[] { SceneId.Ascensor, SceneId.Armeria },
             [SceneId.Incursion] = new[] { SceneId.Ascensor },
-            [SceneId.Atico] = new[] { SceneId.Ascensor }
+            [SceneId.Atico] = new[] { SceneId.Ascensor, SceneId.Extraccion },
+            [SceneId.Extraccion] = new[] { SceneId.Laboratorio }
         };
 
         private readonly ISceneLoader _loader;

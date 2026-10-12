@@ -1,6 +1,7 @@
 using Specimen.Core.Composition;
 using Specimen.Core.Iteration;
 using Specimen.Core.Iteration.Presence;
+using Specimen.Core.Loot;
 using Specimen.Runtime.Bootstrap;
 using UnityEngine;
 using UnityEngine.InputSystem;
@@ -30,6 +31,7 @@ namespace Specimen.Runtime.Incursion
         {
             _run.ReturnToElevator(Me);
             _run.VoteEarlyClose(Me, true);
+            GameBootstrap.Services.Resolve<RunHaul>().Add(_loot.Collected);
             _flow.GoTo(SceneId.Ascensor);
         }
 

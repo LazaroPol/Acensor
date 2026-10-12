@@ -4,6 +4,8 @@ using Specimen.Core.Common;
 using Specimen.Core.Elevator;
 using Specimen.Core.Events;
 using Specimen.Core.Iteration;
+using Specimen.Core.Loot;
+using Specimen.Core.Profile;
 
 namespace Specimen.Core.Composition
 {
@@ -20,10 +22,14 @@ namespace Specimen.Core.Composition
         public static IterationConfig DemoConfig =>
             new IterationConfigBuilder().WithFloors(1).WithCalm(20f).WithIncursion(150f).WithDoorWarnings(60f, 15f).Build();
 
-        public static ServiceContainer Build(ISceneLoader loader)
+        /// <summary>Compone los servicios. Sin <paramref name="profileStore"/>, el perfil vive solo en memoria.</summary>
+        public static ServiceContainer Build(ISceneLoader loader, IProfileStore profileStore = null)
         {
             Guard.NotNull(loader, nameof(loader));
             var container = new ServiceContainer();
+            container.Register<IProfileStore>(profileStore ?? new InMemoryProfileStore());
+            container.RegisterFactory(r => PlayerProfile.Load(r.Resolve<IProfileStore>()));
+            container.Register(new RunHaul());
             container.Register<IEventBus>(new EventBus());
             container.Register(loader);
             container.RegisterFactory(r => new SceneFlow(r.Resolve<ISceneLoader>(), r.Resolve<IEventBus>()));
