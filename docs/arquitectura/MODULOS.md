@@ -64,7 +64,7 @@ Un módulo = un namespace C#. Abre solo la página del módulo que vayas a tocar
 | [Runtime.Bootstrap](modulos/Runtime.Bootstrap.md) | 2 | `GameBootstrap`, `UnitySceneLoader` | Core.Composition |
 | [Runtime.Hubs](modulos/Runtime.Hubs.md) | 3 | `ArmoryScreen`, `ElevatorScreen`, `HubBootstrap` | Core.Armory, Core.Classes, Core.Composition, Core.Elevator, Core.Hubs, Core.Iteration, Runtime.Bootstrap |
 | [Runtime.Hud](modulos/Runtime.Hud.md) | 1 | `GameHud` | Core.Hud |
-| [Runtime.Lab](modulos/Runtime.Lab.md) | 1 | `LabScreen` | Core.Lab |
+| [Runtime.Lab](modulos/Runtime.Lab.md) | 2 | `LabBootstrap`, `LabScreen` | Core.Composition, Core.Dna, Core.Lab |
 | [Runtime.Player](modulos/Runtime.Player.md) | 3 | `GameCamera`, `PlayerController`, `PlayerInput` | Core.Movement, Core.Stats, Core.Vitals |
 | [Runtime.Prototype](modulos/Runtime.Prototype.md) | 7 | `DebugHud`, `PlayerMotor`, `PrototypeBootstrap`, `PrototypeInput`, `PrototypePlayer` … | Core.Movement, Core.Prototype, Core.Stats, Core.Time, Core.Visuals, Core.Vitals, Runtime.Visuals |
 | [Runtime.Visuals](modulos/Runtime.Visuals.md) | 3 | `CatalogoVisual`, `GreyboxFactory`, `VisualSpawner` | Core.Prototype, Core.Visuals |
