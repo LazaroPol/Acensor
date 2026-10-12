@@ -5,7 +5,7 @@
 Ensamblado: `Specimen.Core` · Carpeta: `Assets/_Project/Scripts/Core/Hubs`
 Tests: `Assets/_Project/Tests/EditMode/Core/Hubs`
 
-**Depende de:** [Core.Armory](Core.Armory.md), [Core.Classes](Core.Classes.md), [Core.Common](Core.Common.md), [Core.Elevator](Core.Elevator.md), [Core.Iteration](Core.Iteration.md)
+**Depende de:** [Core.Armory](Core.Armory.md), [Core.Classes](Core.Classes.md), [Core.Common](Core.Common.md), [Core.Elevator](Core.Elevator.md), [Core.Iteration](Core.Iteration.md), [Core.Iteration.Presence](Core.Iteration.Presence.md)
 **Lo usan:** [Runtime.Hubs](Runtime.Hubs.md)
 
 | Fichero | Tipo | Resumen |

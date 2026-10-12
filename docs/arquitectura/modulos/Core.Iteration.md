@@ -6,7 +6,7 @@ Ensamblado: `Specimen.Core` · Carpeta: `Assets/_Project/Scripts/Core/Iteration`
 Tests: `Assets/_Project/Tests/EditMode/Core/Iteration`
 
 **Depende de:** [Core.Common](Core.Common.md), [Core.Events](Core.Events.md), [Core.Iteration.Ending](Core.Iteration.Ending.md), [Core.Iteration.Presence](Core.Iteration.Presence.md), [Core.Iteration.Readiness](Core.Iteration.Readiness.md), [Core.Iteration.States](Core.Iteration.States.md), [Core.Iteration.Voting](Core.Iteration.Voting.md), [Core.StateMachines](Core.StateMachines.md), [Core.Time](Core.Time.md)
-**Lo usan:** [Core.Composition](Core.Composition.md), [Core.Elevator](Core.Elevator.md), [Core.Hubs](Core.Hubs.md), [Core.Hud](Core.Hud.md), [Core.Life](Core.Life.md), [Runtime.Hubs](Runtime.Hubs.md)
+**Lo usan:** [Core.Composition](Core.Composition.md), [Core.Elevator](Core.Elevator.md), [Core.Hubs](Core.Hubs.md), [Core.Hud](Core.Hud.md), [Core.Life](Core.Life.md), [Runtime.Hubs](Runtime.Hubs.md), [Runtime.Incursion](Runtime.Incursion.md)
 
 | Fichero | Tipo | Resumen |
 |---|---|---|

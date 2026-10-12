@@ -17,6 +17,8 @@ namespace Specimen.Runtime.Hubs
     public sealed class HubBootstrap : MonoBehaviour
     {
         private IterationRun _run;
+        private SceneFlow _flow;
+        private IterationPhase _previous;
 
         [RuntimeInitializeOnLoadMethod(RuntimeInitializeLoadType.AfterSceneLoad)]
         private static void EnsureInHubScene()
@@ -32,7 +34,7 @@ namespace Specimen.Runtime.Hubs
             var s = GameBootstrap.Services;
             _run = s.Resolve<IterationRun>();
             if (!_run.HasStarted) _run.Start();
-            var flow = s.Resolve<SceneFlow>();
+            var flow = _flow = s.Resolve<SceneFlow>();
             int player = GameComposition.LocalPlayerId;
             if (SceneManager.GetActiveScene().name == nameof(SceneId.Armeria))
             {
@@ -46,6 +48,13 @@ namespace Specimen.Runtime.Hubs
             }
         }
 
-        private void Update() => _run?.Tick(Time.deltaTime);
+        private void Update()
+        {
+            if (_run == null) return;
+            _run.Tick(Time.deltaTime);
+            var phase = _run.Phase;
+            if (_previous == IterationPhase.Calm && phase == IterationPhase.Incursion) _flow.GoTo(SceneId.Incursion);
+            _previous = phase;
+        }
     }
 }

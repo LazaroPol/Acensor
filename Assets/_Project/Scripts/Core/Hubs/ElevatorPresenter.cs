@@ -3,6 +3,7 @@ using System.Linq;
 using Specimen.Core.Common;
 using Specimen.Core.Elevator;
 using Specimen.Core.Iteration;
+using Specimen.Core.Iteration.Presence;
 
 namespace Specimen.Core.Hubs
 {
@@ -21,6 +22,10 @@ namespace Specimen.Core.Hubs
         }
 
         public bool IsCalm => _run.HasStarted && _run.Phase == IterationPhase.Calm;
+        /// <summary>Hay incursión en marcha y el jugador local está en el ascensor: puede salir al piso.</summary>
+        public bool CanExit => _run.HasStarted && _run.Phase == IterationPhase.Incursion
+                               && _run.Location(_playerId) == PlayerLocation.InElevator;
+
         public bool IsReady => IsCalm && _run.IsReady(_playerId);
 
         public IReadOnlyList<string> SlotLabels() => _platform.Slots.Select(Label).ToList();

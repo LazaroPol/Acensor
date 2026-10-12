@@ -4,7 +4,7 @@
 TOTAL  ██████████████████████████░░░░  86.2%  (75/87 tareas)
 ```
 
-**Fase en curso:** AR · **Siguiente tarea:** AR-06
+**Fase en curso:** AR · **Siguiente tarea:** AR-07
 
 | Fase | Progreso | % | Tareas |
 |---|---|---|---|
