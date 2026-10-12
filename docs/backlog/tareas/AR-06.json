@@ -2,7 +2,7 @@
   "id": "AR-06",
   "phase": "AR",
   "title": "Entorno modular",
-  "status": "review",
+  "status": "done",
   "type": "feature",
   "labels": [
     "arte"
@@ -13,6 +13,6 @@
     "EnvironmentKit asigna modelo a Suelo, Muro, Puerta y Loot.",
     "El generador ajusta cada pieza al tamaño y pivote del estilo greybox y la asigna en CatalogoVisual."
   ],
-  "pr": null,
-  "session": null
+  "pr": "#87",
+  "session": 100
 }
