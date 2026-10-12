@@ -2,7 +2,7 @@
   "id": "OF-16",
   "phase": "OF",
   "title": "Mods, conocimiento y guardado en el Campo de pruebas + guía de prueba",
-  "status": "review",
+  "status": "done",
   "type": "feature",
   "labels": [
     "oficios",
@@ -17,6 +17,6 @@
     "Salir y volver a entrar conserva niveles, recetas, estaciones, piezas, cola e inventario.",
     "Guía docs/oficios/PRUEBA.md con los pasos para verificar los cinco criterios en Unity."
   ],
-  "pr": null,
-  "session": null
+  "pr": "#120",
+  "session": 118
 }
