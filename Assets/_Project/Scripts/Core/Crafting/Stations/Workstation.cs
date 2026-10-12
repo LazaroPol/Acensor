@@ -6,7 +6,7 @@ namespace Specimen.Core.Crafting.Stations
 {
     /// <summary>
     /// Estación de trabajo (GDD §17.3): tipo + nivel (1-3) + ranuras de entrada, salida, combustible
-    /// y piezas. La cola de fabricación llega en OF-09.
+    /// y piezas. La cola de fabricación es <c>Queue.CraftQueue</c> (OF-09).
     /// </summary>
     public sealed partial class Workstation
     {

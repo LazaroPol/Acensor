@@ -2,7 +2,7 @@
   "id": "OF-09",
   "phase": "OF",
   "title": "Cola de fabricación con temporizador y combustible",
-  "status": "review",
+  "status": "done",
   "type": "feature",
   "labels": [
     "oficios",
@@ -17,6 +17,6 @@
     "Al terminar: calidad con los datos del momento de encolar, salida y XP al oficio de quien encoló.",
     "Fabricar una receta en una estación consumiendo materiales por etiqueta (test de extremo a extremo)."
   ],
-  "pr": null,
-  "session": null
+  "pr": "#113",
+  "session": 111
 }
