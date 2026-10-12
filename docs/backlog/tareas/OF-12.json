@@ -2,7 +2,7 @@
   "id": "OF-12",
   "phase": "OF",
   "title": "Contenido II: recetario medieval por oficio y conocimientos",
-  "status": "review",
+  "status": "done",
   "type": "feature",
   "labels": [
     "oficios",
@@ -16,6 +16,6 @@
     "Las sinergias existentes siguen disponibles con el nuevo modelo.",
     "Tests de integridad: todas las entradas y salidas existen en el catálogo y no hay recetas inalcanzables."
   ],
-  "pr": null,
-  "session": null
+  "pr": "#116",
+  "session": 114
 }
