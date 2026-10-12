@@ -71,7 +71,7 @@ namespace Specimen.Runtime.Sandbox
 
         private void Heal()
         {
-            if (!_player.Controller.enabled) _player.Revive(_player.transform.position);
+            if (_player.IsDead) _player.Revive(_player.transform.position);
             else _player.Vitals.Health.Restore(25f);
         }
 

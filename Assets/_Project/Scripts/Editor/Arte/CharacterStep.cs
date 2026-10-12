@@ -18,7 +18,7 @@ namespace Specimen.Editor.Arte
             context.Catalog.clases.Clear();
             foreach (ClassKitId kit in Enum.GetValues(typeof(ClassKitId)))
             {
-                var instance = assembler.Assemble($"Personaje_{kit}", ClassAppearances.For(kit), context.Hero);
+                var instance = assembler.Assemble($"Personaje_{kit}", ClassAppearances.For(kit), context.HeroFor(kit));
                 if (instance != null) context.Decorate(kit, instance);
                 var prefab = PrefabSaver.Save(instance, ArtPaths.Characters);
                 if (prefab != null) context.Catalog.clases.Add(new CatalogoArte.Clase { kit = kit, prefab = prefab });

@@ -20,6 +20,7 @@ Tests: (sin carpeta propia)
 | `Projectile.cs` | class `Projectile` | Proyectil de hechizo: avanza en línea recta y golpea al primer enemigo vivo que toca. |
 | `SandboxBootstrap.cs` | class `SandboxBootstrap` | Arranque de la escena «CampoPruebas»: monta sala, bancos, jugador y bestiario con el arte generado (o greybox si falta) y atiende los atajos |
 | `SandboxContext.cs` | class `SandboxContext` | Servicios compartidos del Campo de pruebas (se crean una vez en el bootstrap y se inyectan). |
+| `SandboxEnemy.Respawn.cs` | class `SandboxEnemy` | Reaparición del bestiario: tras morir, la criatura vuelve a su sitio con la vida llena. |
 | `SandboxEnemy.cs` | class `SandboxEnemy` | Criatura del bestiario en escena: la IA del núcleo decide (esperar/perseguir/atacar), aquí solo se mueve, se anima y aplica el golpe al juga |
 | `SandboxHud.Panels.cs` | class `SandboxHud` | Paneles secundarios del HUD: registro de combate, ayuda, barras de enemigos y aviso de banco. |
 | `SandboxHud.cs` | class `SandboxHud` | HUD de depuración del Campo de pruebas (IMGUI): estado del kit, registro, ayuda y vida de enemigos. |

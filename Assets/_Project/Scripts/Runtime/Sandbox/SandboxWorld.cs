@@ -81,6 +81,7 @@ namespace Specimen.Runtime.Sandbox
                 var core = _factory.Create(entry.Archetype, new EnemyDepth(1, SandboxLoot.RingOf(entry)));
                 enemy.Init(entry, core, player, dead => OnEnemyDeath(dead, player.transform),
                     _context.Art != null ? _context.Art.monstruo : null);
+                enemy.Respawned += e => _context.Feed.Add($"{e.DisplayName} ha reaparecido.");
                 _context.Enemies.Add(enemy);
             }
         }

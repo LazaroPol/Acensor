@@ -1,3 +1,4 @@
+using System.Collections.Generic;
 using Specimen.Core.Animation;
 using Specimen.Core.Classes;
 using Specimen.Runtime.Visuals;
@@ -21,6 +22,11 @@ namespace Specimen.Editor.Arte
         public AnimatorController Hero { get; private set; }
         public AnimatorController Monster { get; private set; }
 
+        private readonly Dictionary<ClassKitId, AnimatorController> _heroes = new Dictionary<ClassKitId, AnimatorController>();
+
+        /// <summary>Controlador propio del kit (animaciones por empuñadura); el genérico si aún no existe.</summary>
+        public AnimatorController HeroFor(ClassKitId kit) => _heroes.TryGetValue(kit, out var c) ? c : Hero;
+
         public static ArtContext Create()
         {
             var clips = new ClipIndex(ArtPaths.Animations3P, ArtPaths.KevinIglesias);
@@ -32,6 +38,8 @@ namespace Specimen.Editor.Arte
             Hero = AnimatorBuilder.Build(DefaultAnimationSets.Heroe(), Clips);
             Monster = AnimatorBuilder.Build(DefaultAnimationSets.Monstruo(), Clips);
             Catalog.heroe = Hero;
+            foreach (ClassKitId kit in System.Enum.GetValues(typeof(ClassKitId)))
+                _heroes[kit] = AnimatorBuilder.Build(KitAnimationSets.For(kit), Clips);
             Catalog.monstruo = Monster;
         }
 

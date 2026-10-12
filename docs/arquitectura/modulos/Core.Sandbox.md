@@ -10,8 +10,10 @@ Tests: `Assets/_Project/Tests/EditMode/Core/Sandbox`
 
 | Fichero | Tipo | Resumen |
 |---|---|---|
+| `RespawnTimer.cs` | class `RespawnTimer` | Cuenta atrás de reaparición: se arma al morir y avisa una sola vez cuando se cumple. |
 | `SandboxLayout.cs` | class `SandboxLayout` | Campo de pruebas: sala cerrada con el jugador al sur, el bestiario al norte, los bancos de profesión en los muros este y oeste y algo de dec |
 | `SandboxLoot.cs` | class `SandboxLoot` | Botín de prueba: tabla de materiales y consumibles; el jefe tira en el anillo 3 y suelta más. |
+| `SandboxRespawn.cs` | class `SandboxRespawn` | Cuánto tarda en reaparecer cada criatura del Campo de pruebas (el jefe, más). |
 | `SandboxSpot.cs` | struct `SandboxSpot` | Punto del Campo de pruebas: qué va (id), dónde (m) y hacia dónde mira (grados, 0 = +Z). |
 | `SignatureEffect.cs` | class `SignatureEffect` | Efecto de una habilidad de firma: tipo, magnitud (multiplicador de daño, vida curada, metros o reducción de daño según el tipo), radio (m) y |
 | `SignatureEffects.cs` | class `SignatureEffects` | Efecto de la habilidad de firma de cada kit (DefaultClassAbilities) en el Campo de pruebas. |
