@@ -1,10 +1,10 @@
 # Progreso — SPECIMEN
 
 ```
-TOTAL  ██████████████████████░░░░░░░░  72.2%  (57/79 tareas)
+TOTAL  ██████████████████████░░░░░░░░  73.4%  (58/79 tareas)
 ```
 
-**Fase en curso:** F8 · **Siguiente tarea:** F8-01
+**Fase en curso:** F8 · **Siguiente tarea:** F8-02
 
 | Fase | Progreso | % | Tareas |
 |---|---|---|---|
@@ -17,7 +17,7 @@ TOTAL  ██████████████████████░░�
 | [F5 · Generación de pisos](fases/F5.md) | `███████████████` | 100% | 6/6 |
 | [F6 · Combate e IA](fases/F6.md) | `███████████████` | 100% | 5/5 |
 | [F7 · Ecos y decisiones](fases/F7.md) | `███████████████` | 100% | 4/4 |
-| [F8 · Asedio y extracción](fases/F8.md) | `░░░░░░░░░░░░░░░` | 0% | 0/4 |
+| [F8 · Asedio y extracción](fases/F8.md) | `████░░░░░░░░░░░` | 25% | 1/4 |
 | [F9 · Meta-progresión: Laboratorio](fases/F9.md) | `████░░░░░░░░░░░` | 25% | 1/4 |
 | [F10 · Presentación en Unity](fases/F10.md) | `░░░░░░░░░░░░░░░` | 0% | 0/6 |
 | [F11 · Multijugador cooperativo](fases/F11.md) | `░░░░░░░░░░░░░░░` | 0% | 0/4 |
@@ -25,8 +25,8 @@ TOTAL  ██████████████████████░░�
 
 ## Cola de prioridad (tablero)
 
-1. **F8-01** Director de oleadas del asedio
-2. **F8-02** Fortificaciones y torretas
-3. **F8-03** Puntuación y multiplicador de supervivencia colectiva
-4. **F8-04** Extracción en Osprey y conversión a puntos de ADN
-5. **F9-02** Aplicación de mutaciones al nuevo clon
+1. **F8-02** Fortificaciones y torretas
+2. **F8-03** Puntuación y multiplicador de supervivencia colectiva
+3. **F8-04** Extracción en Osprey y conversión a puntos de ADN
+4. **F9-02** Aplicación de mutaciones al nuevo clon
+5. **F9-03** Fragmentos de memoria y desbloqueo de lore
