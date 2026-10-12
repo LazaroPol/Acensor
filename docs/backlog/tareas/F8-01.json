@@ -2,14 +2,20 @@
   "id": "F8-01",
   "phase": "F8",
   "title": "Director de oleadas del asedio",
-  "status": "todo",
+  "status": "in_progress",
   "type": "feature",
   "labels": [
     "asedio"
   ],
   "origin": "backlog",
-  "description": "",
-  "acceptance": [],
+  "description": "Núcleo puro del director de oleadas del asedio en la azotea (GDD 03 §3.4): oleadas crecientes, pausa entre ellas y superación del asedio.",
+  "acceptance": [
+    "WaveConfig valida parámetros y calcula el tamaño de cada oleada (crece linealmente); Default = 5 oleadas.",
+    "WaveDirector pasa de Idle a InWave con Start (una sola vez) y entrega exactamente el tamaño de la oleada con TrySpawn.",
+    "Al despejar una oleada (sin apariciones pendientes ni vivos) entra en pausa y, pasado el tiempo, empieza la siguiente (evento WaveStarted).",
+    "Al despejar la última oleada pasa a Survived y dispara Survived una vez; matar sin enemigos vivos o Tick negativo fallan.",
+    "Núcleo sin UnityEngine, ficheros <= 120 líneas y tests NUnit en verde."
+  ],
   "pr": null,
   "session": null
 }
