@@ -27,8 +27,8 @@ TOTAL  ████████████████████████�
 
 ## Cola de prioridad (tablero)
 
-1. **OF-15** Estaciones en el Campo de pruebas: ventana, cola y piezas
-2. **OF-16** Mods, conocimiento y guardado en el Campo de pruebas + guía de prueba
-3. **F11-01** Integración de Netcode for GameObjects
-4. **F11-02** Sincronización del estado de iteración (servidor autoritativo)
-5. **F11-03** Lobby y conexión
+1. **OF-16** Mods, conocimiento y guardado en el Campo de pruebas + guía de prueba
+2. **F11-01** Integración de Netcode for GameObjects
+3. **F11-02** Sincronización del estado de iteración (servidor autoritativo)
+4. **F11-03** Lobby y conexión
+5. **F11-04** Replicación de jugadores, combate y loot
