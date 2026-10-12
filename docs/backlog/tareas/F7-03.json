@@ -2,7 +2,7 @@
   "id": "F7-03",
   "phase": "F7",
   "title": "Consecuencias que alteran pisos futuros",
-  "status": "in_progress",
+  "status": "done",
   "type": "feature",
   "labels": [
     "ecos"
@@ -15,6 +15,6 @@
     "EchoOmenAdjuster.Apply devuelve un Presagio con los modificadores forzados añadidos, sin duplicar ni forzar modificadores de combate en pisos sin combate, y sin mutar el original.",
     "Núcleo sin UnityEngine, ficheros <= 120 líneas y tests NUnit en verde."
   ],
-  "pr": null,
-  "session": null
+  "pr": "#62",
+  "session": 47
 }
