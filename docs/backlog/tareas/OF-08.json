@@ -2,7 +2,7 @@
   "id": "OF-08",
   "phase": "OF",
   "title": "Estaciones: nivel mejorable, ranuras y piezas colocables",
-  "status": "review",
+  "status": "done",
   "type": "feature",
   "labels": [
     "oficios",
@@ -17,6 +17,6 @@
     "Las recetas visibles pero no fabricables informan del motivo (RecipeBlockReason).",
     "Colocar un crisol en la fragua habilita una receta nueva (test)."
   ],
-  "pr": null,
-  "session": null
+  "pr": "#112",
+  "session": 110
 }
