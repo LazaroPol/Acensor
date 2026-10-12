@@ -1,19 +1,20 @@
 using Specimen.Core.Composition;
 using Specimen.Core.Dna;
+using Specimen.Core.Iteration;
 using Specimen.Core.Lab;
+using Specimen.Core.Profile;
+using Specimen.Runtime.Bootstrap;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
 namespace Specimen.Runtime.Lab
 {
     /// <summary>
-    /// Monta la pantalla del Laboratorio al cargar la escena «Laboratorio» (puede estar vacía).
-    /// Mientras no haya perfil persistente, regala puntos de ADN para poder probar el árbol.
+    /// Monta el Laboratorio Genético al cargar su escena (puede estar vacía). Es el menú entre partidas: muestra
+    /// el árbol de ADN del perfil persistente, guarda cada desbloqueo y permite empezar una nueva incursión.
     /// </summary>
     public sealed class LabBootstrap : MonoBehaviour
     {
-        private const int DemoPoints = 12;
-
         /// <summary>Lo llama <c>SceneBootstrapper</c> en cada carga de escena; solo actúa en la suya.</summary>
         public static void Ensure()
         {
@@ -24,10 +25,24 @@ namespace Specimen.Runtime.Lab
 
         private void Start()
         {
-            var tree = DnaTree.CreateDefault();
-            var dna = new DnaAllocation(tree, TierLock.CreateDefault());
-            dna.AddPoints(DemoPoints);
-            gameObject.AddComponent<LabScreen>().Init(new LabPresenter(tree, dna, TierLock.CreateDefault()));
+            var s = GameBootstrap.Services;
+            var profile = s.Resolve<PlayerProfile>();
+            var flow = s.Resolve<SceneFlow>();
+            var run = s.Resolve<IterationRun>();
+            var lab = new LabPresenter(profile.Tree, profile.Dna, TierLock.CreateDefault());
+            var actions = new LabActions(
+                () => { if (lab.UnlockSelected() == UnlockResult.Ok) profile.Save(); },
+                NewRun,
+                () => run.Phase != IterationPhase.Ended && flow.CanGoTo(SceneId.Ascensor),
+                () => flow.GoTo(SceneId.Ascensor));
+            gameObject.AddComponent<LabScreen>().Init(lab, actions);
+        }
+
+        /// <summary>Descarta la partida terminada y aparece en la Armería; el perfil se recarga del almacén.</summary>
+        private static void NewRun()
+        {
+            GameBootstrap.NewGame();
+            SceneManager.LoadScene(nameof(SceneId.Armeria));
         }
     }
 }

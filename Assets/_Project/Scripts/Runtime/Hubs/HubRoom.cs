@@ -45,7 +45,7 @@ namespace Specimen.Runtime.Hubs
             for (int i = 0; i < layout.StationCount; i++) _points.Add(layout.StationPoint(i));
             _points.Add(layout.ElevatorPoint);
             var (sx, sz) = layout.SpawnPoint;
-            var player = IncursionPlayer.Spawn(new Vector3(sx, 1.2f, sz), kit.CreateStatSheet(), run, notices);
+            var player = IncursionPlayer.Spawn(new Vector3(sx, 1.2f, sz), KitStats.For(kit, Bootstrap.GameBootstrap.Services), run, notices);
             _player = player.transform;
             player.gameObject.AddComponent<KitBadge>().Init(Bootstrap.GameBootstrap.Services);
             Attack = player.gameObject.AddComponent<PlayerAttack>();

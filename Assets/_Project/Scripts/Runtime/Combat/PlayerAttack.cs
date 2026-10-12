@@ -5,6 +5,7 @@ using Specimen.Core.Movement;
 using Specimen.Core.Randomness;
 using Specimen.Core.Stats;
 using Specimen.Core.Vitals;
+using Specimen.Runtime.Player;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
@@ -35,7 +36,7 @@ namespace Specimen.Runtime.Combat
         public void Equip(ClassKit kit)
         {
             if (kit == null || _vitals == null) return;
-            _stats = kit.CreateStatSheet();
+            _stats = KitStats.For(kit, Bootstrap.GameBootstrap.Services);
             float speed = _stats.Has(StatType.AttackSpeed) ? _stats.ValueOf(StatType.AttackSpeed) : 1f;
             _attack = new ClassAttack(ClassAttackProfiles.For(kit.Id), _vitals.ClassResource, speed);
         }

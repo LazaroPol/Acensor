@@ -8,6 +8,7 @@ namespace Specimen.Core.Composition
         Armeria,
         Laboratorio,
         Incursion,
-        Atico
+        Atico,
+        Extraccion
     }
 }

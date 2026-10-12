@@ -5,6 +5,7 @@ using Specimen.Core.Composition;
 using Specimen.Core.Events;
 using Specimen.Core.Hud;
 using Specimen.Core.Iteration;
+using Specimen.Core.Iteration.Ending;
 using Specimen.Core.Prototype;
 using Specimen.Core.Visuals;
 using Specimen.Runtime.Bootstrap;
@@ -29,6 +30,7 @@ namespace Specimen.Runtime.Atico
         private PlayerController _player;
         private SiegeController _siege;
         private OspreyPad _pad;
+        private SceneFlow _flow;
 
         /// <summary>Lo llama <c>SceneBootstrapper</c> en cada carga de escena; solo actúa en la suya.</summary>
         public static void Ensure()
@@ -42,12 +44,13 @@ namespace Specimen.Runtime.Atico
         {
             var s = GameBootstrap.Services;
             _run = s.Resolve<IterationRun>();
+            _flow = s.Resolve<SceneFlow>();
             var spawner = new GameObject("Azotea").AddComponent<VisualSpawner>();
             spawner.Init(new VisualCatalog<GameObject>(new DefaultGreyboxStyles()));
             foreach (var placement in Platform()) spawner.Spawn(placement);
             var catalog = s.Resolve<IClassKitCatalog>();
             var kit = s.Resolve<ClassKitArmory>().TryGetKit(GameComposition.LocalPlayerId, out var mine) ? mine : catalog.All[0];
-            var player = IncursionPlayer.Spawn(new Vector3(Size / 2f, 1.2f, Size / 2f), kit.CreateStatSheet(), _run,
+            var player = IncursionPlayer.Spawn(new Vector3(Size / 2f, 1.2f, Size / 2f), KitStats.For(kit, s), _run,
                 new HudNotices(s.Resolve<IEventBus>()));
             player.gameObject.AddComponent<PlayerAttack>().Init(kit, player.Vitals);
             _player = player;
@@ -71,6 +74,7 @@ namespace Specimen.Runtime.Atico
             if (_run == null) return;
             _run.Tick(Time.deltaTime);
             if (_siege.Survived) _pad.Arrive();
+            if (_run.Outcome == IterationOutcome.Victory) _flow.GoTo(SceneId.Extraccion);
             if (!_player.Vitals.IsAlive && _run.Phase != IterationPhase.Ended) Respawn();
         }
 
@@ -93,7 +97,7 @@ namespace Specimen.Runtime.Atico
 
         private void EndScreen()
         {
-            GUI.Label(new Rect(Screen.width / 2f - 150f, Screen.height / 2f - 40f, 300f, 28f), "¡Extracción completa! Victoria");
+            GUI.Label(new Rect(Screen.width / 2f - 150f, Screen.height / 2f - 40f, 300f, 28f), "El equipo ha caído en la azotea.");
             if (!GUI.Button(new Rect(Screen.width / 2f - 100f, Screen.height / 2f, 200f, 36f), "Nueva partida")) return;
             GameBootstrap.NewGame();
             SceneManager.LoadScene(nameof(SceneId.Armeria));

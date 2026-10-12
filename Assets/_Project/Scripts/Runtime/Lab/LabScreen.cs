@@ -10,8 +10,13 @@ namespace Specimen.Runtime.Lab
         private const float NodeHeight = 34f;
 
         private LabPresenter _lab;
+        private LabActions _actions;
 
-        public void Init(LabPresenter lab) => _lab = lab;
+        public void Init(LabPresenter lab, LabActions actions)
+        {
+            _lab = lab;
+            _actions = actions;
+        }
 
         private void OnGUI()
         {
@@ -24,6 +29,14 @@ namespace Specimen.Runtime.Lab
                 x += ColumnWidth + 10f;
             }
             Footer();
+            Menu();
+        }
+
+        private void Menu()
+        {
+            float x = Screen.width - 240f;
+            if (GUI.Button(new Rect(x, 10f, 220f, 32f), "Nueva incursión (Armería)")) _actions.NewRun();
+            if (_actions.CanReturn() && GUI.Button(new Rect(x, 48f, 220f, 32f), "Volver al Ascensor")) _actions.ReturnToElevator();
         }
 
         private void Column(float x, LabBranchView branch)
@@ -50,7 +63,7 @@ namespace Specimen.Runtime.Lab
                 int missing = _lab.PointsMissingForSelected();
                 string gap = missing > 0 ? $" · faltan {missing} pts en la rama" : string.Empty;
                 GUI.Label(new Rect(20f, y, 600f, 24f), $"Seleccionada: {_lab.SelectedId}{gap}");
-                if (GUI.Button(new Rect(640f, y, 160f, 28f), "Desbloquear")) _lab.UnlockSelected();
+                if (GUI.Button(new Rect(640f, y, 160f, 28f), "Desbloquear")) _actions.UnlockSelected();
             }
             GUI.Label(new Rect(20f, y + 28f, 800f, 24f), _lab.Message);
         }

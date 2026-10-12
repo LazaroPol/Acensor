@@ -5,7 +5,7 @@
 Ensamblado: `Specimen.Runtime` · Carpeta: `Assets/_Project/Scripts/Runtime/Combat`
 Tests: (sin carpeta propia)
 
-**Depende de:** [Core.Classes](Core.Classes.md), [Core.Combat](Core.Combat.md), [Core.Combat.Attacks](Core.Combat.Attacks.md), [Core.Combat.Enemies](Core.Combat.Enemies.md), [Core.Floors](Core.Floors.md), [Core.Movement](Core.Movement.md), [Core.Randomness](Core.Randomness.md), [Core.Stats](Core.Stats.md), [Core.Vitals](Core.Vitals.md)
+**Depende de:** [Core.Classes](Core.Classes.md), [Core.Combat](Core.Combat.md), [Core.Combat.Attacks](Core.Combat.Attacks.md), [Core.Combat.Enemies](Core.Combat.Enemies.md), [Core.Floors](Core.Floors.md), [Core.Movement](Core.Movement.md), [Core.Randomness](Core.Randomness.md), [Core.Stats](Core.Stats.md), [Core.Vitals](Core.Vitals.md), [Runtime.Player](Runtime.Player.md)
 **Lo usan:** [Runtime.Atico](Runtime.Atico.md), [Runtime.Hubs](Runtime.Hubs.md), [Runtime.Incursion](Runtime.Incursion.md)
 
 | Fichero | Tipo | Resumen |

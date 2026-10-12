@@ -20,6 +20,7 @@ namespace Specimen.Core.Art
         {
             switch (scene)
             {
+                case SceneId.Extraccion:
                 case SceneId.Laboratorio: return ColorMood.Laboratorio;
                 case SceneId.Atico:
                 case SceneId.Incursion: return ColorMood.Piso;

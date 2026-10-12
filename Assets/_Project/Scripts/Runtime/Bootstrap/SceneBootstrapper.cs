@@ -1,4 +1,5 @@
 using Specimen.Runtime.Atico;
+using Specimen.Runtime.Extraction;
 using Specimen.Runtime.Hubs;
 using Specimen.Runtime.Incursion;
 using Specimen.Runtime.Lab;
@@ -27,6 +28,7 @@ namespace Specimen.Runtime.Bootstrap
             HubBootstrap.Ensure();
             IncursionBootstrap.Ensure();
             AticoBootstrap.Ensure();
+            ExtraccionBootstrap.Ensure();
             LabBootstrap.Ensure();
             PrototypeBootstrap.Ensure();
             SandboxBootstrap.Ensure();
