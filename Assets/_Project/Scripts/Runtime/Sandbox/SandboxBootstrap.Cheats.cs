@@ -17,7 +17,7 @@ namespace Specimen.Runtime.Sandbox
 
         private void TestShortcuts(SandboxInput input)
         {
-            if (input.GiveXp.WasPressedThisFrame()) _context.GrantXp(TestXp, "F3 · prueba");
+            if (input.GiveXp.WasPressedThisFrame()) _context.GrantXp(TestXp, "F3 · prueba", Core.Progression.XpSource.Combate);
             if (!input.GiveMaterials.WasPressedThisFrame()) return;
             foreach (string id in Basics)
                 _context.Inventory.Add(ItemInstance.CreateNew(ItemCatalog.Get(id)), TestMaterials);

@@ -31,16 +31,16 @@ namespace Specimen.Runtime.Sandbox.Ui
             root.transform.SetParent(transform, false);
             gameObject.AddComponent<HudFrames>().Init(root, context, player);
             gameObject.AddComponent<HudActionBar>().Init(root, context, player);
+            gameObject.AddComponent<HudTargetFrame>().Init(root, context, player);
+            gameObject.AddComponent<CombatText>().Init(root, context, player.transform);
             gameObject.AddComponent<HudMinimap>().Init(root, context, player.transform);
             _messages = gameObject.AddComponent<HudMessages>();
             _messages.Init(root, context);
+            context.Events.Error += _messages.Error;
             _bag = Add(UiWindow.Spawn<InventoryWindow>(root, new Vector2(1480f, 420f), w => { w.Context = context; w.Player = player; }));
-            _character = Add(UiWindow.Spawn<CharacterWindow>(root, new Vector2(60f, 170f), w =>
+            _character = Add(UiWindow.Spawn<CharacterWindow>(root, new Vector2(40f, 140f), w =>
             {
-                w.Context = context;
-                w.Player = player;
-                w.Kits = kits;
-                w.Equip = equip;
+                (w.Context, w.Player, w.Kits, w.Equip) = (context, player, kits, equip);
             }));
             _spellbook = Add(UiWindow.Spawn<SpellbookWindow>(root, new Vector2(520f, 170f), w => { w.Context = context; w.Player = player; }));
             _talents = Add(UiWindow.Spawn<TalentWindow>(root, new Vector2(560f, 120f), w => { w.Context = context; w.Player = player; }));
@@ -79,7 +79,19 @@ namespace Specimen.Runtime.Sandbox.Ui
         {
             if (_context == null) return;
             _context.BenchOpened -= _profession.Show;
+            _context.Events.Error -= _messages.Error;
             _context.Hero.Progress.LeveledUp -= OnLevelUp;
+        }
+
+        private void CloseOrClearTarget()
+        {
+            bool any = false;
+            foreach (var window in _windows)
+            {
+                any |= window.IsOpen;
+                window.Close();
+            }
+            if (!any) _player.GetComponent<PlayerTarget>()?.Clear();
         }
 
         private void OnLevelUp(int level)
@@ -99,8 +111,7 @@ namespace Specimen.Runtime.Sandbox.Ui
             if (input.Talents.WasPressedThisFrame()) _talents.Toggle();
             if (input.Map.WasPressedThisFrame()) _map.Toggle();
             if (input.Help.WasPressedThisFrame()) _messages.ToggleHelp();
-            if (input.Close.WasPressedThisFrame())
-                foreach (var window in _windows) window.Close();
+            if (input.Close.WasPressedThisFrame()) CloseOrClearTarget();
             if (_profession.IsOpen && _context.Interactions?.Current is not BenchStation) _profession.Close();
         }
     }

@@ -22,7 +22,7 @@ namespace Specimen.Runtime.Sandbox
             Input = input;
             Random = new Pcg32Random(seed);
             Feed = new CombatFeed();
-            Hits = new HitResolver(Random, Feed) { DamageBonus = () => Fury.Current };
+            Hits = new HitResolver(Random, Feed, Events) { DamageBonus = () => Fury.Current, PlayerLevel = () => Hero.Level };
             Crafter = new Crafter(Recipes);
         }
 
@@ -32,6 +32,7 @@ namespace Specimen.Runtime.Sandbox
         public IRandom Random { get; }
         public CombatFeed Feed { get; }
         public HitResolver Hits { get; }
+        public CombatEvents Events { get; } = new CombatEvents();
         public EnemyRegistry Enemies { get; } = new EnemyRegistry();
         public Inventory Inventory { get; } = new Inventory(24);
         public ProfessionBench Bench { get; } = new ProfessionBench(SynergyCatalog.CreateDefault());
@@ -47,9 +48,10 @@ namespace Specimen.Runtime.Sandbox
 
         public void OpenBench(ProfessionId profession) => BenchOpened?.Invoke(profession);
 
-        /// <summary>Suma experiencia, la anuncia y devuelve los niveles ganados.</summary>
-        public int GrantXp(int amount, string reason)
+        /// <summary>Suma experiencia, la anuncia (azul claro combate, verde profesión) y devuelve los niveles ganados.</summary>
+        public int GrantXp(int amount, string reason, XpSource source)
         {
+            Events.Xp(amount, source);
             int levels = Hero.Progress.AddXp(amount);
             Feed.Add($"+{amount} PX ({reason})");
             return levels;

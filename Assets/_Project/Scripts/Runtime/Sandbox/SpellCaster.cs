@@ -16,13 +16,17 @@ namespace Specimen.Runtime.Sandbox
         private readonly List<SpellSlot> _slots = new List<SpellSlot>();
         private SandboxPlayer _player;
         private SandboxContext _context;
+        private PlayerTarget _target;
+        private AutoAttack _attack;
 
         public IReadOnlyList<SpellSlot> Slots => _slots;
 
-        public void Init(SandboxPlayer player, SandboxContext context)
+        public void Init(SandboxPlayer player, SandboxContext context, PlayerTarget target, AutoAttack attack)
         {
             _player = player;
             _context = context;
+            _target = target;
+            _attack = attack;
             _player.Equipped += Rebuild;
         }
 
@@ -50,10 +54,11 @@ namespace Specimen.Runtime.Sandbox
         {
             if (index < 0 || index >= _slots.Count || !_player.IsAlive) return;
             var slot = _slots[index];
+            if (!TargetReady(slot.Spell)) return;
             var result = slot.TryCast(_context.Hero.Level, _player.Vitals.ClassResource, _player.Bonuses.CooldownReduction);
             if (result != SpellCastResult.Cast)
             {
-                _context.Feed.Add($"{slot.Spell.Name}: {Reason(result, slot)}");
+                _context.Events.Fail($"{slot.Spell.Name}: {Reason(result, slot)}");
                 return;
             }
             _context.Feed.Add($"¡{slot.Spell.Name}!");

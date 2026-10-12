@@ -3,7 +3,7 @@ using UnityEngine;
 
 namespace Specimen.Runtime.Sandbox
 {
-    /// <summary>Proyectil de hechizo: avanza en línea recta y golpea al primer enemigo vivo que toca.</summary>
+    /// <summary>Proyectil: avanza en línea recta (o persigue a su objetivo, si lo tiene) y golpea al enemigo que toca.</summary>
     public sealed class Projectile : MonoBehaviour
     {
         private Vector3 _direction;
@@ -13,9 +13,10 @@ namespace Specimen.Runtime.Sandbox
         private float _travelled;
         private EnemyRegistry _enemies;
         private Action<SandboxEnemy> _onHit;
+        private SandboxEnemy _homing;
 
         public static Projectile Launch(Vector3 origin, Vector3 direction, float speed, float range, float radius,
-            Color color, EnemyRegistry enemies, Action<SandboxEnemy> onHit)
+            Color color, EnemyRegistry enemies, Action<SandboxEnemy> onHit, SandboxEnemy homing = null)
         {
             var go = GameObject.CreatePrimitive(PrimitiveType.Sphere);
             go.name = "Proyectil";
@@ -35,6 +36,7 @@ namespace Specimen.Runtime.Sandbox
             projectile._radius = radius;
             projectile._enemies = enemies;
             projectile._onHit = onHit;
+            projectile._homing = homing;
             return projectile;
         }
 
@@ -47,6 +49,11 @@ namespace Specimen.Runtime.Sandbox
 
         private void Update()
         {
+            if (_homing != null && !_homing.IsDead)
+            {
+                var aim = _homing.transform.position + Vector3.up * (_homing.Height * 0.5f) - transform.position;
+                if (aim.sqrMagnitude > 0.01f) _direction = aim.normalized;
+            }
             float step = _speed * Time.deltaTime;
             transform.position += _direction * step;
             _travelled += step;
@@ -54,6 +61,7 @@ namespace Specimen.Runtime.Sandbox
             {
                 var offset = enemy.transform.position - transform.position;
                 offset.y = 0f;
+                if (_homing != null && enemy != _homing) continue;
                 if (offset.magnitude > _radius + enemy.Radius) continue;
                 _onHit?.Invoke(enemy);
                 Destroy(gameObject);

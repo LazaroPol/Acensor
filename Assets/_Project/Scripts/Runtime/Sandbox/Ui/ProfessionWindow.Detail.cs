@@ -77,7 +77,7 @@ namespace Specimen.Runtime.Sandbox.Ui
             if (result == CraftResult.Crafted)
             {
                 Context.Feed.Add($"Fabricas {_selected.Output.Name} x{_selected.OutputQuantity}.");
-                Context.GrantXp(XpRewards.Craft, "fabricación");
+                Context.GrantXp(XpRewards.Craft, "fabricación", XpSource.Profesion);
                 Player.Animator.Play(Core.Animation.AnimSlot.Interactuar);
             }
             else Context.Feed.Add($"No se puede fabricar: {result}");

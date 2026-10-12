@@ -11,6 +11,7 @@ Tests: `Assets/_Project/Tests/EditMode/Core/Combat`
 | Fichero | Tipo | Resumen |
 |---|---|---|
 | `ArmorMitigation.cs` | class `ArmorMitigation` | Armadura con rendimientos decrecientes: reducción = armor / (armor + K). |
+| `ArmorRules.cs` | class `ArmorRules` | Mitigación por armadura al estilo de WoW clásico: reducción = A / (A + 400 + 85 · nivel del atacante), con un máximo del 75 %. |
 | `CritRules.cs` | class `CritRules` | Probabilidad de crítico en [0, 1] y multiplicador >= 1 del atacante. |
 | `DamageCalculator.cs` | class `DamageCalculator` | Resuelve un golpe: crítico (con IRandom inyectado) → armadura (solo físico) → resistencia. |
 | `DamageResult.cs` | class `DamageResult` | Resultado de resolver un golpe: daño bruto, final tras mitigación y si fue crítico. |

@@ -9,8 +9,8 @@ namespace Specimen.Runtime.Sandbox.Ui
     public sealed class HudMessages : MonoBehaviour
     {
         private const string HelpText =
-            "WASD mover · Shift esprintar · Espacio esquivar · Clic atacar · Q firma · 1-5 hechizos · E usar\n" +
-            "B bolsa · C personaje · P hechizos · N talentos · M mapa · Esc cerrar · Tab kit · R reiniciar · F3 +PX · F4 materiales · H ayuda";
+            "WASD mover · Tab / clic objetivo · F / clic dcho atacar con el arma · Q firma · 1-5 hechizos · E usar\n" +
+            "B bolsa · C personaje · P hechizos · N talentos · M mapa · Esc cerrar · K kit · R reiniciar · F3 +PX · F4 materiales · H ayuda";
 
         private SandboxContext _context;
         private Text _log;
@@ -19,6 +19,8 @@ namespace Specimen.Runtime.Sandbox.Ui
         private Text _banner;
         private GameObject _help;
         private float _bannerTime;
+        private Text _error;
+        private float _errorTime;
 
         public void Init(UiRoot root, SandboxContext context)
         {
@@ -35,6 +37,11 @@ namespace Specimen.Runtime.Sandbox.Ui
             banner.anchoredPosition = new Vector2(0f, -150f);
             _banner = UiFactory.Label(banner, string.Empty, Vector2.zero, new Vector2(900f, 90f), 30, TextAnchor.MiddleCenter,
                 UiTheme.Gold);
+            var error = Centered(root, "Error", new Vector2(900f, 30f), 0f, false);
+            error.anchorMin = error.anchorMax = error.pivot = new Vector2(0.5f, 1f);
+            error.anchoredPosition = new Vector2(0f, -250f);
+            _error = UiFactory.Label(error, string.Empty, Vector2.zero, new Vector2(900f, 30f), 20, TextAnchor.MiddleCenter,
+                new Color(1f, 0.15f, 0.1f));
             var help = Centered(root, "Ayuda", new Vector2(900f, 46f), 0f, true);
             help.anchorMin = help.anchorMax = help.pivot = new Vector2(0.5f, 1f);
             help.anchoredPosition = new Vector2(0f, -12f);
@@ -46,6 +53,13 @@ namespace Specimen.Runtime.Sandbox.Ui
         {
             _banner.text = text;
             _bannerTime = 4f;
+        }
+
+        /// <summary>Aviso rojo en el centro (como «No tienes objetivo» en WoW).</summary>
+        public void Error(string text)
+        {
+            _error.text = text;
+            _errorTime = 2f;
         }
 
         public void ToggleHelp() => _help.SetActive(!_help.activeSelf);
@@ -69,6 +83,8 @@ namespace Specimen.Runtime.Sandbox.Ui
             if (current != null) _prompt.text = $"<color=#F0C060><b>E</b></color> · {current.Prompt}";
             _bannerTime -= Time.unscaledDeltaTime;
             _banner.color = new Color(UiTheme.Gold.r, UiTheme.Gold.g, UiTheme.Gold.b, Mathf.Clamp01(_bannerTime));
+            _errorTime -= Time.unscaledDeltaTime;
+            _error.color = new Color(1f, 0.15f, 0.1f, Mathf.Clamp01(_errorTime));
         }
     }
 }

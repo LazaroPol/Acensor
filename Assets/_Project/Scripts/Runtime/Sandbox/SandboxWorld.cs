@@ -62,9 +62,12 @@ namespace Specimen.Runtime.Sandbox
             var controller = root.AddComponent<PlayerController>();
             var player = root.AddComponent<SandboxPlayer>();
             player.Init(_context, camera.transform);
-            root.AddComponent<PlayerCombat>().Init(player, _context);
+            var target = root.AddComponent<PlayerTarget>();
+            target.Init(_context);
+            var attack = root.AddComponent<AutoAttack>();
+            attack.Init(player, _context, target);
             root.AddComponent<SignatureCaster>().Init(player, _context);
-            root.AddComponent<SpellCaster>().Init(player, _context);
+            root.AddComponent<SpellCaster>().Init(player, _context, target, attack);
             camera.Follow(root.transform, controller.Input, CameraDistance);
             return player;
         }

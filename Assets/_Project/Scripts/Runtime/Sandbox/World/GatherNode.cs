@@ -39,7 +39,7 @@ namespace Specimen.Runtime.Sandbox.World
                 int added = _context.Inventory.Add(ItemInstance.CreateNew(drop.Item), drop.Quantity);
                 _context.Feed.Add(added > 0 ? $"+ {drop.Item.Name} x{added}" : "Inventario lleno.");
             }
-            _context.GrantXp(XpRewards.Gather, GatheringRules.NameOf(Kind));
+            _context.GrantXp(XpRewards.Gather, GatheringRules.NameOf(Kind), XpSource.Profesion);
             if (--_uses > 0) return;
             _model.SetActive(false);
             if (Kind == GatherKind.Arbol) Stump();
