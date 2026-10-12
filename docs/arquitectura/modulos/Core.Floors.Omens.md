@@ -6,7 +6,7 @@ Ensamblado: `Specimen.Core` · Carpeta: `Assets/_Project/Scripts/Core/Floors/Ome
 Tests: `Assets/_Project/Tests/EditMode/Core/Floors/Omens`
 
 **Depende de:** [Core.Common](Core.Common.md), [Core.Floors.Types](Core.Floors.Types.md), [Core.Randomness](Core.Randomness.md)
-**Lo usan:** nadie
+**Lo usan:** [Core.Echoes.Consequences](Core.Echoes.Consequences.md)
 
 | Fichero | Tipo | Resumen |
 |---|---|---|

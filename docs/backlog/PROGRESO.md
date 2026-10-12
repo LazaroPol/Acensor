@@ -25,8 +25,8 @@ TOTAL  █████████████████████░░░�
 
 ## Cola de prioridad (tablero)
 
-1. **F7-03** Consecuencias que alteran pisos futuros
-2. **F7-04** Decisiones secretas individuales
-3. **F8-01** Director de oleadas del asedio
-4. **F8-02** Fortificaciones y torretas
-5. **F8-03** Puntuación y multiplicador de supervivencia colectiva
+1. **F7-04** Decisiones secretas individuales
+2. **F8-01** Director de oleadas del asedio
+3. **F8-02** Fortificaciones y torretas
+4. **F8-03** Puntuación y multiplicador de supervivencia colectiva
+5. **F8-04** Extracción en Osprey y conversión a puntos de ADN
