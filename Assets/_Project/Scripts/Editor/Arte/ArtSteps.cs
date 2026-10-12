@@ -7,6 +7,11 @@ namespace Specimen.Editor.Arte
     {
         public static IReadOnlyList<IArtStep> All => new IArtStep[]
         {
+            new CharacterStep()
+        };
+
+        public static IReadOnlyList<ICharacterDecorator> CharacterDecorators => new ICharacterDecorator[]
+        {
         };
     }
 }
