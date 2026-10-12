@@ -9,6 +9,7 @@ using Specimen.Core.Vitals;
 using Specimen.Core.Visuals;
 using Specimen.Runtime.Bootstrap;
 using Specimen.Runtime.Combat;
+using Specimen.Runtime.Player;
 using Specimen.Runtime.Prototype;
 using Specimen.Runtime.Visuals;
 using UnityEngine;
@@ -59,6 +60,7 @@ namespace Specimen.Runtime.Incursion
                 new HudNotices(s.Resolve<IEventBus>()));
             _player = player.transform;
             _vitals = player.Vitals;
+            player.gameObject.AddComponent<KitBadge>().Init(s);
             player.gameObject.AddComponent<PlayerAttack>().Init(kit.CreateStatSheet());
             EnemySpawner.Populate(floor, layout, _run.Floor, _player, player.Vitals);
             _loot = gameObject.AddComponent<LootPickups>();
