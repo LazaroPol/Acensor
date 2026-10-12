@@ -8,9 +8,9 @@ namespace Specimen.Runtime.Sandbox.Ui
 {
     /// <summary>
     /// Interfaz del Campo de pruebas estilo MMO: HUD (marco, barra de acción, PX, minimapa, registro) y ventanas
-    /// (bolsa, personaje, hechizos, talentos, profesión, estación y mapa) con sus atajos de teclado y botones de menú.
+    /// (bolsa, mods, personaje, hechizos, talentos, profesión, estación y mapa) con sus atajos de teclado y botones de menú.
     /// </summary>
-    public sealed class SandboxUi : MonoBehaviour
+    public sealed partial class SandboxUi : MonoBehaviour
     {
         private readonly List<UiWindow> _windows = new List<UiWindow>();
         private SandboxContext _context;
@@ -39,6 +39,7 @@ namespace Specimen.Runtime.Sandbox.Ui
             _messages.Init(root, context);
             context.Events.Error += _messages.Error;
             _bag = Add(UiWindow.Spawn<InventoryWindow>(root, new Vector2(1480f, 420f), w => { w.Context = context; w.Player = player; }));
+            AddModWindow(root);
             _character = Add(UiWindow.Spawn<CharacterWindow>(root, new Vector2(40f, 140f), w =>
             {
                 (w.Context, w.Player, w.Kits, w.Equip) = (context, player, kits, equip);
@@ -92,14 +93,6 @@ namespace Specimen.Runtime.Sandbox.Ui
             bool any = _windows.Exists(w => w.IsOpen);
             _windows.ForEach(w => w.Close());
             if (!any) _player.GetComponent<PlayerTarget>()?.Clear();
-        }
-
-        private void OnLevelUp(int level)
-        {
-            _player.RefreshProgression(true);
-            string spell = _player.Kit != null ? SpellCaster.LearnedText(_context.Hero.SpellbookFor(_player.Kit.Id), level) : null;
-            _messages.Announce($"¡Nivel {level}!\n<size=20>+1 punto de talento{(spell != null ? " · " + spell : string.Empty)}</size>");
-            _context.Feed.Add($"Has alcanzado el nivel {level}. {spell}");
         }
 
         private void Update()

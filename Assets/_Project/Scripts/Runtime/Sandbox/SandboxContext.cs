@@ -13,7 +13,7 @@ using UnityEngine;
 namespace Specimen.Runtime.Sandbox
 {
     /// <summary>Servicios compartidos del Campo de pruebas (se crean una vez en el bootstrap y se inyectan).</summary>
-    public sealed class SandboxContext
+    public sealed partial class SandboxContext
     {
         public const int LocalPlayer = 1;
 

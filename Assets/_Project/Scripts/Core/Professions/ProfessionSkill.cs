@@ -1,3 +1,4 @@
+using System;
 using Specimen.Core.Common;
 
 namespace Specimen.Core.Professions
@@ -33,6 +34,13 @@ namespace Specimen.Core.Professions
             }
             if (IsMaxed) Xp = 0;
             return Level - before;
+        }
+
+        /// <summary>Restaura nivel y XP de un guardado (GDD §17.7); se ajustan a la curva.</summary>
+        public void Restore(int level, int xp)
+        {
+            Level = Math.Max(1, Math.Min(level, Curve.MaxLevel));
+            Xp = IsMaxed ? 0 : Math.Max(0, Math.Min(xp, Curve.XpToNext(Level) - 1));
         }
     }
 }

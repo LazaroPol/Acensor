@@ -1,3 +1,4 @@
+using System.Collections.Generic;
 using Specimen.Core.Loot;
 using Specimen.Core.Progression;
 using Specimen.Core.Sandbox;
@@ -15,7 +16,8 @@ namespace Specimen.Runtime.Sandbox
             _context.Feed.Add($"{enemy.DisplayName} derrotado. Reaparece en {enemy.RespawnRemaining:0} s.");
             _context.GrantXp(XpRewards.ForKill(enemy.Entry, _context.Hero.Level, enemy.Level), enemy.DisplayName,
                 XpSource.Combate);
-            var drops = SandboxLoot.DropsFor(enemy.Entry, _context.Random);
+            var drops = new List<LootDrop>(SandboxLoot.DropsFor(enemy.Entry, _context.Random));
+            drops.AddRange(_context.CraftLoot.Roll(SandboxLoot.RingOf(enemy.Entry), _context.Random));
             for (int i = 0; i < drops.Count; i++) SpawnLoot(drops[i], enemy.transform.position + Offset(i), player);
         }
 

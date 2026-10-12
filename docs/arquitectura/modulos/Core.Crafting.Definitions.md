@@ -6,7 +6,7 @@ Ensamblado: `Specimen.Core` · Carpeta: `Assets/_Project/Scripts/Core/Crafting/D
 Tests: `Assets/_Project/Tests/EditMode/Core/Crafting/Definitions`
 
 **Depende de:** [Core.Common](Core.Common.md), [Core.Items](Core.Items.md), [Core.Professions](Core.Professions.md)
-**Lo usan:** [Core.Crafting.Authoring](Core.Crafting.Authoring.md), [Core.Crafting.Content](Core.Crafting.Content.md), [Core.Crafting.Knowledge](Core.Crafting.Knowledge.md), [Core.Crafting.Queue](Core.Crafting.Queue.md), [Core.Crafting.Session](Core.Crafting.Session.md), [Core.Crafting.Stations](Core.Crafting.Stations.md), [Runtime.Crafting.Authoring](Runtime.Crafting.Authoring.md), [Runtime.Sandbox](Runtime.Sandbox.md)
+**Lo usan:** [Core.Crafting.Authoring](Core.Crafting.Authoring.md), [Core.Crafting.Content](Core.Crafting.Content.md), [Core.Crafting.Knowledge](Core.Crafting.Knowledge.md), [Core.Crafting.Play](Core.Crafting.Play.md), [Core.Crafting.Queue](Core.Crafting.Queue.md), [Core.Crafting.Session](Core.Crafting.Session.md), [Core.Crafting.Stations](Core.Crafting.Stations.md), [Runtime.Crafting.Authoring](Runtime.Crafting.Authoring.md), [Runtime.Sandbox](Runtime.Sandbox.md)
 
 | Fichero | Tipo | Resumen |
 |---|---|---|

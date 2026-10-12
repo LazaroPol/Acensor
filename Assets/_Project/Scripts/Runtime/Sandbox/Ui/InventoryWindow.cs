@@ -1,3 +1,5 @@
+using System;
+using Specimen.Core.Items;
 using Specimen.Core.Items.Catalog;
 using Specimen.Runtime.UI;
 using UnityEngine;
@@ -5,7 +7,7 @@ using UnityEngine.UI;
 
 namespace Specimen.Runtime.Sandbox.Ui
 {
-    /// <summary>Bolsa (B / I): 6 × 4 huecos con marco del color de rareza y tooltip; clic derecho consume o equipa.</summary>
+    /// <summary>Bolsa (B / I): 6 × 4 huecos con marco del color de rareza y tooltip; clic derecho consume, equipa o lee; clic izquierdo abre los mods.</summary>
     public sealed class InventoryWindow : UiWindow
     {
         private const int Columns = 6;
@@ -16,6 +18,9 @@ namespace Specimen.Runtime.Sandbox.Ui
 
         public SandboxContext Context { get; set; }
         public SandboxPlayer Player { get; set; }
+
+        /// <summary>Clic izquierdo sobre un arma o armadura: abre su ventana de mods (OF-16).</summary>
+        public Action<ItemInstance> OpenMods { get; set; }
 
         public override string Title => "Bolsa";
         protected override Vector2 Size => new Vector2(Columns * Cell + 24f, Rows * Cell + TitleHeight + 54f);
@@ -30,6 +35,7 @@ namespace Specimen.Runtime.Sandbox.Ui
                 var slot = UiSlot.Create(Body, new Vector2(i % Columns * Cell, i / Columns * Cell), Cell - 4f);
                 slot.Hover.Text = () => TooltipAt(index);
                 slot.Hover.RightClick = () => Use(index);
+                slot.Hover.LeftClick = () => Inspect(index);
                 _slots[i] = slot;
             }
             _footer = UiFactory.Label(Body, string.Empty, new Vector2(0f, Rows * Cell + 4f), new Vector2(Columns * Cell, 22f),
@@ -67,11 +73,21 @@ namespace Specimen.Runtime.Sandbox.Ui
             var stacks = Context.Inventory.Stacks;
             if (index >= stacks.Count || !Player.IsAlive) return;
             var item = stacks[index].Definition;
+            if (Context.ReadKnowledge(item.Id)) { Refresh(); return; }
             if (Player.Gear.CanEquip(item)) Gear.EquipFromBag(Context, Player, stacks[index].Item);
             else if (ConsumableUse.TryUse(Context.Inventory, item.Id, Player.Vitals, out var effect))
                 Context.Feed.Add($"Usas {item.Name}: {effect.Description}");
             else Context.Feed.Add($"{item.Name} no se puede usar (material para recetas).");
             Refresh();
+        }
+
+        private void Inspect(int index)
+        {
+            var stacks = Context.Inventory.Stacks;
+            if (index >= stacks.Count) return;
+            var category = stacks[index].Definition.Category;
+            if (category == ItemCategory.Weapon || category == ItemCategory.Armor || category == ItemCategory.Tool)
+                OpenMods?.Invoke(stacks[index].Item);
         }
     }
 }
