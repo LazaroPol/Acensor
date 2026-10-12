@@ -8,7 +8,7 @@ _Sustituir el greybox por los packs de arte (personajes por clase, animaciones, 
 | ✅ | **AR-02** Personajes del kit de clases | S97 | #82 |
 | ✅ | **AR-03** Kit de animaciones: locomoción, melé y hechizos | S96 | #81 |
 | ✅ | **AR-04** Armas y equipo por clase | S98 | #83 |
-| 👀 | **AR-05** Bestiario |  |  |
+| ✅ | **AR-05** Bestiario | S99 | #84 |
 | ⬜ | **AR-06** Entorno modular |  |  |
 | ⬜ | **AR-07** Mobiliario de profesiones |  |  |
 | ⬜ | **AR-08** Campo de pruebas jugable |  |  |
