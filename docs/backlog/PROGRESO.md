@@ -1,7 +1,7 @@
 # Progreso — SPECIMEN
 
 ```
-TOTAL  ████████████████████████░░░░░░  79.7%  (63/79 tareas)
+TOTAL  ████████████████████████░░░░░░  81.0%  (64/79 tareas)
 ```
 
 **Fase en curso:** F9 · **Siguiente tarea:** F9-02
@@ -19,7 +19,7 @@ TOTAL  ████████████████████████�
 | [F7 · Ecos y decisiones](fases/F7.md) | `███████████████` | 100% | 4/4 |
 | [F8 · Asedio y extracción](fases/F8.md) | `███████████████` | 100% | 4/4 |
 | [F9 · Meta-progresión: Laboratorio](fases/F9.md) | `████░░░░░░░░░░░` | 25% | 1/4 |
-| [F10 · Presentación en Unity](fases/F10.md) | `█████░░░░░░░░░░` | 33% | 2/6 |
+| [F10 · Presentación en Unity](fases/F10.md) | `████████░░░░░░░` | 50% | 3/6 |
 | [F11 · Multijugador cooperativo](fases/F11.md) | `░░░░░░░░░░░░░░░` | 0% | 0/4 |
 | [F12 · Vertical Slice — Acto I](fases/F12.md) | `░░░░░░░░░░░░░░░` | 0% | 0/5 |
 
@@ -28,5 +28,5 @@ TOTAL  ████████████████████████�
 1. **F9-02** Aplicación de mutaciones al nuevo clon
 2. **F9-03** Fragmentos de memoria y desbloqueo de lore
 3. **F9-04** Guardado y carga del perfil
-4. **F10-03** HUD: temporizador, recursos, avisos
-5. **F10-04** UI del Laboratorio Genético
+4. **F10-04** UI del Laboratorio Genético
+5. **F10-05** Dualidad cromática: Volumes URP y shader toon con contornos

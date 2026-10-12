@@ -2,14 +2,18 @@
   "id": "F10-03",
   "phase": "F10",
   "title": "HUD: temporizador, recursos, avisos",
-  "status": "todo",
+  "status": "done",
   "type": "feature",
   "labels": [
     "ui"
   ],
   "origin": "backlog",
-  "description": "",
-  "acceptance": [],
-  "pr": null,
-  "session": null
+  "description": "HUD de partida: temporizador de fase, piso, barras de recursos y avisos (puertas cerrándose, cambios de fase).",
+  "acceptance": [
+    "GameHudPresenter expone fase, piso, temporizador mm:ss y barras de Vida/Recurso/Aguante con fracción 0..1.",
+    "HudNotices genera avisos desde eventos de la iteración, los ordena por gravedad y los hace caducar.",
+    "GameHud (Runtime/Hud) solo dibuja el presenter."
+  ],
+  "pr": "73",
+  "session": 83
 }
