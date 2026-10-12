@@ -6,7 +6,7 @@ Ensamblado: `Specimen.Core` · Carpeta: `Assets/_Project/Scripts/Core/Crafting/M
 Tests: `Assets/_Project/Tests/EditMode/Core/Crafting/Mods`
 
 **Depende de:** [Core.Common](Core.Common.md), [Core.Items](Core.Items.md), [Core.Professions](Core.Professions.md)
-**Lo usan:** nadie
+**Lo usan:** [Core.Crafting.Authoring](Core.Crafting.Authoring.md), [Runtime.Crafting.Authoring](Runtime.Crafting.Authoring.md)
 
 | Fichero | Tipo | Resumen |
 |---|---|---|
