@@ -4,7 +4,7 @@
 TOTAL  ████████████████████████░░░░░░  78.6%  (81/103 tareas)
 ```
 
-**Fase en curso:** OF · **Siguiente tarea:** OF-04
+**Fase en curso:** OF · **Siguiente tarea:** OF-05
 
 | Fase | Progreso | % | Tareas |
 |---|---|---|---|
@@ -27,8 +27,8 @@ TOTAL  ████████████████████████�
 
 ## Cola de prioridad (tablero)
 
-1. **OF-04** Nivel y XP por oficio con curva configurable e hitos
-2. **OF-05** Calidad del objeto: grados, tirada y huecos de mod
-3. **OF-06** RecipeDefinition: estación, niveles, piezas, tiempo, XP y desbloqueo
-4. **OF-07** Conocimiento: pergaminos, planos, tratados y libros de oficio
-5. **OF-08** Estaciones: nivel mejorable, ranuras y piezas colocables
+1. **OF-05** Calidad del objeto: grados, tirada y huecos de mod
+2. **OF-06** RecipeDefinition: estación, niveles, piezas, tiempo, XP y desbloqueo
+3. **OF-07** Conocimiento: pergaminos, planos, tratados y libros de oficio
+4. **OF-08** Estaciones: nivel mejorable, ranuras y piezas colocables
+5. **OF-09** Cola de fabricación con temporizador y combustible
