@@ -2,7 +2,7 @@
   "id": "OF-04",
   "phase": "OF",
   "title": "Nivel y XP por oficio con curva configurable e hitos",
-  "status": "review",
+  "status": "done",
   "type": "feature",
   "labels": [
     "oficios",
@@ -17,6 +17,6 @@
     "Los hitos devuelven tier de material permitido, bonus de tiempo y calidad máxima por nivel.",
     "ProfessionLevels guarda un skill por profesión y se integra en HeroProgression."
   ],
-  "pr": null,
-  "session": null
+  "pr": "#108",
+  "session": 106
 }

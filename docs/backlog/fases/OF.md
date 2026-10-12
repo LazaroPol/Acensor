@@ -7,7 +7,7 @@ _Niveles de oficio, recetas por etiqueta, estaciones con piezas, planos y tratad
 | ✅ | **OF-01** Diseño de oficios: GDD §17 y backlog de la fase | S103 | #105 |
 | ✅ | **OF-02** Materiales: tier, peso, etiquetas e icono en ItemDefinition | S104 | #106 |
 | ✅ | **OF-03** Ingredientes por objeto o etiqueta y consumo por etiqueta | S105 | #107 |
-| 👀 | **OF-04** Nivel y XP por oficio con curva configurable e hitos |  |  |
+| ✅ | **OF-04** Nivel y XP por oficio con curva configurable e hitos | S106 | #108 |
 | ⬜ | **OF-05** Calidad del objeto: grados, tirada y huecos de mod |  |  |
 | ⬜ | **OF-06** RecipeDefinition: estación, niveles, piezas, tiempo, XP y desbloqueo |  |  |
 | ⬜ | **OF-07** Conocimiento: pergaminos, planos, tratados y libros de oficio |  |  |
