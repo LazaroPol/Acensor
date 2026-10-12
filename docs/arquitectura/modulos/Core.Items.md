@@ -20,5 +20,7 @@ Tests: `Assets/_Project/Tests/EditMode/Core/Items`
 | `ItemInstance.cs` | class `ItemInstance` | Objeto concreto en el mundo o en un inventario: su plantilla más su propio desgaste. |
 | `ItemStack.cs` | class `ItemStack` | Contenido de una ranura: un objeto y cuántas unidades hay. |
 | `MaterialTags.cs` | enum `MaterialTags` | Etiquetas de material (combinables). |
+| `Quality.cs` | enum `Quality` | Grado de calidad de un objeto fabricado o hallado (GDD §17.1). |
+| `QualityGrade.cs` | class `QualityGrade` | Datos de un grado: nombre visible, umbral de puntos, huecos de mod y multiplicadores. |
 | `Rarity.cs` | enum `Rarity` | Rareza de un objeto, de menor a mayor. |
 | `RarityRules.cs` | class `RarityRules` | Reglas por rareza: cuanto más rara, más aguanta el equipo antes de romperse. |

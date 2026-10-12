@@ -16,8 +16,11 @@ namespace Specimen.Core.Crafting
         public ItemDefinition Output { get; }
         public int OutputQuantity { get; }
 
+        /// <summary>Calidad máxima que puede salir de esta receta (Legendary = sin tope propio).</summary>
+        public Quality QualityCap { get; }
+
         public Recipe(string id, ProfessionId profession, IEnumerable<RecipeIngredient> ingredients,
-            ItemDefinition output, int outputQuantity = 1)
+            ItemDefinition output, int outputQuantity = 1, Quality qualityCap = Quality.Legendary)
         {
             if (string.IsNullOrWhiteSpace(id)) throw new ArgumentException("Id vacío.", nameof(id));
             Id = id;
@@ -25,6 +28,9 @@ namespace Specimen.Core.Crafting
             Ingredients = Guard.NotNull(ingredients, nameof(ingredients)).ToList().AsReadOnly();
             Output = Guard.NotNull(output, nameof(output));
             OutputQuantity = Guard.Positive(outputQuantity, nameof(outputQuantity));
+            if (qualityCap < Quality.Crude || qualityCap > Quality.Legendary)
+                throw new ArgumentOutOfRangeException(nameof(qualityCap));
+            QualityCap = qualityCap;
             if (Ingredients.Count == 0 || Ingredients.Any(i => i == null))
                 throw new ArgumentException("Faltan ingredientes válidos.", nameof(ingredients));
             if (Ingredients.Select(i => i.ItemId).Distinct().Count() != Ingredients.Count)
