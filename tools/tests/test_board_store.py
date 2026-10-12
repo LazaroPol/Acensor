@@ -41,7 +41,7 @@ class BoardStoreTests(unittest.TestCase):
         self.assertGreater(len(snap["tasks"]), 70)
         self.assertIn("tipos", snap["catalog"])
         status = {t["id"]: t["status"] for t in snap["tasks"]}
-        pending = [tid for tid in snap["priority"] if status.get(tid) != "done"]
+        pending = [tid for tid in snap["priority"] if status.get(tid) not in ("done", "review", "blocked", "idea")]
         self.assertEqual(pending[0], snap["summary"]["next_task"])
 
     def test_quick_task_gets_next_id_in_phase_and_goes_to_inbox(self):
