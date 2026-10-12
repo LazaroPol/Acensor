@@ -30,8 +30,8 @@ namespace Specimen.Runtime.Atico
         private SiegeController _siege;
         private OspreyPad _pad;
 
-        [RuntimeInitializeOnLoadMethod(RuntimeInitializeLoadType.AfterSceneLoad)]
-        private static void EnsureInAtticScene()
+        /// <summary>Lo llama <c>SceneBootstrapper</c> en cada carga de escena; solo actúa en la suya.</summary>
+        public static void Ensure()
         {
             if (SceneManager.GetActiveScene().name != nameof(SceneId.Atico)) return;
             if (FindAnyObjectByType<AticoBootstrap>() != null) return;
