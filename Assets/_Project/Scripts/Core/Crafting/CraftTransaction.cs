@@ -12,10 +12,30 @@ namespace Specimen.Core.Crafting
         public static CraftResult Apply(IReadOnlyList<RecipeIngredient> ingredients, ItemDefinition output,
             int quantity, IInventory inventory)
         {
-            foreach (var i in ingredients) inventory.Remove(i.ItemId, i.Quantity);
+            var entries = new List<PlannedConsumption>(ingredients.Count);
+            foreach (var i in ingredients) entries.Add(new PlannedConsumption(i.Item, i.Quantity));
+            return Apply(entries, output, quantity, inventory);
+        }
+
+        /// <summary>Gasta las unidades planificadas (si siguen ahí) y añade el resultado, o nada.</summary>
+        public static CraftResult Apply(IReadOnlyList<PlannedConsumption> entries, ItemDefinition output,
+            int quantity, IInventory inventory)
+        {
+            if (!StillAvailable(entries, inventory)) return CraftResult.MissingIngredients;
+            foreach (var e in entries) inventory.Remove(e.Item.Id, e.Quantity);
             if (TryAddOutput(output, quantity, inventory)) return CraftResult.Crafted;
-            foreach (var i in ingredients) inventory.Add(ItemInstance.CreateNew(i.Item), i.Quantity);
+            foreach (var e in entries) inventory.Add(ItemInstance.CreateNew(e.Item), e.Quantity);
             return CraftResult.NoSpace;
+        }
+
+        private static bool StillAvailable(IReadOnlyList<PlannedConsumption> entries, IInventory inventory)
+        {
+            var needed = new Dictionary<string, int>();
+            foreach (var e in entries)
+                needed[e.Item.Id] = (needed.TryGetValue(e.Item.Id, out int n) ? n : 0) + e.Quantity;
+            foreach (var pair in needed)
+                if (inventory.CountOf(pair.Key) < pair.Value) return false;
+            return true;
         }
 
         private static bool TryAddOutput(ItemDefinition output, int quantity, IInventory inventory)

@@ -2,7 +2,7 @@
   "id": "OF-03",
   "phase": "OF",
   "title": "Ingredientes por objeto o etiqueta y consumo por etiqueta",
-  "status": "review",
+  "status": "done",
   "type": "feature",
   "labels": [
     "oficios",
@@ -18,6 +18,6 @@
     "Calcula el tier medio ponderado de lo que realmente se gasta.",
     "Recipe/RecipeIngredient antiguos siguen funcionando (por objeto)."
   ],
-  "pr": null,
-  "session": null
+  "pr": "#107",
+  "session": 105
 }
