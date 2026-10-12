@@ -15,8 +15,11 @@ namespace Specimen.Editor.Arte
         {
             ArtFolders.Ensure(ArtPaths.Animation);
             string path = $"{ArtPaths.Animation}/{set.Name}.controller";
-            AssetDatabase.DeleteAsset(path);
-            var controller = AnimatorController.CreateAnimatorControllerAtPath(path);
+            // Se reconstruye dentro del mismo asset: borrarlo y recrearlo deja las referencias de los
+            // prefabs apuntando a un objeto que ya no existe («Missing») y los personajes quedan en T-pose.
+            var controller = AssetDatabase.LoadAssetAtPath<AnimatorController>(path);
+            if (controller == null) controller = AnimatorController.CreateAnimatorControllerAtPath(path);
+            else AnimatorCleaner.Clear(controller, path);
             AddParameters(controller);
             var machine = controller.layers[0].stateMachine;
             var locomotion = BuildLocomotion(controller, set, clips);

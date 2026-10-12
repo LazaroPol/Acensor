@@ -52,7 +52,7 @@ namespace Specimen.Runtime.Sandbox
             _controller.Init(Stats, _cameraYaw);
             _controller.enabled = true;
             SwapVisual(_context.Art != null ? _context.Art.ClassPrefab(kit.Id) : null);
-            _animator.Rebind();
+            _animator.Rebind(_context.Art != null ? _context.Art.heroe : null);
             _shieldLeft = 0f;
             _context.Feed.Add($"Kit equipado: {kit.DisplayName} ({kit.Role})");
             Equipped?.Invoke(kit);
