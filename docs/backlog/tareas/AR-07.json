@@ -2,7 +2,7 @@
   "id": "AR-07",
   "phase": "AR",
   "title": "Mobiliario de profesiones",
-  "status": "review",
+  "status": "done",
   "type": "feature",
   "labels": [
     "arte"
@@ -13,6 +13,6 @@
     "ProfessionFurniture da al menos dos herramientas a cada una de las 7 profesiones.",
     "El generador crea un banco por profesión en Art/Generado/Mobiliario."
   ],
-  "pr": null,
-  "session": null
+  "pr": "#89",
+  "session": 101
 }
