@@ -4,7 +4,7 @@
 TOTAL  ████████████████████████░░░░░░  81.6%  (71/87 tareas)
 ```
 
-**Fase en curso:** AR · **Siguiente tarea:** AR-02
+**Fase en curso:** AR · **Siguiente tarea:** AR-03
 
 | Fase | Progreso | % | Tareas |
 |---|---|---|---|
@@ -27,7 +27,7 @@ TOTAL  ████████████████████████�
 ## Cola de prioridad (tablero)
 
 1. **AR-02** Personajes del kit de clases
-2. **AR-03** Kit de animaciones: locomoción, melé y hechizos
-3. **AR-04** Armas y equipo por clase
-4. **AR-05** Bestiario
-5. **AR-06** Entorno modular
+2. **AR-04** Armas y equipo por clase
+3. **AR-05** Bestiario
+4. **AR-06** Entorno modular
+5. **AR-07** Mobiliario de profesiones
