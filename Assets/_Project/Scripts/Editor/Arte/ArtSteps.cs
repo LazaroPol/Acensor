@@ -10,6 +10,7 @@ namespace Specimen.Editor.Arte
             new CharacterStep(),
             new MonsterStep(),
             new EnvironmentStep(),
+            new FurnitureStep(),
             new VisualCatalogStep()
         };
 
