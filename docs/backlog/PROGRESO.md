@@ -4,7 +4,7 @@
 TOTAL  █████████████████████████░░░░░  83.5%  (86/103 tareas)
 ```
 
-**Fase en curso:** OF · **Siguiente tarea:** OF-09
+**Fase en curso:** OF · **Siguiente tarea:** OF-10
 
 | Fase | Progreso | % | Tareas |
 |---|---|---|---|
