@@ -2,7 +2,7 @@
   "id": "OF-06",
   "phase": "OF",
   "title": "RecipeDefinition: estación, niveles, piezas, tiempo, XP y desbloqueo",
-  "status": "review",
+  "status": "done",
   "type": "feature",
   "labels": [
     "oficios",
@@ -17,6 +17,6 @@
     "RecipeCatalog con ids únicos, consulta por estación y por oficio, y resolución de variantes mejoradas.",
     "Validación: sin entradas, salidas vacías, tiempo negativo o Improves inexistente fallan pronto."
   ],
-  "pr": null,
-  "session": null
+  "pr": "#110",
+  "session": 108
 }
