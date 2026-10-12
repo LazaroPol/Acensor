@@ -13,3 +13,8 @@
 | Nanite | GPU Resident Drawer + LODs + modularidad de muros |
 | Post-proceso adaptativo | **Volumes** con blend por zona (Ascensor / Piso / Atrapado) |
 | Cel-shading custom | Shader Graph toon + **Renderer Feature** de contornos (normales/profundidad) |
+
+### Estado de la implementación (F10-05)
+- `Core.Art`: `MoodProfiles` (valores por ambiente), `MoodSelector` (ubicación/escena → ambiente) y `MoodTransition` (fundido).
+- `Runtime.Art.MoodVolumeDriver` aplica el ambiente a un Volume global de URP, la niebla y el contorno.
+- `Assets/_Project/Art/Shaders/SpecimenToon.shader` (`Specimen/Toon`): luz en escalones + contorno por casco invertido.
