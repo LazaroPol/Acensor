@@ -2,14 +2,20 @@
   "id": "F8-03",
   "phase": "F8",
   "title": "Puntuación y multiplicador de supervivencia colectiva",
-  "status": "todo",
+  "status": "done",
   "type": "feature",
   "labels": [
     "asedio"
   ],
   "origin": "backlog",
-  "description": "",
-  "acceptance": [],
-  "pr": null,
-  "session": null
+  "description": "Núcleo puro de la puntuación de la iteración (GDD 03 §3.5): puntos base y multiplicador de supervivencia colectiva.",
+  "acceptance": [
+    "ScoreConfig valida valores no negativos; IterationScore acumula bajas, calidad de loot y pisos completados.",
+    "Puntos base = bajas × valor + loot + pisos × bonus.",
+    "Multiplicador = 1 + paso × (jugadores vivos al final de cada piso, acumulado).",
+    "Settle(survived) aplica el multiplicador solo si el equipo sobrevivió; si murió conserva los puntos con multiplicador 1.",
+    "Núcleo sin UnityEngine, ficheros <= 120 líneas y tests NUnit en verde."
+  ],
+  "pr": "#68",
+  "session": 51
 }

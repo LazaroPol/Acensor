@@ -1,11 +1,15 @@
 #!/usr/bin/env bash
 # Entrega una tarea ya commiteada en su rama y cierra su sesión, todo en la misma PR:
+#   0) tarjeta a «Revisión» en el tablero (publicado en main) antes de los tests finales
 #   1) abre la PR (verificación local)  2) marca la tarea y añade la fila al historial
 #   3) escribe docs/sesiones/SESION-SS.md desde una plantilla ({PR} = número de PR)
 #   4) mergea solo con CI en verde y re-verifica main.
 # Uso: tools/session/ship.sh <TAREA> <SESIÓN> "<título PR>" <descripcion_pr.md> <plantilla_sesion.md>
 source "$(dirname "$0")/../git/common.sh"
 TASK="$1"; SESSION="$2"; TITLE="$3"; BODY="$4"; TEMPLATE="$5"
+
+require_feature_branch
+"$ROOT/tools/session/board_status.sh" "$TASK" review
 
 PR="$("$ROOT/tools/git/open_pr.sh" "$TITLE" "$BODY" | tail -1)"
 [[ "$PR" =~ ^[0-9]+$ ]] || die "No se pudo abrir la PR"
