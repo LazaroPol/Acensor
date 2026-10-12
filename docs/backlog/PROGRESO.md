@@ -4,7 +4,7 @@
 TOTAL  ███████████████████████░░░░░░░  76.7%  (79/103 tareas)
 ```
 
-**Fase en curso:** OF · **Siguiente tarea:** OF-02
+**Fase en curso:** OF · **Siguiente tarea:** OF-03
 
 | Fase | Progreso | % | Tareas |
 |---|---|---|---|
@@ -27,8 +27,8 @@ TOTAL  ███████████████████████░�
 
 ## Cola de prioridad (tablero)
 
-1. **OF-02** Materiales: tier, peso, etiquetas e icono en ItemDefinition
-2. **OF-03** Ingredientes por objeto o etiqueta y consumo por etiqueta
-3. **OF-04** Nivel y XP por oficio con curva configurable e hitos
-4. **OF-05** Calidad del objeto: grados, tirada y huecos de mod
-5. **OF-06** RecipeDefinition: estación, niveles, piezas, tiempo, XP y desbloqueo
+1. **OF-03** Ingredientes por objeto o etiqueta y consumo por etiqueta
+2. **OF-04** Nivel y XP por oficio con curva configurable e hitos
+3. **OF-05** Calidad del objeto: grados, tirada y huecos de mod
+4. **OF-06** RecipeDefinition: estación, niveles, piezas, tiempo, XP y desbloqueo
+5. **OF-07** Conocimiento: pergaminos, planos, tratados y libros de oficio

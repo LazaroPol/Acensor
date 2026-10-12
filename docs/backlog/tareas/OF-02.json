@@ -2,7 +2,7 @@
   "id": "OF-02",
   "phase": "OF",
   "title": "Materiales: tier, peso, etiquetas e icono en ItemDefinition",
-  "status": "todo",
+  "status": "review",
   "type": "feature",
   "labels": [
     "oficios",
