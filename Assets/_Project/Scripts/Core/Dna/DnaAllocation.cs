@@ -42,5 +42,25 @@ namespace Specimen.Core.Dna
             _invested[node.Branch] = Invested(node.Branch) + node.Cost;
             return UnlockResult.Ok;
         }
+
+        /// <summary>Reemplaza el estado con el de un perfil guardado. Falla si un nodo no existe en el árbol.</summary>
+        public void Restore(int freePoints, IEnumerable<string> unlockedIds)
+        {
+            if (freePoints < 0) throw new ArgumentOutOfRangeException(nameof(freePoints), freePoints, "Debe ser >= 0.");
+            var nodes = new List<DnaNode>();
+            foreach (var id in unlockedIds ?? throw new ArgumentNullException(nameof(unlockedIds)))
+            {
+                if (!_tree.TryGet(id, out var node)) throw new ArgumentException($"Nodo desconocido: {id}.", nameof(unlockedIds));
+                nodes.Add(node);
+            }
+            _unlocked.Clear();
+            _invested.Clear();
+            FreePoints = freePoints;
+            foreach (var node in nodes)
+            {
+                if (!_unlocked.Add(node.Id)) continue;
+                _invested[node.Branch] = Invested(node.Branch) + node.Cost;
+            }
+        }
     }
 }
