@@ -2,7 +2,7 @@
   "id": "OF-01",
   "phase": "OF",
   "title": "Diseño de oficios: GDD §17 y backlog de la fase",
-  "status": "review",
+  "status": "done",
   "type": "docs",
   "labels": [
     "oficios"
@@ -14,6 +14,6 @@
     "Fase OF creada con tareas de una sesión cada una, con descripción y criterios de aceptación.",
     "Los criterios de aceptación de la petición están mapeados a tareas."
   ],
-  "pr": null,
-  "session": null
+  "pr": "#105",
+  "session": 103
 }

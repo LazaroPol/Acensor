@@ -24,3 +24,4 @@
 14. [Arquitectura técnica](14-arquitectura-tecnica.md)
 15. [Alcance del Vertical Slice (objetivo)](15-vertical-slice.md)
 16. [Prototipo greybox (fase PG)](16-prototipo-greybox.md)
+17. [Oficios: artesanía, conocimiento y mods (fase OF)](17-oficios.md)
