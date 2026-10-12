@@ -23,7 +23,7 @@ namespace Specimen.Runtime.Hubs
             var room = host.AddComponent<HubRoom>();
             int slots = platform.Slots.Count;
             int lab = slots;
-            var layout = new HubRoomLayout(14, 9, slots + 1);
+            var layout = new HubRoomLayout(20, 12, slots + 1);
             room.Build(layout, KitOf(s).CreateStatSheet(), run, new HudNotices(s.Resolve<IEventBus>()),
                 i => i == room.ElevatorIndex ? DoorLabel(elevator) : i == lab ? "Entrar al Laboratorio Genético" : elevator.SlotLabels()[i],
                 i =>

@@ -2,7 +2,7 @@
 
 > Nombre provisional. Fusión de tres conceptos: **Fans of Labyrinth's** (supervivencia día/noche, asedio, clones y ADN), **El Ascensor** (subida continua con temporizador, armería inicial con stock limitado, hogueras) y **La Torre** (pisos temáticos, antesala, profesiones, Ecos, actos).
 
-**Género:** Roguelite cooperativo (1-4 jugadores) · Extraction ARPG · Defensa de base
+**Género:** Roguelite cooperativo (1-6 jugadores) · Extraction ARPG · Defensa de base
 **Motor:** Unity 6 (URP) · C# · Netcode for GameObjects (fase posterior)
 **Perspectiva:** Tercera persona, cámara cenital-oblicua (estilo Risk of Rain 2 / V Rising)
 

@@ -11,7 +11,7 @@ namespace Specimen.Core.Iteration
     /// </summary>
     public sealed class IterationConfig
     {
-        public const int MaxPlayersLimit = 4;
+        public const int MaxPlayersLimit = 6;
 
         public int FloorCount { get; }
         public float CalmSeconds { get; }
