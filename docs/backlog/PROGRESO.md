@@ -4,7 +4,7 @@
 TOTAL  ██████████████████████░░░░░░░░  74.7%  (59/79 tareas)
 ```
 
-**Fase en curso:** F8 · **Siguiente tarea:** F8-03
+**Fase en curso:** F8 · **Siguiente tarea:** F9-02
 
 | Fase | Progreso | % | Tareas |
 |---|---|---|---|
@@ -27,6 +27,6 @@ TOTAL  ██████████████████████░░�
 
 1. **F8-03** Puntuación y multiplicador de supervivencia colectiva
 2. **F8-04** Extracción en Osprey y conversión a puntos de ADN
-3. **F9-02** Aplicación de mutaciones al nuevo clon
-4. **F9-03** Fragmentos de memoria y desbloqueo de lore
-5. **F9-04** Guardado y carga del perfil
+3. **F9-03** Fragmentos de memoria y desbloqueo de lore
+4. **F9-04** Guardado y carga del perfil
+5. **F10-01** Bootstrap de escenas e inyección de dependencias
