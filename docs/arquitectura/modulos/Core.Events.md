@@ -6,7 +6,7 @@ Ensamblado: `Specimen.Core` · Carpeta: `Assets/_Project/Scripts/Core/Events`
 Tests: `Assets/_Project/Tests/EditMode/Core/Events`
 
 **Depende de:** [Core.Common](Core.Common.md)
-**Lo usan:** [Core.Iteration](Core.Iteration.md)
+**Lo usan:** [Core.Composition](Core.Composition.md), [Core.Iteration](Core.Iteration.md)
 
 | Fichero | Tipo | Resumen |
 |---|---|---|

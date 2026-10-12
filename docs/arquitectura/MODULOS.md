@@ -15,6 +15,7 @@ Un módulo = un namespace C#. Abre solo la página del módulo que vayas a tocar
 | [Core.Combat.Enemies](modulos/Core.Combat.Enemies.md) | 8 | `DepthScalingConfig`, `Enemy`, `EnemyArchetype`, `EnemyDepth`, `EnemyFactory` … | Core.Common, Core.Loot |
 | [Core.Combat.Perception](modulos/Core.Combat.Perception.md) | 7 | `EnemyPerception`, `IPerceptionModifiers`, `Observer`, `PerceivedTarget`, `PerceptionConfig` … | Core.Iteration.Presence, Core.Movement |
 | [Core.Common](modulos/Core.Common.md) | 1 | `Guard` | — |
+| [Core.Composition](modulos/Core.Composition.md) | 6 | `GameComposition`, `ISceneLoader`, `IServiceRegistry`, `IServiceResolver`, `SceneChanged` … | Core.Common, Core.Events |
 | [Core.Crafting](modulos/Core.Crafting.md) | 11 | `CraftResult`, `CraftTransaction`, `Crafter`, `IRecipeBook`, `ISynergyRecipeBook` … | Core.Common, Core.Items, Core.Professions |
 | [Core.Echoes](modulos/Core.Echoes.md) | 2 | `EchoDecision`, `EchoRegistry` | Core.Common |
 | [Core.Echoes.Consequences](modulos/Core.Echoes.Consequences.md) | 3 | `EchoConsequence`, `EchoConsequenceTable`, `EchoOmenAdjuster` | Core.Common, Core.Floors.Omens |
@@ -48,6 +49,7 @@ Un módulo = un namespace C#. Abre solo la página del módulo que vayas a tocar
 | [Core.Time](modulos/Core.Time.md) | 4 | `IClock`, `ITickable`, `ManualClock`, `PhaseTimer` | Core.Common |
 | [Core.Visuals](modulos/Core.Visuals.md) | 14 | `DefaultGreyboxStyles`, `GreyboxColor`, `GreyboxOffset`, `GreyboxPrimitive`, `GreyboxStyle` … | Core.Common |
 | [Core.Vitals](modulos/Core.Vitals.md) | 6 | `CharacterVitals`, `Fatigue`, `FatigueConfig`, `ResourceKind`, `ResourcePool` … | Core.Common, Core.Stats, Core.Time |
+| [Runtime.Bootstrap](modulos/Runtime.Bootstrap.md) | 2 | `GameBootstrap`, `UnitySceneLoader` | Core.Composition |
 | [Runtime.Prototype](modulos/Runtime.Prototype.md) | 7 | `DebugHud`, `PlayerMotor`, `PrototypeBootstrap`, `PrototypeInput`, `PrototypePlayer` … | Core.Movement, Core.Prototype, Core.Stats, Core.Time, Core.Visuals, Core.Vitals, Runtime.Visuals |
 | [Runtime.Visuals](modulos/Runtime.Visuals.md) | 3 | `CatalogoVisual`, `GreyboxFactory`, `VisualSpawner` | Core.Prototype, Core.Visuals |
 
