@@ -23,6 +23,7 @@ Un módulo = un namespace C#. Abre solo la página del módulo que vayas a tocar
 | [Core.Common](modulos/Core.Common.md) | 1 | `Guard` | — |
 | [Core.Composition](modulos/Core.Composition.md) | 6 | `GameComposition`, `ISceneLoader`, `IServiceRegistry`, `IServiceResolver`, `SceneChanged` … | Core.Armory, Core.Classes, Core.Common, Core.Elevator, Core.Events, Core.Iteration, Core.Loot, Core.Profile |
 | [Core.Crafting](modulos/Core.Crafting.md) | 23 | `ConsumptionPlan`, `CraftResult`, `CraftTransaction`, `Crafter`, `DefaultRecipes` … | Core.Common, Core.Items, Core.Items.Catalog, Core.Professions, Core.Randomness |
+| [Core.Crafting.Content](modulos/Core.Crafting.Content.md) | 13 | `ContentItems`, `DefaultKnowledge`, `DefaultRecipeCatalog`, `DefaultSynergyRecipes`, `RecipeLadder` … | Core.Crafting.Definitions, Core.Crafting.Knowledge, Core.Crafting.Stations, Core.Items, Core.Items.Catalog, Core.Professions |
 | [Core.Crafting.Definitions](modulos/Core.Crafting.Definitions.md) | 13 | `AllOfCondition`, `AlwaysKnownCondition`, `CollectionCompleteCondition`, `IRecipeKnowledge`, `KnowledgeRequiredCondition` … | Core.Common, Core.Items, Core.Professions |
 | [Core.Crafting.Knowledge](modulos/Core.Crafting.Knowledge.md) | 6 | `KnowledgeDefinition`, `KnowledgeReader`, `KnowledgeType`, `KnownRecipes`, `ReadOutcome` … | Core.Common, Core.Crafting.Definitions, Core.Items, Core.Professions |
 | [Core.Crafting.Mods](modulos/Core.Crafting.Mods.md) | 18 | `DefaultGearTags`, `DefaultMods`, `GearModifierKind`, `GearModifier`, `GearStat` … | Core.Common, Core.Items, Core.Professions |
@@ -47,7 +48,7 @@ Un módulo = un namespace C#. Abre solo la página del módulo que vayas a tocar
 | [Core.Hubs](modulos/Core.Hubs.md) | 5 | `ArmoryPresenter`, `ElevatorPresenter`, `HubRoomLayout`, `KitAvailability`, `KitEntry` … | Core.Armory, Core.Classes, Core.Common, Core.Elevator, Core.Iteration, Core.Iteration.Presence, Core.Prototype, Core.Visuals |
 | [Core.Hud](modulos/Core.Hud.md) | 5 | `GameHudPresenter`, `HudBar`, `NoticeSeverity`, `HudNotice`, `HudNotices` … | Core.Common, Core.Events, Core.Iteration, Core.Prototype, Core.Time, Core.Vitals |
 | [Core.Items](modulos/Core.Items.md) | 14 | `Durability`, `IDurability`, `IInventory`, `Inventory`, `ItemCategory` … | Core.Common |
-| [Core.Items.Catalog](modulos/Core.Items.Catalog.md) | 11 | `ConsumableEffect`, `ConsumableUse`, `FuelIds`, `GearIds`, `ItemCatalog` … | Core.Common, Core.Items, Core.Vitals |
+| [Core.Items.Catalog](modulos/Core.Items.Catalog.md) | 13 | `ConsumableEffect`, `ConsumableUse`, `FuelIds`, `GearIds`, `ItemCatalog` … | Core.Common, Core.Items, Core.Vitals |
 | [Core.Iteration](modulos/Core.Iteration.md) | 9 | `IterationConfig`, `IterationConfigBuilder`, `IterationContext`, `IterationPhaseChanged`, `FloorReached` … | Core.Common, Core.Events, Core.Iteration.Ending, Core.Iteration.Presence, Core.Iteration.Readiness, Core.Iteration.States, Core.Iteration.Voting, Core.StateMachines, Core.Time |
 | [Core.Iteration.Ending](modulos/Core.Iteration.Ending.md) | 3 | `FateResolver`, `IterationEnded`, `IterationOutcome`, `PlayerFate` | Core.Iteration.Presence |
 | [Core.Iteration.Presence](modulos/Core.Iteration.Presence.md) | 4 | `PlayerLocation`, `PlayersTrapped`, `PlayerRescued`, `PresenceTracker`, `TrappedModifiers` | Core.Common |

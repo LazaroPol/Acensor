@@ -6,7 +6,7 @@ Ensamblado: `Specimen.Core` · Carpeta: `Assets/_Project/Scripts/Core/Items`
 Tests: `Assets/_Project/Tests/EditMode/Core/Items`
 
 **Depende de:** [Core.Common](Core.Common.md)
-**Lo usan:** [Core.Crafting](Core.Crafting.md), [Core.Crafting.Definitions](Core.Crafting.Definitions.md), [Core.Crafting.Knowledge](Core.Crafting.Knowledge.md), [Core.Crafting.Mods](Core.Crafting.Mods.md), [Core.Crafting.Queue](Core.Crafting.Queue.md), [Core.Crafting.Stations](Core.Crafting.Stations.md), [Core.Elevator](Core.Elevator.md), [Core.Equipment](Core.Equipment.md), [Core.Items.Catalog](Core.Items.Catalog.md), [Core.Loot](Core.Loot.md), [Core.Repair](Core.Repair.md), [Runtime.Sandbox](Runtime.Sandbox.md), [Runtime.Sandbox.Ui](Runtime.Sandbox.Ui.md), [Runtime.Sandbox.World](Runtime.Sandbox.World.md)
+**Lo usan:** [Core.Crafting](Core.Crafting.md), [Core.Crafting.Content](Core.Crafting.Content.md), [Core.Crafting.Definitions](Core.Crafting.Definitions.md), [Core.Crafting.Knowledge](Core.Crafting.Knowledge.md), [Core.Crafting.Mods](Core.Crafting.Mods.md), [Core.Crafting.Queue](Core.Crafting.Queue.md), [Core.Crafting.Stations](Core.Crafting.Stations.md), [Core.Elevator](Core.Elevator.md), [Core.Equipment](Core.Equipment.md), [Core.Items.Catalog](Core.Items.Catalog.md), [Core.Loot](Core.Loot.md), [Core.Repair](Core.Repair.md), [Runtime.Sandbox](Runtime.Sandbox.md), [Runtime.Sandbox.Ui](Runtime.Sandbox.Ui.md), [Runtime.Sandbox.World](Runtime.Sandbox.World.md)
 
 | Fichero | Tipo | Resumen |
 |---|---|---|
