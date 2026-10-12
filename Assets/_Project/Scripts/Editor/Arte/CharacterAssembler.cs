@@ -31,7 +31,8 @@ namespace Specimen.Editor.Arte
             var root = new GameObject(name);
             var model = Object.Instantiate(baseAsset, root.transform, false);
             model.name = "Modelo";
-            SkeletonMerger.Merge(model, _models.Load(AppearanceModels.OutfitModel(look)));
+            string outfit = AppearanceModels.OutfitModel(look);
+            if (outfit != null) SkeletonMerger.Merge(model, _models.Load(outfit));
             foreach (string hair in look.Hair) SkeletonMerger.Merge(model, _models.Load(hair));
             MaterialRemapper.Apply(root, _textures, baseName, Preferred(look));
             SetupAnimator(model, _models.AvatarOf(baseName), controller);
@@ -47,7 +48,8 @@ namespace Specimen.Editor.Arte
             if (animator.avatar == null) animator.avatar = avatar;
             animator.runtimeAnimatorController = controller;
             animator.applyRootMotion = false;
-            animator.cullingMode = AnimatorCullingMode.CullUpdateTransforms;
+            animator.cullingMode = AnimatorCullingMode.AlwaysAnimate;
+            foreach (var skinned in model.GetComponentsInChildren<SkinnedMeshRenderer>(true)) skinned.updateWhenOffscreen = true;
         }
 
         private static IReadOnlyDictionary<string, string> Preferred(CharacterAppearance look)

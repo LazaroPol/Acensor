@@ -35,7 +35,8 @@ namespace Specimen.Editor.Arte
         public static bool IsHumanoidSource(string path)
             => (Starts(path, Characters3P + "/") || Starts(path, Outfits3P + "/")
                 || Starts(path, Animations3P + "/") || Starts(path, Bestiary3P + "/"))
-               && !Starts(path, Hair3P + "/") && !Starts(path, Outfits3P + "/Partes/");
+               && !Starts(path, Hair3P + "/") && !Starts(path, Outfits3P + "/Partes/")
+               && !path.Replace('\\', '/').EndsWith("_Peasant.fbx", StringComparison.OrdinalIgnoreCase);
 
         public static bool IsAnimationLibrary(string path) => Starts(path, Animations3P + "/");
 
