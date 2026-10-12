@@ -27,8 +27,8 @@ TOTAL  ████████████████████████�
 
 ## Cola de prioridad (tablero)
 
-1. **F11-01** Integración de Netcode for GameObjects
-2. **F11-02** Sincronización del estado de iteración (servidor autoritativo)
-3. **F11-03** Lobby y conexión
-4. **F11-04** Replicación de jugadores, combate y loot
-5. **F12-01** Cinco pisos del Acto I + jefe
+1. **F11-02** Sincronización del estado de iteración (servidor autoritativo)
+2. **F11-03** Lobby y conexión
+3. **F11-04** Replicación de jugadores, combate y loot
+4. **F12-01** Cinco pisos del Acto I + jefe
+5. **F12-02** Tutorial con la mentora Ilse
