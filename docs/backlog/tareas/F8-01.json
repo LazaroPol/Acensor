@@ -2,7 +2,7 @@
   "id": "F8-01",
   "phase": "F8",
   "title": "Director de oleadas del asedio",
-  "status": "in_progress",
+  "status": "done",
   "type": "feature",
   "labels": [
     "asedio"
@@ -16,6 +16,6 @@
     "Al despejar la última oleada pasa a Survived y dispara Survived una vez; matar sin enemigos vivos o Tick negativo fallan.",
     "Núcleo sin UnityEngine, ficheros <= 120 líneas y tests NUnit en verde."
   ],
-  "pr": null,
-  "session": null
+  "pr": "#64",
+  "session": 49
 }
