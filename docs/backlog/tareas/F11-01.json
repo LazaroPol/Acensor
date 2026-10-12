@@ -2,14 +2,21 @@
   "id": "F11-01",
   "phase": "F11",
   "title": "Integración de Netcode for GameObjects",
-  "status": "review",
+  "status": "done",
   "type": "feature",
   "labels": [
     "red"
   ],
   "origin": "backlog",
-  "description": "",
-  "acceptance": [],
-  "pr": null,
-  "session": null
+  "description": "Integrar Netcode for GameObjects: paquete en el manifiesto, abstracción pura de sesión de red en el núcleo (roles, autoridad, punto de conexión, capacidad 1-6) y adaptador NGO en Runtime.",
+  "acceptance": [
+    "Packages/manifest.json incluye com.unity.netcode.gameobjects y el ensamblado Runtime referencia Unity.Netcode.Runtime y Unity.Networking.Transport.",
+    "Core.Networking (sin UnityEngine) define NetworkRole, SessionEndpoint validado (puerto 1-65535, dirección no vacía) y SessionSettings con 1-6 jugadores.",
+    "NetworkSession arranca como host, servidor o cliente sobre un INetworkTransport inyectado, rechaza arrancar dos veces, vuelve a Offline si el transporte falla o al apagar, y notifica cambios de rol.",
+    "La autoridad (servidor autoritativo) es cierta en Offline, Host y Server y falsa en Client.",
+    "NgoNetworkTransport adapta NetworkManager/UnityTransport a INetworkTransport.",
+    "Tests NUnit cubren endpoint, ajustes, autoridad y transiciones de la sesión."
+  ],
+  "pr": "#121",
+  "session": 119
 }

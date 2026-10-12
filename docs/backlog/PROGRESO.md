@@ -1,7 +1,7 @@
 # Progreso — SPECIMEN
 
 ```
-TOTAL  ███████████████████████████░░░  90.3%  (93/103 tareas)
+TOTAL  ███████████████████████████░░░  91.3%  (94/103 tareas)
 ```
 
 **Fase en curso:** OF · **Siguiente tarea:** F11-02
@@ -22,7 +22,7 @@ TOTAL  ████████████████████████�
 | [F10 · Presentación en Unity](fases/F10.md) | `███████████████` | 100% | 6/6 |
 | [AR · Arte e integración de assets](fases/AR.md) | `███████████████` | 100% | 8/8 |
 | [OF · Oficios: artesanía, conocimiento y mods](fases/OF.md) | `██████████████░` | 94% | 15/16 |
-| [F11 · Multijugador cooperativo](fases/F11.md) | `░░░░░░░░░░░░░░░` | 0% | 0/4 |
+| [F11 · Multijugador cooperativo](fases/F11.md) | `████░░░░░░░░░░░` | 25% | 1/4 |
 | [F12 · Vertical Slice — Acto I](fases/F12.md) | `░░░░░░░░░░░░░░░` | 0% | 0/5 |
 
 ## Cola de prioridad (tablero)
