@@ -36,6 +36,14 @@ namespace Specimen.Tests.Core.Floors
         }
 
         [Test]
+        public void ShaftPoint_IsTheEmergencyExitDoor()
+        {
+            var layout = Layout();
+            var door = layout.Build().First(p => p.Id == VisualId.Puerta);
+            Assert.That(layout.ShaftPoint, Is.EqualTo((door.X, door.Z)));
+        }
+
+        [Test]
         public void SpawnPoint_IsEntranceCenter()
         {
             var layout = Layout();
