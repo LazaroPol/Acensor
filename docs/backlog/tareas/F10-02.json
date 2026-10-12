@@ -2,7 +2,7 @@
   "id": "F10-02",
   "phase": "F10",
   "title": "Controlador del jugador y cámara",
-  "status": "in_progress",
+  "status": "done",
   "type": "feature",
   "labels": [
     "ui"
@@ -14,6 +14,6 @@
     "CameraZoom: distancia acotada [min,max] ajustable con la rueda.",
     "PlayerController y GameCamera (Runtime/Player) solo traducen el núcleo a Unity; las estadísticas se inyectan."
   ],
-  "pr": null,
-  "session": null
+  "pr": "72",
+  "session": 82
 }
