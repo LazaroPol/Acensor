@@ -29,6 +29,7 @@ namespace Specimen.Runtime.Sandbox
         {
             var camera = Camera.main;
             if (camera == null) return;
+            DrawRespawnLabels(camera);
             foreach (var enemy in _context.Enemies.Alive())
             {
                 var screen = camera.WorldToScreenPoint(enemy.transform.position + Vector3.up * (enemy.Height + 0.3f));
@@ -39,6 +40,18 @@ namespace Specimen.Runtime.Sandbox
                 fill.width *= enemy.HealthFraction;
                 GUI.DrawTexture(fill, Texture2D.whiteTexture, ScaleMode.StretchToFill, false, 0f, new Color(0.9f, 0.2f, 0.2f), 0f, 0f);
                 GUI.Label(new Rect(rect.x - 20f, rect.y - 20f, 160f, 20f), enemy.DisplayName);
+            }
+        }
+
+        private void DrawRespawnLabels(Camera camera)
+        {
+            foreach (var enemy in _context.Enemies.All)
+            {
+                if (enemy == null || !enemy.IsDead || enemy.RespawnRemaining <= 0f) continue;
+                var screen = camera.WorldToScreenPoint(enemy.transform.position + Vector3.up * 1.2f);
+                if (screen.z <= 0f) continue;
+                GUI.Label(new Rect(screen.x - 60f, Screen.height - screen.y, 160f, 20f),
+                    $"{enemy.DisplayName}: vuelve en {enemy.RespawnRemaining:0} s");
             }
         }
 

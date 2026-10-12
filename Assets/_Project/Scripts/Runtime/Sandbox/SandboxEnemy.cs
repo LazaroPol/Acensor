@@ -3,6 +3,7 @@ using Specimen.Core.Animation;
 using Specimen.Core.Bestiary;
 using Specimen.Core.Combat;
 using Specimen.Core.Combat.Enemies;
+using Specimen.Core.Sandbox;
 using Specimen.Runtime.Characters;
 using UnityEngine;
 
@@ -12,7 +13,7 @@ namespace Specimen.Runtime.Sandbox
     /// Criatura del bestiario en escena: la IA del núcleo decide (esperar/perseguir/atacar), aquí solo
     /// se mueve, se anima y aplica el golpe al jugador tras un breve amago.
     /// </summary>
-    public sealed class SandboxEnemy : MonoBehaviour
+    public sealed partial class SandboxEnemy : MonoBehaviour
     {
         private const float WindUp = 0.45f;
         private const float ReachTolerance = 1.4f;
@@ -43,6 +44,7 @@ namespace Specimen.Runtime.Sandbox
             _target = target;
             _onDeath = onDeath;
             _health = new EnemyHealth(enemy.Stats.MaxHealth);
+            _respawn = new RespawnTimer(SandboxRespawn.DelayFor(entry));
             _brain = new EnemyBrain(new EnemyBrainConfig().ScaledBy(entry.Scale));
             _animator = GetComponent<CharacterAnimator>();
             if (_animator == null) _animator = gameObject.AddComponent<CharacterAnimator>();
@@ -61,6 +63,7 @@ namespace Specimen.Runtime.Sandbox
         public void ResetToHome()
         {
             _health.Revive();
+            _respawn.Cancel();
             _windUp = -1f;
             transform.SetPositionAndRotation(_home, _homeRotation);
             _animator.SetDead(false);
@@ -70,13 +73,19 @@ namespace Specimen.Runtime.Sandbox
         {
             _animator.SetDead(true);
             _animator.SetSpeed(0f);
+            _respawn.Begin();
             _onDeath?.Invoke(this);
         }
 
         private void Update()
         {
-            if (_enemy == null || IsDead) return;
+            if (_enemy == null) return;
             float dt = Time.deltaTime;
+            if (IsDead)
+            {
+                TickRespawn(dt);
+                return;
+            }
             var flat = _target.transform.position - transform.position;
             flat.y = 0f;
             float distance = flat.magnitude;

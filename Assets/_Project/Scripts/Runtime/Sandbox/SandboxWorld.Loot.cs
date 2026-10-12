@@ -11,7 +11,7 @@ namespace Specimen.Runtime.Sandbox
     {
         private void OnEnemyDeath(SandboxEnemy enemy, Transform player)
         {
-            _context.Feed.Add($"{enemy.DisplayName} derrotado.");
+            _context.Feed.Add($"{enemy.DisplayName} derrotado. Reaparece en {enemy.RespawnRemaining:0} s.");
             var drops = SandboxLoot.DropsFor(enemy.Entry, _context.Random);
             for (int i = 0; i < drops.Count; i++) SpawnLoot(drops[i], enemy.transform.position + Offset(i), player);
         }

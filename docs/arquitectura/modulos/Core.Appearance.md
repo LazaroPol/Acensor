@@ -6,7 +6,7 @@ Ensamblado: `Specimen.Core` · Carpeta: `Assets/_Project/Scripts/Core/Appearance
 Tests: `Assets/_Project/Tests/EditMode/Core/Appearance`
 
 **Depende de:** [Core.Classes](Core.Classes.md), [Core.Combat.Attacks](Core.Combat.Attacks.md), [Core.Common](Core.Common.md)
-**Lo usan:** nadie
+**Lo usan:** [Core.Animation](Core.Animation.md)
 
 | Fichero | Tipo | Resumen |
 |---|---|---|

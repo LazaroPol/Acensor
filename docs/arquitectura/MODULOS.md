@@ -8,7 +8,7 @@ Un módulo = un namespace C#. Abre solo la página del módulo que vayas a tocar
 |---|---|---|---|
 | [Core.Abilities](modulos/Core.Abilities.md) | 7 | `AbilityCooldown`, `AbilityDefinition`, `AbilityResult`, `AbilitySlot`, `DefaultClassAbilities` … | Core.Classes, Core.Common, Core.Vitals |
 | [Core.Abilities.Mobility](modulos/Core.Abilities.Mobility.md) | 4 | `AirJumpCounter`, `MobilityConfig`, `MobilityProfile`, `ShortTeleport` | Core.Classes, Core.Common, Core.Movement |
-| [Core.Animation](modulos/Core.Animation.md) | 6 | `AnimParams`, `AnimSlot`, `AnimationSet`, `ClipLoopRule`, `DefaultAnimationSets` … | — |
+| [Core.Animation](modulos/Core.Animation.md) | 10 | `AnimParams`, `AnimSlot`, `AnimationSet`, `Candidates`, `ClipLoopRule` … | Core.Appearance, Core.Classes, Core.Combat.Attacks |
 | [Core.Appearance](modulos/Core.Appearance.md) | 9 | `AppearanceModels`, `BodyType`, `CharacterAppearance`, `ClassAppearances`, `ClassLoadout` … | Core.Classes, Core.Combat.Attacks, Core.Common |
 | [Core.Armory](modulos/Core.Armory.md) | 3 | `ArmoryStock`, `ClassKitArmory`, `IArmoryStock` | Core.Classes, Core.Common |
 | [Core.Art](modulos/Core.Art.md) | 6 | `ColorMood`, `MoodColor`, `MoodProfile`, `MoodProfiles`, `MoodSelector` … | Core.Common, Core.Composition, Core.Iteration.Presence, Core.Time |
@@ -56,7 +56,7 @@ Un módulo = un namespace C#. Abre solo la página del módulo que vayas a tocar
 | [Core.Prototype](modulos/Core.Prototype.md) | 7 | `DebugCommands`, `DebugHudPresenter`, `GreyboxRoomLayout`, `HudTime`, `ILevelLayout` … | Core.Common, Core.Physics, Core.Time, Core.Visuals, Core.Vitals |
 | [Core.Randomness](modulos/Core.Randomness.md) | 2 | `IRandom`, `Pcg32Random` | Core.Common |
 | [Core.Repair](modulos/Core.Repair.md) | 6 | `IRepairCatalog`, `RepairCatalog`, `RepairReport`, `RepairResult`, `RepairRule` … | Core.Common, Core.Items |
-| [Core.Sandbox](modulos/Core.Sandbox.md) | 6 | `SandboxLayout`, `SandboxLoot`, `SandboxSpot`, `SignatureEffect`, `SignatureEffects` … | Core.Bestiary, Core.Classes, Core.Combat.Bosses, Core.Common, Core.Items, Core.Loot, Core.Professions, Core.Prototype, Core.Randomness, Core.Visuals, Core.Visuals.Packs |
+| [Core.Sandbox](modulos/Core.Sandbox.md) | 8 | `RespawnTimer`, `SandboxLayout`, `SandboxLoot`, `SandboxRespawn`, `SandboxSpot` … | Core.Bestiary, Core.Classes, Core.Combat.Bosses, Core.Common, Core.Items, Core.Loot, Core.Professions, Core.Prototype, Core.Randomness, Core.Visuals, Core.Visuals.Packs |
 | [Core.Siege](modulos/Core.Siege.md) | 3 | `WaveConfig`, `WaveDirector`, `WaveState` | Core.Common |
 | [Core.Siege.Defenses](modulos/Core.Siege.Defenses.md) | 2 | `Fortification`, `Turret` | Core.Common |
 | [Core.Siege.Extraction](modulos/Core.Siege.Extraction.md) | 3 | `DnaConversion`, `ExtractionReport`, `OspreyExtraction` | Core.Common, Core.Siege.Scoring |
@@ -79,7 +79,7 @@ Un módulo = un namespace C#. Abre solo la página del módulo que vayas a tocar
 | [Runtime.Lab](modulos/Runtime.Lab.md) | 3 | `LabActions`, `LabBootstrap`, `LabScreen` | Core.Composition, Core.Dna, Core.Iteration, Core.Lab, Core.Profile, Runtime.Bootstrap |
 | [Runtime.Player](modulos/Runtime.Player.md) | 5 | `GameCamera`, `KitBadge`, `KitStats`, `PlayerController`, `PlayerInput` | Core.Armory, Core.Classes, Core.Composition, Core.Movement, Core.Profile, Core.Stats, Core.Vitals |
 | [Runtime.Prototype](modulos/Runtime.Prototype.md) | 7 | `DebugHud`, `PlayerMotor`, `PrototypeBootstrap`, `PrototypeInput`, `PrototypePlayer` … | Core.Movement, Core.Prototype, Core.Stats, Core.Time, Core.Visuals, Core.Vitals, Runtime.Visuals |
-| [Runtime.Sandbox](modulos/Runtime.Sandbox.md) | 21 | `BenchStation`, `CombatFeed`, `DamageColors`, `EnemyRegistry`, `HitResolver` … | Core.Abilities, Core.Animation, Core.Bestiary, Core.Classes, Core.Combat, Core.Combat.Attacks, Core.Combat.Enemies, Core.Items, Core.Loot, Core.Movement, Core.Professions, Core.Randomness, Core.Sandbox, Core.Stats, Core.Visuals, Core.Vitals, Runtime.Characters, Runtime.Player, Runtime.Visuals |
+| [Runtime.Sandbox](modulos/Runtime.Sandbox.md) | 22 | `BenchStation`, `CombatFeed`, `DamageColors`, `EnemyRegistry`, `HitResolver` … | Core.Abilities, Core.Animation, Core.Bestiary, Core.Classes, Core.Combat, Core.Combat.Attacks, Core.Combat.Enemies, Core.Items, Core.Loot, Core.Movement, Core.Professions, Core.Randomness, Core.Sandbox, Core.Stats, Core.Visuals, Core.Vitals, Runtime.Characters, Runtime.Player, Runtime.Visuals |
 | [Runtime.Visuals](modulos/Runtime.Visuals.md) | 5 | `CatalogoArte`, `CatalogoVisual`, `GreyboxFactory`, `VisualSpawner` | Core.Classes, Core.Professions, Core.Prototype, Core.Visuals |
 
 Grafo de dependencias entre módulos: [GRAFO.md](GRAFO.md).

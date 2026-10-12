@@ -25,6 +25,7 @@ namespace Specimen.Editor.Arte
                 var root = new GameObject($"Enemigo_{entry.Id}");
                 var model = Object.Instantiate(asset, root.transform, false);
                 model.name = "Modelo";
+                FacingFixer.FaceForward(model);
                 var preferred = new Dictionary<string, string> { [entry.MaterialKey] = entry.BaseColorTexture };
                 MaterialRemapper.Apply(root, textures, $"{entry.ModelName}_{entry.Variant}", preferred);
                 ModelFitting.NormalizeHeight(model, BaseHeight);
