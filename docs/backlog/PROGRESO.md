@@ -26,8 +26,8 @@ TOTAL  ████████████████████████�
 
 ## Cola de prioridad (tablero)
 
-1. **AR-01** Pipeline de importación de assets de terceros
-2. **AR-02** Personajes del kit de clases
-3. **AR-03** Kit de animaciones: locomoción, melé y hechizos
-4. **AR-04** Armas y equipo por clase
-5. **AR-05** Bestiario
+1. **AR-02** Personajes del kit de clases
+2. **AR-03** Kit de animaciones: locomoción, melé y hechizos
+3. **AR-04** Armas y equipo por clase
+4. **AR-05** Bestiario
+5. **AR-06** Entorno modular

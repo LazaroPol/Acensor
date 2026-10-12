@@ -2,7 +2,7 @@
   "id": "AR-01",
   "phase": "AR",
   "title": "Pipeline de importación de assets de terceros",
-  "status": "todo",
+  "status": "in_progress",
   "type": "infra",
   "labels": [
     "arte"
