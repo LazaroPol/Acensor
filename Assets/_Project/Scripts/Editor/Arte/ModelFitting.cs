@@ -24,13 +24,26 @@ namespace Specimen.Editor.Arte
             model.transform.localScale *= ratio;
         }
 
-        /// <summary>Escala no uniforme para que el modelo ocupe exactamente <paramref name="size"/> (m).</summary>
-        public static void FitToSize(GameObject model, Vector3 size)
+        /// <summary>
+        /// Envuelve el modelo en «Ajuste» (sin rotación) y escala ese envoltorio para que el conjunto ocupe
+        /// <paramref name="size"/> (m) en ejes del mundo. Escalar el propio modelo no sirve: los FBX de
+        /// Blender traen la raíz girada -90° en X y la escala se aplicaría en ejes cruzados.
+        /// </summary>
+        public static GameObject FitToSize(GameObject model, Vector3 size)
         {
-            var current = WorldBounds(model).size;
-            var s = model.transform.localScale;
-            model.transform.localScale = new Vector3(
-                Ratio(size.x, current.x) * s.x, Ratio(size.y, current.y) * s.y, Ratio(size.z, current.z) * s.z);
+            var wrapper = Wrap(model);
+            var current = WorldBounds(wrapper).size;
+            wrapper.transform.localScale = new Vector3(
+                Ratio(size.x, current.x), Ratio(size.y, current.y), Ratio(size.z, current.z));
+            return wrapper;
+        }
+
+        public static GameObject Wrap(GameObject model)
+        {
+            var wrapper = new GameObject("Ajuste");
+            wrapper.transform.SetParent(model.transform.parent, false);
+            model.transform.SetParent(wrapper.transform, true);
+            return wrapper;
         }
 
         /// <summary>Mueve el modelo para que el mínimo de sus bounds quede en <paramref name="corner"/> (local del padre).</summary>

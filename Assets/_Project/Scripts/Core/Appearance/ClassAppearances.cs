@@ -3,7 +3,8 @@ using Specimen.Core.Classes;
 
 namespace Specimen.Core.Appearance
 {
-    /// <summary>Aspecto de cada kit de clase (GDD §4): silueta y paleta distintas para leerlos de un vistazo.</summary>
+    /// <summary>Aspecto de cada kit de clase (GDD §4): atuendo, variante de color y peinado
+    /// distintos. Ningún kit va solo con el cuerpo base (es un traje ajustado pensado para llevar atuendo encima).</summary>
     public static class ClassAppearances
     {
         private static readonly Dictionary<ClassKitId, CharacterAppearance> Looks =
@@ -14,9 +15,8 @@ namespace Specimen.Core.Appearance
                 [ClassKitId.Oraculo] = new CharacterAppearance(BodyType.Femenino, OutfitId.Campesino, 1, "Hair_Buns"),
                 [ClassKitId.DruidaCeniza] = new CharacterAppearance(BodyType.Masculino, OutfitId.Campesino, 2,
                     "Hair_Buzzed", "Hair_Beard"),
-                [ClassKitId.Duelista] = new CharacterAppearance(BodyType.Masculino, OutfitId.Ajustado, 1,
-                    "Hair_SimpleParted"),
-                [ClassKitId.Arcanista] = new CharacterAppearance(BodyType.Femenino, OutfitId.Ajustado, 1, "Hair_Long")
+                [ClassKitId.Duelista] = new CharacterAppearance(BodyType.Masculino, OutfitId.Explorador, 3),
+                [ClassKitId.Arcanista] = new CharacterAppearance(BodyType.Femenino, OutfitId.Campesino, 2, "Hair_Long")
             };
 
         public static CharacterAppearance For(ClassKitId kit) => Looks[kit];

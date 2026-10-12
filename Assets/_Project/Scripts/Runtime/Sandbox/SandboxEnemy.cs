@@ -35,7 +35,8 @@ namespace Specimen.Runtime.Sandbox
         public float Radius => 0.45f * Entry.Scale;
         public float Height => 1.5f * Entry.Scale;
 
-        public void Init(BestiaryEntry entry, Enemy enemy, SandboxPlayer target, Action<SandboxEnemy> onDeath)
+        public void Init(BestiaryEntry entry, Enemy enemy, SandboxPlayer target, Action<SandboxEnemy> onDeath,
+            RuntimeAnimatorController controller)
         {
             Entry = entry;
             _enemy = enemy;
@@ -45,7 +46,7 @@ namespace Specimen.Runtime.Sandbox
             _brain = new EnemyBrain(new EnemyBrainConfig().ScaledBy(entry.Scale));
             _animator = GetComponent<CharacterAnimator>();
             if (_animator == null) _animator = gameObject.AddComponent<CharacterAnimator>();
-            _animator.Rebind();
+            _animator.Rebind(controller);
             _home = transform.position;
             _homeRotation = transform.rotation;
         }
