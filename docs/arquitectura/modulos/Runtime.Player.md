@@ -5,7 +5,7 @@
 Ensamblado: `Specimen.Runtime` · Carpeta: `Assets/_Project/Scripts/Runtime/Player`
 Tests: (sin carpeta propia)
 
-**Depende de:** [Core.Armory](Core.Armory.md), [Core.Classes](Core.Classes.md), [Core.Composition](Core.Composition.md), [Core.Movement](Core.Movement.md), [Core.Stats](Core.Stats.md), [Core.Vitals](Core.Vitals.md)
+**Depende de:** [Core.Armory](Core.Armory.md), [Core.Composition](Core.Composition.md), [Core.Movement](Core.Movement.md), [Core.Stats](Core.Stats.md), [Core.Vitals](Core.Vitals.md)
 **Lo usan:** [Runtime.Atico](Runtime.Atico.md), [Runtime.Hubs](Runtime.Hubs.md), [Runtime.Incursion](Runtime.Incursion.md), [Runtime.Sandbox](Runtime.Sandbox.md)
 
 | Fichero | Tipo | Resumen |
