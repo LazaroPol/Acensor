@@ -1,0 +1,20 @@
+{
+  "id": "AR-08",
+  "phase": "AR",
+  "title": "Campo de pruebas jugable",
+  "status": "todo",
+  "type": "feature",
+  "labels": [
+    "arte",
+    "greybox"
+  ],
+  "origin": "backlog",
+  "description": "Escena CampoPruebas para probar las mecánicas: cambio de clase, movimiento, esquiva, melé, hechizos, firma de clase, enemigos del bestiario, loot y bancos de profesión.",
+  "acceptance": [
+    "SandboxLayout coloca jugador, 6 enemigos y 7 bancos dentro de la sala.",
+    "SandboxLoot genera botín válido.",
+    "Menú SPECIMEN › Crear escena Campo de pruebas crea la escena y la añade a Build Settings."
+  ],
+  "pr": null,
+  "session": null
+}

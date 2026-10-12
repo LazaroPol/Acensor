@@ -1,0 +1,18 @@
+{
+  "id": "AR-06",
+  "phase": "AR",
+  "title": "Entorno modular",
+  "status": "todo",
+  "type": "feature",
+  "labels": [
+    "arte"
+  ],
+  "origin": "backlog",
+  "description": "Suelo, muro, puerta y loot con piezas del pueblo medieval ajustadas a la cuadrícula del greybox, y decorado para el Campo de pruebas.",
+  "acceptance": [
+    "EnvironmentKit asigna modelo a Suelo, Muro, Puerta y Loot.",
+    "El generador ajusta cada pieza al tamaño y pivote del estilo greybox y la asigna en CatalogoVisual."
+  ],
+  "pr": null,
+  "session": null
+}

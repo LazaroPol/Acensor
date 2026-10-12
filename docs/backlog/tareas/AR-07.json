@@ -1,0 +1,18 @@
+{
+  "id": "AR-07",
+  "phase": "AR",
+  "title": "Mobiliario de profesiones",
+  "status": "todo",
+  "type": "feature",
+  "labels": [
+    "arte"
+  ],
+  "origin": "backlog",
+  "description": "Banco de trabajo por profesión con herramientas del pack KayKit.",
+  "acceptance": [
+    "ProfessionFurniture da al menos dos herramientas a cada una de las 7 profesiones.",
+    "El generador crea un banco por profesión en Art/Generado/Mobiliario."
+  ],
+  "pr": null,
+  "session": null
+}

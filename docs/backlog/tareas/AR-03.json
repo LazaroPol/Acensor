@@ -1,0 +1,19 @@
+{
+  "id": "AR-03",
+  "phase": "AR",
+  "title": "Kit de animaciones: locomoción, melé y hechizos",
+  "status": "todo",
+  "type": "feature",
+  "labels": [
+    "arte"
+  ],
+  "origin": "backlog",
+  "description": "Conjuntos de animación (héroe y monstruo) por ranura lógica y AnimatorController generado con blend de locomoción, esquiva, ataque melé, hechizo, golpe, muerte e interacción.",
+  "acceptance": [
+    "AnimationSet da candidatos de clip para todas las ranuras en ambos conjuntos.",
+    "LocomotionBlend normaliza la velocidad a [0,1] con umbrales andar/trotar/esprintar.",
+    "El generador crea Heroe.controller y Monstruo.controller con los parámetros de AnimParams."
+  ],
+  "pr": null,
+  "session": null
+}

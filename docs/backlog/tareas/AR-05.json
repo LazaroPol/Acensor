@@ -1,0 +1,20 @@
+{
+  "id": "AR-05",
+  "phase": "AR",
+  "title": "Bestiario",
+  "status": "todo",
+  "type": "feature",
+  "labels": [
+    "arte",
+    "combate"
+  ],
+  "origin": "backlog",
+  "description": "Entradas de bestiario (arquetipo + modelo + variante + escala) con IA de persecución/ataque y salud de enemigo.",
+  "acceptance": [
+    "DefaultBestiary incluye al menos 6 entradas, una para el jefe del Acto I.",
+    "EnemyBrain pasa de esperar a perseguir, atacar con enfriamiento y soltar al alejarse.",
+    "EnemyHealth muere una sola vez y no baja de 0."
+  ],
+  "pr": null,
+  "session": null
+}

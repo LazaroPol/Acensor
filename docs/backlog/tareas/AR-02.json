@@ -1,0 +1,19 @@
+{
+  "id": "AR-02",
+  "phase": "AR",
+  "title": "Personajes del kit de clases",
+  "status": "todo",
+  "type": "feature",
+  "labels": [
+    "arte"
+  ],
+  "origin": "backlog",
+  "description": "Apariencia por kit de clase (cuerpo, atuendo, pelo, variante de textura) y prefabs de personaje combinando mallas sobre un único esqueleto.",
+  "acceptance": [
+    "ClassAppearances define una apariencia distinta para los 6 kits.",
+    "AppearanceModels resuelve modelo base, atuendo y textura de variante.",
+    "El generador crea un prefab por kit en Art/Generado/Personajes con Animator Humanoid."
+  ],
+  "pr": null,
+  "session": null
+}

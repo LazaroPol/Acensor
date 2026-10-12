@@ -1,10 +1,10 @@
 # Progreso — SPECIMEN
 
 ```
-TOTAL  ███████████████████████████░░░  88.6%  (70/79 tareas)
+TOTAL  ████████████████████████░░░░░░  80.5%  (70/87 tareas)
 ```
 
-**Fase en curso:** F11 · **Siguiente tarea:** F11-01
+**Fase en curso:** AR · **Siguiente tarea:** AR-01
 
 | Fase | Progreso | % | Tareas |
 |---|---|---|---|
@@ -20,13 +20,14 @@ TOTAL  ████████████████████████�
 | [F8 · Asedio y extracción](fases/F8.md) | `███████████████` | 100% | 4/4 |
 | [F9 · Meta-progresión: Laboratorio](fases/F9.md) | `███████████████` | 100% | 4/4 |
 | [F10 · Presentación en Unity](fases/F10.md) | `███████████████` | 100% | 6/6 |
+| [AR · Arte e integración de assets](fases/AR.md) | `░░░░░░░░░░░░░░░` | 0% | 0/8 |
 | [F11 · Multijugador cooperativo](fases/F11.md) | `░░░░░░░░░░░░░░░` | 0% | 0/4 |
 | [F12 · Vertical Slice — Acto I](fases/F12.md) | `░░░░░░░░░░░░░░░` | 0% | 0/5 |
 
 ## Cola de prioridad (tablero)
 
-1. **F11-01** Integración de Netcode for GameObjects
-2. **F11-02** Sincronización del estado de iteración (servidor autoritativo)
-3. **F11-03** Lobby y conexión
-4. **F11-04** Replicación de jugadores, combate y loot
-5. **F12-01** Cinco pisos del Acto I + jefe
+1. **AR-01** Pipeline de importación de assets de terceros
+2. **AR-02** Personajes del kit de clases
+3. **AR-03** Kit de animaciones: locomoción, melé y hechizos
+4. **AR-04** Armas y equipo por clase
+5. **AR-05** Bestiario

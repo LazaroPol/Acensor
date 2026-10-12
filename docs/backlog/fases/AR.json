@@ -1,0 +1,5 @@
+{
+  "id": "AR",
+  "name": "Arte e integración de assets",
+  "goal": "Sustituir el greybox por los packs de arte (personajes por clase, animaciones, armas, bestiario, entorno, mobiliario) y un Campo de pruebas jugable"
+}

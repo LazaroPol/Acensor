@@ -1,0 +1,21 @@
+{
+  "id": "AR-04",
+  "phase": "AR",
+  "title": "Armas y equipo por clase",
+  "status": "todo",
+  "type": "feature",
+  "labels": [
+    "arte",
+    "combate"
+  ],
+  "origin": "backlog",
+  "description": "Arma y estilo de ataque por kit (melé o hechizo) con su perfil de ataque, y arma enganchada a la mano derecha del prefab.",
+  "acceptance": [
+    "ClassLoadouts asigna arma y estilo a los 6 kits.",
+    "ClassAttackProfiles define daño, tipo, alcance, arco, enfriamiento y coste.",
+    "ClassAttack respeta enfriamiento y coste de recurso.",
+    "MeleeArc acierta solo dentro de alcance y arco."
+  ],
+  "pr": null,
+  "session": null
+}

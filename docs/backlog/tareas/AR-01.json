@@ -1,0 +1,20 @@
+{
+  "id": "AR-01",
+  "phase": "AR",
+  "title": "Pipeline de importación de assets de terceros",
+  "status": "todo",
+  "type": "infra",
+  "labels": [
+    "arte"
+  ],
+  "origin": "backlog",
+  "description": "Copia de los packs a Art/ThirdParty (fuera de git), reglas de importación (Humanoid, bucles de animación), materiales URP desde las texturas del pack y menú SPECIMEN › Arte.",
+  "acceptance": [
+    "Art/ThirdParty, Art/Generado, Kevin Iglesias y ThirdPartyPackages están en .gitignore.",
+    "CREDITOS.md lista cada pack con su licencia.",
+    "Los modelos de personajes, atuendos, animaciones y bestiario se importan como Humanoid; los clips *_Loop en bucle.",
+    "Menú SPECIMEN › Arte › Importar paquetes Kevin Iglesias importa los .unitypackage sin diálogo."
+  ],
+  "pr": null,
+  "session": null
+}
