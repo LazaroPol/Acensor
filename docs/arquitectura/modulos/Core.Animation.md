@@ -6,7 +6,7 @@ Ensamblado: `Specimen.Core` · Carpeta: `Assets/_Project/Scripts/Core/Animation`
 Tests: `Assets/_Project/Tests/EditMode/Core/Animation`
 
 **Depende de:** nada
-**Lo usan:** [Runtime.Characters](Runtime.Characters.md)
+**Lo usan:** [Runtime.Characters](Runtime.Characters.md), [Runtime.Sandbox](Runtime.Sandbox.md)
 
 | Fichero | Tipo | Resumen |
 |---|---|---|

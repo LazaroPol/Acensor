@@ -1,0 +1,16 @@
+{
+  "id": "AR-09",
+  "phase": "AR",
+  "title": "Arte en la Incursión (jugador y enemigos del bestiario)",
+  "status": "idea",
+  "type": "arte",
+  "labels": [
+    "arte",
+    "combate"
+  ],
+  "origin": "backlog",
+  "description": "Usar CatalogoArte en la escena Incursión: modelo del kit elegido con CharacterAnimator, enemigos del bestiario en vez de esferas/cubos, y PlayerAttack con ClassAttackProfiles.",
+  "acceptance": [],
+  "pr": null,
+  "session": null
+}

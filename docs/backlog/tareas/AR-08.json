@@ -2,7 +2,7 @@
   "id": "AR-08",
   "phase": "AR",
   "title": "Campo de pruebas jugable",
-  "status": "review",
+  "status": "done",
   "type": "feature",
   "labels": [
     "arte",
@@ -15,6 +15,6 @@
     "SandboxLoot genera botín válido.",
     "Menú SPECIMEN › Crear escena Campo de pruebas crea la escena y la añade a Build Settings."
   ],
-  "pr": null,
-  "session": null
+  "pr": "#92",
+  "session": 102
 }

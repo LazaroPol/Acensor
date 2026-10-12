@@ -6,7 +6,7 @@ Ensamblado: `Specimen.Runtime` · Carpeta: `Assets/_Project/Scripts/Runtime/Char
 Tests: (sin carpeta propia)
 
 **Depende de:** [Core.Animation](Core.Animation.md)
-**Lo usan:** nadie
+**Lo usan:** [Runtime.Sandbox](Runtime.Sandbox.md)
 
 | Fichero | Tipo | Resumen |
 |---|---|---|
