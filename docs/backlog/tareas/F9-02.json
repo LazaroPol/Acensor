@@ -2,14 +2,20 @@
   "id": "F9-02",
   "phase": "F9",
   "title": "Aplicación de mutaciones al nuevo clon",
-  "status": "todo",
+  "status": "done",
   "type": "feature",
   "labels": [
     "meta"
   ],
   "origin": "backlog",
-  "description": "",
-  "acceptance": [],
-  "pr": null,
-  "session": null
+  "description": "Las mutaciones desbloqueadas del árbol de ADN se aplican como modificadores a la hoja de atributos del nuevo clon (GDD §12).",
+  "acceptance": [
+    "Cada nodo desbloqueado añade su modificador porcentual al atributo que afecta",
+    "Ramas combinables sin restricción de clase",
+    "Aplicar dos veces no acumula (idempotente)",
+    "Atributos no definidos en la hoja se omiten",
+    "Tests NUnit"
+  ],
+  "pr": "#69",
+  "session": 92
 }
