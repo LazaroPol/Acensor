@@ -52,5 +52,17 @@ namespace Specimen.Core.Crafting.Stations
         public bool HasAll(IEnumerable<string> partIds) => partIds.All(HasWorking);
 
         public int QualityBonus => _parts.Where(p => !p.IsBroken).Sum(p => p.Definition.QualityBonus);
+
+        /// <summary>Reducción de tiempo de las piezas sanas (suma; la cola la limita).</summary>
+        public float TimeBonus => _parts.Where(p => !p.IsBroken).Sum(p => p.Definition.TimeBonus);
+
+        /// <summary>Ahorro de combustible de las piezas sanas (p. ej. fuelle 0,25).</summary>
+        public float FuelSaving => _parts.Where(p => !p.IsBroken).Sum(p => p.Definition.FuelSaving);
+
+        /// <summary>Gasta 1 punto de las piezas indicadas (las que exige la receta fabricada).</summary>
+        public void Wear(IEnumerable<string> partIds)
+        {
+            foreach (var id in partIds) Find(id)?.Wear();
+        }
     }
 }
