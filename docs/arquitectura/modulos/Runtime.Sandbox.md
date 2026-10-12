@@ -5,13 +5,13 @@
 Ensamblado: `Specimen.Runtime` · Carpeta: `Assets/_Project/Scripts/Runtime/Sandbox`
 Tests: (sin carpeta propia)
 
-**Depende de:** [Core.Abilities](Core.Abilities.md), [Core.Animation](Core.Animation.md), [Core.Bestiary](Core.Bestiary.md), [Core.Classes](Core.Classes.md), [Core.Combat](Core.Combat.md), [Core.Combat.Attacks](Core.Combat.Attacks.md), [Core.Combat.Enemies](Core.Combat.Enemies.md), [Core.Combat.Targeting](Core.Combat.Targeting.md), [Core.Crafting](Core.Crafting.md), [Core.Equipment](Core.Equipment.md), [Core.Items](Core.Items.md), [Core.Items.Catalog](Core.Items.Catalog.md), [Core.Loot](Core.Loot.md), [Core.Professions](Core.Professions.md), [Core.Progression](Core.Progression.md), [Core.Randomness](Core.Randomness.md), [Core.Sandbox](Core.Sandbox.md), [Core.Stats](Core.Stats.md), [Core.Talents](Core.Talents.md), [Core.Visuals](Core.Visuals.md), [Core.Vitals](Core.Vitals.md), [Core.World](Core.World.md), [Runtime.Characters](Runtime.Characters.md), [Runtime.Player](Runtime.Player.md), [Runtime.Sandbox.Ui](Runtime.Sandbox.Ui.md), [Runtime.Sandbox.World](Runtime.Sandbox.World.md), [Runtime.UI](Runtime.UI.md), [Runtime.Visuals](Runtime.Visuals.md)
+**Depende de:** [Core.Abilities](Core.Abilities.md), [Core.Animation](Core.Animation.md), [Core.Bestiary](Core.Bestiary.md), [Core.Classes](Core.Classes.md), [Core.Combat](Core.Combat.md), [Core.Combat.Attacks](Core.Combat.Attacks.md), [Core.Combat.Enemies](Core.Combat.Enemies.md), [Core.Combat.Targeting](Core.Combat.Targeting.md), [Core.Crafting](Core.Crafting.md), [Core.Crafting.Authoring](Core.Crafting.Authoring.md), [Core.Crafting.Content](Core.Crafting.Content.md), [Core.Crafting.Definitions](Core.Crafting.Definitions.md), [Core.Crafting.Session](Core.Crafting.Session.md), [Core.Equipment](Core.Equipment.md), [Core.Items](Core.Items.md), [Core.Items.Catalog](Core.Items.Catalog.md), [Core.Loot](Core.Loot.md), [Core.Professions](Core.Professions.md), [Core.Progression](Core.Progression.md), [Core.Randomness](Core.Randomness.md), [Core.Sandbox](Core.Sandbox.md), [Core.Stats](Core.Stats.md), [Core.Talents](Core.Talents.md), [Core.Visuals](Core.Visuals.md), [Core.Vitals](Core.Vitals.md), [Core.World](Core.World.md), [Runtime.Characters](Runtime.Characters.md), [Runtime.Player](Runtime.Player.md), [Runtime.Sandbox.Ui](Runtime.Sandbox.Ui.md), [Runtime.Sandbox.World](Runtime.Sandbox.World.md), [Runtime.UI](Runtime.UI.md), [Runtime.Visuals](Runtime.Visuals.md)
 **Lo usan:** [Runtime.Bootstrap](Runtime.Bootstrap.md)
 
 | Fichero | Tipo | Resumen |
 |---|---|---|
 | `AutoAttack.cs` | class `AutoAttack` | «Atacar» (F o clic derecho sobre un enemigo): ataque automático con el arma equipada, como en WoW. |
-| `BenchStation.cs` | class `BenchStation` | Banco de profesión: con E cerca abre la ventana de recetas de su profesión (estilo WoW). |
+| `BenchStation.cs` | class `BenchStation` | Estación de oficio del poblado (GDD §17.7): envuelve una (estación, cola, combustible y piezas) que avanza en tiempo real; con E cerca abre  |
 | `CombatEvents.cs` | class `CombatEvents` | Sucesos de combate y progresión que pinta la interfaz (texto flotante, errores, marco de objetivo). |
 | `CombatFeed.cs` | class `CombatFeed` | Registro de los últimos sucesos del combate para el HUD (daño, botín, kit, avisos). |
 | `DamageColors.cs` | class `DamageColors` | Color de cada tipo de daño (proyectiles, textos). |
@@ -25,7 +25,7 @@ Tests: (sin carpeta propia)
 | `Nameplates.cs` | class `Nameplates` | Placas sobre las criaturas (nivel y nombre con color de dificultad, vida; «» marca el objetivo) y reaparición. |
 | `PlayerTarget.cs` | class `PlayerTarget` | Objetivo del jugador al estilo WoW: Tab recorre los enemigos cercanos, clic izquierdo sobre uno lo selecciona y clic derecho lo selecciona y |
 | `Projectile.cs` | class `Projectile` | Proyectil: avanza en línea recta (o persigue a su objetivo, si lo tiene) y golpea al enemigo que toca. |
-| `SandboxBootstrap.Cheats.cs` | class `SandboxBootstrap` | Atajos de prueba para la progresión: F3 da experiencia y F4 un lote de materiales básicos. |
+| `SandboxBootstrap.Cheats.cs` | class `SandboxBootstrap` | Atajos de prueba para la progresión: F3 da experiencia y F4 un lote de materiales básicos y de oficio (cobre, leña y un crisol para probar l |
 | `SandboxBootstrap.cs` | class `SandboxBootstrap` | Arranque de la escena «CampoPruebas»: monta la Armería, el poblado, jugador, bestiario e interfaz con el arte generado (o greybox si falta)  |
 | `SandboxContext.cs` | class `SandboxContext` | Servicios compartidos del Campo de pruebas (se crean una vez en el bootstrap y se inyectan). |
 | `SandboxEnemy.Respawn.cs` | class `SandboxEnemy` | Reaparición del bestiario: tras morir, la criatura vuelve a su sitio con la vida llena. |

@@ -5,7 +5,7 @@
 Ensamblado: `Specimen.Runtime` · Carpeta: `Assets/_Project/Scripts/Runtime/Sandbox/Ui`
 Tests: (sin carpeta propia)
 
-**Depende de:** [Core.Classes](Core.Classes.md), [Core.Combat](Core.Combat.md), [Core.Crafting](Core.Crafting.md), [Core.Equipment](Core.Equipment.md), [Core.Gathering](Core.Gathering.md), [Core.Items](Core.Items.md), [Core.Items.Catalog](Core.Items.Catalog.md), [Core.Professions](Core.Professions.md), [Core.Progression](Core.Progression.md), [Core.Stats](Core.Stats.md), [Core.Talents](Core.Talents.md), [Core.Vitals](Core.Vitals.md), [Core.World](Core.World.md), [Runtime.UI](Runtime.UI.md)
+**Depende de:** [Core.Classes](Core.Classes.md), [Core.Combat](Core.Combat.md), [Core.Crafting](Core.Crafting.md), [Core.Crafting.Queue](Core.Crafting.Queue.md), [Core.Crafting.Session](Core.Crafting.Session.md), [Core.Crafting.Stations](Core.Crafting.Stations.md), [Core.Equipment](Core.Equipment.md), [Core.Gathering](Core.Gathering.md), [Core.Items](Core.Items.md), [Core.Items.Catalog](Core.Items.Catalog.md), [Core.Professions](Core.Professions.md), [Core.Progression](Core.Progression.md), [Core.Stats](Core.Stats.md), [Core.Talents](Core.Talents.md), [Core.Vitals](Core.Vitals.md), [Core.World](Core.World.md), [Runtime.UI](Runtime.UI.md)
 **Lo usan:** [Runtime.Sandbox](Runtime.Sandbox.md)
 
 | Fichero | Tipo | Resumen |
@@ -30,5 +30,9 @@ Tests: (sin carpeta propia)
 | `SandboxUi.cs` | class `SandboxUi` | Interfaz del Campo de pruebas estilo MMO: HUD (marco, barra de acción, PX, minimapa, registro) y ventanas (bolsa, personaje, hechizos, talen |
 | `SpellView.cs` | class `SpellView` | Presentación de hechizos: icono (iniciales sobre el color de su tipo de daño) y tooltip. |
 | `SpellbookWindow.cs` | class `SpellbookWindow` | Libro de hechizos (P): los cinco hechizos del kit, con nivel de aprendizaje, tecla y descripción. |
+| `StationWindow.Queue.cs` | class `StationWindow` | Columna central: estado de la cola y una barra de progreso por trabajo (cancelable si no ha empezado). |
+| `StationWindow.Recipes.cs` | class `StationWindow` | Columna izquierda: recetas de la estación (verde = se puede, gris = motivo) y botón Fabricar. |
+| `StationWindow.Slots.cs` | class `StationWindow` | Columna derecha: ranuras de entrada, salida y combustible, y piezas (colocar / quitar). |
+| `StationWindow.cs` | class `StationWindow` | Ventana de estación (GDD §17.7, E en un banco del poblado): recetas disponibles y en gris con motivo, cola con barras de progreso, ranuras d |
 | `TalentCell.cs` | class `TalentCell` | Un talento del árbol: icono, rango «x/y» y tooltip con el efecto actual y el del siguiente rango. |
 | `TalentWindow.cs` | class `TalentWindow` | Talentos (N), al estilo de los árboles clásicos de WoW: tres ramas por kit, cinco filas; cada fila pide 5 puntos gastados en su rama. |
