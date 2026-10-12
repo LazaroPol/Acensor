@@ -7,6 +7,7 @@ namespace Specimen.Core.Composition
         Ascensor,
         Armeria,
         Laboratorio,
-        Incursion
+        Incursion,
+        Atico
     }
 }

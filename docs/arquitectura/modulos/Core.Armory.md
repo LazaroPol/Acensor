@@ -6,7 +6,7 @@ Ensamblado: `Specimen.Core` · Carpeta: `Assets/_Project/Scripts/Core/Armory`
 Tests: `Assets/_Project/Tests/EditMode/Core/Armory`
 
 **Depende de:** [Core.Classes](Core.Classes.md), [Core.Common](Core.Common.md)
-**Lo usan:** [Core.Composition](Core.Composition.md), [Core.Hubs](Core.Hubs.md), [Runtime.Hubs](Runtime.Hubs.md), [Runtime.Incursion](Runtime.Incursion.md)
+**Lo usan:** [Core.Composition](Core.Composition.md), [Core.Hubs](Core.Hubs.md), [Runtime.Atico](Runtime.Atico.md), [Runtime.Hubs](Runtime.Hubs.md), [Runtime.Incursion](Runtime.Incursion.md)
 
 | Fichero | Tipo | Resumen |
 |---|---|---|
