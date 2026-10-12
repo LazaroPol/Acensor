@@ -6,6 +6,7 @@
   python3 -m tools.progress --done F1-01 --pr '#12' --session 3
   python3 -m tools.progress --next             imprime la siguiente tarea (cola de prioridad del tablero)
   python3 -m tools.progress --pause F1-01 --branch feature/F1-01-x   la deja «En pausa» con su rama
+  python3 -m tools.progress --status F1-01 review   cualquier estado del tablero (in_progress, review…)
   python3 -m tools.progress --urgent F1-01 [--dir D]  imprime la urgente que la interrumpe (sale 1 si no hay)
 """
 import pathlib
@@ -40,6 +41,7 @@ def main(argv=None) -> int:
     ap.add_argument("--pause")
     ap.add_argument("--branch")
     ap.add_argument("--urgent")
+    ap.add_argument("--status", nargs=2, metavar=("TAREA", "ESTADO"))
     ap.add_argument("--dir", type=pathlib.Path)
     args = ap.parse_args(argv)
 
@@ -61,6 +63,10 @@ def main(argv=None) -> int:
     if args.next:
         print(model.summarize(backlog)["next_task"] or "")
         return 0
+    if args.status:
+        task = model.set_status(backlog, *args.status)
+        model.validate(backlog)
+        model.save_task(task)
     if args.start or args.done:
         tid = args.start or args.done
         status = "in_progress" if args.start else "done"

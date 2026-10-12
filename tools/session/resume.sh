@@ -1,5 +1,6 @@
 #!/usr/bin/env bash
-# Retoma una tarea «En pausa» desde su rama guardada: trae main encima y la marca en curso.
+# Retoma una tarea «En pausa» desde su rama guardada: la pasa a «En curso» en el tablero (main)
+# y trae main encima de la rama.
 # Uso: tools/session/resume.sh <TAREA>
 source "$(dirname "$0")/../git/common.sh"
 TASK="${1:?Falta la tarea a retomar}"
@@ -9,10 +10,11 @@ BRANCH="$(python3 -c 'import json, sys; print(json.load(open(sys.argv[1])).get("
   "docs/backlog/tareas/$TASK.json")"
 [ -n "$BRANCH" ] || die "$TASK no tiene rama guardada: empiézala de cero (checkout -b + --start)"
 
+git checkout -q main
+"$ROOT/tools/session/board_status.sh" "$TASK" in_progress
 DEPTH="${RESUME_FETCH_DEPTH-200}"  # clones superficiales: historia suficiente para el merge
 git fetch -q ${DEPTH:+--depth=$DEPTH} origin "+refs/heads/main:refs/remotes/origin/main" \
   "+refs/heads/$BRANCH:refs/remotes/origin/$BRANCH"
 git checkout -q -B "$BRANCH" "origin/$BRANCH"
 git merge -q --no-edit -m "merge: main en $BRANCH al retomar $TASK" origin/main
-python3 -m tools.progress --start "$TASK" >/dev/null
 echo "▶️  $TASK retomada en $BRANCH"
