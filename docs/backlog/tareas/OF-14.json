@@ -2,7 +2,7 @@
   "id": "OF-14",
   "phase": "OF",
   "title": "Authoring en Unity: ScriptableObjects, base de datos y validación",
-  "status": "todo",
+  "status": "review",
   "type": "feature",
   "labels": [
     "oficios",
