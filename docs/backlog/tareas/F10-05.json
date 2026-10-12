@@ -2,15 +2,20 @@
   "id": "F10-05",
   "phase": "F10",
   "title": "Dualidad cromática: Volumes URP y shader toon con contornos",
-  "status": "todo",
+  "status": "in_progress",
   "type": "feature",
   "labels": [
     "ui",
     "arte"
   ],
   "origin": "backlog",
-  "description": "",
-  "acceptance": [],
+  "description": "Dualidad cromática (GDD 13): perfiles de ambiente con blend por zona aplicados a Volumes URP y shader toon con contorno entintado.",
+  "acceptance": [
+    "Perfiles de ambiente Refugio/Piso/Atrapado/Laboratorio con saturación, temperatura, exposición, niebla y contorno.",
+    "MoodSelector elige el ambiente según ubicación del jugador o escena; MoodTransition funde entre ambientes.",
+    "MoodVolumeDriver aplica el ambiente a un Volume URP, a la niebla y al grosor global de contorno.",
+    "Shader Specimen/Toon: escalones de luz y contorno por casco invertido."
+  ],
   "pr": null,
   "session": null
 }

@@ -4,7 +4,7 @@
 TOTAL  ████████████████████████░░░░░░  81.0%  (64/79 tareas)
 ```
 
-**Fase en curso:** F9 · **Siguiente tarea:** F9-02
+**Fase en curso:** F9 · **Siguiente tarea:** F10-05
 
 | Fase | Progreso | % | Tareas |
 |---|---|---|---|
@@ -29,4 +29,4 @@ TOTAL  ████████████████████████�
 2. **F9-03** Fragmentos de memoria y desbloqueo de lore
 3. **F9-04** Guardado y carga del perfil
 4. **F10-04** UI del Laboratorio Genético
-5. **F10-05** Dualidad cromática: Volumes URP y shader toon con contornos
+5. **F10-06** Escena del Ascensor y Armería jugables
