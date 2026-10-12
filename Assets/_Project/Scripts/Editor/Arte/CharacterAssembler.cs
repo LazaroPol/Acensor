@@ -34,7 +34,6 @@ namespace Specimen.Editor.Arte
             string outfit = AppearanceModels.OutfitModel(look);
             if (outfit != null) SkeletonMerger.Merge(model, _models.Load(outfit));
             foreach (string hair in look.Hair) SkeletonMerger.Merge(model, _models.Load(hair));
-            if (FacingFixer.FaceForward(model)) Debug.Log($"[SPECIMEN] {name}: modelo girado 180° para mirar a +Z.");
             MaterialRemapper.Apply(root, _textures, baseName, Preferred(look));
             SetupAnimator(model, _models.AvatarOf(baseName), controller);
             ModelFitting.NormalizeHeight(model, Height);

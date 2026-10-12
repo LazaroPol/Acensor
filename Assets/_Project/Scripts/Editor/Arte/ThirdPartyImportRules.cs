@@ -11,7 +11,7 @@ namespace Specimen.Editor.Arte
     public sealed class ThirdPartyImportRules : AssetPostprocessor
     {
         // Sube este número si cambias las reglas: Unity reimporta los modelos afectados.
-        public override uint GetVersion() => 4;
+        public override uint GetVersion() => 5;
 
         private void OnPreprocessModel()
         {
@@ -42,9 +42,11 @@ namespace Specimen.Editor.Arte
                 clip.lockRootRotation = true;
                 clip.lockRootHeightY = true;
                 clip.lockRootPositionXZ = true;
-                clip.keepOriginalOrientation = true;
+                // Orientación «Body Orientation» (no «Original»): la raíz de los FBX de Blender viene girada
+                // 180° y con «Original» el cuerpo se horneaba mirando hacia atrás (andaban de espaldas).
+                clip.keepOriginalOrientation = false;
                 clip.keepOriginalPositionY = true;
-                clip.keepOriginalPositionXZ = true;
+                clip.keepOriginalPositionXZ = false;
             }
             importer.clipAnimations = clips;
         }
