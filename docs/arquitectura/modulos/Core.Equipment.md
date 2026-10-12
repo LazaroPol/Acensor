@@ -6,7 +6,7 @@ Ensamblado: `Specimen.Core` · Carpeta: `Assets/_Project/Scripts/Core/Equipment`
 Tests: `Assets/_Project/Tests/EditMode/Core/Equipment`
 
 **Depende de:** [Core.Classes](Core.Classes.md), [Core.Common](Core.Common.md), [Core.Items](Core.Items.md), [Core.Items.Catalog](Core.Items.Catalog.md), [Core.Randomness](Core.Randomness.md), [Core.Stats](Core.Stats.md)
-**Lo usan:** [Core.Progression](Core.Progression.md), [Runtime.Sandbox](Runtime.Sandbox.md), [Runtime.Sandbox.Ui](Runtime.Sandbox.Ui.md)
+**Lo usan:** [Core.Crafting.Play](Core.Crafting.Play.md), [Core.Progression](Core.Progression.md), [Runtime.Sandbox](Runtime.Sandbox.md), [Runtime.Sandbox.Ui](Runtime.Sandbox.Ui.md)
 
 | Fichero | Tipo | Resumen |
 |---|---|---|

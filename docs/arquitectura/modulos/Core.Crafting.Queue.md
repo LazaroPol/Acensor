@@ -11,6 +11,7 @@ Tests: `Assets/_Project/Tests/EditMode/Core/Crafting/Queue`
 | Fichero | Tipo | Resumen |
 |---|---|---|
 | `CraftJob.cs` | class `CraftJob` | Trabajo encolado: receta, materiales ya retirados, de dónde salieron, quién lo encoló y los datos de calidad congelados al encolar (GDD §17. |
+| `CraftQueue.Restore.cs` | class `CraftQueue` | Vuelve a poner en cola un trabajo guardado con los segundos que le quedaban (GDD §17.7). |
 | `CraftQueue.Tick.cs` | class `CraftQueue` | Avance de la cola: combustible, temporizador y entrega (GDD §17.3). |
 | `CraftQueue.cs` | class `CraftQueue` | Cola de fabricación de una (GDD §17.3): al encolar reserva y retira los materiales (entrada de la estación y, si faltan, bolsa del jugador); |
 | `CraftQueueState.cs` | enum `CraftQueueState` | Estado de la cola tras el último avance: pausada no es cancelada (no se pierde nada). |

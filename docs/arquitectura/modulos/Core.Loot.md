@@ -6,7 +6,7 @@ Ensamblado: `Specimen.Core` · Carpeta: `Assets/_Project/Scripts/Core/Loot`
 Tests: `Assets/_Project/Tests/EditMode/Core/Loot`
 
 **Depende de:** [Core.Common](Core.Common.md), [Core.Items](Core.Items.md), [Core.Randomness](Core.Randomness.md)
-**Lo usan:** [Core.Combat.Enemies](Core.Combat.Enemies.md), [Core.Composition](Core.Composition.md), [Core.Floors](Core.Floors.md), [Core.Floors.Population](Core.Floors.Population.md), [Core.Floors.Remnants](Core.Floors.Remnants.md), [Core.Gathering](Core.Gathering.md), [Core.Sandbox](Core.Sandbox.md), [Runtime.Extraction](Runtime.Extraction.md), [Runtime.Incursion](Runtime.Incursion.md), [Runtime.Sandbox](Runtime.Sandbox.md)
+**Lo usan:** [Core.Combat.Enemies](Core.Combat.Enemies.md), [Core.Composition](Core.Composition.md), [Core.Crafting.Play](Core.Crafting.Play.md), [Core.Floors](Core.Floors.md), [Core.Floors.Population](Core.Floors.Population.md), [Core.Floors.Remnants](Core.Floors.Remnants.md), [Core.Gathering](Core.Gathering.md), [Core.Sandbox](Core.Sandbox.md), [Runtime.Extraction](Runtime.Extraction.md), [Runtime.Incursion](Runtime.Incursion.md), [Runtime.Sandbox](Runtime.Sandbox.md)
 
 | Fichero | Tipo | Resumen |
 |---|---|---|

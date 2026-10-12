@@ -45,13 +45,19 @@ inv=bolsa:3:ab12               # inventario:ranura:instancia | inv=bolsa:4:mader
 - El progreso de oficios es **del personaje** (persiste entre iteraciones como el perfil); el
   contenido de las estaciones del Ascensor-Refugio se guarda con el refugio.
 
+- **Campo de pruebas (OF-16):** `Core.Crafting.Play` hace la foto (`CraftingSnapshot`) y la carga
+  (`CraftingRestorer`). Las ranuras de cada estación se guardan como inventarios `inv=Fragua.in|out|fuel:…`;
+  los trabajos restaurados no se pueden cancelar (sus materiales ya se pagaron). Almacén:
+  `PlayerPrefsCraftingSaveStore` (`specimen.oficios.v1` y `.bak`).
+
 ## Integración en el Campo de pruebas (OF-15, OF-16)
 - Cada `BenchStation` del poblado pasa a ser una estación completa: ventana con ranuras de entrada,
   salida, combustible y piezas, lista de recetas (disponibles / en gris con motivo), cola con barra
   de progreso y botón de mejorar estación.
 - Clic derecho sobre un pergamino/plano/tratado en la bolsa → lo lee (mensaje en el HUD).
-- Ventana de objeto: huecos de mod arrastrables, stats base → efectivos en verde/rojo.
+- Ventana de objeto (clic izquierdo en la bolsa): huecos de mod, poner/quitar con un clic, stats base → efectivos en verde/rojo.
 - XP de oficio en el HUD con el color de profesión que ya existe (`XpSource`).
 - Botín del poblado y de pisos: conocimientos, piezas y mods en las tablas por anillo (`Core.Loot`).
 - Guardado automático al salir y al cerrar una ventana de estación; carga al entrar al Campo.
 - `docs/arte/` gana la lista de iconos necesarios (un `IconKey` por ítem) para los packs del usuario.
+- Guía de prueba manual de la fase: [`docs/oficios/PRUEBA.md`](../../oficios/PRUEBA.md).

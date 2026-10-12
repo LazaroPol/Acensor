@@ -6,7 +6,7 @@ Ensamblado: `Specimen.Core` · Carpeta: `Assets/_Project/Scripts/Core/Crafting/S
 Tests: `Assets/_Project/Tests/EditMode/Core/Crafting/Session`
 
 **Depende de:** [Core.Common](Core.Common.md), [Core.Crafting.Authoring](Core.Crafting.Authoring.md), [Core.Crafting.Definitions](Core.Crafting.Definitions.md), [Core.Crafting.Knowledge](Core.Crafting.Knowledge.md), [Core.Crafting.Queue](Core.Crafting.Queue.md), [Core.Crafting.Stations](Core.Crafting.Stations.md), [Core.Items](Core.Items.md), [Core.Professions](Core.Professions.md), [Core.Randomness](Core.Randomness.md), [Core.Time](Core.Time.md)
-**Lo usan:** [Runtime.Sandbox](Runtime.Sandbox.md), [Runtime.Sandbox.Ui](Runtime.Sandbox.Ui.md)
+**Lo usan:** [Core.Crafting.Play](Core.Crafting.Play.md), [Runtime.Sandbox](Runtime.Sandbox.md), [Runtime.Sandbox.Ui](Runtime.Sandbox.Ui.md)
 
 | Fichero | Tipo | Resumen |
 |---|---|---|
@@ -18,6 +18,7 @@ Tests: `Assets/_Project/Tests/EditMode/Core/Crafting/Session`
 | `StationLabels.cs` | class `StationLabels` | Textos de la ventana de estación (GDD §17 «Nombre visible»): oficios, estaciones y motivos. |
 | `StationServices.cs` | class `StationServices` | Datos que una sesión de estación consulta: piezas colocables, combustibles y mejoras. |
 | `StationSession.Parts.cs` | class `StationSession` | Piezas de la estación: se colocan desde la bolsa y vuelven a ella conservando su desgaste. |
+| `StationSession.Restore.cs` | class `StationSession` | Carga de un guardado (GDD §17.7): nivel, piezas con su desgaste y trabajos en cola. |
 | `StationSession.Upkeep.cs` | class `StationSession` | Combustible y mejora de nivel de la estación en uso. |
 | `StationSession.cs` | class `StationSession` | Una estación en uso (GDD §17.3, §17.7): une la , su y el del jugador. |
 | `StationSessionFactory.cs` | class `StationSessionFactory` | Crea estaciones listas para usar a partir del catálogo de oficios y el perfil del jugador. |

@@ -50,6 +50,7 @@ namespace Specimen.Runtime.Sandbox
             new VillageBuilder(_context).Build();
             _player.Equip(_kits.All[0]);
             _world.SpawnBestiary(_player);
+            _context.LoadCrafting();
             gameObject.AddComponent<Nameplates>().Init(_context, _player.GetComponent<PlayerTarget>());
             new GameObject(nameof(SandboxUi)).AddComponent<SandboxUi>().Init(_context, _player, _kits.All, Equip);
             _context.Feed.Add("Sal por la puerta sur de la Armería: el poblado, el bosque y los campamentos te esperan.");
@@ -57,7 +58,13 @@ namespace Specimen.Runtime.Sandbox
             if (arte == null) _context.Feed.Add("Sin CatalogoArte: todo en greybox (SPECIMEN › Arte › 2 · Generar).");
         }
 
-        private void OnDestroy() => _context?.Input.Dispose();
+        private void OnApplicationQuit() => _context?.SaveCrafting();
+
+        private void OnDestroy()
+        {
+            _context?.SaveCrafting();
+            _context?.Input.Dispose();
+        }
 
         private void Update()
         {

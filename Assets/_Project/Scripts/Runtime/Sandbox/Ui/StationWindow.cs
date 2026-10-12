@@ -85,6 +85,9 @@ namespace Specimen.Runtime.Sandbox.Ui
                 : next == null ? "La estación ya está al máximo." : $"Para mejorar hace falta: {Ingredients(next.Cost)}");
         }
 
+        /// <summary>Guardado automático al cerrar la ventana de estación (GDD §17.7).</summary>
+        private void OnDisable() => Context?.SaveCrafting();
+
         private void Say(string text)
         {
             _message.text = text;

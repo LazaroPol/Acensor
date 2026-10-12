@@ -29,5 +29,16 @@ namespace Specimen.Core.Crafting.Stations
             LevelQualityBonus = upgrade.QualityBonus;
             return UpgradeResult.Upgraded;
         }
+    
+
+        /// <summary>Aplica una mejora sin coste (al cargar un guardado, GDD §17.7).</summary>
+        public void Restore(StationUpgrade upgrade)
+        {
+            Guard.NotNull(upgrade, nameof(upgrade));
+            if (upgrade.Station != Type || upgrade.TargetLevel <= Level) return;
+            Level = upgrade.TargetLevel;
+            QueueSize = upgrade.QueueSize;
+            LevelQualityBonus = upgrade.QualityBonus;
+        }
     }
 }
