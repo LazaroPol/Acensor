@@ -14,7 +14,7 @@ _Niveles de oficio, recetas por etiqueta, estaciones con piezas, planos y tratad
 | ✅ | **OF-08** Estaciones: nivel mejorable, ranuras y piezas colocables | S110 | #112 |
 | ✅ | **OF-09** Cola de fabricación con temporizador y combustible | S111 | #113 |
 | ✅ | **OF-10** Mods de equipo: definición, instalación y stats efectivos | S112 | #114 |
-| ⬜ | **OF-11** Contenido I: materiales, combustibles, piezas de estación y mods |  |  |
+| 🔄 | **OF-11** Contenido I: materiales, combustibles, piezas de estación y mods |  |  |
 | ⬜ | **OF-12** Contenido II: recetario medieval por oficio y conocimientos |  |  |
 | ⬜ | **OF-13** Guardado y carga del progreso de oficios e inventario |  |  |
 | ⬜ | **OF-14** Authoring en Unity: ScriptableObjects, base de datos y validación |  |  |
