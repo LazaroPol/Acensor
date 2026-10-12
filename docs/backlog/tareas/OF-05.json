@@ -2,7 +2,7 @@
   "id": "OF-05",
   "phase": "OF",
   "title": "Calidad del objeto: grados, tirada y huecos de mod",
-  "status": "review",
+  "status": "done",
   "type": "feature",
   "labels": [
     "oficios",
@@ -17,6 +17,6 @@
     "ItemInstance.CreateNew acepta calidad y aplica el multiplicador de durabilidad.",
     "Tests deterministas con Pcg32Random."
   ],
-  "pr": null,
-  "session": null
+  "pr": "#109",
+  "session": 107
 }
