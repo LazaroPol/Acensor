@@ -68,9 +68,10 @@ Un módulo = un namespace C#. Abre solo la página del módulo que vayas a tocar
 | [Runtime.Art](modulos/Runtime.Art.md) | 1 | `MoodVolumeDriver` | Core.Art |
 | [Runtime.Bootstrap](modulos/Runtime.Bootstrap.md) | 2 | `GameBootstrap`, `UnitySceneLoader` | Core.Composition |
 | [Runtime.Characters](modulos/Runtime.Characters.md) | 1 | `CharacterAnimator` | Core.Animation |
+| [Runtime.Combat](modulos/Runtime.Combat.md) | 3 | `EnemyActor`, `EnemySpawner`, `PlayerAttack` | Core.Combat, Core.Combat.Enemies, Core.Floors, Core.Randomness, Core.Stats, Core.Vitals |
 | [Runtime.Hubs](modulos/Runtime.Hubs.md) | 3 | `ArmoryScreen`, `ElevatorScreen`, `HubBootstrap` | Core.Armory, Core.Classes, Core.Composition, Core.Elevator, Core.Hubs, Core.Iteration, Runtime.Bootstrap |
 | [Runtime.Hud](modulos/Runtime.Hud.md) | 1 | `GameHud` | Core.Hud |
-| [Runtime.Incursion](modulos/Runtime.Incursion.md) | 2 | `IncursionBootstrap`, `IncursionPlayer` | Core.Armory, Core.Classes, Core.Composition, Core.Events, Core.Floors, Core.Hud, Core.Iteration, Core.Stats, Core.Visuals, Runtime.Bootstrap, Runtime.Hud, Runtime.Player, Runtime.Prototype, Runtime.Visuals |
+| [Runtime.Incursion](modulos/Runtime.Incursion.md) | 2 | `IncursionBootstrap`, `IncursionPlayer` | Core.Armory, Core.Classes, Core.Composition, Core.Events, Core.Floors, Core.Hud, Core.Iteration, Core.Stats, Core.Visuals, Core.Vitals, Runtime.Bootstrap, Runtime.Combat, Runtime.Hud, Runtime.Player, Runtime.Prototype, Runtime.Visuals |
 | [Runtime.Lab](modulos/Runtime.Lab.md) | 2 | `LabBootstrap`, `LabScreen` | Core.Composition, Core.Dna, Core.Lab |
 | [Runtime.Player](modulos/Runtime.Player.md) | 3 | `GameCamera`, `PlayerController`, `PlayerInput` | Core.Movement, Core.Stats, Core.Vitals |
 | [Runtime.Prototype](modulos/Runtime.Prototype.md) | 7 | `DebugHud`, `PlayerMotor`, `PrototypeBootstrap`, `PrototypeInput`, `PrototypePlayer` … | Core.Movement, Core.Prototype, Core.Stats, Core.Time, Core.Visuals, Core.Vitals, Runtime.Visuals |

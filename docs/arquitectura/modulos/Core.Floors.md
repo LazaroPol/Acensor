@@ -6,7 +6,7 @@ Ensamblado: `Specimen.Core` · Carpeta: `Assets/_Project/Scripts/Core/Floors`
 Tests: `Assets/_Project/Tests/EditMode/Core/Floors`
 
 **Depende de:** [Core.Common](Core.Common.md), [Core.Loot](Core.Loot.md), [Core.Prototype](Core.Prototype.md), [Core.Randomness](Core.Randomness.md), [Core.Visuals](Core.Visuals.md)
-**Lo usan:** [Runtime.Incursion](Runtime.Incursion.md)
+**Lo usan:** [Runtime.Combat](Runtime.Combat.md), [Runtime.Incursion](Runtime.Incursion.md)
 
 | Fichero | Tipo | Resumen |
 |---|---|---|
