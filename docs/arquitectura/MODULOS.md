@@ -28,6 +28,7 @@ Un módulo = un namespace C#. Abre solo la página del módulo que vayas a tocar
 | [Core.Crafting.Knowledge](modulos/Core.Crafting.Knowledge.md) | 6 | `KnowledgeDefinition`, `KnowledgeReader`, `KnowledgeType`, `KnownRecipes`, `ReadOutcome` … | Core.Common, Core.Crafting.Definitions, Core.Items, Core.Professions |
 | [Core.Crafting.Mods](modulos/Core.Crafting.Mods.md) | 18 | `DefaultGearTags`, `DefaultMods`, `GearModifierKind`, `GearModifier`, `GearStat` … | Core.Common, Core.Items, Core.Professions |
 | [Core.Crafting.Queue](modulos/Core.Crafting.Queue.md) | 9 | `CraftJob`, `CraftQueue`, `CraftQueueState`, `CraftTiming`, `EnqueueResult` … | Core.Common, Core.Crafting.Definitions, Core.Crafting.Stations, Core.Items, Core.Items.Catalog, Core.Professions, Core.Time |
+| [Core.Crafting.Save](modulos/Core.Crafting.Save.md) | 13 | `CraftingSave`, `CraftingSaveData`, `CraftingSaveFormatException`, `CraftingSaveReader`, `CraftingSaveWriter` … | Core.Common, Core.Items, Core.Professions |
 | [Core.Crafting.Stations](modulos/Core.Crafting.Stations.md) | 14 | `DefaultStationParts`, `PartPlaceResult`, `PartSlots`, `RecipeAvailability`, `RecipeBlockReason` … | Core.Common, Core.Crafting.Definitions, Core.Items, Core.Professions |
 | [Core.Dna](modulos/Core.Dna.md) | 12 | `DefaultDnaEffects`, `DnaAllocation`, `DnaBranch`, `DnaEffect`, `DnaMutationApplier` … | Core.Iteration.Ending, Core.Stats |
 | [Core.Echoes](modulos/Core.Echoes.md) | 2 | `EchoDecision`, `EchoRegistry` | Core.Common |
