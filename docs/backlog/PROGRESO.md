@@ -26,8 +26,8 @@ TOTAL  ████████████████████████�
 
 ## Cola de prioridad (tablero)
 
-1. **AR-04** Armas y equipo por clase
-2. **AR-05** Bestiario
-3. **AR-06** Entorno modular
-4. **AR-07** Mobiliario de profesiones
-5. **AR-08** Campo de pruebas jugable
+1. **AR-05** Bestiario
+2. **AR-06** Entorno modular
+3. **AR-07** Mobiliario de profesiones
+4. **AR-08** Campo de pruebas jugable
+5. **F11-01** Integración de Netcode for GameObjects

@@ -7,7 +7,7 @@ _Sustituir el greybox por los packs de arte (personajes por clase, animaciones, 
 | ✅ | **AR-01** Pipeline de importación de assets de terceros | S95 | #80 |
 | ✅ | **AR-02** Personajes del kit de clases | S97 | #82 |
 | ✅ | **AR-03** Kit de animaciones: locomoción, melé y hechizos | S96 | #81 |
-| ⬜ | **AR-04** Armas y equipo por clase |  |  |
+| 🔄 | **AR-04** Armas y equipo por clase |  |  |
 | ⬜ | **AR-05** Bestiario |  |  |
 | ⬜ | **AR-06** Entorno modular |  |  |
 | ⬜ | **AR-07** Mobiliario de profesiones |  |  |
