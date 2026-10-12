@@ -10,5 +10,5 @@ _Sustituir el greybox por los packs de arte (personajes por clase, animaciones, 
 | ✅ | **AR-04** Armas y equipo por clase | S98 | #83 |
 | ✅ | **AR-05** Bestiario | S99 | #84 |
 | ✅ | **AR-06** Entorno modular | S100 | #87 |
-| ⬜ | **AR-07** Mobiliario de profesiones |  |  |
+| 🔄 | **AR-07** Mobiliario de profesiones |  |  |
 | ⬜ | **AR-08** Campo de pruebas jugable |  |  |
