@@ -4,7 +4,7 @@
 TOTAL  ███████████████████████░░░░░░░  77.2%  (61/79 tareas)
 ```
 
-**Fase en curso:** F9 · **Siguiente tarea:** F9-02
+**Fase en curso:** F9 · **Siguiente tarea:** F10-01
 
 | Fase | Progreso | % | Tareas |
 |---|---|---|---|
@@ -28,5 +28,5 @@ TOTAL  ███████████████████████░�
 1. **F9-02** Aplicación de mutaciones al nuevo clon
 2. **F9-03** Fragmentos de memoria y desbloqueo de lore
 3. **F9-04** Guardado y carga del perfil
-4. **F10-01** Bootstrap de escenas e inyección de dependencias
-5. **F10-02** Controlador del jugador y cámara
+4. **F10-02** Controlador del jugador y cámara
+5. **F10-03** HUD: temporizador, recursos, avisos

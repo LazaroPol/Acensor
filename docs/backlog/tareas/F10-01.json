@@ -2,14 +2,19 @@
   "id": "F10-01",
   "phase": "F10",
   "title": "Bootstrap de escenas e inyección de dependencias",
-  "status": "todo",
+  "status": "in_progress",
   "type": "feature",
   "labels": [
     "ui"
   ],
   "origin": "backlog",
-  "description": "",
-  "acceptance": [],
+  "description": "Raíz de composición en C# puro (contenedor de servicios, flujo de escenas) y puntos de entrada Unity que la usan.",
+  "acceptance": [
+    "Contenedor de dependencias sin reflexión: registro, fábricas perezosas, errores por duplicado/ausente/circular.",
+    "GameComposition registra bus de eventos, cargador de escenas y SceneFlow.",
+    "SceneFlow solo permite las transiciones del bucle (Boot→Ascensor⇄Armería/Laboratorio/Incursión) y publica SceneChanged.",
+    "GameBootstrap crea el contenedor antes de cargar escenas; UnitySceneLoader carga por nombre de escena."
+  ],
   "pr": null,
   "session": null
 }
