@@ -25,6 +25,7 @@ Un módulo = un namespace C#. Abre solo la página del módulo que vayas a tocar
 | [Core.Crafting](modulos/Core.Crafting.md) | 23 | `ConsumptionPlan`, `CraftResult`, `CraftTransaction`, `Crafter`, `DefaultRecipes` … | Core.Common, Core.Items, Core.Items.Catalog, Core.Professions, Core.Randomness |
 | [Core.Crafting.Definitions](modulos/Core.Crafting.Definitions.md) | 13 | `AllOfCondition`, `AlwaysKnownCondition`, `CollectionCompleteCondition`, `IRecipeKnowledge`, `KnowledgeRequiredCondition` … | Core.Common, Core.Items, Core.Professions |
 | [Core.Crafting.Knowledge](modulos/Core.Crafting.Knowledge.md) | 6 | `KnowledgeDefinition`, `KnowledgeReader`, `KnowledgeType`, `KnownRecipes`, `ReadOutcome` … | Core.Common, Core.Crafting.Definitions, Core.Items, Core.Professions |
+| [Core.Crafting.Stations](modulos/Core.Crafting.Stations.md) | 11 | `PartPlaceResult`, `PartSlots`, `RecipeAvailability`, `RecipeBlockReason`, `RecipeOption` … | Core.Common, Core.Crafting.Definitions, Core.Items, Core.Professions |
 | [Core.Dna](modulos/Core.Dna.md) | 12 | `DefaultDnaEffects`, `DnaAllocation`, `DnaBranch`, `DnaEffect`, `DnaMutationApplier` … | Core.Iteration.Ending, Core.Stats |
 | [Core.Echoes](modulos/Core.Echoes.md) | 2 | `EchoDecision`, `EchoRegistry` | Core.Common |
 | [Core.Echoes.Consequences](modulos/Core.Echoes.Consequences.md) | 3 | `EchoConsequence`, `EchoConsequenceTable`, `EchoOmenAdjuster` | Core.Common, Core.Floors.Omens |
