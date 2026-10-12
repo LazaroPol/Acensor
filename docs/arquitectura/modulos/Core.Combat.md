@@ -6,7 +6,7 @@ Ensamblado: `Specimen.Core` · Carpeta: `Assets/_Project/Scripts/Core/Combat`
 Tests: `Assets/_Project/Tests/EditMode/Core/Combat`
 
 **Depende de:** [Core.Common](Core.Common.md), [Core.Randomness](Core.Randomness.md)
-**Lo usan:** [Core.Bestiary](Core.Bestiary.md), [Runtime.Combat](Runtime.Combat.md), [Runtime.Sandbox](Runtime.Sandbox.md)
+**Lo usan:** [Core.Bestiary](Core.Bestiary.md), [Core.Progression](Core.Progression.md), [Runtime.Combat](Runtime.Combat.md), [Runtime.Sandbox](Runtime.Sandbox.md), [Runtime.Sandbox.Ui](Runtime.Sandbox.Ui.md)
 
 | Fichero | Tipo | Resumen |
 |---|---|---|

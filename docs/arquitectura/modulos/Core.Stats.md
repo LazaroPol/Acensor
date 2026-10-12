@@ -6,7 +6,7 @@ Ensamblado: `Specimen.Core` · Carpeta: `Assets/_Project/Scripts/Core/Stats`
 Tests: `Assets/_Project/Tests/EditMode/Core/Stats`
 
 **Depende de:** [Core.Common](Core.Common.md)
-**Lo usan:** [Core.Classes](Core.Classes.md), [Core.Dna](Core.Dna.md), [Core.Elevator](Core.Elevator.md), [Core.Profile](Core.Profile.md), [Core.Vitals](Core.Vitals.md), [Runtime.Combat](Runtime.Combat.md), [Runtime.Incursion](Runtime.Incursion.md), [Runtime.Player](Runtime.Player.md), [Runtime.Prototype](Runtime.Prototype.md), [Runtime.Sandbox](Runtime.Sandbox.md)
+**Lo usan:** [Core.Classes](Core.Classes.md), [Core.Dna](Core.Dna.md), [Core.Elevator](Core.Elevator.md), [Core.Profile](Core.Profile.md), [Core.Progression](Core.Progression.md), [Core.Talents](Core.Talents.md), [Core.Vitals](Core.Vitals.md), [Runtime.Combat](Runtime.Combat.md), [Runtime.Incursion](Runtime.Incursion.md), [Runtime.Player](Runtime.Player.md), [Runtime.Prototype](Runtime.Prototype.md), [Runtime.Sandbox](Runtime.Sandbox.md), [Runtime.Sandbox.Ui](Runtime.Sandbox.Ui.md)
 
 | Fichero | Tipo | Resumen |
 |---|---|---|

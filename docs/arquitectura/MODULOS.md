@@ -21,7 +21,7 @@ Un módulo = un namespace C#. Abre solo la página del módulo que vayas a tocar
 | [Core.Combat.Perception](modulos/Core.Combat.Perception.md) | 7 | `EnemyPerception`, `IPerceptionModifiers`, `Observer`, `PerceivedTarget`, `PerceptionConfig` … | Core.Iteration.Presence, Core.Movement |
 | [Core.Common](modulos/Core.Common.md) | 1 | `Guard` | — |
 | [Core.Composition](modulos/Core.Composition.md) | 6 | `GameComposition`, `ISceneLoader`, `IServiceRegistry`, `IServiceResolver`, `SceneChanged` … | Core.Armory, Core.Classes, Core.Common, Core.Elevator, Core.Events, Core.Iteration, Core.Loot, Core.Profile |
-| [Core.Crafting](modulos/Core.Crafting.md) | 11 | `CraftResult`, `CraftTransaction`, `Crafter`, `IRecipeBook`, `ISynergyRecipeBook` … | Core.Common, Core.Items, Core.Professions |
+| [Core.Crafting](modulos/Core.Crafting.md) | 12 | `CraftResult`, `CraftTransaction`, `Crafter`, `DefaultRecipes`, `IRecipeBook` … | Core.Common, Core.Items, Core.Items.Catalog, Core.Professions |
 | [Core.Dna](modulos/Core.Dna.md) | 12 | `DefaultDnaEffects`, `DnaAllocation`, `DnaBranch`, `DnaEffect`, `DnaMutationApplier` … | Core.Iteration.Ending, Core.Stats |
 | [Core.Echoes](modulos/Core.Echoes.md) | 2 | `EchoDecision`, `EchoRegistry` | Core.Common |
 | [Core.Echoes.Consequences](modulos/Core.Echoes.Consequences.md) | 3 | `EchoConsequence`, `EchoConsequenceTable`, `EchoOmenAdjuster` | Core.Common, Core.Floors.Omens |
@@ -36,9 +36,11 @@ Un módulo = un namespace C#. Abre solo la página del módulo que vayas a tocar
 | [Core.Floors.Population](modulos/Core.Floors.Population.md) | 5 | `FloorPopulation`, `FloorPopulator`, `RingPopulationRules`, `RingQuota`, `RoomPopulation` | Core.Common, Core.Loot, Core.Randomness |
 | [Core.Floors.Remnants](modulos/Core.Floors.Remnants.md) | 8 | `FloorRemnants`, `FragmentPlacement`, `MemoryFragmentLog`, `Remnant`, `RemnantKind` … | Core.Common, Core.Loot, Core.Randomness |
 | [Core.Floors.Types](modulos/Core.Floors.Types.md) | 9 | `PuzzleFloor`, `DecisionFloor`, `SanctuaryFloor`, `ProfessionFloor`, `LootFloor` … | Core.Common |
+| [Core.Gathering](modulos/Core.Gathering.md) | 2 | `GatherKind`, `GatheringRules` | Core.Common, Core.Items.Catalog, Core.Loot, Core.Randomness |
 | [Core.Hubs](modulos/Core.Hubs.md) | 5 | `ArmoryPresenter`, `ElevatorPresenter`, `HubRoomLayout`, `KitAvailability`, `KitEntry` … | Core.Armory, Core.Classes, Core.Common, Core.Elevator, Core.Iteration, Core.Iteration.Presence, Core.Prototype, Core.Visuals |
 | [Core.Hud](modulos/Core.Hud.md) | 5 | `GameHudPresenter`, `HudBar`, `NoticeSeverity`, `HudNotice`, `HudNotices` … | Core.Common, Core.Events, Core.Iteration, Core.Prototype, Core.Time, Core.Vitals |
 | [Core.Items](modulos/Core.Items.md) | 11 | `Durability`, `IDurability`, `IInventory`, `Inventory`, `ItemCategory` … | Core.Common |
+| [Core.Items.Catalog](modulos/Core.Items.Catalog.md) | 4 | `ConsumableEffect`, `ConsumableUse`, `ItemCatalog`, `ItemIds` | Core.Common, Core.Items, Core.Vitals |
 | [Core.Iteration](modulos/Core.Iteration.md) | 9 | `IterationConfig`, `IterationConfigBuilder`, `IterationContext`, `IterationPhaseChanged`, `FloorReached` … | Core.Common, Core.Events, Core.Iteration.Ending, Core.Iteration.Presence, Core.Iteration.Readiness, Core.Iteration.States, Core.Iteration.Voting, Core.StateMachines, Core.Time |
 | [Core.Iteration.Ending](modulos/Core.Iteration.Ending.md) | 3 | `FateResolver`, `IterationEnded`, `IterationOutcome`, `PlayerFate` | Core.Iteration.Presence |
 | [Core.Iteration.Presence](modulos/Core.Iteration.Presence.md) | 4 | `PlayerLocation`, `PlayersTrapped`, `PlayerRescued`, `PresenceTracker`, `TrappedModifiers` | Core.Common |
@@ -51,22 +53,25 @@ Un módulo = un namespace C#. Abre solo la página del módulo que vayas a tocar
 | [Core.Lore](modulos/Core.Lore.md) | 3 | `FragmentLedger`, `LoreEntry`, `MemoryArchive` | Core.Echoes.Voting |
 | [Core.Movement](modulos/Core.Movement.md) | 9 | `CameraPoint`, `CameraZoom`, `DodgeConfig`, `DodgeController`, `MovementConfig` … | Core.Common, Core.Vitals |
 | [Core.Physics](modulos/Core.Physics.md) | 4 | `ColliderBox`, `CollisionLayer`, `CollisionMatrix`, `DefaultCollisionMatrix` | Core.Common |
-| [Core.Professions](modulos/Core.Professions.md) | 7 | `DefaultProfessionSynergies`, `ISynergyCatalog`, `ProfessionBench`, `ProfessionFurniture`, `ProfessionId` … | Core.Common |
+| [Core.Professions](modulos/Core.Professions.md) | 8 | `DefaultProfessionSynergies`, `ISynergyCatalog`, `LearnedProfessions`, `ProfessionBench`, `ProfessionFurniture` … | Core.Common |
 | [Core.Profile](modulos/Core.Profile.md) | 7 | `IProfileStore`, `InMemoryProfileStore`, `PlayerProfile`, `ProfileData`, `ProfileFormatException` … | Core.Common, Core.Dna, Core.Lore, Core.Stats |
+| [Core.Progression](modulos/Core.Progression.md) | 12 | `CharacterProgress`, `HeroProgression`, `KitSpellbooks`, `LevelCurve`, `LevelStats` … | Core.Bestiary, Core.Classes, Core.Combat, Core.Common, Core.Professions, Core.Stats, Core.Talents, Core.Vitals |
 | [Core.Prototype](modulos/Core.Prototype.md) | 7 | `DebugCommands`, `DebugHudPresenter`, `GreyboxRoomLayout`, `HudTime`, `ILevelLayout` … | Core.Common, Core.Physics, Core.Time, Core.Visuals, Core.Vitals |
 | [Core.Randomness](modulos/Core.Randomness.md) | 2 | `IRandom`, `Pcg32Random` | Core.Common |
 | [Core.Repair](modulos/Core.Repair.md) | 6 | `IRepairCatalog`, `RepairCatalog`, `RepairReport`, `RepairResult`, `RepairRule` … | Core.Common, Core.Items |
-| [Core.Sandbox](modulos/Core.Sandbox.md) | 8 | `RespawnTimer`, `SandboxLayout`, `SandboxLoot`, `SandboxRespawn`, `SandboxSpot` … | Core.Bestiary, Core.Classes, Core.Combat.Bosses, Core.Common, Core.Items, Core.Loot, Core.Professions, Core.Prototype, Core.Randomness, Core.Visuals, Core.Visuals.Packs |
+| [Core.Sandbox](modulos/Core.Sandbox.md) | 8 | `RespawnTimer`, `SandboxLayout`, `SandboxLoot`, `SandboxRespawn`, `SandboxSpot` … | Core.Bestiary, Core.Classes, Core.Combat.Bosses, Core.Common, Core.Items.Catalog, Core.Loot, Core.Professions, Core.Prototype, Core.Randomness, Core.Visuals, Core.Visuals.Packs |
 | [Core.Siege](modulos/Core.Siege.md) | 3 | `WaveConfig`, `WaveDirector`, `WaveState` | Core.Common |
 | [Core.Siege.Defenses](modulos/Core.Siege.Defenses.md) | 2 | `Fortification`, `Turret` | Core.Common |
 | [Core.Siege.Extraction](modulos/Core.Siege.Extraction.md) | 3 | `DnaConversion`, `ExtractionReport`, `OspreyExtraction` | Core.Common, Core.Siege.Scoring |
 | [Core.Siege.Scoring](modulos/Core.Siege.Scoring.md) | 3 | `IterationScore`, `ScoreConfig`, `ScoreResult` | Core.Common |
 | [Core.StateMachines](modulos/Core.StateMachines.md) | 3 | `IState`, `StateBase`, `StateMachine`, `Transition` | Core.Common, Core.Time |
 | [Core.Stats](modulos/Core.Stats.md) | 7 | `IStatFormula`, `ModifierKind`, `StandardStatFormula`, `Stat`, `StatModifier` … | Core.Common |
+| [Core.Talents](modulos/Core.Talents.md) | 10 | `KitTalentTrees`, `TalentAllocation`, `TalentBonuses`, `TalentBranch`, `TalentBuilder` … | Core.Classes, Core.Common, Core.Stats |
 | [Core.Time](modulos/Core.Time.md) | 4 | `IClock`, `ITickable`, `ManualClock`, `PhaseTimer` | Core.Common |
 | [Core.Visuals](modulos/Core.Visuals.md) | 14 | `DefaultGreyboxStyles`, `GreyboxColor`, `GreyboxOffset`, `GreyboxPrimitive`, `GreyboxStyle` … | Core.Common |
 | [Core.Visuals.Packs](modulos/Core.Visuals.Packs.md) | 2 | `EnvironmentKit`, `MaterialTextureNames` | — |
 | [Core.Vitals](modulos/Core.Vitals.md) | 7 | `AcceleratingRegen`, `CharacterVitals`, `Fatigue`, `FatigueConfig`, `ResourceKind` … | Core.Common, Core.Stats, Core.Time |
+| [Core.World](modulos/Core.World.md) | 11 | `HouseBlueprint`, `HousePiece`, `HousePieceKind`, `HouseSpot`, `HouseStyle` … | Core.Common, Core.Gathering, Core.Randomness |
 | [Runtime.Art](modulos/Runtime.Art.md) | 1 | `MoodVolumeDriver` | Core.Art |
 | [Runtime.Atico](modulos/Runtime.Atico.md) | 3 | `AticoBootstrap`, `OspreyPad`, `SiegeController` | Core.Armory, Core.Classes, Core.Composition, Core.Events, Core.Hud, Core.Iteration, Core.Iteration.Ending, Core.Prototype, Core.Siege, Core.Siege.Extraction, Core.Visuals, Core.Vitals, Runtime.Bootstrap, Runtime.Combat, Runtime.Incursion, Runtime.Player, Runtime.Prototype, Runtime.Visuals |
 | [Runtime.Bootstrap](modulos/Runtime.Bootstrap.md) | 4 | `GameBootstrap`, `PlayerPrefsProfileStore`, `SceneBootstrapper`, `UnitySceneLoader` | Core.Composition, Core.Profile, Runtime.Atico, Runtime.Extraction, Runtime.Hubs, Runtime.Incursion, Runtime.Lab, Runtime.Prototype, Runtime.Sandbox |
@@ -79,7 +84,10 @@ Un módulo = un namespace C#. Abre solo la página del módulo que vayas a tocar
 | [Runtime.Lab](modulos/Runtime.Lab.md) | 3 | `LabActions`, `LabBootstrap`, `LabScreen` | Core.Composition, Core.Dna, Core.Iteration, Core.Lab, Core.Profile, Runtime.Bootstrap |
 | [Runtime.Player](modulos/Runtime.Player.md) | 5 | `GameCamera`, `KitBadge`, `KitStats`, `PlayerController`, `PlayerInput` | Core.Armory, Core.Classes, Core.Composition, Core.Movement, Core.Profile, Core.Stats, Core.Vitals |
 | [Runtime.Prototype](modulos/Runtime.Prototype.md) | 7 | `DebugHud`, `PlayerMotor`, `PrototypeBootstrap`, `PrototypeInput`, `PrototypePlayer` … | Core.Movement, Core.Prototype, Core.Stats, Core.Time, Core.Visuals, Core.Vitals, Runtime.Visuals |
-| [Runtime.Sandbox](modulos/Runtime.Sandbox.md) | 22 | `BenchStation`, `CombatFeed`, `DamageColors`, `EnemyRegistry`, `HitResolver` … | Core.Abilities, Core.Animation, Core.Bestiary, Core.Classes, Core.Combat, Core.Combat.Attacks, Core.Combat.Enemies, Core.Items, Core.Loot, Core.Movement, Core.Professions, Core.Randomness, Core.Sandbox, Core.Stats, Core.Visuals, Core.Vitals, Runtime.Characters, Runtime.Player, Runtime.Visuals |
+| [Runtime.Sandbox](modulos/Runtime.Sandbox.md) | 26 | `BenchStation`, `CombatFeed`, `DamageColors`, `EnemyRegistry`, `HitResolver` … | Core.Abilities, Core.Animation, Core.Bestiary, Core.Classes, Core.Combat, Core.Combat.Attacks, Core.Combat.Enemies, Core.Crafting, Core.Items, Core.Loot, Core.Movement, Core.Professions, Core.Progression, Core.Randomness, Core.Sandbox, Core.Stats, Core.Talents, Core.Visuals, Core.Vitals, Core.World, Runtime.Characters, Runtime.Player, Runtime.Sandbox.Ui, Runtime.Sandbox.World, Runtime.UI, Runtime.Visuals |
+| [Runtime.Sandbox.Ui](modulos/Runtime.Sandbox.Ui.md) | 16 | `CharacterWindow`, `HudActionBar`, `HudFrames`, `HudMessages`, `HudMinimap` … | Core.Classes, Core.Combat, Core.Crafting, Core.Gathering, Core.Items, Core.Items.Catalog, Core.Professions, Core.Progression, Core.Stats, Core.Talents, Core.Vitals, Core.World, Runtime.UI |
+| [Runtime.Sandbox.World](modulos/Runtime.Sandbox.World.md) | 5 | `GatherNode`, `NatureFactory`, `VillageBuilder`, `WorldMaterials` | Core.Gathering, Core.Items, Core.Progression, Core.World, Runtime.Visuals |
+| [Runtime.UI](modulos/Runtime.UI.md) | 9 | `UiDragHandle`, `UiFactory`, `UiHoverTip`, `UiRoot`, `UiSlot` … | — |
 | [Runtime.Visuals](modulos/Runtime.Visuals.md) | 5 | `CatalogoArte`, `CatalogoVisual`, `GreyboxFactory`, `VisualSpawner` | Core.Classes, Core.Professions, Core.Prototype, Core.Visuals |
 
 Grafo de dependencias entre módulos: [GRAFO.md](GRAFO.md).

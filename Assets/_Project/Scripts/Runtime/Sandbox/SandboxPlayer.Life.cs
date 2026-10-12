@@ -11,6 +11,14 @@ namespace Specimen.Runtime.Sandbox
 
         private void OnHealthDepleted(Core.Vitals.ResourcePool pool) => Die();
 
+        /// <summary>Reaplica nivel y talentos a la hoja de stats (las barras crecen al momento); al subir de nivel, rellena.</summary>
+        public void RefreshProgression(bool refill)
+        {
+            if (Kit == null) return;
+            Bonuses = _context.Hero.Apply(Kit.Id, Stats);
+            if (refill && !_dead) Vitals.RefillAll();
+        }
+
         public void Revive(Vector3 position)
         {
             Vitals.RefillAll();

@@ -3,6 +3,7 @@ using Specimen.Core.Animation;
 using Specimen.Core.Classes;
 using Specimen.Core.Combat;
 using Specimen.Core.Stats;
+using Specimen.Core.Talents;
 using Specimen.Core.Vitals;
 using Specimen.Runtime.Characters;
 using Specimen.Runtime.Player;
@@ -30,6 +31,7 @@ namespace Specimen.Runtime.Sandbox
 
         public ClassKit Kit { get; private set; }
         public StatSheet Stats { get; private set; }
+        public TalentBonuses Bonuses { get; private set; } = TalentBonuses.None;
         public CharacterVitals Vitals => _controller.Vitals;
         public bool IsAlive => Vitals != null && !_dead && Vitals.IsAlive;
         public bool IsDead => _dead;
@@ -50,6 +52,7 @@ namespace Specimen.Runtime.Sandbox
         {
             Kit = kit;
             Stats = kit.CreateStatSheet();
+            Bonuses = _context.Hero.Apply(kit.Id, Stats);
             if (Vitals != null) Vitals.Health.Depleted -= OnHealthDepleted;
             _controller.Init(Stats, _cameraYaw);
             _controller.enabled = true;

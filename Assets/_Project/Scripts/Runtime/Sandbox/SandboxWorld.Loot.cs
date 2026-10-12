@@ -1,4 +1,5 @@
 using Specimen.Core.Loot;
+using Specimen.Core.Progression;
 using Specimen.Core.Sandbox;
 using Specimen.Core.Visuals;
 using Specimen.Runtime.Visuals;
@@ -12,6 +13,8 @@ namespace Specimen.Runtime.Sandbox
         private void OnEnemyDeath(SandboxEnemy enemy, Transform player)
         {
             _context.Feed.Add($"{enemy.DisplayName} derrotado. Reaparece en {enemy.RespawnRemaining:0} s.");
+            int ring = SandboxLoot.RingOf(enemy.Entry);
+            _context.GrantXp(XpRewards.ForKill(enemy.Entry, _context.Hero.Level, ring), enemy.DisplayName);
             var drops = SandboxLoot.DropsFor(enemy.Entry, _context.Random);
             for (int i = 0; i < drops.Count; i++) SpawnLoot(drops[i], enemy.transform.position + Offset(i), player);
         }

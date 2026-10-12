@@ -1,6 +1,8 @@
 using Specimen.Core.Classes;
 using Specimen.Core.Visuals;
 using Specimen.Runtime.Player;
+using Specimen.Runtime.Sandbox.Ui;
+using Specimen.Runtime.Sandbox.World;
 using Specimen.Runtime.Visuals;
 using UnityEngine;
 using UnityEngine.SceneManagement;
@@ -8,8 +10,8 @@ using UnityEngine.SceneManagement;
 namespace Specimen.Runtime.Sandbox
 {
     /// <summary>
-    /// Arranque de la escena «CampoPruebas»: monta sala, bancos, jugador y bestiario con el arte generado
-    /// (o greybox si falta) y atiende los atajos de prueba (kits, reinicio, dañar/curar).
+    /// Arranque de la escena «CampoPruebas»: monta la Armería, el poblado, jugador, bestiario e interfaz con el
+    /// arte generado (o greybox si falta) y atiende los atajos de prueba (kit con Tab, reinicio, dañar/curar).
     /// </summary>
     public sealed class SandboxBootstrap : MonoBehaviour
     {
@@ -41,10 +43,14 @@ namespace Specimen.Runtime.Sandbox
             _world.BuildRoom();
             var camera = EnsureCamera();
             _player = _world.SpawnPlayer(camera);
-            var benches = _world.PlaceBenches(_player);
+            gameObject.AddComponent<InteractionHub>().Init(_context, _player);
+            _world.PlaceBenches(_player);
+            new VillageBuilder(_context).Build();
             _player.Equip(_kits.All[0]);
             _world.SpawnBestiary(_player);
-            new GameObject(nameof(SandboxHud)).AddComponent<SandboxHud>().Init(_context, _player, benches);
+            gameObject.AddComponent<Nameplates>().Init(_context);
+            new GameObject(nameof(SandboxUi)).AddComponent<SandboxUi>().Init(_context, _player, _kits.All, Equip);
+            _context.Feed.Add("Sal por la puerta sur de la Armería: el poblado, el bosque y los campamentos te esperan.");
             SandboxLighting.Apply(camera.GetComponent<Camera>());
             if (arte == null) _context.Feed.Add("Sin CatalogoArte: todo en greybox (SPECIMEN › Arte › 2 · Generar).");
         }
@@ -55,18 +61,19 @@ namespace Specimen.Runtime.Sandbox
         {
             if (_context == null) return;
             var input = _context.Input;
-            int pressed = input.ClassPressed();
-            if (pressed >= 0 && pressed < _kits.All.Count) EquipIndex(pressed);
             if (input.NextClass.WasPressedThisFrame()) EquipIndex((_kitIndex + 1) % _kits.All.Count);
             if (input.Hurt.WasPressedThisFrame()) _player.Vitals.Health.Drain(15f);
             if (input.Heal.WasPressedThisFrame()) Heal();
             if (input.Restart.WasPressedThisFrame()) Restart();
         }
 
-        private void EquipIndex(int index)
+        private void EquipIndex(int index) => Equip(_kits.All[index]);
+
+        private void Equip(ClassKit kit)
         {
-            _kitIndex = index;
-            _player.Equip(_kits.All[index]);
+            for (int i = 0; i < _kits.All.Count; i++)
+                if (_kits.All[i] == kit) _kitIndex = i;
+            _player.Equip(kit);
         }
 
         private void Heal()

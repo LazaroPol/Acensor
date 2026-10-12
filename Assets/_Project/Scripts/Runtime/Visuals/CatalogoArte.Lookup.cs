@@ -24,5 +24,15 @@ namespace Specimen.Runtime.Visuals
             foreach (var entry in bancos) if (entry.profesion == profession) return entry.prefab;
             return null;
         }
+
+        public GameObject HousePrefab(string template) => Named(casas, template);
+
+        public GameObject DecorPrefab(string model) => Named(decorado, $"Decor_{model}");
+
+        private static GameObject Named(System.Collections.Generic.List<GameObject> list, string name)
+        {
+            foreach (var prefab in list) if (prefab != null && prefab.name == name) return prefab;
+            return null;
+        }
     }
 }
