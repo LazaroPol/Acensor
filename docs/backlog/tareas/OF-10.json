@@ -2,7 +2,7 @@
   "id": "OF-10",
   "phase": "OF",
   "title": "Mods de equipo: definición, instalación y stats efectivos",
-  "status": "review",
+  "status": "done",
   "type": "feature",
   "labels": [
     "oficios",
@@ -18,6 +18,6 @@
     "ModdedStats calcula base → efectivo (planos y %) y la durabilidad máxima nunca baja de 1.",
     "Palo de madera + esquirlas/piedra/clavo producen los efectos de la tabla del GDD."
   ],
-  "pr": null,
-  "session": null
+  "pr": "#114",
+  "session": 112
 }
