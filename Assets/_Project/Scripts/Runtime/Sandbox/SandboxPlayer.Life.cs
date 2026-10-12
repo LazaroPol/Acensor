@@ -5,9 +5,16 @@ namespace Specimen.Runtime.Sandbox
     /// <summary>Muerte, reaparición e impulsos del jugador del Campo de pruebas.</summary>
     public sealed partial class SandboxPlayer
     {
+        // La vida se regenera sola (PlayerController): sin esta bandera el personaje «revivía» un frame
+        // después de llegar a 0 y nunca llegaba a reproducir la animación de muerte.
+        private bool _dead;
+
+        private void OnHealthDepleted(Core.Vitals.ResourcePool pool) => Die();
+
         public void Revive(Vector3 position)
         {
             Vitals.RefillAll();
+            _dead = false;
             _controller.enabled = true;
             _animator.SetDead(false);
             Teleport(position);
@@ -32,6 +39,8 @@ namespace Specimen.Runtime.Sandbox
 
         private void Die()
         {
+            if (_dead) return;
+            _dead = true;
             _controller.enabled = false;
             _animator.SetDead(true);
             _context.Feed.Add("Has caído. Pulsa R para reaparecer (o F2 para curarte).");

@@ -31,7 +31,8 @@ namespace Specimen.Runtime.Sandbox
         public ClassKit Kit { get; private set; }
         public StatSheet Stats { get; private set; }
         public CharacterVitals Vitals => _controller.Vitals;
-        public bool IsAlive => Vitals != null && Vitals.IsAlive;
+        public bool IsAlive => Vitals != null && !_dead && Vitals.IsAlive;
+        public bool IsDead => _dead;
         public bool IsShielded => _shieldLeft > 0f;
         public CharacterAnimator Animator => _animator;
         public PlayerController Controller => _controller;
@@ -49,8 +50,12 @@ namespace Specimen.Runtime.Sandbox
         {
             Kit = kit;
             Stats = kit.CreateStatSheet();
+            if (Vitals != null) Vitals.Health.Depleted -= OnHealthDepleted;
             _controller.Init(Stats, _cameraYaw);
             _controller.enabled = true;
+            _dead = false;
+            _animator.SetDead(false);
+            Vitals.Health.Depleted += OnHealthDepleted;
             SwapVisual(_context.Art != null ? _context.Art.ClassPrefab(kit.Id) : null);
             _animator.Rebind(_context.Art != null ? _context.Art.heroe : null);
             _shieldLeft = 0f;
@@ -90,7 +95,7 @@ namespace Specimen.Runtime.Sandbox
         {
             if (Vitals == null) return;
             if (_shieldLeft > 0f) _shieldLeft -= Time.deltaTime;
-            if (!IsAlive && _controller.enabled) Die();
+            if (!_dead && !Vitals.IsAlive) Die();
             if (IsAlive && _controller.Input.Dodge.WasPressedThisFrame()) _animator.Play(AnimSlot.Esquiva);
         }
 
