@@ -1,0 +1,19 @@
+<!-- GENERADO por `python3 -m tools.arch`; no editar a mano. -->
+
+# `Specimen.Core.Dna`
+
+Ensamblado: `Specimen.Core` · Carpeta: `Assets/_Project/Scripts/Core/Dna`
+Tests: `Assets/_Project/Tests/EditMode/Core/Dna`
+
+**Depende de:** nada
+**Lo usan:** nadie
+
+| Fichero | Tipo | Resumen |
+|---|---|---|
+| `DnaAllocation.cs` | class `DnaAllocation` | Estado de un perfil: puntos libres, nodos desbloqueados y puntos invertidos por rama. |
+| `DnaBranch.cs` | enum `DnaBranch` | Ramas del árbol de ADN (GDD §12). |
+| `DnaNode.cs` | class `DnaNode` | Nodo inmutable del árbol: rama, nivel (tier) y coste en puntos de ADN. |
+| `DnaTree.cs` | class `DnaTree` | Catálogo de nodos del árbol, indexado por id. |
+| `ITierLock.cs` | interface `ITierLock` | Puntos que hay que haber invertido en una rama para acceder a un nivel. |
+| `TierLock.cs` | class `TierLock` | Umbrales por nivel (índice 0 = tier 1). |
+| `UnlockResult.cs` | enum `UnlockResult` | Resultado de intentar desbloquear un nodo de ADN. |

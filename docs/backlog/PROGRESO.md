@@ -4,7 +4,7 @@
 TOTAL  █████████████████████░░░░░░░░░  70.9%  (56/79 tareas)
 ```
 
-**Fase en curso:** F8 · **Siguiente tarea:** F8-01
+**Fase en curso:** F8 · **Siguiente tarea:** F9-01
 
 | Fase | Progreso | % | Tareas |
 |---|---|---|---|
@@ -29,4 +29,4 @@ TOTAL  █████████████████████░░░�
 2. **F8-02** Fortificaciones y torretas
 3. **F8-03** Puntuación y multiplicador de supervivencia colectiva
 4. **F8-04** Extracción en Osprey y conversión a puntos de ADN
-5. **F9-01** Árbol de ADN con ramas y Tier Lock
+5. **F9-02** Aplicación de mutaciones al nuevo clon
