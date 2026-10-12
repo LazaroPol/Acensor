@@ -44,7 +44,7 @@ namespace Specimen.Runtime.Sandbox
             _onDeath = onDeath;
             SetupLevel(entry, enemy);
             _respawn = new RespawnTimer(SandboxRespawn.DelayFor(entry));
-            _brain = new EnemyBrain(new EnemyBrainConfig().ScaledBy(entry.Scale));
+            _brain = new EnemyBrain(SandboxAggro.Config().ScaledBy(entry.Scale));
             _animator = GetComponent<CharacterAnimator>();
             if (_animator == null) _animator = gameObject.AddComponent<CharacterAnimator>();
             _animator.Rebind(controller);
@@ -56,6 +56,7 @@ namespace Specimen.Runtime.Sandbox
         {
             if (IsDead) return;
             _animator.Play(AnimSlot.Golpe);
+            _brain.Provoke();
             if (_health.TakeDamage(result.Final)) Die();
         }
 

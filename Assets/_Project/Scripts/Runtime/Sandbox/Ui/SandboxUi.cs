@@ -48,6 +48,8 @@ namespace Specimen.Runtime.Sandbox.Ui
             _map = Add(UiWindow.Spawn<MapWindow>(root, new Vector2(540f, 110f), w => { w.Context = context; w.Player = player; }));
             BuildMenu(root);
             UiTooltip.Create(root);
+            root.Windows.SetAsLastSibling();
+            root.Overlay.SetAsLastSibling();
             context.BenchOpened += _profession.Show;
             context.Hero.Progress.LeveledUp += OnLevelUp;
         }
@@ -67,7 +69,7 @@ namespace Specimen.Runtime.Sandbox.Ui
             };
             var menu = UiFactory.Node(root.Rect, "Menu", Vector2.zero, new Vector2(labels.Length * 124f, 34f));
             menu.anchorMin = menu.anchorMax = menu.pivot = new Vector2(1f, 0f);
-            menu.anchoredPosition = new Vector2(-16f, 30f);
+            menu.anchoredPosition = new Vector2(-16f, 40f);
             for (int i = 0; i < labels.Length; i++)
             {
                 var window = labels[i].window;

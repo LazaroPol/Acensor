@@ -28,10 +28,11 @@ namespace Specimen.Runtime.Sandbox.Ui
             _health = Bar(frame, 32f, 22f, UiTheme.Health);
             _resource = Bar(frame, 58f, 18f, UiTheme.Resource);
             _stamina = Bar(frame, 80f, 14f, UiTheme.Stamina);
-            var xp = UiFactory.Node(root.Rect, "Experiencia", Vector2.zero, new Vector2(820f, 16f));
+            var xp = UiFactory.Node(root.Rect, "Experiencia", Vector2.zero, new Vector2(1000f, 26f));
             xp.anchorMin = xp.anchorMax = xp.pivot = new Vector2(0.5f, 0f);
             xp.anchoredPosition = new Vector2(0f, 6f);
-            _xp.fill = UiFactory.Bar(xp, Vector2.zero, new Vector2(820f, 16f), UiTheme.Xp, out _xp.label);
+            _xp.fill = UiFactory.Bar(xp, Vector2.zero, new Vector2(1000f, 26f), UiTheme.Xp, out _xp.label);
+            _xp.label.fontSize = 15;
         }
 
         private static (Image, Text) Bar(Transform parent, float y, float height, Color color)

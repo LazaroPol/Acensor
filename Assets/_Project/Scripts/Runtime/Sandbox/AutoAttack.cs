@@ -65,12 +65,12 @@ namespace Specimen.Runtime.Sandbox
 
         private void Update()
         {
-            if (_context.Input.AutoAttack.WasPressedThisFrame() && !UI.UiRoot.PointerOverUi())
+            if (_context.Input.AutoAttack.WasPressedThisFrame())
             {
-                bool key = UnityEngine.InputSystem.Keyboard.current?.fKey.wasPressedThisFrame ?? false;
-                if (Active && key) Stop();
+                if (Active) Stop();
                 else Begin();
             }
+            if (_context.Mouse != null && _context.Mouse.RightClicked && _target.ClickedEnemy != null) Begin();
             if (_swing > 0f) _swing -= Time.deltaTime;
             _rangeWarning -= Time.deltaTime;
             TickPending();

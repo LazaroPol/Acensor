@@ -23,7 +23,7 @@ namespace Specimen.Runtime.Sandbox.Ui
             _context = context;
             _target = player.GetComponent<PlayerTarget>();
             _attack = player.GetComponent<AutoAttack>();
-            var frame = UiFactory.Panel(root.Rect, "MarcoObjetivo", new Vector2(410f, 16f), new Vector2(330f, 92f), UiTheme.Background);
+            var frame = UiFactory.Panel(root.Rect, "MarcoObjetivo", new Vector2(16f, 140f), new Vector2(330f, 92f), UiTheme.Background);
             _frame = frame.gameObject;
             var badge = UiFactory.Panel(frame, "Nivel", new Vector2(10f, 10f), new Vector2(40f, 40f), UiTheme.Background);
             _level = UiFactory.Label(badge, string.Empty, Vector2.zero, new Vector2(40f, 40f), 18, TextAnchor.MiddleCenter);

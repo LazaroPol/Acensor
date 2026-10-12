@@ -4,7 +4,7 @@ using UnityEngine.UI;
 
 namespace Specimen.Runtime.UI
 {
-    /// <summary>Tooltip único que sigue al ratón (texto enriquecido: nombre coloreado, descripción, costes…).</summary>
+    /// <summary>Tooltip único que sigue al ratón por encima del cursor (texto enriquecido: nombre, descripción, costes…).</summary>
     public sealed class UiTooltip : MonoBehaviour
     {
         private const float Width = 300f;
@@ -49,9 +49,12 @@ namespace Specimen.Runtime.UI
             float scale = canvas != null ? canvas.scaleFactor : 1f;
             var mouse = Mouse.current.position.ReadValue() / scale;
             var screen = new Vector2(Screen.width, Screen.height) / scale;
-            float x = Mathf.Min(mouse.x + 18f, screen.x - Width - 4f);
-            float y = Mathf.Max(mouse.y - 12f, _rect.sizeDelta.y + 4f);
-            _rect.anchoredPosition = new Vector2(x, -(screen.y - y));
+            float height = _rect.sizeDelta.y;
+            float x = Mathf.Clamp(mouse.x - Width / 2f, 4f, screen.x - Width - 4f);
+            // Por encima del cursor (como en WoW); si no cabe arriba, debajo.
+            float top = mouse.y + 20f + height;
+            if (top > screen.y - 4f) top = Mathf.Max(mouse.y - 20f, height + 4f);
+            _rect.anchoredPosition = new Vector2(x, -(screen.y - top));
         }
     }
 }

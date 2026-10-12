@@ -57,5 +57,15 @@ namespace Specimen.Tests.Core.Combat.Enemies
             Assert.That(scaled.AttackRange, Is.EqualTo(3f).Within(1e-5f));
             Assert.That(scaled.AggroRange, Is.GreaterThanOrEqualTo(scaled.AttackRange));
         }
+
+        [Test]
+        public void ProvokedBrainChasesFromOutsideAggroUntilLeash()
+        {
+            var brain = new EnemyBrain(Specimen.Core.Sandbox.SandboxAggro.Config());
+            Assert.That(brain.Decide(20f, true, true, 0.1f), Is.EqualTo(EnemyAction.Esperar));
+            brain.Provoke();
+            Assert.That(brain.Decide(20f, true, true, 0.1f), Is.EqualTo(EnemyAction.Perseguir));
+            Assert.That(brain.Decide(40f, true, true, 0.1f), Is.EqualTo(EnemyAction.Esperar));
+        }
     }
 }

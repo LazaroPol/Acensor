@@ -42,6 +42,7 @@ namespace Specimen.Runtime.Sandbox
         public TimedBonus Fury { get; } = new TimedBonus();
         public VillageLayout Village { get; } = new VillageLayout();
         public InteractionHub Interactions { get; set; }
+        public MouseGestures Mouse { get; set; }
 
         /// <summary>Lo levanta un banco al usarlo con E; la interfaz abre la ventana de profesión.</summary>
         public event System.Action<ProfessionId> BenchOpened;

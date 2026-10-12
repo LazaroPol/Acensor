@@ -34,8 +34,10 @@ namespace Specimen.Runtime.UI
                 TextAnchor.MiddleCenter);
             slot._count = UiFactory.Label(rect, string.Empty, new Vector2(2f, size - 18f), new Vector2(size - 5f, 16f), 12,
                 TextAnchor.LowerRight);
-            slot._key = UiFactory.Label(rect, key ?? string.Empty, new Vector2(4f, 2f), new Vector2(size, 14f), 11,
-                TextAnchor.UpperLeft, UiTheme.TextDim);
+            int keySize = Mathf.Max(13, (int)(size * 0.3f));
+            slot._key = UiFactory.Label(rect, key ?? string.Empty, new Vector2(5f, 2f), new Vector2(size - 8f, keySize + 4f),
+                keySize, TextAnchor.UpperLeft, new Color(1f, 0.92f, 0.7f));
+            slot._key.fontStyle = FontStyle.Bold;
             slot._border = UiFactory.Border(rect, UiTheme.GoldDim);
             slot.Hover = rect.gameObject.AddComponent<UiHoverTip>();
             slot.Clear();
