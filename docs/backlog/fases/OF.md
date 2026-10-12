@@ -10,7 +10,7 @@ _Niveles de oficio, recetas por etiqueta, estaciones con piezas, planos y tratad
 | ✅ | **OF-04** Nivel y XP por oficio con curva configurable e hitos | S106 | #108 |
 | ✅ | **OF-05** Calidad del objeto: grados, tirada y huecos de mod | S107 | #109 |
 | ✅ | **OF-06** RecipeDefinition: estación, niveles, piezas, tiempo, XP y desbloqueo | S108 | #110 |
-| ⬜ | **OF-07** Conocimiento: pergaminos, planos, tratados y libros de oficio |  |  |
+| 👀 | **OF-07** Conocimiento: pergaminos, planos, tratados y libros de oficio |  |  |
 | ⬜ | **OF-08** Estaciones: nivel mejorable, ranuras y piezas colocables |  |  |
 | ⬜ | **OF-09** Cola de fabricación con temporizador y combustible |  |  |
 | ⬜ | **OF-10** Mods de equipo: definición, instalación y stats efectivos |  |  |
