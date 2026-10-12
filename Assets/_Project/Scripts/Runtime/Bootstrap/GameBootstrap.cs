@@ -14,6 +14,9 @@ namespace Specimen.Runtime.Bootstrap
 
         public static IServiceResolver Services => _services ??= GameComposition.Build(new UnitySceneLoader());
 
+        /// <summary>Descarta la partida actual: el siguiente acceso a <see cref="Services"/> crea una nueva.</summary>
+        public static void NewGame() => _services = null;
+
         [RuntimeInitializeOnLoadMethod(RuntimeInitializeLoadType.SubsystemRegistration)]
         private static void Reset() => _services = null;
 

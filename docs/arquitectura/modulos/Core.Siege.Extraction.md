@@ -6,7 +6,7 @@ Ensamblado: `Specimen.Core` · Carpeta: `Assets/_Project/Scripts/Core/Siege/Extr
 Tests: `Assets/_Project/Tests/EditMode/Core/Siege/Extraction`
 
 **Depende de:** [Core.Common](Core.Common.md), [Core.Siege.Scoring](Core.Siege.Scoring.md)
-**Lo usan:** nadie
+**Lo usan:** [Runtime.Atico](Runtime.Atico.md)
 
 | Fichero | Tipo | Resumen |
 |---|---|---|
