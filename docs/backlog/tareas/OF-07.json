@@ -2,7 +2,7 @@
   "id": "OF-07",
   "phase": "OF",
   "title": "Conocimiento: pergaminos, planos, tratados y libros de oficio",
-  "status": "review",
+  "status": "done",
   "type": "feature",
   "labels": [
     "oficios",
@@ -17,6 +17,6 @@
     "KnownRecipes responde si una UnlockCondition se cumple y expone lo aprendido para guardarlo.",
     "Una receta bloqueada pasa a disponible tras leer su plano o tratado (test de extremo a extremo)."
   ],
-  "pr": null,
-  "session": null
+  "pr": "#111",
+  "session": 109
 }
