@@ -30,6 +30,8 @@ namespace Specimen.Runtime.Hubs
             string text = _elevator.IsReady ? "Listo ✔ (cancelar)" : "Estoy listo para salir";
             if (GUI.Button(new Rect(20f, y + 10f, 360f, 38f), text)) _elevator.ToggleReady();
             GUI.enabled = true;
+            if (_elevator.CanExit && GUI.Button(new Rect(20f, y + 100f, 360f, 34f), "Salir al piso"))
+                _flow.GoTo(SceneId.Incursion);
             if (GUI.Button(new Rect(20f, y + 56f, 360f, 34f), "Laboratorio Genético")) _flow.GoTo(SceneId.Laboratorio);
         }
     }

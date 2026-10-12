@@ -5,13 +5,14 @@
 Ensamblado: `Specimen.Core` · Carpeta: `Assets/_Project/Scripts/Core/Floors`
 Tests: `Assets/_Project/Tests/EditMode/Core/Floors`
 
-**Depende de:** [Core.Common](Core.Common.md), [Core.Loot](Core.Loot.md), [Core.Randomness](Core.Randomness.md)
-**Lo usan:** nadie
+**Depende de:** [Core.Common](Core.Common.md), [Core.Loot](Core.Loot.md), [Core.Prototype](Core.Prototype.md), [Core.Randomness](Core.Randomness.md), [Core.Visuals](Core.Visuals.md)
+**Lo usan:** [Runtime.Incursion](Runtime.Incursion.md)
 
 | Fichero | Tipo | Resumen |
 |---|---|---|
 | `Corridor.cs` | struct `Corridor` | Pasillo no dirigido entre dos salas (A &lt; B). |
 | `FloorConnectivity.cs` | class `FloorConnectivity` | Consultas de alcanzabilidad sobre un trazado (BFS desde la entrada). |
+| `FloorGreyboxLayout.cs` | class `FloorGreyboxLayout` | Convierte un en visuales greybox: cada anillo es una fila de salas (suelo cuadrado), los pasillos unen centros en L y el Ascensor marca la e |
 | `FloorLayout.cs` | class `FloorLayout` | Trazado inmutable de un piso: salas, pasillos y semilla que lo generó. |
 | `FloorRoom.cs` | struct `FloorRoom` | Sala del piso. |
 | `IFloorGenerator.cs` | interface `IFloorGenerator` | Genera el trazado de un piso de forma reproducible a partir de una semilla. |

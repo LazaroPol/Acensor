@@ -6,7 +6,7 @@ Ensamblado: `Specimen.Runtime` · Carpeta: `Assets/_Project/Scripts/Runtime/Hud`
 Tests: (sin carpeta propia)
 
 **Depende de:** [Core.Hud](Core.Hud.md)
-**Lo usan:** nadie
+**Lo usan:** [Runtime.Incursion](Runtime.Incursion.md)
 
 | Fichero | Tipo | Resumen |
 |---|---|---|

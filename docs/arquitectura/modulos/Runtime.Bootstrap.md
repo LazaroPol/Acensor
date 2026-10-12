@@ -6,7 +6,7 @@ Ensamblado: `Specimen.Runtime` · Carpeta: `Assets/_Project/Scripts/Runtime/Boot
 Tests: (sin carpeta propia)
 
 **Depende de:** [Core.Composition](Core.Composition.md)
-**Lo usan:** [Runtime.Hubs](Runtime.Hubs.md)
+**Lo usan:** [Runtime.Hubs](Runtime.Hubs.md), [Runtime.Incursion](Runtime.Incursion.md)
 
 | Fichero | Tipo | Resumen |
 |---|---|---|
