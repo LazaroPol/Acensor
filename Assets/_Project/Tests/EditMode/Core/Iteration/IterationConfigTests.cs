@@ -27,7 +27,7 @@ namespace Specimen.Tests.Core.Iteration
         [TestCase(5, 180, -1, 5, 4)]
         [TestCase(5, 180, 420, 0, 4)]
         [TestCase(5, 180, 420, 5, 0)]
-        [TestCase(5, 180, 420, 5, 5)]
+        [TestCase(5, 180, 420, 5, 7)]
         public void InvalidValues_AreRejected(int floors, float calm, float incursion, int waves, int players) =>
             Assert.Throws<ArgumentOutOfRangeException>(() => Make(floors, calm, incursion, waves, players));
 

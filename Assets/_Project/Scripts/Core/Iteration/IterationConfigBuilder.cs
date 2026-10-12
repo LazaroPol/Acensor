@@ -2,7 +2,7 @@ namespace Specimen.Core.Iteration
 {
     /// <summary>
     /// Constructor fluido con los valores por defecto del GDD (§3.1): Acto de 5 pisos,
-    /// Calma 3 min, Incursión 7 min, avisos a 60 s y 15 s, asedio de 5 oleadas, 4 jugadores,
+    /// Calma 3 min, Incursión 7 min, avisos a 60 s y 15 s, asedio de 5 oleadas, 6 jugadores,
     /// 15 s de gracia tras votar el cierre anticipado.
     /// </summary>
     public sealed class IterationConfigBuilder

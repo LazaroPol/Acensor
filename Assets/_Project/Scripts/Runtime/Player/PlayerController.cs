@@ -14,12 +14,16 @@ namespace Specimen.Runtime.Player
     {
         [SerializeField] private float gravity = -20f;
         [SerializeField] private float staminaRegenPerSecond = 15f;
+        [SerializeField] private float healthRegenPerSecond = 0.5f;
+        [SerializeField] private float resourceRegenPerSecond = 1f;
 
         private CharacterController _body;
         private PlayerInput _input;
         private PlanarMover _mover;
         private DodgeController _dodge;
         private ResourceRegen _regen;
+        private ResourceRegen _healthRegen;
+        private AcceleratingRegen _resourceRegen;
         private Transform _cameraYaw;
         private float _verticalSpeed;
 
@@ -34,6 +38,8 @@ namespace Specimen.Runtime.Player
             _mover = new PlanarMover(config, new SprintController(Vitals.Stamina, config));
             _dodge = new DodgeController(new DodgeConfig(), Vitals.Stamina);
             _regen = new ResourceRegen(Vitals.Stamina, staminaRegenPerSecond, 1f);
+            _healthRegen = new ResourceRegen(Vitals.Health, healthRegenPerSecond);
+            _resourceRegen = new AcceleratingRegen(Vitals.ClassResource, resourceRegenPerSecond, 2f, 3f, 5f);
             _cameraYaw = cameraYaw;
         }
 
@@ -58,6 +64,8 @@ namespace Specimen.Runtime.Player
             if (_dodge.IsDodging) velocity = dash;
             _regen.Paused = _mover.IsSprinting || _dodge.IsDodging;
             _regen.Tick(dt);
+            _healthRegen.Tick(dt);
+            _resourceRegen.Tick(dt);
             Move(velocity, dt);
         }
 

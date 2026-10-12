@@ -13,7 +13,7 @@ namespace Specimen.Tests.Core.Iteration
             Assert.That(c.CalmSeconds, Is.EqualTo(180f));
             Assert.That(c.IncursionSeconds, Is.EqualTo(420f));
             Assert.That(c.SiegeWaves, Is.EqualTo(5));
-            Assert.That(c.MaxPlayers, Is.EqualTo(4));
+            Assert.That(c.MaxPlayers, Is.EqualTo(6));
             Assert.That(c.DoorWarnings, Is.EqualTo(new[] { 60f, 15f }));
         }
 
