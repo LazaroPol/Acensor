@@ -66,6 +66,7 @@ Un módulo = un namespace C#. Abre solo la página del módulo que vayas a tocar
 | [Core.Visuals.Packs](modulos/Core.Visuals.Packs.md) | 1 | `MaterialTextureNames` | — |
 | [Core.Vitals](modulos/Core.Vitals.md) | 6 | `CharacterVitals`, `Fatigue`, `FatigueConfig`, `ResourceKind`, `ResourcePool` … | Core.Common, Core.Stats, Core.Time |
 | [Runtime.Art](modulos/Runtime.Art.md) | 1 | `MoodVolumeDriver` | Core.Art |
+| [Runtime.Atico](modulos/Runtime.Atico.md) | 1 | `AticoBootstrap` | Core.Armory, Core.Classes, Core.Composition, Core.Events, Core.Hud, Core.Iteration, Core.Prototype, Core.Visuals, Runtime.Bootstrap, Runtime.Incursion, Runtime.Prototype, Runtime.Visuals |
 | [Runtime.Bootstrap](modulos/Runtime.Bootstrap.md) | 2 | `GameBootstrap`, `UnitySceneLoader` | Core.Composition |
 | [Runtime.Characters](modulos/Runtime.Characters.md) | 1 | `CharacterAnimator` | Core.Animation |
 | [Runtime.Combat](modulos/Runtime.Combat.md) | 3 | `EnemyActor`, `EnemySpawner`, `PlayerAttack` | Core.Combat, Core.Combat.Enemies, Core.Floors, Core.Randomness, Core.Stats, Core.Vitals |

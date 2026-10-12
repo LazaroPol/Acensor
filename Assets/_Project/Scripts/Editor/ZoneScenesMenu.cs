@@ -12,7 +12,7 @@ namespace Specimen.Editor
     public static class ZoneScenesMenu
     {
         private const string Folder = "Assets/_Project/Scenes/Zonas";
-        private static readonly SceneId[] Zones = { SceneId.Armeria, SceneId.Ascensor, SceneId.Laboratorio, SceneId.Incursion };
+        private static readonly SceneId[] Zones = { SceneId.Armeria, SceneId.Ascensor, SceneId.Laboratorio, SceneId.Incursion, SceneId.Atico };
 
         [MenuItem("SPECIMEN/Crear escenas de zonas")]
         public static void Create()

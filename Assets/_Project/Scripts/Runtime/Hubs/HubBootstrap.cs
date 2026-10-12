@@ -54,6 +54,7 @@ namespace Specimen.Runtime.Hubs
             _run.Tick(Time.deltaTime);
             var phase = _run.Phase;
             if (_previous == IterationPhase.Calm && phase == IterationPhase.Incursion) _flow.GoTo(SceneId.Incursion);
+            if (_previous != IterationPhase.Siege && phase == IterationPhase.Siege) _flow.GoTo(SceneId.Atico);
             _previous = phase;
         }
     }
