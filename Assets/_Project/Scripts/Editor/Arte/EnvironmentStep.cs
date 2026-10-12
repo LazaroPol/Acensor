@@ -38,11 +38,11 @@ namespace Specimen.Editor.Arte
             var size = new Vector3(style.Scale.X, style.Scale.Y, style.Scale.Z);
             var b = ModelFitting.WorldBounds(model).size;
             bool turn = size.x > size.z && b.z > b.x;
-            ModelFitting.FitToSize(model, turn ? new Vector3(size.z, size.y, size.x) : size);
-            if (turn) model.transform.localRotation = Quaternion.Euler(0f, 90f, 0f);
+            var fit = ModelFitting.FitToSize(model, turn ? new Vector3(size.z, size.y, size.x) : size);
+            if (turn) fit.transform.localRotation = Quaternion.Euler(0f, 90f, 0f);
             var center = GreyboxOffset.CenterOf(style, VisualAnchors.For(id));
             var min = new Vector3(center.X, center.Y, center.Z) - size / 2f;
-            ModelFitting.AlignMinTo(model, min, false);
+            ModelFitting.AlignMinTo(fit, min, false);
             var collider = root.AddComponent<BoxCollider>();
             collider.center = min + size / 2f;
             collider.size = size;

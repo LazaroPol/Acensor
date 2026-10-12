@@ -18,11 +18,11 @@ namespace Specimen.Runtime.Player
         private PlayerInput _input;
         private Transform _target;
 
-        public void Follow(Transform target, PlayerInput input)
+        public void Follow(Transform target, PlayerInput input, float initialDistance = 12f)
         {
             _target = target;
             _input = input;
-            _zoom = new CameraZoom();
+            _zoom = new CameraZoom(initialDistance);
             Apply(Rig().Desired(ToPoint(target.position)));
         }
 

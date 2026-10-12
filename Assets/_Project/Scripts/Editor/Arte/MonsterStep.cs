@@ -27,8 +27,8 @@ namespace Specimen.Editor.Arte
                 model.name = "Modelo";
                 var preferred = new Dictionary<string, string> { [entry.MaterialKey] = entry.BaseColorTexture };
                 MaterialRemapper.Apply(root, textures, $"{entry.ModelName}_{entry.Variant}", preferred);
-                CharacterAssembler.SetupAnimator(model, models.AvatarOf(entry.ModelName), context.Monster);
                 ModelFitting.NormalizeHeight(model, BaseHeight);
+                CharacterAssembler.SetupAnimator(model, models.AvatarOf(entry.ModelName), context.Monster);
                 model.transform.localScale *= entry.Scale;
                 root.AddComponent<CharacterAnimator>();
                 var prefab = PrefabSaver.Save(root, ArtPaths.Enemies);

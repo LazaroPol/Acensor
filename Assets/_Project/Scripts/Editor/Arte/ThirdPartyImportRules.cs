@@ -11,7 +11,7 @@ namespace Specimen.Editor.Arte
     public sealed class ThirdPartyImportRules : AssetPostprocessor
     {
         // Sube este número si cambias las reglas: Unity reimporta los modelos afectados.
-        public override uint GetVersion() => 1;
+        public override uint GetVersion() => 4;
 
         private void OnPreprocessModel()
         {
@@ -26,7 +26,8 @@ namespace Specimen.Editor.Arte
                 importer.importAnimation = ArtPaths.IsAnimationLibrary(assetPath);
                 return;
             }
-            importer.animationType = ModelImporterAnimationType.None;
+            bool skinned = assetPath.Contains("/Pelo/") || assetPath.Contains("/Partes/") || assetPath.EndsWith("_Peasant.fbx");
+            importer.animationType = skinned ? ModelImporterAnimationType.Generic : ModelImporterAnimationType.None;
             importer.importAnimation = false;
         }
 

@@ -18,6 +18,9 @@ namespace Specimen.Runtime.Sandbox
         private readonly SandboxLayout _layout = new SandboxLayout();
         private readonly EnemyFactory _factory = new EnemyFactory(new LinearDepthScaling(DepthScalingConfig.Default));
 
+        /// <summary>Distancia inicial de cámara (m): más cerca que en la Incursión para ver bien modelos y animaciones.</summary>
+        public const float CameraDistance = 8f;
+
         public SandboxWorld(SandboxContext context) => _context = context;
 
         public Vector3 PlayerSpawn => At(_layout.PlayerSpawn) + Vector3.up * 0.05f;
@@ -60,7 +63,7 @@ namespace Specimen.Runtime.Sandbox
             player.Init(_context, camera.transform);
             root.AddComponent<PlayerCombat>().Init(player, _context);
             root.AddComponent<SignatureCaster>().Init(player, _context);
-            camera.Follow(root.transform, controller.Input);
+            camera.Follow(root.transform, controller.Input, CameraDistance);
             return player;
         }
 

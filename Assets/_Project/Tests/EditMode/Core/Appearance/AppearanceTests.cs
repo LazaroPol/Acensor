@@ -23,6 +23,13 @@ namespace Specimen.Tests.Core.Appearance
         }
 
         [Test]
+        public void NoKitWearsOnlyTheBaseBody()
+        {
+            foreach (ClassKitId kit in Enum.GetValues(typeof(ClassKitId)))
+                Assert.That(ClassAppearances.For(kit).Outfit, Is.Not.EqualTo(OutfitId.Ajustado), kit.ToString());
+        }
+
+        [Test]
         public void ExplorerUsesRangerAsBaseWithoutOutfit()
         {
             var look = new CharacterAppearance(BodyType.Femenino, OutfitId.Explorador, 3);

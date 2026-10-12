@@ -28,6 +28,10 @@ namespace Specimen.Runtime.Characters
             _parameters.Clear();
             if (!HasAnimator) return;
             _animator.applyRootMotion = false;
+            // Los FBX de Blender traen la raíz girada: los bounds de las mallas no siguen al esqueleto y Unity
+            // creería que el personaje está fuera de cámara (dejaría de animarlo y lo podría ocultar).
+            _animator.cullingMode = AnimatorCullingMode.AlwaysAnimate;
+            foreach (var skinned in GetComponentsInChildren<SkinnedMeshRenderer>(true)) skinned.updateWhenOffscreen = true;
             foreach (var parameter in _animator.parameters) _parameters.Add(parameter.nameHash);
         }
 
