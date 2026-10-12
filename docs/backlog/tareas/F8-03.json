@@ -2,7 +2,7 @@
   "id": "F8-03",
   "phase": "F8",
   "title": "Puntuación y multiplicador de supervivencia colectiva",
-  "status": "in_progress",
+  "status": "done",
   "type": "feature",
   "labels": [
     "asedio"
@@ -16,6 +16,6 @@
     "Settle(survived) aplica el multiplicador solo si el equipo sobrevivió; si murió conserva los puntos con multiplicador 1.",
     "Núcleo sin UnityEngine, ficheros <= 120 líneas y tests NUnit en verde."
   ],
-  "pr": null,
-  "session": null
+  "pr": "#68",
+  "session": 51
 }
