@@ -2,7 +2,7 @@
   "id": "F10-05",
   "phase": "F10",
   "title": "Dualidad cromática: Volumes URP y shader toon con contornos",
-  "status": "in_progress",
+  "status": "done",
   "type": "feature",
   "labels": [
     "ui",
@@ -16,6 +16,6 @@
     "MoodVolumeDriver aplica el ambiente a un Volume URP, a la niebla y al grosor global de contorno.",
     "Shader Specimen/Toon: escalones de luz y contorno por casco invertido."
   ],
-  "pr": null,
-  "session": null
+  "pr": "74",
+  "session": 84
 }
