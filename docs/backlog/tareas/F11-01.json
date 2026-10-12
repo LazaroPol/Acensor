@@ -2,7 +2,7 @@
   "id": "F11-01",
   "phase": "F11",
   "title": "Integración de Netcode for GameObjects",
-  "status": "todo",
+  "status": "review",
   "type": "feature",
   "labels": [
     "red"
