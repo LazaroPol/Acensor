@@ -26,8 +26,8 @@ TOTAL  ████████████████████████�
 
 ## Cola de prioridad (tablero)
 
-1. **AR-02** Personajes del kit de clases
-2. **AR-04** Armas y equipo por clase
-3. **AR-05** Bestiario
-4. **AR-06** Entorno modular
-5. **AR-07** Mobiliario de profesiones
+1. **AR-04** Armas y equipo por clase
+2. **AR-05** Bestiario
+3. **AR-06** Entorno modular
+4. **AR-07** Mobiliario de profesiones
+5. **AR-08** Campo de pruebas jugable
