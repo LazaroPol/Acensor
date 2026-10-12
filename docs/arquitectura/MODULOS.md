@@ -68,7 +68,7 @@ Un módulo = un namespace C#. Abre solo la página del módulo que vayas a tocar
 | [Core.Vitals](modulos/Core.Vitals.md) | 7 | `AcceleratingRegen`, `CharacterVitals`, `Fatigue`, `FatigueConfig`, `ResourceKind` … | Core.Common, Core.Stats, Core.Time |
 | [Runtime.Art](modulos/Runtime.Art.md) | 1 | `MoodVolumeDriver` | Core.Art |
 | [Runtime.Atico](modulos/Runtime.Atico.md) | 3 | `AticoBootstrap`, `OspreyPad`, `SiegeController` | Core.Armory, Core.Classes, Core.Composition, Core.Events, Core.Hud, Core.Iteration, Core.Prototype, Core.Siege, Core.Siege.Extraction, Core.Visuals, Core.Vitals, Runtime.Bootstrap, Runtime.Combat, Runtime.Incursion, Runtime.Player, Runtime.Prototype, Runtime.Visuals |
-| [Runtime.Bootstrap](modulos/Runtime.Bootstrap.md) | 2 | `GameBootstrap`, `UnitySceneLoader` | Core.Composition |
+| [Runtime.Bootstrap](modulos/Runtime.Bootstrap.md) | 3 | `GameBootstrap`, `SceneBootstrapper`, `UnitySceneLoader` | Core.Composition, Runtime.Atico, Runtime.Hubs, Runtime.Incursion, Runtime.Lab, Runtime.Prototype, Runtime.Sandbox |
 | [Runtime.Characters](modulos/Runtime.Characters.md) | 1 | `CharacterAnimator` | Core.Animation |
 | [Runtime.Combat](modulos/Runtime.Combat.md) | 3 | `EnemyActor`, `EnemySpawner`, `PlayerAttack` | Core.Combat, Core.Combat.Enemies, Core.Floors, Core.Randomness, Core.Stats, Core.Vitals |
 | [Runtime.Hubs](modulos/Runtime.Hubs.md) | 6 | `ArmoryRoom`, `ArmoryScreen`, `ElevatorRoom`, `ElevatorScreen`, `HubBootstrap` … | Core.Armory, Core.Classes, Core.Composition, Core.Elevator, Core.Events, Core.Hubs, Core.Hud, Core.Iteration, Core.Stats, Core.Visuals, Runtime.Bootstrap, Runtime.Incursion, Runtime.Player, Runtime.Prototype, Runtime.Visuals |

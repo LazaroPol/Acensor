@@ -16,8 +16,8 @@ namespace Specimen.Runtime.Hubs
         private SceneFlow _flow;
         private IterationPhase _previous;
 
-        [RuntimeInitializeOnLoadMethod(RuntimeInitializeLoadType.AfterSceneLoad)]
-        private static void EnsureInHubScene()
+        /// <summary>Lo llama <c>SceneBootstrapper</c> en cada carga de escena; solo actúa en la suya.</summary>
+        public static void Ensure()
         {
             string scene = SceneManager.GetActiveScene().name;
             if (scene != nameof(SceneId.Armeria) && scene != nameof(SceneId.Ascensor)) return;

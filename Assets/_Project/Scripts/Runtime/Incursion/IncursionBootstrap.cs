@@ -32,8 +32,8 @@ namespace Specimen.Runtime.Incursion
         private CharacterVitals _vitals;
         private LootPickups _loot;
 
-        [RuntimeInitializeOnLoadMethod(RuntimeInitializeLoadType.AfterSceneLoad)]
-        private static void EnsureInIncursionScene()
+        /// <summary>Lo llama <c>SceneBootstrapper</c> en cada carga de escena; solo actúa en la suya.</summary>
+        public static void Ensure()
         {
             if (SceneManager.GetActiveScene().name != nameof(SceneId.Incursion)) return;
             if (FindAnyObjectByType<IncursionBootstrap>() != null) return;
