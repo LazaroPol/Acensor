@@ -1,8 +1,4 @@
-using Specimen.Core.Armory;
-using Specimen.Core.Classes;
 using Specimen.Core.Composition;
-using Specimen.Core.Elevator;
-using Specimen.Core.Hubs;
 using Specimen.Core.Iteration;
 using Specimen.Runtime.Bootstrap;
 using UnityEngine;
@@ -35,17 +31,8 @@ namespace Specimen.Runtime.Hubs
             _run = s.Resolve<IterationRun>();
             if (!_run.HasStarted) _run.Start();
             var flow = _flow = s.Resolve<SceneFlow>();
-            int player = GameComposition.LocalPlayerId;
-            if (SceneManager.GetActiveScene().name == nameof(SceneId.Armeria))
-            {
-                var armory = new ArmoryPresenter(s.Resolve<ClassKitArmory>(), s.Resolve<IClassKitCatalog>(), _run, player);
-                gameObject.AddComponent<ArmoryScreen>().Init(armory, () => flow.GoTo(SceneId.Ascensor));
-            }
-            else
-            {
-                var elevator = new ElevatorPresenter(s.Resolve<ElevatorPlatform>(), _run, player);
-                gameObject.AddComponent<ElevatorScreen>().Init(elevator, flow);
-            }
+            if (SceneManager.GetActiveScene().name == nameof(SceneId.Armeria)) ArmoryRoom.Mount(gameObject, s, _run, flow);
+            else ElevatorRoom.Mount(gameObject, s, _run, flow);
         }
 
         private void Update()

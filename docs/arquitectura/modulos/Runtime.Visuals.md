@@ -6,7 +6,7 @@ Ensamblado: `Specimen.Runtime` · Carpeta: `Assets/_Project/Scripts/Runtime/Visu
 Tests: (sin carpeta propia)
 
 **Depende de:** [Core.Classes](Core.Classes.md), [Core.Professions](Core.Professions.md), [Core.Prototype](Core.Prototype.md), [Core.Visuals](Core.Visuals.md)
-**Lo usan:** [Runtime.Atico](Runtime.Atico.md), [Runtime.Incursion](Runtime.Incursion.md), [Runtime.Prototype](Runtime.Prototype.md), [Runtime.Sandbox](Runtime.Sandbox.md)
+**Lo usan:** [Runtime.Atico](Runtime.Atico.md), [Runtime.Hubs](Runtime.Hubs.md), [Runtime.Incursion](Runtime.Incursion.md), [Runtime.Prototype](Runtime.Prototype.md), [Runtime.Sandbox](Runtime.Sandbox.md)
 
 | Fichero | Tipo | Resumen |
 |---|---|---|

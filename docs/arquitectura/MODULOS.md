@@ -35,7 +35,7 @@ Un módulo = un namespace C#. Abre solo la página del módulo que vayas a tocar
 | [Core.Floors.Population](modulos/Core.Floors.Population.md) | 5 | `FloorPopulation`, `FloorPopulator`, `RingPopulationRules`, `RingQuota`, `RoomPopulation` | Core.Common, Core.Loot, Core.Randomness |
 | [Core.Floors.Remnants](modulos/Core.Floors.Remnants.md) | 8 | `FloorRemnants`, `FragmentPlacement`, `MemoryFragmentLog`, `Remnant`, `RemnantKind` … | Core.Common, Core.Loot, Core.Randomness |
 | [Core.Floors.Types](modulos/Core.Floors.Types.md) | 9 | `PuzzleFloor`, `DecisionFloor`, `SanctuaryFloor`, `ProfessionFloor`, `LootFloor` … | Core.Common |
-| [Core.Hubs](modulos/Core.Hubs.md) | 3 | `ArmoryPresenter`, `ElevatorPresenter`, `KitAvailability`, `KitEntry` | Core.Armory, Core.Classes, Core.Common, Core.Elevator, Core.Iteration, Core.Iteration.Presence |
+| [Core.Hubs](modulos/Core.Hubs.md) | 5 | `ArmoryPresenter`, `ElevatorPresenter`, `HubRoomLayout`, `KitAvailability`, `KitEntry` … | Core.Armory, Core.Classes, Core.Common, Core.Elevator, Core.Iteration, Core.Iteration.Presence, Core.Prototype, Core.Visuals |
 | [Core.Hud](modulos/Core.Hud.md) | 5 | `GameHudPresenter`, `HudBar`, `NoticeSeverity`, `HudNotice`, `HudNotices` … | Core.Common, Core.Events, Core.Iteration, Core.Prototype, Core.Time, Core.Vitals |
 | [Core.Items](modulos/Core.Items.md) | 11 | `Durability`, `IDurability`, `IInventory`, `Inventory`, `ItemCategory` … | Core.Common |
 | [Core.Iteration](modulos/Core.Iteration.md) | 9 | `IterationConfig`, `IterationConfigBuilder`, `IterationContext`, `IterationPhaseChanged`, `FloorReached` … | Core.Common, Core.Events, Core.Iteration.Ending, Core.Iteration.Presence, Core.Iteration.Readiness, Core.Iteration.States, Core.Iteration.Voting, Core.StateMachines, Core.Time |
@@ -71,7 +71,7 @@ Un módulo = un namespace C#. Abre solo la página del módulo que vayas a tocar
 | [Runtime.Bootstrap](modulos/Runtime.Bootstrap.md) | 2 | `GameBootstrap`, `UnitySceneLoader` | Core.Composition |
 | [Runtime.Characters](modulos/Runtime.Characters.md) | 1 | `CharacterAnimator` | Core.Animation |
 | [Runtime.Combat](modulos/Runtime.Combat.md) | 3 | `EnemyActor`, `EnemySpawner`, `PlayerAttack` | Core.Combat, Core.Combat.Enemies, Core.Floors, Core.Randomness, Core.Stats, Core.Vitals |
-| [Runtime.Hubs](modulos/Runtime.Hubs.md) | 3 | `ArmoryScreen`, `ElevatorScreen`, `HubBootstrap` | Core.Armory, Core.Classes, Core.Composition, Core.Elevator, Core.Hubs, Core.Iteration, Runtime.Bootstrap |
+| [Runtime.Hubs](modulos/Runtime.Hubs.md) | 6 | `ArmoryRoom`, `ArmoryScreen`, `ElevatorRoom`, `ElevatorScreen`, `HubBootstrap` … | Core.Armory, Core.Classes, Core.Composition, Core.Elevator, Core.Events, Core.Hubs, Core.Hud, Core.Iteration, Core.Stats, Core.Visuals, Runtime.Bootstrap, Runtime.Incursion, Runtime.Player, Runtime.Prototype, Runtime.Visuals |
 | [Runtime.Hud](modulos/Runtime.Hud.md) | 1 | `GameHud` | Core.Hud |
 | [Runtime.Incursion](modulos/Runtime.Incursion.md) | 2 | `IncursionBootstrap`, `IncursionPlayer` | Core.Armory, Core.Classes, Core.Composition, Core.Events, Core.Floors, Core.Hud, Core.Iteration, Core.Stats, Core.Visuals, Core.Vitals, Runtime.Bootstrap, Runtime.Combat, Runtime.Hud, Runtime.Player, Runtime.Prototype, Runtime.Visuals |
 | [Runtime.Lab](modulos/Runtime.Lab.md) | 2 | `LabBootstrap`, `LabScreen` | Core.Composition, Core.Dna, Core.Lab |

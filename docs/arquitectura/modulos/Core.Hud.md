@@ -6,7 +6,7 @@ Ensamblado: `Specimen.Core` · Carpeta: `Assets/_Project/Scripts/Core/Hud`
 Tests: `Assets/_Project/Tests/EditMode/Core/Hud`
 
 **Depende de:** [Core.Common](Core.Common.md), [Core.Events](Core.Events.md), [Core.Iteration](Core.Iteration.md), [Core.Prototype](Core.Prototype.md), [Core.Time](Core.Time.md), [Core.Vitals](Core.Vitals.md)
-**Lo usan:** [Runtime.Atico](Runtime.Atico.md), [Runtime.Hud](Runtime.Hud.md), [Runtime.Incursion](Runtime.Incursion.md)
+**Lo usan:** [Runtime.Atico](Runtime.Atico.md), [Runtime.Hubs](Runtime.Hubs.md), [Runtime.Hud](Runtime.Hud.md), [Runtime.Incursion](Runtime.Incursion.md)
 
 | Fichero | Tipo | Resumen |
 |---|---|---|
