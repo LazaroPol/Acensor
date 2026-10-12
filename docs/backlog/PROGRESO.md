@@ -27,8 +27,8 @@ TOTAL  ████████████████████████�
 
 ## Cola de prioridad (tablero)
 
-1. **OF-12** Contenido II: recetario medieval por oficio y conocimientos
-2. **OF-13** Guardado y carga del progreso de oficios e inventario
-3. **OF-14** Authoring en Unity: ScriptableObjects, base de datos y validación
-4. **OF-15** Estaciones en el Campo de pruebas: ventana, cola y piezas
-5. **OF-16** Mods, conocimiento y guardado en el Campo de pruebas + guía de prueba
+1. **OF-13** Guardado y carga del progreso de oficios e inventario
+2. **OF-14** Authoring en Unity: ScriptableObjects, base de datos y validación
+3. **OF-15** Estaciones en el Campo de pruebas: ventana, cola y piezas
+4. **OF-16** Mods, conocimiento y guardado en el Campo de pruebas + guía de prueba
+5. **F11-01** Integración de Netcode for GameObjects
