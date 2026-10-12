@@ -2,7 +2,7 @@
   "id": "F8-04",
   "phase": "F8",
   "title": "Extracción en Osprey y conversión a puntos de ADN",
-  "status": "in_progress",
+  "status": "done",
   "type": "feature",
   "labels": [
     "asedio"
@@ -15,6 +15,6 @@
     "Depart devuelve quién subió y quién se quedó atrás.",
     "Núcleo sin UnityEngine, ficheros <= 120 líneas y tests NUnit en verde."
   ],
-  "pr": null,
-  "session": null
+  "pr": "#70",
+  "session": 52
 }
