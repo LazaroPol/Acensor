@@ -13,6 +13,8 @@ namespace Specimen.Runtime.Combat
         private Transform _target;
         private CharacterVitals _targetVitals;
         private EnemyHealth _health;
+        private CharacterController _body;
+        private float _verticalSpeed;
 
         public event System.Action Died;
 
@@ -26,6 +28,10 @@ namespace Specimen.Runtime.Combat
             _targetVitals = targetVitals;
             _health = new EnemyHealth(enemy.Stats.MaxHealth);
             _brain = new EnemyBrain(new EnemyBrainConfig(attackRange: 1.8f, attackCooldown: 1.2f));
+            _body = gameObject.AddComponent<CharacterController>();
+            _body.radius = 0.5f;
+            _body.height = 1f;
+            _body.center = Vector3.zero;
         }
 
         public void Hurt(float amount)
@@ -43,13 +49,20 @@ namespace Specimen.Runtime.Combat
             switch (_brain.Decide(flat.magnitude, !IsDead, _targetVitals.IsAlive, Time.deltaTime))
             {
                 case EnemyAction.Perseguir:
-                    transform.position += flat.normalized * (_brain.Config.MoveSpeed * Time.deltaTime);
+                    Step(flat.normalized * _brain.Config.MoveSpeed);
                     break;
                 case EnemyAction.Atacar:
                     var hit = _enemy.Attack();
                     _targetVitals.Health.Drain(hit.Amount);
                     break;
             }
+        }
+
+        /// <summary>Mueve con el CharacterController: respeta muros y cae al suelo.</summary>
+        private void Step(Vector3 velocity)
+        {
+            _verticalSpeed = _body.isGrounded ? -1f : _verticalSpeed - 20f * Time.deltaTime;
+            _body.Move((velocity + Vector3.up * _verticalSpeed) * Time.deltaTime);
         }
     }
 }

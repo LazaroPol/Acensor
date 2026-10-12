@@ -18,15 +18,18 @@ namespace Specimen.Runtime.Hubs
             var armory = new ArmoryPresenter(s.Resolve<ClassKitArmory>(), catalog, run, GameComposition.LocalPlayerId);
             var room = host.AddComponent<HubRoom>();
             var layout = new HubRoomLayout(14, 9, catalog.All.Count);
-            room.Build(layout, catalog.All[0].CreateStatSheet(), run, new HudNotices(s.Resolve<IEventBus>()),
+            room.Build(layout, Current(s, catalog), run, new HudNotices(s.Resolve<IEventBus>()),
                 i => i == room.ElevatorIndex ? (armory.CanLeave ? "Subir al Ascensor" : armory.Message) : Label(armory, i),
                 i =>
                 {
-                    if (i != room.ElevatorIndex) armory.Choose(armory.Entries()[i].Id);
+                    if (i != room.ElevatorIndex && armory.Choose(catalog.All[i].Id)) room.Attack.Equip(catalog.All[i]);
                     else if (armory.Leave()) flow.GoTo(SceneId.Ascensor);
                 });
             host.AddComponent<ArmoryScreen>().Init(armory, null);
         }
+
+        private static ClassKit Current(IServiceResolver s, IClassKitCatalog catalog) =>
+            s.Resolve<ClassKitArmory>().TryGetKit(GameComposition.LocalPlayerId, out var kit) ? kit : catalog.All[0];
 
         private static string Label(ArmoryPresenter armory, int i)
         {

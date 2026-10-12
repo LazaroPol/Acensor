@@ -61,7 +61,7 @@ namespace Specimen.Runtime.Incursion
             _player = player.transform;
             _vitals = player.Vitals;
             player.gameObject.AddComponent<KitBadge>().Init(s);
-            player.gameObject.AddComponent<PlayerAttack>().Init(kit.CreateStatSheet());
+            player.gameObject.AddComponent<PlayerAttack>().Init(kit, player.Vitals);
             EnemySpawner.Populate(floor, layout, _run.Floor, _player, player.Vitals);
             _loot = gameObject.AddComponent<LootPickups>();
             _loot.Init(floor, layout, _player);

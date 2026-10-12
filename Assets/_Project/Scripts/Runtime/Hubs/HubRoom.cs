@@ -1,9 +1,10 @@
 using System.Collections.Generic;
+using Specimen.Core.Classes;
 using Specimen.Core.Hubs;
 using Specimen.Core.Hud;
 using Specimen.Core.Iteration;
-using Specimen.Core.Stats;
 using Specimen.Core.Visuals;
+using Specimen.Runtime.Combat;
 using Specimen.Runtime.Incursion;
 using Specimen.Runtime.Player;
 using Specimen.Runtime.Prototype;
@@ -29,7 +30,10 @@ namespace Specimen.Runtime.Hubs
         /// <summary>Índice del Ascensor en las interacciones (las estaciones van de 0 a n-1).</summary>
         public int ElevatorIndex => _layout.StationCount;
 
-        public PlayerController Build(HubRoomLayout layout, StatSheet stats, IterationRun run, HudNotices notices,
+        /// <summary>Ataque del jugador en la sala (se puede re-equipar al coger otro kit).</summary>
+        public PlayerAttack Attack { get; private set; }
+
+        public PlayerController Build(HubRoomLayout layout, ClassKit kit, IterationRun run, HudNotices notices,
             System.Func<int, string> label, System.Action<int> use)
         {
             _layout = layout;
@@ -41,9 +45,11 @@ namespace Specimen.Runtime.Hubs
             for (int i = 0; i < layout.StationCount; i++) _points.Add(layout.StationPoint(i));
             _points.Add(layout.ElevatorPoint);
             var (sx, sz) = layout.SpawnPoint;
-            var player = IncursionPlayer.Spawn(new Vector3(sx, 1.2f, sz), stats, run, notices);
+            var player = IncursionPlayer.Spawn(new Vector3(sx, 1.2f, sz), kit.CreateStatSheet(), run, notices);
             _player = player.transform;
             player.gameObject.AddComponent<KitBadge>().Init(Bootstrap.GameBootstrap.Services);
+            Attack = player.gameObject.AddComponent<PlayerAttack>();
+            Attack.Init(kit, player.Vitals);
             PrototypeScenery.EnsureLight();
             return player;
         }

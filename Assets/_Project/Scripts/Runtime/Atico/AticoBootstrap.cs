@@ -49,7 +49,7 @@ namespace Specimen.Runtime.Atico
             var kit = s.Resolve<ClassKitArmory>().TryGetKit(GameComposition.LocalPlayerId, out var mine) ? mine : catalog.All[0];
             var player = IncursionPlayer.Spawn(new Vector3(Size / 2f, 1.2f, Size / 2f), kit.CreateStatSheet(), _run,
                 new HudNotices(s.Resolve<IEventBus>()));
-            player.gameObject.AddComponent<PlayerAttack>().Init(kit.CreateStatSheet());
+            player.gameObject.AddComponent<PlayerAttack>().Init(kit, player.Vitals);
             _player = player;
             player.gameObject.AddComponent<KitBadge>().Init(s);
             _siege = gameObject.AddComponent<SiegeController>();
