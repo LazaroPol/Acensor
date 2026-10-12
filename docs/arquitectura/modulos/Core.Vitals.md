@@ -10,6 +10,7 @@ Tests: `Assets/_Project/Tests/EditMode/Core/Vitals`
 
 | Fichero | Tipo | Resumen |
 |---|---|---|
+| `AcceleratingRegen.cs` | class `AcceleratingRegen` | Regeneración que se acelera con la calma: recupera a ritmo base mientras el recurso se gasta y, pasados sin gastar, el ritmo sube linealment |
 | `CharacterVitals.cs` | class `CharacterVitals` | Vida, recurso de clase y stamina de un personaje, con sus máximos ligados a la . |
 | `Fatigue.cs` | class `Fatigue` | Fatiga acumulada entre pisos. |
 | `FatigueConfig.cs` | class `FatigueConfig` | Parámetros de la fatiga: puntos por piso, extra si el jugador quedó atrapado, penalización de stamina máxima por punto (fracción) y tope de  |

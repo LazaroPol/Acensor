@@ -64,7 +64,7 @@ Un módulo = un namespace C#. Abre solo la página del módulo que vayas a tocar
 | [Core.Time](modulos/Core.Time.md) | 4 | `IClock`, `ITickable`, `ManualClock`, `PhaseTimer` | Core.Common |
 | [Core.Visuals](modulos/Core.Visuals.md) | 14 | `DefaultGreyboxStyles`, `GreyboxColor`, `GreyboxOffset`, `GreyboxPrimitive`, `GreyboxStyle` … | Core.Common |
 | [Core.Visuals.Packs](modulos/Core.Visuals.Packs.md) | 2 | `EnvironmentKit`, `MaterialTextureNames` | — |
-| [Core.Vitals](modulos/Core.Vitals.md) | 6 | `CharacterVitals`, `Fatigue`, `FatigueConfig`, `ResourceKind`, `ResourcePool` … | Core.Common, Core.Stats, Core.Time |
+| [Core.Vitals](modulos/Core.Vitals.md) | 7 | `AcceleratingRegen`, `CharacterVitals`, `Fatigue`, `FatigueConfig`, `ResourceKind` … | Core.Common, Core.Stats, Core.Time |
 | [Runtime.Art](modulos/Runtime.Art.md) | 1 | `MoodVolumeDriver` | Core.Art |
 | [Runtime.Atico](modulos/Runtime.Atico.md) | 3 | `AticoBootstrap`, `OspreyPad`, `SiegeController` | Core.Armory, Core.Classes, Core.Composition, Core.Events, Core.Hud, Core.Iteration, Core.Prototype, Core.Siege, Core.Siege.Extraction, Core.Visuals, Core.Vitals, Runtime.Bootstrap, Runtime.Combat, Runtime.Incursion, Runtime.Player, Runtime.Prototype, Runtime.Visuals |
 | [Runtime.Bootstrap](modulos/Runtime.Bootstrap.md) | 2 | `GameBootstrap`, `UnitySceneLoader` | Core.Composition |
