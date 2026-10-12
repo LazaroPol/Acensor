@@ -6,7 +6,7 @@ Ensamblado: `Specimen.Core` · Carpeta: `Assets/_Project/Scripts/Core/Classes`
 Tests: `Assets/_Project/Tests/EditMode/Core/Classes`
 
 **Depende de:** [Core.Common](Core.Common.md), [Core.Stats](Core.Stats.md)
-**Lo usan:** [Core.Abilities](Core.Abilities.md), [Core.Abilities.Mobility](Core.Abilities.Mobility.md), [Core.Appearance](Core.Appearance.md), [Core.Armory](Core.Armory.md), [Core.Combat.Attacks](Core.Combat.Attacks.md), [Core.Composition](Core.Composition.md), [Core.Hubs](Core.Hubs.md), [Runtime.Hubs](Runtime.Hubs.md), [Runtime.Visuals](Runtime.Visuals.md)
+**Lo usan:** [Core.Abilities](Core.Abilities.md), [Core.Abilities.Mobility](Core.Abilities.Mobility.md), [Core.Appearance](Core.Appearance.md), [Core.Armory](Core.Armory.md), [Core.Combat.Attacks](Core.Combat.Attacks.md), [Core.Composition](Core.Composition.md), [Core.Hubs](Core.Hubs.md), [Runtime.Hubs](Runtime.Hubs.md), [Runtime.Incursion](Runtime.Incursion.md), [Runtime.Visuals](Runtime.Visuals.md)
 
 | Fichero | Tipo | Resumen |
 |---|---|---|

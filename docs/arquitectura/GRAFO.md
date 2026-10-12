@@ -20,7 +20,8 @@ flowchart LR
   n52["Core.Siege.Scoring"]; n53["Core.StateMachines"]; n54["Core.Stats"]; n55["Core.Time"]
   n56["Core.Visuals"]; n57["Core.Visuals.Packs"]; n58["Core.Vitals"]; n59["Runtime.Art"]
   n60["Runtime.Bootstrap"]; n61["Runtime.Characters"]; n62["Runtime.Hubs"]; n63["Runtime.Hud"]
-  n64["Runtime.Lab"]; n65["Runtime.Player"]; n66["Runtime.Prototype"]; n67["Runtime.Visuals"]
+  n64["Runtime.Incursion"]; n65["Runtime.Lab"]; n66["Runtime.Player"]; n67["Runtime.Prototype"]
+  n68["Runtime.Visuals"]
   n0 --> n7 & n13 & n58
   n1 --> n7 & n13 & n42
   n3 --> n7 & n9 & n13
@@ -42,13 +43,13 @@ flowchart LR
   n20 --> n13
   n21 --> n13 & n15 & n31 & n32 & n39 & n54 & n55 & n58
   n22 --> n13
-  n23 --> n13 & n40 & n47
+  n23 --> n13 & n40 & n46 & n47 & n56
   n24 --> n13 & n28 & n47
   n25 --> n13 & n44 & n47
   n26 --> n13 & n40 & n47
   n27 --> n13 & n40 & n47
   n28 --> n13
-  n29 --> n4 & n7 & n13 & n21 & n32
+  n29 --> n4 & n7 & n13 & n21 & n32 & n34
   n30 --> n13 & n22 & n32 & n46 & n55 & n58
   n31 --> n13
   n32 --> n13 & n22 & n33 & n34 & n35 & n36 & n37 & n53 & n55
@@ -82,8 +83,9 @@ flowchart LR
   n61 --> n2
   n62 --> n4 & n7 & n14 & n21 & n29 & n32 & n60
   n63 --> n30
-  n64 --> n14 & n16 & n38
-  n65 --> n42 & n54 & n58
-  n66 --> n42 & n46 & n54 & n55 & n56 & n58 & n67
-  n67 --> n7 & n44 & n46 & n56
+  n64 --> n4 & n7 & n14 & n22 & n23 & n30 & n32 & n54 & n56 & n60 & n63 & n66 & n67 & n68
+  n65 --> n14 & n16 & n38
+  n66 --> n42 & n54 & n58
+  n67 --> n42 & n46 & n54 & n55 & n56 & n58 & n68
+  n68 --> n7 & n44 & n46 & n56
 ```

@@ -6,7 +6,7 @@ Ensamblado: `Specimen.Core` · Carpeta: `Assets/_Project/Scripts/Core/Iteration/
 Tests: `Assets/_Project/Tests/EditMode/Core/Iteration/Presence`
 
 **Depende de:** [Core.Common](Core.Common.md)
-**Lo usan:** [Core.Art](Core.Art.md), [Core.Combat.Perception](Core.Combat.Perception.md), [Core.Iteration](Core.Iteration.md), [Core.Iteration.Ending](Core.Iteration.Ending.md), [Core.Iteration.States](Core.Iteration.States.md)
+**Lo usan:** [Core.Art](Core.Art.md), [Core.Combat.Perception](Core.Combat.Perception.md), [Core.Hubs](Core.Hubs.md), [Core.Iteration](Core.Iteration.md), [Core.Iteration.Ending](Core.Iteration.Ending.md), [Core.Iteration.States](Core.Iteration.States.md)
 
 | Fichero | Tipo | Resumen |
 |---|---|---|
