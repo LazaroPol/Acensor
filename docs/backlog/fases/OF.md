@@ -16,7 +16,7 @@ _Niveles de oficio, recetas por etiqueta, estaciones con piezas, planos y tratad
 | ✅ | **OF-10** Mods de equipo: definición, instalación y stats efectivos | S112 | #114 |
 | ✅ | **OF-11** Contenido I: materiales, combustibles, piezas de estación y mods | S113 | #115 |
 | 👀 | **OF-12** Contenido II: recetario medieval por oficio y conocimientos | S114 | #116 |
-| 👀 | **OF-13** Guardado y carga del progreso de oficios e inventario |  |  |
+| ✅ | **OF-13** Guardado y carga del progreso de oficios e inventario | S115 | #117 |
 | ⬜ | **OF-14** Authoring en Unity: ScriptableObjects, base de datos y validación |  |  |
 | ⬜ | **OF-15** Estaciones en el Campo de pruebas: ventana, cola y piezas |  |  |
 | ⬜ | **OF-16** Mods, conocimiento y guardado en el Campo de pruebas + guía de prueba |  |  |
