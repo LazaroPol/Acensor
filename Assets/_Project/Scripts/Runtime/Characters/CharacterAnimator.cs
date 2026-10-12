@@ -22,10 +22,12 @@ namespace Specimen.Runtime.Characters
         public void Init(LocomotionBlend blend) => _blend = blend ?? _blend;
 
         /// <summary>Vuelve a buscar el Animator (p. ej. tras cambiar el modelo visual).</summary>
-        public void Rebind()
+        public void Rebind(RuntimeAnimatorController fallback = null)
         {
             _animator = GetComponentInChildren<Animator>();
             _parameters.Clear();
+            if (_animator != null && _animator.runtimeAnimatorController == null && fallback != null)
+                _animator.runtimeAnimatorController = fallback;
             if (!HasAnimator) return;
             _animator.applyRootMotion = false;
             // Los FBX de Blender traen la raíz girada: los bounds de las mallas no siguen al esqueleto y Unity
@@ -35,7 +37,7 @@ namespace Specimen.Runtime.Characters
             foreach (var parameter in _animator.parameters) _parameters.Add(parameter.nameHash);
         }
 
-        private void Awake() => Rebind();
+        private void Awake() => Rebind(null);
 
         public void SetSpeed(float metersPerSecond)
         {

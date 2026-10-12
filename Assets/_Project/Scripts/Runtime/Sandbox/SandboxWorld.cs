@@ -79,7 +79,8 @@ namespace Specimen.Runtime.Sandbox
                 go.name = entry.DisplayName;
                 var enemy = go.AddComponent<SandboxEnemy>();
                 var core = _factory.Create(entry.Archetype, new EnemyDepth(1, SandboxLoot.RingOf(entry)));
-                enemy.Init(entry, core, player, dead => OnEnemyDeath(dead, player.transform));
+                enemy.Init(entry, core, player, dead => OnEnemyDeath(dead, player.transform),
+                    _context.Art != null ? _context.Art.monstruo : null);
                 _context.Enemies.Add(enemy);
             }
         }
