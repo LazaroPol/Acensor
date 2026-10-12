@@ -18,19 +18,16 @@ namespace Specimen.Runtime.Hubs
         private void OnGUI()
         {
             if (_armory == null) return;
-            GUI.Label(new Rect(20f, 10f, 600f, 28f), "ARMERÍA · " + _armory.Message);
-            float y = 48f;
+            GUI.Label(new Rect(20f, 80f, 600f, 28f), "ARMERÍA · " + _armory.Message);
+            float y = 108f;
             foreach (var kit in _armory.Entries())
             {
-                GUI.enabled = kit.Availability != KitAvailability.Unavailable;
-                string mark = kit.Availability == KitAvailability.Mine ? "▶ " : string.Empty;
-                if (GUI.Button(new Rect(20f, y, 360f, 34f), $"{mark}{kit.Name} ({kit.RoleAndResource})"))
-                    _armory.Choose(kit.Id);
-                y += 38f;
+                string mark = kit.Availability == KitAvailability.Mine ? "▶ " : "  ";
+                GUI.Label(new Rect(20f, y, 420f, 24f), $"{mark}{kit.Name} ({kit.RoleAndResource})");
+                y += 24f;
             }
-            GUI.enabled = _armory.CanLeave;
-            if (GUI.Button(new Rect(20f, y + 10f, 360f, 38f), "Salir al Ascensor") && _armory.Leave()) _onLeave?.Invoke();
-            GUI.enabled = true;
+            if (_onLeave != null && _armory.CanLeave && GUI.Button(new Rect(20f, y + 6f, 220f, 30f), "Salir al Ascensor")
+                && _armory.Leave()) _onLeave();
         }
     }
 }
