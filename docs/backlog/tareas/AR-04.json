@@ -2,7 +2,7 @@
   "id": "AR-04",
   "phase": "AR",
   "title": "Armas y equipo por clase",
-  "status": "review",
+  "status": "done",
   "type": "feature",
   "labels": [
     "arte",
@@ -16,6 +16,6 @@
     "ClassAttack respeta enfriamiento y coste de recurso.",
     "MeleeArc acierta solo dentro de alcance y arco."
   ],
-  "pr": null,
-  "session": null
+  "pr": "#83",
+  "session": 98
 }
