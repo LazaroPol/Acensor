@@ -1,7 +1,7 @@
 # Progreso — SPECIMEN
 
 ```
-TOTAL  ████████████████████████░░░░░░  81.6%  (71/87 tareas)
+TOTAL  █████████████████████████░░░░░  82.8%  (72/87 tareas)
 ```
 
 **Fase en curso:** AR · **Siguiente tarea:** AR-02
@@ -20,7 +20,7 @@ TOTAL  ████████████████████████�
 | [F8 · Asedio y extracción](fases/F8.md) | `███████████████` | 100% | 4/4 |
 | [F9 · Meta-progresión: Laboratorio](fases/F9.md) | `███████████████` | 100% | 4/4 |
 | [F10 · Presentación en Unity](fases/F10.md) | `███████████████` | 100% | 6/6 |
-| [AR · Arte e integración de assets](fases/AR.md) | `██░░░░░░░░░░░░░` | 12% | 1/8 |
+| [AR · Arte e integración de assets](fases/AR.md) | `████░░░░░░░░░░░` | 25% | 2/8 |
 | [F11 · Multijugador cooperativo](fases/F11.md) | `░░░░░░░░░░░░░░░` | 0% | 0/4 |
 | [F12 · Vertical Slice — Acto I](fases/F12.md) | `░░░░░░░░░░░░░░░` | 0% | 0/5 |
 
