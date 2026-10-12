@@ -17,6 +17,7 @@ Tests: `Assets/_Project/Tests/EditMode/Core/Progression`
 | `LevelDifficulty.cs` | enum `Difficulty` | Color de dificultad de una criatura según la diferencia de nivel, como el nombre del objetivo en WoW. |
 | `LevelDifficulty.cs` | class `LevelDifficulty` |  |
 | `LevelStats.cs` | class `LevelStats` | Crecimiento de stats por nivel: +8 % de vida y +6 % de daño y recurso por nivel por encima del 1. |
+| `ProfessionXp.cs` | class `ProfessionXp` | XP de oficio al terminar una fabricación (GDD §17.1): recetas muy por debajo del nivel dan menos (gris 10 %, verde 50 %, amarillo o más 100  |
 | `SpellCastResult.cs` | enum `SpellCastResult` |  |
 | `SpellDefinition.cs` | class `SpellDefinition` | Hechizo o técnica que un kit aprende al subir de nivel. |
 | `SpellKind.cs` | enum `SpellKind` | Tipo de efecto de un hechizo o técnica aprendida. |
