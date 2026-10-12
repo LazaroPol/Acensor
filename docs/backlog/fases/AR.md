@@ -12,3 +12,4 @@ _Sustituir el greybox por los packs de arte (personajes por clase, animaciones, 
 | ✅ | **AR-06** Entorno modular | S100 | #87 |
 | ✅ | **AR-07** Mobiliario de profesiones | S101 | #89 |
 | 🔄 | **AR-08** Campo de pruebas jugable |  |  |
+| 💡 | **AR-09** Arte en la Incursión (jugador y enemigos del bestiario) |  |  |

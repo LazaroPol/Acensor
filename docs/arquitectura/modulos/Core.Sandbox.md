@@ -1,0 +1,18 @@
+<!-- GENERADO por `python3 -m tools.arch`; no editar a mano. -->
+
+# `Specimen.Core.Sandbox`
+
+Ensamblado: `Specimen.Core` · Carpeta: `Assets/_Project/Scripts/Core/Sandbox`
+Tests: `Assets/_Project/Tests/EditMode/Core/Sandbox`
+
+**Depende de:** [Core.Bestiary](Core.Bestiary.md), [Core.Classes](Core.Classes.md), [Core.Combat.Bosses](Core.Combat.Bosses.md), [Core.Common](Core.Common.md), [Core.Items](Core.Items.md), [Core.Loot](Core.Loot.md), [Core.Professions](Core.Professions.md), [Core.Prototype](Core.Prototype.md), [Core.Randomness](Core.Randomness.md), [Core.Visuals](Core.Visuals.md), [Core.Visuals.Packs](Core.Visuals.Packs.md)
+**Lo usan:** [Runtime.Sandbox](Runtime.Sandbox.md)
+
+| Fichero | Tipo | Resumen |
+|---|---|---|
+| `SandboxLayout.cs` | class `SandboxLayout` | Campo de pruebas: sala cerrada con el jugador al sur, el bestiario al norte, los bancos de profesión en los muros este y oeste y algo de dec |
+| `SandboxLoot.cs` | class `SandboxLoot` | Botín de prueba: tabla de materiales y consumibles; el jefe tira en el anillo 3 y suelta más. |
+| `SandboxSpot.cs` | struct `SandboxSpot` | Punto del Campo de pruebas: qué va (id), dónde (m) y hacia dónde mira (grados, 0 = +Z). |
+| `SignatureEffect.cs` | class `SignatureEffect` | Efecto de una habilidad de firma: tipo, magnitud (multiplicador de daño, vida curada, metros o reducción de daño según el tipo), radio (m) y |
+| `SignatureEffects.cs` | class `SignatureEffects` | Efecto de la habilidad de firma de cada kit (DefaultClassAbilities) en el Campo de pruebas. |
+| `SignatureKind.cs` | enum `SignatureKind` | Qué hace la habilidad de firma de un kit al activarse (versión jugable de prueba). |

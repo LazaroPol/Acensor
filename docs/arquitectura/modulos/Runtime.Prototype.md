@@ -6,7 +6,7 @@ Ensamblado: `Specimen.Runtime` · Carpeta: `Assets/_Project/Scripts/Runtime/Prot
 Tests: (sin carpeta propia)
 
 **Depende de:** [Core.Movement](Core.Movement.md), [Core.Prototype](Core.Prototype.md), [Core.Stats](Core.Stats.md), [Core.Time](Core.Time.md), [Core.Visuals](Core.Visuals.md), [Core.Vitals](Core.Vitals.md), [Runtime.Visuals](Runtime.Visuals.md)
-**Lo usan:** [Runtime.Atico](Runtime.Atico.md), [Runtime.Incursion](Runtime.Incursion.md)
+**Lo usan:** [Runtime.Atico](Runtime.Atico.md), [Runtime.Incursion](Runtime.Incursion.md), [Runtime.Sandbox](Runtime.Sandbox.md)
 
 | Fichero | Tipo | Resumen |
 |---|---|---|

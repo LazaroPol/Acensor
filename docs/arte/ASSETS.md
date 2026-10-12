@@ -1,5 +1,7 @@
 # Assets: cómo entregarlos y cómo se usan
 
+> **Packs de terceros (fase AR) y Campo de pruebas:** ver [PACKS.md](PACKS.md).
+
 El juego no referencia modelos directamente: cada cosa visible tiene un **ID lógico** (`VisualId`) y el
 `CatalogoVisual` (ScriptableObject en `Assets/_Project/Data/Visuals/`) dice qué prefab usar. Si un ID
 no tiene prefab, se dibuja un cubo/cápsula greybox. Detalle técnico: [GDD 16](../gdd/16-prototipo-greybox.md).

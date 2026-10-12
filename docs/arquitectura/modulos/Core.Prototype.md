@@ -6,7 +6,7 @@ Ensamblado: `Specimen.Core` · Carpeta: `Assets/_Project/Scripts/Core/Prototype`
 Tests: `Assets/_Project/Tests/EditMode/Core/Prototype`
 
 **Depende de:** [Core.Common](Core.Common.md), [Core.Physics](Core.Physics.md), [Core.Time](Core.Time.md), [Core.Visuals](Core.Visuals.md), [Core.Vitals](Core.Vitals.md)
-**Lo usan:** [Core.Floors](Core.Floors.md), [Core.Hud](Core.Hud.md), [Runtime.Atico](Runtime.Atico.md), [Runtime.Prototype](Runtime.Prototype.md), [Runtime.Visuals](Runtime.Visuals.md)
+**Lo usan:** [Core.Floors](Core.Floors.md), [Core.Hud](Core.Hud.md), [Core.Sandbox](Core.Sandbox.md), [Runtime.Atico](Runtime.Atico.md), [Runtime.Prototype](Runtime.Prototype.md), [Runtime.Visuals](Runtime.Visuals.md)
 
 | Fichero | Tipo | Resumen |
 |---|---|---|

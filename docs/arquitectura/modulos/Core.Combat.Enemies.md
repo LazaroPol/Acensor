@@ -6,7 +6,7 @@ Ensamblado: `Specimen.Core` · Carpeta: `Assets/_Project/Scripts/Core/Combat/Ene
 Tests: `Assets/_Project/Tests/EditMode/Core/Combat/Enemies`
 
 **Depende de:** [Core.Abilities](Core.Abilities.md), [Core.Common](Core.Common.md), [Core.Loot](Core.Loot.md)
-**Lo usan:** [Core.Bestiary](Core.Bestiary.md), [Core.Combat.Bosses](Core.Combat.Bosses.md), [Runtime.Combat](Runtime.Combat.md)
+**Lo usan:** [Core.Bestiary](Core.Bestiary.md), [Core.Combat.Bosses](Core.Combat.Bosses.md), [Runtime.Combat](Runtime.Combat.md), [Runtime.Sandbox](Runtime.Sandbox.md)
 
 | Fichero | Tipo | Resumen |
 |---|---|---|

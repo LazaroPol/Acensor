@@ -6,7 +6,7 @@ Ensamblado: `Specimen.Core` · Carpeta: `Assets/_Project/Scripts/Core/Items`
 Tests: `Assets/_Project/Tests/EditMode/Core/Items`
 
 **Depende de:** [Core.Common](Core.Common.md)
-**Lo usan:** [Core.Crafting](Core.Crafting.md), [Core.Elevator](Core.Elevator.md), [Core.Loot](Core.Loot.md), [Core.Repair](Core.Repair.md)
+**Lo usan:** [Core.Crafting](Core.Crafting.md), [Core.Elevator](Core.Elevator.md), [Core.Loot](Core.Loot.md), [Core.Repair](Core.Repair.md), [Core.Sandbox](Core.Sandbox.md), [Runtime.Sandbox](Runtime.Sandbox.md)
 
 | Fichero | Tipo | Resumen |
 |---|---|---|

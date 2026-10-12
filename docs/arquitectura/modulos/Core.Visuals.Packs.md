@@ -6,7 +6,7 @@ Ensamblado: `Specimen.Core` · Carpeta: `Assets/_Project/Scripts/Core/Visuals/Pa
 Tests: (sin carpeta propia)
 
 **Depende de:** nada
-**Lo usan:** nadie
+**Lo usan:** [Core.Sandbox](Core.Sandbox.md)
 
 | Fichero | Tipo | Resumen |
 |---|---|---|
