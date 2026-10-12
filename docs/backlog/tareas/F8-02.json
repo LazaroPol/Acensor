@@ -2,7 +2,7 @@
   "id": "F8-02",
   "phase": "F8",
   "title": "Fortificaciones y torretas",
-  "status": "in_progress",
+  "status": "done",
   "type": "feature",
   "labels": [
     "asedio"
@@ -15,6 +15,6 @@
     "Turret.Reload repone munición sin pasar del máximo; parámetros inválidos fallan pronto.",
     "Núcleo sin UnityEngine, ficheros <= 120 líneas y tests NUnit en verde."
   ],
-  "pr": null,
-  "session": null
+  "pr": "#67",
+  "session": 50
 }

@@ -1,10 +1,10 @@
 # Progreso — SPECIMEN
 
 ```
-TOTAL  ██████████████████████░░░░░░░░  72.2%  (57/79 tareas)
+TOTAL  ██████████████████████░░░░░░░░  73.4%  (58/79 tareas)
 ```
 
-**Fase en curso:** F8 · **Siguiente tarea:** F8-02
+**Fase en curso:** F8 · **Siguiente tarea:** F8-03
 
 | Fase | Progreso | % | Tareas |
 |---|---|---|---|
@@ -17,7 +17,7 @@ TOTAL  ██████████████████████░░�
 | [F5 · Generación de pisos](fases/F5.md) | `███████████████` | 100% | 6/6 |
 | [F6 · Combate e IA](fases/F6.md) | `███████████████` | 100% | 5/5 |
 | [F7 · Ecos y decisiones](fases/F7.md) | `███████████████` | 100% | 4/4 |
-| [F8 · Asedio y extracción](fases/F8.md) | `████░░░░░░░░░░░` | 25% | 1/4 |
+| [F8 · Asedio y extracción](fases/F8.md) | `████████░░░░░░░` | 50% | 2/4 |
 | [F9 · Meta-progresión: Laboratorio](fases/F9.md) | `░░░░░░░░░░░░░░░` | 0% | 0/4 |
 | [F10 · Presentación en Unity](fases/F10.md) | `░░░░░░░░░░░░░░░` | 0% | 0/6 |
 | [F11 · Multijugador cooperativo](fases/F11.md) | `░░░░░░░░░░░░░░░` | 0% | 0/4 |
