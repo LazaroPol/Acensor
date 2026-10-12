@@ -11,24 +11,26 @@ using Specimen.Runtime.Bootstrap;
 using Specimen.Runtime.Combat;
 using Specimen.Runtime.Prototype;
 using Specimen.Runtime.Visuals;
-using UnityEngine.InputSystem;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
 namespace Specimen.Runtime.Incursion
 {
     /// <summary>
-    /// Escena «Incursion»: genera el piso, lo monta en greybox, coloca al jugador con el kit de la Armería
-    /// y lo devuelve al Ascensor (tecla E junto a él) o cuando la fase termina. La escena puede estar vacía.
+    /// Escena «Incursion»: genera el piso (laberinto de salas con enemigos y botín), coloca al jugador con el
+    /// kit de la Armería y resuelve la salida: volver al Ascensor a tiempo (E) o, si se va sin él, saltar por
+    /// el Hueco de Emergencia y cerrar la partida en fracaso. La escena puede estar vacía.
     /// </summary>
-    public sealed class IncursionBootstrap : MonoBehaviour
+    public sealed partial class IncursionBootstrap : MonoBehaviour
     {
         private const float InteractRange = 3f;
         private IterationRun _run;
         private SceneFlow _flow;
         private Transform _player;
         private Vector3 _elevator;
+        private Vector3 _shaft;
         private CharacterVitals _vitals;
+        private LootPickups _loot;
 
         [RuntimeInitializeOnLoadMethod(RuntimeInitializeLoadType.AfterSceneLoad)]
         private static void EnsureInIncursionScene()
@@ -50,6 +52,8 @@ namespace Specimen.Runtime.Incursion
             foreach (var placement in layout.Build()) spawner.Spawn(placement);
             var (x, z) = layout.SpawnPoint;
             _elevator = new Vector3(x, 0f, z + 2f);
+            var (sx, sz) = layout.ShaftPoint;
+            _shaft = new Vector3(sx, 0f, sz);
             var kit = KitOf(s);
             var player = IncursionPlayer.Spawn(new Vector3(x, 1.2f, z), kit.CreateStatSheet(), _run,
                 new HudNotices(s.Resolve<IEventBus>()));
@@ -57,6 +61,8 @@ namespace Specimen.Runtime.Incursion
             _vitals = player.Vitals;
             player.gameObject.AddComponent<PlayerAttack>().Init(kit.CreateStatSheet());
             EnemySpawner.Populate(floor, layout, _run.Floor, _player, player.Vitals);
+            _loot = gameObject.AddComponent<LootPickups>();
+            _loot.Init(floor, layout, _player);
             _run.LeaveElevator(GameComposition.LocalPlayerId);
             PrototypeScenery.EnsureLight();
         }
@@ -67,20 +73,7 @@ namespace Specimen.Runtime.Incursion
             return s.Resolve<ClassKitArmory>().TryGetKit(GameComposition.LocalPlayerId, out var kit) ? kit : catalog.All[0];
         }
 
-        private void Update()
-        {
-            if (_run == null) return;
-            _run.Tick(Time.deltaTime);
-            if (!_vitals.IsAlive) Respawn();
-            if (_run.Phase != IterationPhase.Incursion) { _flow.GoTo(SceneId.Ascensor); return; }
-            bool near = (_player.position - _elevator).sqrMagnitude < InteractRange * InteractRange;
-            if (near && Keyboard.current != null && Keyboard.current.eKey.wasPressedThisFrame)
-            {
-                _run.ReturnToElevator(GameComposition.LocalPlayerId);
-                _run.VoteEarlyClose(GameComposition.LocalPlayerId, true);
-                _flow.GoTo(SceneId.Ascensor);
-            }
-        }
+        private bool Near(Vector3 point) => (_player.position - point).sqrMagnitude < InteractRange * InteractRange;
 
         private void Respawn()
         {
@@ -90,8 +83,5 @@ namespace Specimen.Runtime.Incursion
             _player.position = _elevator + Vector3.back * 2f + Vector3.up;
             body.enabled = true;
         }
-
-        private void OnGUI() =>
-            GUI.Label(new Rect(10f, Screen.height - 30f, 600f, 24f), "E junto al Ascensor: volver y cerrar el piso · busca el Hueco de Emergencia");
     }
 }

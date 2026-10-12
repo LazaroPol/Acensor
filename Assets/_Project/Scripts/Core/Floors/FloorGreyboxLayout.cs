@@ -67,6 +67,17 @@ namespace Specimen.Core.Floors
             if (room.Kind == RoomKind.EmergencyExit) result.Add(new LevelPlacement(VisualId.Puerta, x, 0f, z));
         }
 
+        /// <summary>Hueco de Emergencia: centro de la sala de salida del anillo más profundo.</summary>
+        public (float X, float Z) ShaftPoint
+        {
+            get
+            {
+                foreach (var room in _floor.Rooms)
+                    if (room.Kind == RoomKind.EmergencyExit) return CenterOf(room.Id);
+                return SpawnPoint;
+            }
+        }
+
         /// <summary>Punto de aparición del jugador: junto al Ascensor de la entrada.</summary>
         public (float X, float Z) SpawnPoint => CenterOf(_floor.Entrance.Id);
     }

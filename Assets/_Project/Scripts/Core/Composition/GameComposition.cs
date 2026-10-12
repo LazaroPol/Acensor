@@ -16,6 +16,10 @@ namespace Specimen.Core.Composition
         /// <summary>Jugador local (partida individual hasta que llegue la red).</summary>
         public const int LocalPlayerId = 1;
 
+        /// <summary>Ritmo de la demo: un solo piso (Calma 20 s, Incursión 2,5 min) y después el Ático.</summary>
+        public static IterationConfig DemoConfig =>
+            new IterationConfigBuilder().WithFloors(1).WithCalm(20f).WithIncursion(150f).WithDoorWarnings(60f, 15f).Build();
+
         public static ServiceContainer Build(ISceneLoader loader)
         {
             Guard.NotNull(loader, nameof(loader));
@@ -25,7 +29,7 @@ namespace Specimen.Core.Composition
             container.RegisterFactory(r => new SceneFlow(r.Resolve<ISceneLoader>(), r.Resolve<IEventBus>()));
             container.Register<IClassKitCatalog>(ClassKitCatalog.CreateDefault());
             container.RegisterFactory(r => new ClassKitArmory(r.Resolve<IClassKitCatalog>()));
-            container.RegisterFactory(r => new IterationRun(IterationConfigBuilder.Default, r.Resolve<IEventBus>(), new[] { LocalPlayerId }));
+            container.RegisterFactory(r => new IterationRun(DemoConfig, r.Resolve<IEventBus>(), new[] { LocalPlayerId }));
             container.RegisterFactory(_ => new ElevatorPlatform(4, new BlueprintCatalog(new ModuleBlueprint[0])));
             return container;
         }
