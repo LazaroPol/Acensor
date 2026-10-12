@@ -5,8 +5,10 @@ using Specimen.Core.Events;
 using Specimen.Core.Floors;
 using Specimen.Core.Hud;
 using Specimen.Core.Iteration;
+using Specimen.Core.Vitals;
 using Specimen.Core.Visuals;
 using Specimen.Runtime.Bootstrap;
+using Specimen.Runtime.Combat;
 using Specimen.Runtime.Prototype;
 using Specimen.Runtime.Visuals;
 using UnityEngine.InputSystem;
@@ -26,6 +28,7 @@ namespace Specimen.Runtime.Incursion
         private SceneFlow _flow;
         private Transform _player;
         private Vector3 _elevator;
+        private CharacterVitals _vitals;
 
         [RuntimeInitializeOnLoadMethod(RuntimeInitializeLoadType.AfterSceneLoad)]
         private static void EnsureInIncursionScene()
@@ -51,6 +54,9 @@ namespace Specimen.Runtime.Incursion
             var player = IncursionPlayer.Spawn(new Vector3(x, 1.2f, z), kit.CreateStatSheet(), _run,
                 new HudNotices(s.Resolve<IEventBus>()));
             _player = player.transform;
+            _vitals = player.Vitals;
+            player.gameObject.AddComponent<PlayerAttack>().Init(kit.CreateStatSheet());
+            EnemySpawner.Populate(floor, layout, _run.Floor, _player, player.Vitals);
             _run.LeaveElevator(GameComposition.LocalPlayerId);
             PrototypeScenery.EnsureLight();
         }
@@ -65,6 +71,7 @@ namespace Specimen.Runtime.Incursion
         {
             if (_run == null) return;
             _run.Tick(Time.deltaTime);
+            if (!_vitals.IsAlive) Respawn();
             if (_run.Phase != IterationPhase.Incursion) { _flow.GoTo(SceneId.Ascensor); return; }
             bool near = (_player.position - _elevator).sqrMagnitude < InteractRange * InteractRange;
             if (near && Keyboard.current != null && Keyboard.current.eKey.wasPressedThisFrame)
@@ -72,6 +79,15 @@ namespace Specimen.Runtime.Incursion
                 _run.ReturnToElevator(GameComposition.LocalPlayerId);
                 _flow.GoTo(SceneId.Ascensor);
             }
+        }
+
+        private void Respawn()
+        {
+            _vitals.RefillAll();
+            var body = _player.GetComponent<CharacterController>();
+            body.enabled = false;
+            _player.position = _elevator + Vector3.back * 2f + Vector3.up;
+            body.enabled = true;
         }
 
         private void OnGUI() =>
