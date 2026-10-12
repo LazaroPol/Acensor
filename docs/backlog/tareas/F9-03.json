@@ -2,7 +2,7 @@
   "id": "F9-03",
   "phase": "F9",
   "title": "Fragmentos de memoria y desbloqueo de lore",
-  "status": "in_progress",
+  "status": "done",
   "type": "feature",
   "labels": [
     "meta"
@@ -15,6 +15,6 @@
     "El registro por jugador implementa IFragmentSource (desempate de Ecos)",
     "Tests NUnit"
   ],
-  "pr": null,
-  "session": null
+  "pr": "#75",
+  "session": 93
 }
