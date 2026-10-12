@@ -2,7 +2,7 @@
   "id": "OF-04",
   "phase": "OF",
   "title": "Nivel y XP por oficio con curva configurable e hitos",
-  "status": "in_progress",
+  "status": "review",
   "type": "feature",
   "labels": [
     "oficios",
