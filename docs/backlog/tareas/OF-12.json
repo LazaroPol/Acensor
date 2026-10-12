@@ -1,0 +1,21 @@
+{
+  "id": "OF-12",
+  "phase": "OF",
+  "title": "Contenido II: recetario medieval por oficio y conocimientos",
+  "status": "todo",
+  "type": "feature",
+  "labels": [
+    "oficios",
+    "contenido"
+  ],
+  "origin": "backlog",
+  "description": "Recetario por defecto (≥ 70 recetas en 4 tiers para los 7 oficios) y ≥ 25 conocimientos según §17.6; las recetas actuales se integran. Diseño: docs/gdd/17-oficios.md §17.6.",
+  "acceptance": [
+    "Cada oficio tiene recetas T1 de partida y una escalera T2-T4 con nivel, estación, piezas y desbloqueo.",
+    "Cada receta no inicial tiene al menos un conocimiento o pieza que la desbloquea.",
+    "Las sinergias existentes siguen disponibles con el nuevo modelo.",
+    "Tests de integridad: todas las entradas y salidas existen en el catálogo y no hay recetas inalcanzables."
+  ],
+  "pr": null,
+  "session": null
+}

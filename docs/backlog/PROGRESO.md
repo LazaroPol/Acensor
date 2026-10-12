@@ -1,10 +1,10 @@
 # Progreso — SPECIMEN
 
 ```
-TOTAL  ███████████████████████████░░░  89.7%  (78/87 tareas)
+TOTAL  ███████████████████████░░░░░░░  75.7%  (78/103 tareas)
 ```
 
-**Fase en curso:** F11 · **Siguiente tarea:** F11-01
+**Fase en curso:** OF · **Siguiente tarea:** OF-01
 
 | Fase | Progreso | % | Tareas |
 |---|---|---|---|
@@ -21,13 +21,14 @@ TOTAL  ████████████████████████�
 | [F9 · Meta-progresión: Laboratorio](fases/F9.md) | `███████████████` | 100% | 4/4 |
 | [F10 · Presentación en Unity](fases/F10.md) | `███████████████` | 100% | 6/6 |
 | [AR · Arte e integración de assets](fases/AR.md) | `███████████████` | 100% | 8/8 |
+| [OF · Oficios: artesanía, conocimiento y mods](fases/OF.md) | `░░░░░░░░░░░░░░░` | 0% | 0/16 |
 | [F11 · Multijugador cooperativo](fases/F11.md) | `░░░░░░░░░░░░░░░` | 0% | 0/4 |
 | [F12 · Vertical Slice — Acto I](fases/F12.md) | `░░░░░░░░░░░░░░░` | 0% | 0/5 |
 
 ## Cola de prioridad (tablero)
 
-1. **F11-01** Integración de Netcode for GameObjects
-2. **F11-02** Sincronización del estado de iteración (servidor autoritativo)
-3. **F11-03** Lobby y conexión
-4. **F11-04** Replicación de jugadores, combate y loot
-5. **F12-01** Cinco pisos del Acto I + jefe
+1. **OF-01** Diseño de oficios: GDD §17 y backlog de la fase
+2. **OF-02** Materiales: tier, peso, etiquetas e icono en ItemDefinition
+3. **OF-03** Ingredientes por objeto o etiqueta y consumo por etiqueta
+4. **OF-04** Nivel y XP por oficio con curva configurable e hitos
+5. **OF-05** Calidad del objeto: grados, tirada y huecos de mod

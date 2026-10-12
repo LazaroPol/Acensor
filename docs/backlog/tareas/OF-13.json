@@ -1,0 +1,21 @@
+{
+  "id": "OF-13",
+  "phase": "OF",
+  "title": "Guardado y carga del progreso de oficios e inventario",
+  "status": "todo",
+  "type": "feature",
+  "labels": [
+    "oficios",
+    "nucleo"
+  ],
+  "origin": "backlog",
+  "description": "CraftingSave: serializador de texto versionado (oficios v1) e ICraftingSaveStore en memoria. Diseño: docs/gdd/17-oficios.md §17.7.",
+  "acceptance": [
+    "Guarda y carga niveles y XP, recetas conocidas, volúmenes leídos, estaciones con nivel, piezas, ranuras y cola.",
+    "Guarda instancias con calidad, durabilidad y mods, e inventarios con pilas e instancias.",
+    "Round-trip: guardar y cargar reproduce el mismo estado (tests).",
+    "Texto corrupto lanza CraftingSaveFormatException sin pisar el guardado anterior."
+  ],
+  "pr": null,
+  "session": null
+}

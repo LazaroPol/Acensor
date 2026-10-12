@@ -1,0 +1,22 @@
+{
+  "id": "OF-04",
+  "phase": "OF",
+  "title": "Nivel y XP por oficio con curva configurable e hitos",
+  "status": "todo",
+  "type": "feature",
+  "labels": [
+    "oficios",
+    "nucleo"
+  ],
+  "origin": "backlog",
+  "description": "ProfessionSkill por ProfessionId, ProfessionCurve (tabla de datos, semilla 40·n^1,5, nivel máx. 20) y ProfessionMilestones (tiers de material, bonus de tiempo y calidad máxima). Diseño: docs/gdd/17-oficios.md §17.1.",
+  "acceptance": [
+    "Curva definida por datos (tabla); rechaza tablas vacías o no crecientes.",
+    "Ganar XP sube uno o varios niveles y no pasa del máximo.",
+    "XP reducida según la diferencia de nivel de la receta (gris 10 %, verde 50 %, resto 100 %).",
+    "Los hitos devuelven tier de material permitido, bonus de tiempo y calidad máxima por nivel.",
+    "ProfessionLevels guarda un skill por profesión y se integra en HeroProgression."
+  ],
+  "pr": null,
+  "session": null
+}

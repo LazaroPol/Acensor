@@ -1,0 +1,22 @@
+{
+  "id": "OF-16",
+  "phase": "OF",
+  "title": "Mods, conocimiento y guardado en el Campo de pruebas + guía de prueba",
+  "status": "todo",
+  "type": "feature",
+  "labels": [
+    "oficios",
+    "ui"
+  ],
+  "origin": "backlog",
+  "description": "Leer pergaminos desde la bolsa, ventana de mods del objeto con stats base → efectivo, botín de conocimientos/piezas/mods, guardado automático y guía manual de los 5 criterios de la fase. Diseño: docs/gdd/17-oficios.md §17.7.",
+  "acceptance": [
+    "Leer un plano o tratado desde la bolsa hace disponible su receta en la estación.",
+    "Puedo añadir y quitar mods en un arma y veo el cambio de stats.",
+    "Conocimientos, piezas y mods aparecen en el botín del poblado.",
+    "Salir y volver a entrar conserva niveles, recetas, estaciones, piezas, cola e inventario.",
+    "Guía docs/oficios/PRUEBA.md con los pasos para verificar los cinco criterios en Unity."
+  ],
+  "pr": null,
+  "session": null
+}

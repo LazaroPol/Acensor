@@ -1,0 +1,21 @@
+{
+  "id": "OF-11",
+  "phase": "OF",
+  "title": "Contenido I: materiales, combustibles, piezas de estación y mods",
+  "status": "todo",
+  "type": "feature",
+  "labels": [
+    "oficios",
+    "contenido"
+  ],
+  "origin": "backlog",
+  "description": "Catálogo por defecto en C# (ficheros pequeños por etiqueta/estación) con la batería de §17.5. Diseño: docs/gdd/17-oficios.md §17.5.",
+  "acceptance": [
+    "≥ 45 materiales con tier, peso y etiquetas; combustibles con tiempo de quemado.",
+    "≥ 19 piezas de estación con su estación, recetas habilitadas y bonus.",
+    "≥ 15 mods con hueco, compatibilidad y modificadores.",
+    "Tests de integridad: ids únicos y estables, cada tag y tier tiene al menos un material."
+  ],
+  "pr": null,
+  "session": null
+}

@@ -1,0 +1,21 @@
+{
+  "id": "OF-15",
+  "phase": "OF",
+  "title": "Estaciones en el Campo de pruebas: ventana, cola y piezas",
+  "status": "todo",
+  "type": "feature",
+  "labels": [
+    "oficios",
+    "ui"
+  ],
+  "origin": "backlog",
+  "description": "BenchStation pasa a envolver un Workstation: ventana con ranuras, recetas disponibles y en gris con motivo, cola con progreso, combustible, piezas y mejora de estación. Diseño: docs/gdd/17-oficios.md §17.7.",
+  "acceptance": [
+    "Puedo craftear en una estación del Campo consumiendo materiales por etiqueta.",
+    "Colocar una pieza en la estación hace aparecer recetas nuevas en la ventana.",
+    "La cola avanza con barra de progreso y se pausa sin combustible.",
+    "XP de oficio visible en el HUD al terminar cada trabajo."
+  ],
+  "pr": null,
+  "session": null
+}

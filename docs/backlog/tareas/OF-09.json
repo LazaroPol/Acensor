@@ -1,0 +1,22 @@
+{
+  "id": "OF-09",
+  "phase": "OF",
+  "title": "Cola de fabricación con temporizador y combustible",
+  "status": "todo",
+  "type": "feature",
+  "labels": [
+    "oficios",
+    "nucleo"
+  ],
+  "origin": "backlog",
+  "description": "CraftQueue (ITickable) que reserva materiales al encolar, avanza con el tiempo, consume combustible, tira calidad, entrega a la salida y da XP. Diseño: docs/gdd/17-oficios.md §17.3.",
+  "acceptance": [
+    "Encolar retira los materiales (también por etiqueta); cancelar un trabajo pendiente los devuelve.",
+    "El tiempo aplica los bonus de oficio y de piezas, mínimo 1 s.",
+    "Sin combustible o con la salida llena la cola se pausa sin perder nada.",
+    "Al terminar: calidad con los datos del momento de encolar, salida y XP al oficio de quien encoló.",
+    "Fabricar una receta en una estación consumiendo materiales por etiqueta (test de extremo a extremo)."
+  ],
+  "pr": null,
+  "session": null
+}

@@ -1,0 +1,22 @@
+{
+  "id": "OF-02",
+  "phase": "OF",
+  "title": "Materiales: tier, peso, etiquetas e icono en ItemDefinition",
+  "status": "todo",
+  "type": "feature",
+  "labels": [
+    "oficios",
+    "inventario",
+    "nucleo"
+  ],
+  "origin": "backlog",
+  "description": "Ampliar ItemDefinition sin romper constructores: Tier (0-4), Weight (kg), Tags (MaterialTags [Flags] con valores explícitos) e IconKey. Diseño: docs/gdd/17-oficios.md §17.2.",
+  "acceptance": [
+    "MaterialTags [Flags] con valores explícitos y estables (Madera, Metal, Piedra, Cuero, Tela, Hierba, Comida, Hueso, Mineral, Combustible, Vidrio).",
+    "ItemDefinition expone Tier, Weight, Tags, IconKey y HasTag(tag); tier fuera de 0..4 o peso negativo fallan pronto.",
+    "Los materiales existentes de ItemCatalog reciben tier, peso y etiquetas coherentes.",
+    "Inventory expone el peso total; todos los tests anteriores siguen en verde."
+  ],
+  "pr": null,
+  "session": null
+}

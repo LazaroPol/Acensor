@@ -1,0 +1,23 @@
+{
+  "id": "OF-10",
+  "phase": "OF",
+  "title": "Mods de equipo: definición, instalación y stats efectivos",
+  "status": "todo",
+  "type": "feature",
+  "labels": [
+    "oficios",
+    "inventario",
+    "nucleo"
+  ],
+  "origin": "backlog",
+  "description": "ModDefinition, ModSlotType, GearStat (cortante, contundente, perforante, durabilidad, velocidad, peso, armadura), ModInstaller y ModdedStats. Diseño: docs/gdd/17-oficios.md §17.4.",
+  "acceptance": [
+    "Los huecos de una instancia dependen de su calidad; sin calidad no admite mods.",
+    "Instalar valida hueco libre, tipo repetido, tags compatibles, requisitos y objeto roto; resultado tipado.",
+    "Desinstalar devuelve el mod a la bolsa de forma atómica (o lo destruye si no es retirable).",
+    "ModdedStats calcula base → efectivo (planos y %) y la durabilidad máxima nunca baja de 1.",
+    "Palo de madera + esquirlas/piedra/clavo producen los efectos de la tabla del GDD."
+  ],
+  "pr": null,
+  "session": null
+}

@@ -1,0 +1,22 @@
+{
+  "id": "OF-06",
+  "phase": "OF",
+  "title": "RecipeDefinition: estación, niveles, piezas, tiempo, XP y desbloqueo",
+  "status": "todo",
+  "type": "feature",
+  "labels": [
+    "oficios",
+    "nucleo"
+  ],
+  "origin": "backlog",
+  "description": "RecipeDefinition inmutable con entradas IngredientSpec, salidas, StationType + nivel, RequiredParts, oficio + nivel, CraftSeconds, Xp, UnlockCondition, QualityCap e Improves; conversión desde Recipe antiguo. Diseño: docs/gdd/17-oficios.md §17.2.",
+  "acceptance": [
+    "StationType con valores estables para las 7 estaciones.",
+    "UnlockCondition: AlwaysKnown, KnowledgeRequired, CollectionComplete y combinación Y.",
+    "RecipeDefinition.FromLegacy convierte las recetas actuales (estación principal, nivel 1, instantánea).",
+    "RecipeCatalog con ids únicos, consulta por estación y por oficio, y resolución de variantes mejoradas.",
+    "Validación: sin entradas, salidas vacías, tiempo negativo o Improves inexistente fallan pronto."
+  ],
+  "pr": null,
+  "session": null
+}

@@ -1,0 +1,22 @@
+{
+  "id": "OF-05",
+  "phase": "OF",
+  "title": "Calidad del objeto: grados, tirada y huecos de mod",
+  "status": "todo",
+  "type": "feature",
+  "labels": [
+    "oficios",
+    "nucleo"
+  ],
+  "origin": "backlog",
+  "description": "Quality (Tosca…Legendaria), QualityRules (datos: pesos, umbrales, huecos y multiplicadores) y QualityRoller con IRandom. ItemInstance gana calidad opcional. Diseño: docs/gdd/17-oficios.md §17.1.",
+  "acceptance": [
+    "Seis grados con huecos 1,1,2,2,3,4 y multiplicadores de stats y durabilidad configurables.",
+    "La puntuación combina nivel de oficio, tier medio, nivel de estación, bonus de piezas y aleatorio con semilla.",
+    "La calidad se limita por la calidad máxima del hito y por QualityCap de la receta.",
+    "ItemInstance.CreateNew acepta calidad y aplica el multiplicador de durabilidad.",
+    "Tests deterministas con Pcg32Random."
+  ],
+  "pr": null,
+  "session": null
+}

@@ -1,0 +1,22 @@
+# OF — Oficios: artesanía, conocimiento y mods
+
+_Niveles de oficio, recetas por etiqueta, estaciones con piezas, planos y tratados, calidad y modificación de equipo, con estética medieval_
+
+| | Tarea | Sesión | PR |
+|---|---|---|---|
+| ⬜ | **OF-01** Diseño de oficios: GDD §17 y backlog de la fase |  |  |
+| ⬜ | **OF-02** Materiales: tier, peso, etiquetas e icono en ItemDefinition |  |  |
+| ⬜ | **OF-03** Ingredientes por objeto o etiqueta y consumo por etiqueta |  |  |
+| ⬜ | **OF-04** Nivel y XP por oficio con curva configurable e hitos |  |  |
+| ⬜ | **OF-05** Calidad del objeto: grados, tirada y huecos de mod |  |  |
+| ⬜ | **OF-06** RecipeDefinition: estación, niveles, piezas, tiempo, XP y desbloqueo |  |  |
+| ⬜ | **OF-07** Conocimiento: pergaminos, planos, tratados y libros de oficio |  |  |
+| ⬜ | **OF-08** Estaciones: nivel mejorable, ranuras y piezas colocables |  |  |
+| ⬜ | **OF-09** Cola de fabricación con temporizador y combustible |  |  |
+| ⬜ | **OF-10** Mods de equipo: definición, instalación y stats efectivos |  |  |
+| ⬜ | **OF-11** Contenido I: materiales, combustibles, piezas de estación y mods |  |  |
+| ⬜ | **OF-12** Contenido II: recetario medieval por oficio y conocimientos |  |  |
+| ⬜ | **OF-13** Guardado y carga del progreso de oficios e inventario |  |  |
+| ⬜ | **OF-14** Authoring en Unity: ScriptableObjects, base de datos y validación |  |  |
+| ⬜ | **OF-15** Estaciones en el Campo de pruebas: ventana, cola y piezas |  |  |
+| ⬜ | **OF-16** Mods, conocimiento y guardado en el Campo de pruebas + guía de prueba |  |  |

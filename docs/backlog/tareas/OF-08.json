@@ -1,0 +1,22 @@
+{
+  "id": "OF-08",
+  "phase": "OF",
+  "title": "Estaciones: nivel mejorable, ranuras y piezas colocables",
+  "status": "todo",
+  "type": "feature",
+  "labels": [
+    "oficios",
+    "nucleo"
+  ],
+  "origin": "backlog",
+  "description": "Workstation con ranuras de entrada, salida, combustible y piezas; StationPartDefinition; StationUpgrade por datos; RecipeAvailability con motivos de bloqueo. Diseño: docs/gdd/17-oficios.md §17.3.",
+  "acceptance": [
+    "Colocar y retirar piezas en ranuras de pieza; solo piezas compatibles con la estación.",
+    "Mejorar la estación consume materiales y sube su nivel (1-3).",
+    "La estación solo ofrece recetas conocidas, de su tipo, con nivel de estación suficiente y con sus piezas colocadas.",
+    "Las recetas visibles pero no fabricables informan del motivo (RecipeBlockReason).",
+    "Colocar un crisol en la fragua habilita una receta nueva (test)."
+  ],
+  "pr": null,
+  "session": null
+}

@@ -1,0 +1,22 @@
+{
+  "id": "OF-07",
+  "phase": "OF",
+  "title": "Conocimiento: pergaminos, planos, tratados y libros de oficio",
+  "status": "todo",
+  "type": "feature",
+  "labels": [
+    "oficios",
+    "nucleo"
+  ],
+  "origin": "backlog",
+  "description": "KnowledgeDefinition (tipo, rareza, oficio, nivel mínimo, recetas que enseña, volumen de libro), KnownRecipes del jugador y KnowledgeReader. Diseño: docs/gdd/17-oficios.md §17.3.",
+  "acceptance": [
+    "Leer devuelve Learned, AlreadyKnown, TooLowLevel o WrongProfession; solo Learned consume el objeto.",
+    "Un tratado puede enseñar una variante mejorada o varias recetas.",
+    "Los volúmenes de un libro se registran; completar los cinco cumple CollectionComplete.",
+    "KnownRecipes responde si una UnlockCondition se cumple y expone lo aprendido para guardarlo.",
+    "Una receta bloqueada pasa a disponible tras leer su plano o tratado (test de extremo a extremo)."
+  ],
+  "pr": null,
+  "session": null
+}

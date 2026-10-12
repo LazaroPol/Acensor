@@ -1,0 +1,19 @@
+{
+  "id": "OF-01",
+  "phase": "OF",
+  "title": "Diseño de oficios: GDD §17 y backlog de la fase",
+  "status": "todo",
+  "type": "docs",
+  "labels": [
+    "oficios"
+  ],
+  "origin": "backlog",
+  "description": "Diseño completo del sistema de oficios inspirado en la fabricación por estaciones, con estética medieval y contenido propio, y backlog de la fase OF.",
+  "acceptance": [
+    "docs/gdd/17-oficios.md y docs/gdd/oficios/*.md describen sistemas, contenido, datos y guardado (≤120 líneas por fichero).",
+    "Fase OF creada con tareas de una sesión cada una, con descripción y criterios de aceptación.",
+    "Los criterios de aceptación de la petición están mapeados a tareas."
+  ],
+  "pr": null,
+  "session": null
+}

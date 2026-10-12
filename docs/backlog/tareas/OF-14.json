@@ -1,0 +1,21 @@
+{
+  "id": "OF-14",
+  "phase": "OF",
+  "title": "Authoring en Unity: ScriptableObjects, base de datos y validación",
+  "status": "todo",
+  "type": "feature",
+  "labels": [
+    "oficios",
+    "arte"
+  ],
+  "origin": "backlog",
+  "description": "ScriptableObjects (ítems, recetas, conocimientos, piezas, mods, curva, calidad) con mappers al núcleo, CraftingDatabase, menú de validación y generación de assets desde el catálogo C#. Diseño: docs/gdd/17-oficios.md §17.7.",
+  "acceptance": [
+    "Cada asset se convierte a su definición del núcleo con un mapper pequeño y probado.",
+    "SPECIMEN › Oficios › Validar datos detecta ids duplicados, referencias rotas y curvas no crecientes.",
+    "SPECIMEN › Oficios › Generar assets por defecto crea los assets desde el catálogo C#.",
+    "Código de Runtime/Editor compila contra Unity 6000.6.5f1."
+  ],
+  "pr": null,
+  "session": null
+}

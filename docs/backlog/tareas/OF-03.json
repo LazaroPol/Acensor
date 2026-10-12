@@ -1,0 +1,23 @@
+{
+  "id": "OF-03",
+  "phase": "OF",
+  "title": "Ingredientes por objeto o etiqueta y consumo por etiqueta",
+  "status": "todo",
+  "type": "feature",
+  "labels": [
+    "oficios",
+    "inventario",
+    "nucleo"
+  ],
+  "origin": "backlog",
+  "description": "IngredientSpec (ForItem / ForTag con tier mínimo) y TagConsumptionPlanner que planifica qué pilas gastar antes de aplicar la transacción atómica. Diseño: docs/gdd/17-oficios.md §17.2.",
+  "acceptance": [
+    "IngredientSpec.ForItem e IngredientSpec.ForTag(tag, cantidad, minTier) con validación.",
+    "El planificador gasta primero el menor tier válido y, a igual tier, la pila más pequeña; admite fijar un ítem concreto.",
+    "El plan sin materiales suficientes no toca el inventario; el aplicado es atómico (como CraftTransaction).",
+    "Calcula el tier medio ponderado de lo que realmente se gasta.",
+    "Recipe/RecipeIngredient antiguos siguen funcionando (por objeto)."
+  ],
+  "pr": null,
+  "session": null
+}
