@@ -9,6 +9,7 @@ Un módulo = un namespace C#. Abre solo la página del módulo que vayas a tocar
 | [Core.Abilities](modulos/Core.Abilities.md) | 7 | `AbilityCooldown`, `AbilityDefinition`, `AbilityResult`, `AbilitySlot`, `DefaultClassAbilities` … | Core.Classes, Core.Common, Core.Vitals |
 | [Core.Abilities.Mobility](modulos/Core.Abilities.Mobility.md) | 4 | `AirJumpCounter`, `MobilityConfig`, `MobilityProfile`, `ShortTeleport` | Core.Classes, Core.Common, Core.Movement |
 | [Core.Animation](modulos/Core.Animation.md) | 6 | `AnimParams`, `AnimSlot`, `AnimationSet`, `ClipLoopRule`, `DefaultAnimationSets` … | — |
+| [Core.Appearance](modulos/Core.Appearance.md) | 5 | `AppearanceModels`, `BodyType`, `CharacterAppearance`, `ClassAppearances`, `OutfitId` | Core.Classes, Core.Common |
 | [Core.Armory](modulos/Core.Armory.md) | 3 | `ArmoryStock`, `ClassKitArmory`, `IArmoryStock` | Core.Classes, Core.Common |
 | [Core.Art](modulos/Core.Art.md) | 6 | `ColorMood`, `MoodColor`, `MoodProfile`, `MoodProfiles`, `MoodSelector` … | Core.Common, Core.Composition, Core.Iteration.Presence, Core.Time |
 | [Core.Classes](modulos/Core.Classes.md) | 8 | `ClassKit`, `ClassKitCatalog`, `ClassKitId`, `ClassResourceType`, `ClassRole` … | Core.Common, Core.Stats |

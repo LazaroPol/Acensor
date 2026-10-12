@@ -1,4 +1,5 @@
 using Specimen.Core.Animation;
+using Specimen.Core.Classes;
 using Specimen.Runtime.Visuals;
 using UnityEditor;
 using UnityEditor.Animations;
@@ -32,6 +33,12 @@ namespace Specimen.Editor.Arte
             Monster = AnimatorBuilder.Build(DefaultAnimationSets.Monstruo(), Clips);
             Catalog.heroe = Hero;
             Catalog.monstruo = Monster;
+        }
+
+        /// <summary>Aplica los decoradores de personaje (armas, equipo) a un personaje recién montado.</summary>
+        public void Decorate(ClassKitId kit, GameObject character)
+        {
+            foreach (var decorator in ArtSteps.CharacterDecorators) decorator.Decorate(kit, character);
         }
 
         private static CatalogoArte LoadOrCreateCatalog()
