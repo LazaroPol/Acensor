@@ -24,8 +24,8 @@ namespace Specimen.Runtime.Sandbox
         private SandboxPlayer _player;
         private int _kitIndex;
 
-        [RuntimeInitializeOnLoadMethod(RuntimeInitializeLoadType.AfterSceneLoad)]
-        private static void EnsureInSandboxScene()
+        /// <summary>Lo llama <c>SceneBootstrapper</c> en cada carga de escena; solo actúa en la suya.</summary>
+        public static void Ensure()
         {
             if (SceneManager.GetActiveScene().name != SceneName) return;
             if (FindAnyObjectByType<SandboxBootstrap>() != null) return;

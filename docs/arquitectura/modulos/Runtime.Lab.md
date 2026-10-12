@@ -6,7 +6,7 @@ Ensamblado: `Specimen.Runtime` · Carpeta: `Assets/_Project/Scripts/Runtime/Lab`
 Tests: (sin carpeta propia)
 
 **Depende de:** [Core.Composition](Core.Composition.md), [Core.Dna](Core.Dna.md), [Core.Lab](Core.Lab.md)
-**Lo usan:** nadie
+**Lo usan:** [Runtime.Bootstrap](Runtime.Bootstrap.md)
 
 | Fichero | Tipo | Resumen |
 |---|---|---|

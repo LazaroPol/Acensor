@@ -6,7 +6,7 @@ Ensamblado: `Specimen.Runtime` · Carpeta: `Assets/_Project/Scripts/Runtime/Sand
 Tests: (sin carpeta propia)
 
 **Depende de:** [Core.Abilities](Core.Abilities.md), [Core.Animation](Core.Animation.md), [Core.Bestiary](Core.Bestiary.md), [Core.Classes](Core.Classes.md), [Core.Combat](Core.Combat.md), [Core.Combat.Attacks](Core.Combat.Attacks.md), [Core.Combat.Enemies](Core.Combat.Enemies.md), [Core.Items](Core.Items.md), [Core.Loot](Core.Loot.md), [Core.Movement](Core.Movement.md), [Core.Professions](Core.Professions.md), [Core.Randomness](Core.Randomness.md), [Core.Sandbox](Core.Sandbox.md), [Core.Stats](Core.Stats.md), [Core.Visuals](Core.Visuals.md), [Core.Vitals](Core.Vitals.md), [Runtime.Characters](Runtime.Characters.md), [Runtime.Player](Runtime.Player.md), [Runtime.Visuals](Runtime.Visuals.md)
-**Lo usan:** nadie
+**Lo usan:** [Runtime.Bootstrap](Runtime.Bootstrap.md)
 
 | Fichero | Tipo | Resumen |
 |---|---|---|

@@ -19,8 +19,8 @@ namespace Specimen.Runtime.Prototype
         [SerializeField] private int anchoSala = 10;
         [SerializeField] private int fondoSala = 8;
 
-        [RuntimeInitializeOnLoadMethod(RuntimeInitializeLoadType.AfterSceneLoad)]
-        private static void EnsureInPrototypeScene()
+        /// <summary>Lo llama <c>SceneBootstrapper</c> en cada carga de escena; solo actúa en la suya.</summary>
+        public static void Ensure()
         {
             if (SceneManager.GetActiveScene().name != SceneName) return;
             if (FindAnyObjectByType<PrototypeBootstrap>() != null) return;

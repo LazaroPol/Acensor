@@ -6,7 +6,7 @@ Ensamblado: `Specimen.Core` · Carpeta: `Assets/_Project/Scripts/Core/Combat/Att
 Tests: `Assets/_Project/Tests/EditMode/Core/Combat/Attacks`
 
 **Depende de:** [Core.Abilities](Core.Abilities.md), [Core.Classes](Core.Classes.md), [Core.Common](Core.Common.md), [Core.Movement](Core.Movement.md), [Core.Vitals](Core.Vitals.md)
-**Lo usan:** [Core.Appearance](Core.Appearance.md), [Runtime.Sandbox](Runtime.Sandbox.md)
+**Lo usan:** [Core.Appearance](Core.Appearance.md), [Runtime.Combat](Runtime.Combat.md), [Runtime.Sandbox](Runtime.Sandbox.md)
 
 | Fichero | Tipo | Resumen |
 |---|---|---|

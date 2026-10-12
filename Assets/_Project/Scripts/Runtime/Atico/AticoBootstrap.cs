@@ -30,8 +30,8 @@ namespace Specimen.Runtime.Atico
         private SiegeController _siege;
         private OspreyPad _pad;
 
-        [RuntimeInitializeOnLoadMethod(RuntimeInitializeLoadType.AfterSceneLoad)]
-        private static void EnsureInAtticScene()
+        /// <summary>Lo llama <c>SceneBootstrapper</c> en cada carga de escena; solo actúa en la suya.</summary>
+        public static void Ensure()
         {
             if (SceneManager.GetActiveScene().name != nameof(SceneId.Atico)) return;
             if (FindAnyObjectByType<AticoBootstrap>() != null) return;
@@ -49,8 +49,9 @@ namespace Specimen.Runtime.Atico
             var kit = s.Resolve<ClassKitArmory>().TryGetKit(GameComposition.LocalPlayerId, out var mine) ? mine : catalog.All[0];
             var player = IncursionPlayer.Spawn(new Vector3(Size / 2f, 1.2f, Size / 2f), kit.CreateStatSheet(), _run,
                 new HudNotices(s.Resolve<IEventBus>()));
-            player.gameObject.AddComponent<PlayerAttack>().Init(kit.CreateStatSheet());
+            player.gameObject.AddComponent<PlayerAttack>().Init(kit, player.Vitals);
             _player = player;
+            player.gameObject.AddComponent<KitBadge>().Init(s);
             _siege = gameObject.AddComponent<SiegeController>();
             _siege.Init(_run, player.transform, player.Vitals);
             _pad = gameObject.AddComponent<OspreyPad>();

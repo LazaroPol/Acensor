@@ -14,8 +14,8 @@ namespace Specimen.Runtime.Lab
     {
         private const int DemoPoints = 12;
 
-        [RuntimeInitializeOnLoadMethod(RuntimeInitializeLoadType.AfterSceneLoad)]
-        private static void EnsureInLabScene()
+        /// <summary>Lo llama <c>SceneBootstrapper</c> en cada carga de escena; solo actúa en la suya.</summary>
+        public static void Ensure()
         {
             if (SceneManager.GetActiveScene().name != nameof(SceneId.Laboratorio)) return;
             if (FindAnyObjectByType<LabBootstrap>() != null) return;
