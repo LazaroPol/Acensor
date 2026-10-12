@@ -25,8 +25,8 @@ TOTAL  ███████████████████████░�
 
 ## Cola de prioridad (tablero)
 
-1. **F8-04** Extracción en Osprey y conversión a puntos de ADN
-2. **F9-02** Aplicación de mutaciones al nuevo clon
-3. **F9-03** Fragmentos de memoria y desbloqueo de lore
-4. **F9-04** Guardado y carga del perfil
-5. **F10-01** Bootstrap de escenas e inyección de dependencias
+1. **F9-02** Aplicación de mutaciones al nuevo clon
+2. **F9-03** Fragmentos de memoria y desbloqueo de lore
+3. **F9-04** Guardado y carga del perfil
+4. **F10-01** Bootstrap de escenas e inyección de dependencias
+5. **F10-02** Controlador del jugador y cámara

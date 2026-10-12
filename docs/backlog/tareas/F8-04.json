@@ -2,14 +2,19 @@
   "id": "F8-04",
   "phase": "F8",
   "title": "Extracción en Osprey y conversión a puntos de ADN",
-  "status": "todo",
+  "status": "in_progress",
   "type": "feature",
   "labels": [
     "asedio"
   ],
   "origin": "backlog",
-  "description": "",
-  "acceptance": [],
+  "description": "Núcleo puro de la extracción en Osprey y la conversión de la puntuación a puntos de ADN (GDD 03 §3.4-3.5).",
+  "acceptance": [
+    "DnaConversion calcula floor(puntos × multiplicador / constante) y valida constante > 0.",
+    "OspreyExtraction exige llegar antes de subir o despegar, rechaza jugadores desconocidos, es idempotente al subir y no permite llegar o despegar dos veces.",
+    "Depart devuelve quién subió y quién se quedó atrás.",
+    "Núcleo sin UnityEngine, ficheros <= 120 líneas y tests NUnit en verde."
+  ],
   "pr": null,
   "session": null
 }
