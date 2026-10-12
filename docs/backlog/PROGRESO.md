@@ -27,8 +27,8 @@ TOTAL  ████████████████████████�
 
 ## Cola de prioridad (tablero)
 
-1. **OF-08** Estaciones: nivel mejorable, ranuras y piezas colocables
-2. **OF-09** Cola de fabricación con temporizador y combustible
-3. **OF-10** Mods de equipo: definición, instalación y stats efectivos
-4. **OF-11** Contenido I: materiales, combustibles, piezas de estación y mods
-5. **OF-12** Contenido II: recetario medieval por oficio y conocimientos
+1. **OF-09** Cola de fabricación con temporizador y combustible
+2. **OF-10** Mods de equipo: definición, instalación y stats efectivos
+3. **OF-11** Contenido I: materiales, combustibles, piezas de estación y mods
+4. **OF-12** Contenido II: recetario medieval por oficio y conocimientos
+5. **OF-13** Guardado y carga del progreso de oficios e inventario
