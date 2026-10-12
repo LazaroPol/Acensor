@@ -6,7 +6,7 @@ Ensamblado: `Specimen.Core` · Carpeta: `Assets/_Project/Scripts/Core/Echoes/Vot
 Tests: `Assets/_Project/Tests/EditMode/Core/Echoes/Voting`
 
 **Depende de:** [Core.Common](Core.Common.md)
-**Lo usan:** nadie
+**Lo usan:** [Core.Lore](Core.Lore.md)
 
 | Fichero | Tipo | Resumen |
 |---|---|---|

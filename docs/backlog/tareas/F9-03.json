@@ -2,14 +2,19 @@
   "id": "F9-03",
   "phase": "F9",
   "title": "Fragmentos de memoria y desbloqueo de lore",
-  "status": "todo",
+  "status": "in_progress",
   "type": "feature",
   "labels": [
     "meta"
   ],
   "origin": "backlog",
-  "description": "",
-  "acceptance": [],
+  "description": "Fragmentos de memoria coleccionables (GDD §11): el perfil los acumula y desbloquea entradas de lore; cada jugador cuenta los suyos para el desempate de votaciones.",
+  "acceptance": [
+    "Una entrada de lore se desbloquea al reunir todos sus fragmentos, una sola vez",
+    "Recoger un fragmento repetido no desbloquea nada",
+    "El registro por jugador implementa IFragmentSource (desempate de Ecos)",
+    "Tests NUnit"
+  ],
   "pr": null,
   "session": null
 }
