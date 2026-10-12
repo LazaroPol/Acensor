@@ -25,6 +25,8 @@ namespace Specimen.Runtime.Sandbox
             Hurt = Button("Hurt", "<Keyboard>/f1");
             Heal = Button("Heal", "<Keyboard>/f2");
             Help = Button("Help", "<Keyboard>/h");
+            GiveXp = Button("GiveXp", "<Keyboard>/f3");
+            GiveMaterials = Button("GiveMaterials", "<Keyboard>/f4");
             Bag = Button("Bag", "<Keyboard>/b", "<Keyboard>/i");
             Character = Button("Character", "<Keyboard>/c");
             Spellbook = Button("Spellbook", "<Keyboard>/p");
@@ -43,6 +45,8 @@ namespace Specimen.Runtime.Sandbox
         public InputAction Hurt { get; }
         public InputAction Heal { get; }
         public InputAction Help { get; }
+        public InputAction GiveXp { get; }
+        public InputAction GiveMaterials { get; }
         public InputAction Bag { get; }
         public InputAction Character { get; }
         public InputAction Spellbook { get; }

@@ -14,7 +14,7 @@ namespace Specimen.Runtime.Sandbox
             foreach (var camp in _context.Village.Camps)
             {
                 var entry = DefaultBestiary.Find(camp.Id);
-                int count = entry.Id.StartsWith("guardian") ? 1 : 3;
+                int count = entry.Id.StartsWith("guardian") ? 1 : 2;
                 for (int i = 0; i < count; i++)
                 {
                     float angle = i * 2.4f;

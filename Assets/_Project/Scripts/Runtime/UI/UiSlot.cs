@@ -22,19 +22,20 @@ namespace Specimen.Runtime.UI
             slot._icon = UiFactory.Panel(rect, "Icono", new Vector2(3f, 3f), new Vector2(size - 6f, size - 6f),
                 Color.clear, false).GetComponent<Image>();
             slot._icon.raycastTarget = false;
-            slot._glyph = UiFactory.Label(rect, string.Empty, Vector2.zero, new Vector2(size, size), (int)(size * 0.36f),
-                TextAnchor.MiddleCenter);
-            slot._count = UiFactory.Label(rect, string.Empty, new Vector2(2f, size - 18f), new Vector2(size - 5f, 16f), 12,
-                TextAnchor.LowerRight);
-            slot._key = UiFactory.Label(rect, key ?? string.Empty, new Vector2(4f, 2f), new Vector2(size, 14f), 11,
-                TextAnchor.UpperLeft, UiTheme.TextDim);
             var cooldown = UiFactory.Panel(rect, "Enfriamiento", Vector2.zero, new Vector2(size, size),
                 new Color(0f, 0f, 0f, 0.65f), false).GetComponent<Image>();
             cooldown.type = Image.Type.Filled;
             cooldown.fillMethod = Image.FillMethod.Radial360;
             cooldown.fillOrigin = (int)Image.Origin360.Top;
             cooldown.raycastTarget = false;
+            cooldown.fillAmount = 0f;
             slot._cooldown = cooldown;
+            slot._glyph = UiFactory.Label(rect, string.Empty, Vector2.zero, new Vector2(size, size), (int)(size * 0.36f),
+                TextAnchor.MiddleCenter);
+            slot._count = UiFactory.Label(rect, string.Empty, new Vector2(2f, size - 18f), new Vector2(size - 5f, 16f), 12,
+                TextAnchor.LowerRight);
+            slot._key = UiFactory.Label(rect, key ?? string.Empty, new Vector2(4f, 2f), new Vector2(size, 14f), 11,
+                TextAnchor.UpperLeft, UiTheme.TextDim);
             slot._border = UiFactory.Border(rect, UiTheme.GoldDim);
             slot.Hover = rect.gameObject.AddComponent<UiHoverTip>();
             slot.Clear();

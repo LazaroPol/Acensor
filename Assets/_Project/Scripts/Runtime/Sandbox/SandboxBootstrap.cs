@@ -13,7 +13,7 @@ namespace Specimen.Runtime.Sandbox
     /// Arranque de la escena «CampoPruebas»: monta la Armería, el poblado, jugador, bestiario e interfaz con el
     /// arte generado (o greybox si falta) y atiende los atajos de prueba (kit con Tab, reinicio, dañar/curar).
     /// </summary>
-    public sealed class SandboxBootstrap : MonoBehaviour
+    public sealed partial class SandboxBootstrap : MonoBehaviour
     {
         public const string SceneName = "CampoPruebas";
 
@@ -65,6 +65,7 @@ namespace Specimen.Runtime.Sandbox
             if (input.Hurt.WasPressedThisFrame()) _player.Vitals.Health.Drain(15f);
             if (input.Heal.WasPressedThisFrame()) Heal();
             if (input.Restart.WasPressedThisFrame()) Restart();
+            TestShortcuts(input);
         }
 
         private void EquipIndex(int index) => Equip(_kits.All[index]);

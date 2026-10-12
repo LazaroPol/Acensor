@@ -10,7 +10,7 @@ namespace Specimen.Runtime.Sandbox.Ui
     {
         private const string HelpText =
             "WASD mover · Shift esprintar · Espacio esquivar · Clic atacar · Q firma · 1-5 hechizos · E usar\n" +
-            "B bolsa · C personaje · P hechizos · N talentos · M mapa · Esc cerrar · Tab kit · R reiniciar · H ayuda";
+            "B bolsa · C personaje · P hechizos · N talentos · M mapa · Esc cerrar · Tab kit · R reiniciar · F3 +PX · F4 materiales · H ayuda";
 
         private SandboxContext _context;
         private Text _log;

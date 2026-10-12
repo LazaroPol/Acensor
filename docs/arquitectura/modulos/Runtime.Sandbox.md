@@ -5,7 +5,7 @@
 Ensamblado: `Specimen.Runtime` · Carpeta: `Assets/_Project/Scripts/Runtime/Sandbox`
 Tests: (sin carpeta propia)
 
-**Depende de:** [Core.Abilities](Core.Abilities.md), [Core.Animation](Core.Animation.md), [Core.Bestiary](Core.Bestiary.md), [Core.Classes](Core.Classes.md), [Core.Combat](Core.Combat.md), [Core.Combat.Attacks](Core.Combat.Attacks.md), [Core.Combat.Enemies](Core.Combat.Enemies.md), [Core.Crafting](Core.Crafting.md), [Core.Items](Core.Items.md), [Core.Loot](Core.Loot.md), [Core.Movement](Core.Movement.md), [Core.Professions](Core.Professions.md), [Core.Progression](Core.Progression.md), [Core.Randomness](Core.Randomness.md), [Core.Sandbox](Core.Sandbox.md), [Core.Stats](Core.Stats.md), [Core.Talents](Core.Talents.md), [Core.Visuals](Core.Visuals.md), [Core.Vitals](Core.Vitals.md), [Core.World](Core.World.md), [Runtime.Characters](Runtime.Characters.md), [Runtime.Player](Runtime.Player.md), [Runtime.Sandbox.Ui](Runtime.Sandbox.Ui.md), [Runtime.Sandbox.World](Runtime.Sandbox.World.md), [Runtime.UI](Runtime.UI.md), [Runtime.Visuals](Runtime.Visuals.md)
+**Depende de:** [Core.Abilities](Core.Abilities.md), [Core.Animation](Core.Animation.md), [Core.Bestiary](Core.Bestiary.md), [Core.Classes](Core.Classes.md), [Core.Combat](Core.Combat.md), [Core.Combat.Attacks](Core.Combat.Attacks.md), [Core.Combat.Enemies](Core.Combat.Enemies.md), [Core.Crafting](Core.Crafting.md), [Core.Items](Core.Items.md), [Core.Items.Catalog](Core.Items.Catalog.md), [Core.Loot](Core.Loot.md), [Core.Movement](Core.Movement.md), [Core.Professions](Core.Professions.md), [Core.Progression](Core.Progression.md), [Core.Randomness](Core.Randomness.md), [Core.Sandbox](Core.Sandbox.md), [Core.Stats](Core.Stats.md), [Core.Talents](Core.Talents.md), [Core.Visuals](Core.Visuals.md), [Core.Vitals](Core.Vitals.md), [Core.World](Core.World.md), [Runtime.Characters](Runtime.Characters.md), [Runtime.Player](Runtime.Player.md), [Runtime.Sandbox.Ui](Runtime.Sandbox.Ui.md), [Runtime.Sandbox.World](Runtime.Sandbox.World.md), [Runtime.UI](Runtime.UI.md), [Runtime.Visuals](Runtime.Visuals.md)
 **Lo usan:** [Runtime.Bootstrap](Runtime.Bootstrap.md)
 
 | Fichero | Tipo | Resumen |
@@ -21,6 +21,7 @@ Tests: (sin carpeta propia)
 | `Nameplates.cs` | class `Nameplates` | Placas de nombre y vida sobre las criaturas, y cuenta atrás de reaparición de las caídas. |
 | `PlayerCombat.cs` | class `PlayerCombat` | Ataque básico del kit (clic izquierdo / J): melé en arco delante del jugador o proyectil de hechizo. |
 | `Projectile.cs` | class `Projectile` | Proyectil de hechizo: avanza en línea recta y golpea al primer enemigo vivo que toca. |
+| `SandboxBootstrap.Cheats.cs` | class `SandboxBootstrap` | Atajos de prueba para la progresión: F3 da experiencia y F4 un lote de materiales básicos. |
 | `SandboxBootstrap.cs` | class `SandboxBootstrap` | Arranque de la escena «CampoPruebas»: monta la Armería, el poblado, jugador, bestiario e interfaz con el arte generado (o greybox si falta)  |
 | `SandboxContext.cs` | class `SandboxContext` | Servicios compartidos del Campo de pruebas (se crean una vez en el bootstrap y se inyectan). |
 | `SandboxEnemy.Respawn.cs` | class `SandboxEnemy` | Reaparición del bestiario: tras morir, la criatura vuelve a su sitio con la vida llena. |
