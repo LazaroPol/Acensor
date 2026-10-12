@@ -21,6 +21,7 @@ namespace Specimen.Core.Art
             switch (scene)
             {
                 case SceneId.Laboratorio: return ColorMood.Laboratorio;
+                case SceneId.Atico:
                 case SceneId.Incursion: return ColorMood.Piso;
                 default: return ColorMood.Refugio;
             }

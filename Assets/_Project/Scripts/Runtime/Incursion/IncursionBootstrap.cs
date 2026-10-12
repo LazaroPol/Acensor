@@ -77,6 +77,7 @@ namespace Specimen.Runtime.Incursion
             if (near && Keyboard.current != null && Keyboard.current.eKey.wasPressedThisFrame)
             {
                 _run.ReturnToElevator(GameComposition.LocalPlayerId);
+                _run.VoteEarlyClose(GameComposition.LocalPlayerId, true);
                 _flow.GoTo(SceneId.Ascensor);
             }
         }
@@ -91,6 +92,6 @@ namespace Specimen.Runtime.Incursion
         }
 
         private void OnGUI() =>
-            GUI.Label(new Rect(10f, Screen.height - 30f, 600f, 24f), "E junto al Ascensor: volver · busca el Hueco de Emergencia");
+            GUI.Label(new Rect(10f, Screen.height - 30f, 600f, 24f), "E junto al Ascensor: volver y cerrar el piso · busca el Hueco de Emergencia");
     }
 }

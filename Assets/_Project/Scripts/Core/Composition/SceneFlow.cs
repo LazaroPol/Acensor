@@ -14,17 +14,18 @@ namespace Specimen.Core.Composition
 
     /// <summary>
     /// Flujo de escenas: solo permite las transiciones del bucle de juego
-    /// (Boot → Ascensor ⇄ Armería/Laboratorio, Ascensor ⇄ Incursión) y avisa por el bus.
+    /// (Boot → Ascensor ⇄ Armería/Laboratorio, Ascensor ⇄ Incursión/Ático) y avisa por el bus.
     /// </summary>
     public sealed class SceneFlow
     {
         private static readonly Dictionary<SceneId, SceneId[]> Allowed = new Dictionary<SceneId, SceneId[]>
         {
             [SceneId.Boot] = new[] { SceneId.Ascensor },
-            [SceneId.Ascensor] = new[] { SceneId.Armeria, SceneId.Laboratorio, SceneId.Incursion },
+            [SceneId.Ascensor] = new[] { SceneId.Armeria, SceneId.Laboratorio, SceneId.Incursion, SceneId.Atico },
             [SceneId.Armeria] = new[] { SceneId.Ascensor },
             [SceneId.Laboratorio] = new[] { SceneId.Ascensor },
-            [SceneId.Incursion] = new[] { SceneId.Ascensor }
+            [SceneId.Incursion] = new[] { SceneId.Ascensor },
+            [SceneId.Atico] = new[] { SceneId.Ascensor }
         };
 
         private readonly ISceneLoader _loader;
