@@ -2,7 +2,7 @@
   "id": "F9-04",
   "phase": "F9",
   "title": "Guardado y carga del perfil",
-  "status": "in_progress",
+  "status": "done",
   "type": "feature",
   "labels": [
     "meta"
@@ -16,6 +16,6 @@
     "Serialización determinista",
     "Tests NUnit"
   ],
-  "pr": null,
-  "session": null
+  "pr": "#77",
+  "session": 94
 }
