@@ -11,7 +11,8 @@ Tests: `Assets/_Project/Tests/EditMode/Core/Crafting/Mods`
 | Fichero | Tipo | Resumen |
 |---|---|---|
 | `DefaultGearTags.cs` | class `DefaultGearTags` | Etiquetas derivadas de la categoría (Arma, Armadura, Herramienta) y del material (Madera, Metal), más las extra que se declaren por id (Arma |
-| `DefaultMods.cs` | class `DefaultMods` | Mods de ejemplo de §17.4 (Palo de madera y comunes). |
+| `DefaultMods.Catalog.cs` | class `DefaultMods` | Resto de la tabla de mods de §17.5 (ids mod.* estables: se guardan en los objetos). |
+| `DefaultMods.cs` | class `DefaultMods` | Mods de §17.4/§17.5: los del Palo de madera aquí; el resto del catálogo en DefaultMods.Catalog. |
 | `GearModifier.cs` | enum `GearModifierKind` | Cómo se aplica un modificador: suma plana o porcentaje sobre el total. |
 | `GearModifier.cs` | struct `GearModifier` | Modificador de un mod sobre un stat de equipo. |
 | `GearStat.cs` | enum `GearStat` | Stats de equipo que los mods modifican (GDD §17.4). |

@@ -12,7 +12,12 @@ Tests: (sin carpeta propia)
 |---|---|---|
 | `ConsumableEffect.cs` | class `ConsumableEffect` | Qué hace un consumible al usarlo: vida y recurso de clase que devuelve, y descripción para el tooltip. |
 | `ConsumableUse.cs` | class `ConsumableUse` | Consumir un objeto de la bolsa (clic derecho): aplica su efecto a las vitales y gasta una unidad. |
+| `FuelIds.cs` | class `FuelIds` | Ids estables de los combustibles de §17.5 (sus segundos de quemado están en FuelTable). |
 | `GearIds.cs` | class `GearIds` | Ids del equipo nuevo: equipo inicial de cada kit y botín de las criaturas del poblado. |
 | `ItemCatalog.Gear.cs` | class `ItemCatalog` | Equipo inicial de los kits y equipo que sueltan las criaturas (sus stats están en GearCatalog). |
+| `ItemCatalog.Materials.Crafted.cs` | class `ItemCatalog` | Intermedios sin calidad (un oficio los fabrica para otro) y combustibles de §17.5. |
+| `ItemCatalog.Materials.Mineral.cs` | class `ItemCatalog` | Materiales de §17.5: metal, mineral y vidrio (reutiliza hierro, lingote, chatarra y cristal). |
+| `ItemCatalog.Materials.Natural.cs` | class `ItemCatalog` | Materiales de §17.5: madera, piedra, cuero, tela y hueso (reutiliza madera, piedra y cuero). |
+| `ItemCatalog.Materials.Organic.cs` | class `ItemCatalog` | Materiales de §17.5: hierbas y comida (reutiliza carne y hierba de ceniza). |
 | `ItemCatalog.cs` | class `ItemCatalog` | Catálogo de objetos del juego: materiales (recolección y botín), consumibles y equipo fabricado. |
 | `ItemIds.cs` | class `ItemIds` | Ids estables de los objetos del catálogo (se guardan en inventarios y recetas). |

@@ -2,8 +2,8 @@ using System.Collections.Generic;
 
 namespace Specimen.Core.Crafting.Mods
 {
-    /// <summary>Mods de ejemplo de §17.4 (Palo de madera y comunes). El catálogo completo llega con OF-11.</summary>
-    public static class DefaultMods
+    /// <summary>Mods de §17.4/§17.5: los del Palo de madera aquí; el resto del catálogo en DefaultMods.Catalog.</summary>
+    public static partial class DefaultMods
     {
         public const string EsquirlasMetal = "mod.esquirlas_metal";
         public const string PiedraAtada = "mod.piedra_atada";
@@ -42,6 +42,13 @@ namespace Specimen.Core.Crafting.Mods
                 GearModifier.Percent(GearStat.DañoPerforante, 0.1f)
             }, removable: false);
 
-        public static IReadOnlyList<ModDefinition> All { get; } = new[] { Esquirlas, Piedra, ClavoMod, Tiras, Resina };
+        /// <summary>Los 15 mods. Perezoso: los campos viven en varios ficheros parciales (orden de inicio no garantizado).</summary>
+        public static IReadOnlyList<ModDefinition> All => _all ?? (_all = new[]
+        {
+            Esquirlas, Piedra, ClavoMod, Tiras, Resina, FiloSilex, PuntaHueso, Remaches, Contrapeso, MangoFresno,
+            PlacasCosidas, ForroAcolchado, AfiladoFino, GemaTallada, CorreajeLigero
+        });
+
+        private static ModDefinition[] _all;
     }
 }

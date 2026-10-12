@@ -16,5 +16,6 @@ Tests: `Assets/_Project/Tests/EditMode/Core/Crafting/Queue`
 | `CraftQueueState.cs` | enum `CraftQueueState` | Estado de la cola tras el último avance: pausada no es cancelada (no se pierde nada). |
 | `CraftTiming.cs` | class `CraftTiming` | Tiempo real de un trabajo (GDD §17.3): CraftSeconds × (1 − bonusOficio) × (1 − bonusPiezas) , mínimo . |
 | `EnqueueResult.cs` | enum `EnqueueResult` | Resultado de intentar encolar una receta en una estación. |
-| `FuelTable.cs` | class `FuelTable` | Combustibles (datos): segundos que arde cada unidad (GDD §17.3). |
+| `FuelTable.Default.cs` | class `FuelTable` | Combustibles por defecto de §17.5, derivados del catálogo de objetos. |
+| `FuelTable.cs` | class `FuelTable` | Combustibles (datos): segundos que arde cada unidad y, si procede, única estación donde arde (GDD §17.5). |
 | `InventoryChain.cs` | class `InventoryChain` | Vista de dos inventarios como uno (GDD §17.3: la estación tira de su entrada y, si falta, de la bolsa del jugador). |

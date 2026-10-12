@@ -10,6 +10,8 @@ Tests: `Assets/_Project/Tests/EditMode/Core/Crafting/Stations`
 
 | Fichero | Tipo | Resumen |
 |---|---|---|
+| `DefaultStationParts.Sections.cs` | class `DefaultStationParts` | Tabla de piezas de §17.5 por estación (bonus: calidad, fracción de tiempo y de combustible ahorrada). |
+| `DefaultStationParts.cs` | class `DefaultStationParts` | Las 19 piezas de estación de §17.5. |
 | `PartPlaceResult.cs` | enum `PartPlaceResult` | Resultado de colocar una pieza en una estación. |
 | `PartSlots.cs` | class `PartSlots` | Ranuras de pieza de una estación: solo admite piezas compatibles y sin repetir. |
 | `RecipeAvailability.cs` | class `RecipeAvailability` | Qué recetas ofrece una estación (GDD §17.3). |
@@ -17,6 +19,7 @@ Tests: `Assets/_Project/Tests/EditMode/Core/Crafting/Stations`
 | `RecipeOption.cs` | class `RecipeOption` | Receta que ofrece una estación y, si está en gris, el motivo. |
 | `StationPart.cs` | class `StationPart` | Pieza física colocable: se gasta 1 punto por uso; rota deja de contar hasta repararla. |
 | `StationPartDefinition.cs` | class `StationPartDefinition` | Pieza de estación (GDD §17.3): crisol, fuelle, olla de hierro… Su es el que citan las RequiredParts de las recetas. |
+| `StationPartEntry.cs` | class `StationPartEntry` | Ficha de contenido de una pieza de estación (GDD §17.5): su definición, el nombre visible, qué recetas habilita (texto para la UI) y el obje |
 | `StationUpgrade.cs` | class `StationUpgrade` | Mejora de estación por datos (GDD §17.3): sube una estación al (2-3) gastando ; fija el tamaño de cola y los puntos de calidad del nuevo niv |
 | `UpgradeResult.cs` | enum `UpgradeResult` | Resultado de intentar mejorar una estación. |
 | `Workstation.Upgrade.cs` | class `Workstation` | Mejora de nivel de la : atómica (o gasta todo o nada). |
