@@ -6,7 +6,7 @@ Ensamblado: `Specimen.Core` · Carpeta: `Assets/_Project/Scripts/Core/Elevator`
 Tests: `Assets/_Project/Tests/EditMode/Core/Elevator`
 
 **Depende de:** [Core.Common](Core.Common.md), [Core.Crafting](Core.Crafting.md), [Core.Items](Core.Items.md), [Core.Iteration](Core.Iteration.md), [Core.Life](Core.Life.md), [Core.Stats](Core.Stats.md), [Core.Time](Core.Time.md), [Core.Vitals](Core.Vitals.md)
-**Lo usan:** nadie
+**Lo usan:** [Core.Composition](Core.Composition.md), [Core.Hubs](Core.Hubs.md), [Runtime.Hubs](Runtime.Hubs.md)
 
 | Fichero | Tipo | Resumen |
 |---|---|---|

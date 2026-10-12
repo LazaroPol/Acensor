@@ -2,14 +2,19 @@
   "id": "F10-06",
   "phase": "F10",
   "title": "Escena del Ascensor y Armería jugables",
-  "status": "todo",
+  "status": "in_progress",
   "type": "feature",
   "labels": [
     "ui"
   ],
   "origin": "backlog",
-  "description": "",
-  "acceptance": [],
+  "description": "Armería y Ascensor jugables: elegir kit de clase, salir al Ascensor, ver ranuras de módulos y marcar «listo».",
+  "acceptance": [
+    "ArmoryPresenter: elegir/cambiar kit con el stock de ClassKitArmory y salir solo con kit (LeaveArmory).",
+    "ElevatorPresenter: lista las ranuras y alterna «listo» solo durante la Calma.",
+    "GameComposition registra catálogo de kits, armería, IterationRun y plataforma del Ascensor.",
+    "HubBootstrap monta ArmoryScreen/ElevatorScreen en las escenas Armeria y Ascensor y avanza la iteración."
+  ],
   "pr": null,
   "session": null
 }
