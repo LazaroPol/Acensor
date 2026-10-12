@@ -27,7 +27,10 @@ namespace Specimen.Core.Sandbox
         public static IReadOnlyList<LootDrop> DropsFor(BestiaryEntry entry, IRandom random)
         {
             int ring = RingOf(entry);
-            return TableFor(entry.Model).Roll(ring, ring == DepthRings.Min ? 1 : 3, Guard.NotNull(random, nameof(random)));
+            var drops = new List<LootDrop>(TableFor(entry.Model).Roll(ring, ring == DepthRings.Min ? 1 : 3,
+                Guard.NotNull(random, nameof(random))));
+            drops.AddRange(SandboxGearLoot.Roll(entry, random));
+            return drops;
         }
 
         private static LootTable Table(params (string id, float weight, int min, int max)[] entries)

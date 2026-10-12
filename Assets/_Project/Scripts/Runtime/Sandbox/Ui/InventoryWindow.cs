@@ -5,7 +5,7 @@ using UnityEngine.UI;
 
 namespace Specimen.Runtime.Sandbox.Ui
 {
-    /// <summary>Bolsa (B / I): 6 × 4 huecos con marco del color de rareza, tooltip y clic derecho para consumir.</summary>
+    /// <summary>Bolsa (B / I): 6 × 4 huecos con marco del color de rareza y tooltip; clic derecho consume o equipa.</summary>
     public sealed class InventoryWindow : UiWindow
     {
         private const int Columns = 6;
@@ -58,7 +58,8 @@ namespace Specimen.Runtime.Sandbox.Ui
         {
             var stacks = Context.Inventory.Stacks;
             if (index >= stacks.Count) return null;
-            return ItemView.Tooltip(stacks[index].Definition, stacks[index].Item, stacks[index].Quantity);
+            return ItemView.Tooltip(stacks[index].Definition, stacks[index].Item, stacks[index].Quantity,
+                Player.Kit != null ? Player.Gear : null, Player.Stats);
         }
 
         private void Use(int index)
@@ -66,7 +67,8 @@ namespace Specimen.Runtime.Sandbox.Ui
             var stacks = Context.Inventory.Stacks;
             if (index >= stacks.Count || !Player.IsAlive) return;
             var item = stacks[index].Definition;
-            if (ConsumableUse.TryUse(Context.Inventory, item.Id, Player.Vitals, out var effect))
+            if (Player.Gear.CanEquip(item)) Gear.EquipFromBag(Context, Player, stacks[index].Item);
+            else if (ConsumableUse.TryUse(Context.Inventory, item.Id, Player.Vitals, out var effect))
                 Context.Feed.Add($"Usas {item.Name}: {effect.Description}");
             else Context.Feed.Add($"{item.Name} no se puede usar (material para recetas).");
             Refresh();

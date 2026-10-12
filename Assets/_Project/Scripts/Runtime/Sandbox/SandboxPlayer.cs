@@ -53,6 +53,7 @@ namespace Specimen.Runtime.Sandbox
             Kit = kit;
             Stats = kit.CreateStatSheet();
             Bonuses = _context.Hero.Apply(kit.Id, Stats);
+            ApplyCrit();
             if (Vitals != null) Vitals.Health.Depleted -= OnHealthDepleted;
             _controller.Init(Stats, _cameraYaw);
             _controller.enabled = true;
@@ -72,14 +73,17 @@ namespace Specimen.Runtime.Sandbox
             _shieldLeft = seconds;
         }
 
-        public void ReceiveHit(Hit hit, string source)
+        /// <summary>Golpe recibido: armadura al estilo WoW según el nivel del atacante, escudo y texto flotante rojo.</summary>
+        public void ReceiveHit(Hit hit, string source, int attackerLevel)
         {
             if (!IsAlive) return;
             float armor = Stats.Has(StatType.Armor) ? Stats.ValueOf(StatType.Armor) : 0f;
-            var result = _context.Hits.Resolve(hit, CritRules.None, new DefenseProfile(armor, Resistances.None));
+            var result = _context.Hits.Resolve(hit, CritRules.None, new DefenseProfile(armor, Resistances.None), attackerLevel);
             float amount = result.Final * (IsShielded ? 1f - _shieldReduction : 1f);
             Vitals.Health.Drain(amount);
             _animator.Play(AnimSlot.Golpe);
+            _context.Events.Taken(transform.position + Vector3.up * 2f,
+                new DamageResult(result.Raw, amount, result.IsCritical, result.Type));
             _context.Feed.Add($"{source} te golpea: -{amount:0}{(IsShielded ? " (escudo)" : string.Empty)}");
         }
 

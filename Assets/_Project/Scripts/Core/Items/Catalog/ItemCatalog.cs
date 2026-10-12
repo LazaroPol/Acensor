@@ -5,7 +5,7 @@ using I = Specimen.Core.Items.Catalog.ItemIds;
 namespace Specimen.Core.Items.Catalog
 {
     /// <summary>Catálogo de objetos del juego: materiales (recolección y botín), consumibles y equipo fabricado.</summary>
-    public static class ItemCatalog
+    public static partial class ItemCatalog
     {
         private static readonly Dictionary<string, ItemDefinition> Items = Build();
 
@@ -49,6 +49,7 @@ namespace Specimen.Core.Items.Catalog
             Gear(list, I.KitReparacion, "Kit de reparación", ItemCategory.Tool, Rarity.Common, 0, 5);
             Gear(list, I.TotemPiedra, "Tótem de piedra", ItemCategory.Tool, Rarity.Uncommon, 0);
             Gear(list, I.Idolo, "Ídolo de ceniza", ItemCategory.Tool, Rarity.Epic, 0);
+            AddEquipment(list);
             var result = new Dictionary<string, ItemDefinition>();
             foreach (var item in list) result.Add(item.Id, item);
             return result;

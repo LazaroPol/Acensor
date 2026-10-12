@@ -1,13 +1,15 @@
 using System.Text;
+using Specimen.Core.Equipment;
 using Specimen.Core.Items;
 using Specimen.Core.Items.Catalog;
+using Specimen.Core.Stats;
 using Specimen.Runtime.UI;
 using UnityEngine;
 
 namespace Specimen.Runtime.Sandbox.Ui
 {
     /// <summary>Presentación de objetos en la interfaz: «icono» (iniciales sobre color de categoría) y tooltip.</summary>
-    public static class ItemView
+    public static partial class ItemView
     {
         public static string Glyph(string name)
         {
@@ -58,12 +60,14 @@ namespace Specimen.Runtime.Sandbox.Ui
         public static void Show(UiSlot slot, ItemDefinition item, int count, bool dim = false) =>
             slot.Set(Glyph(item.Name), Tint(item.Category), UiTheme.Rarity(item.Rarity), count, dim);
 
-        public static string Tooltip(ItemDefinition item, ItemInstance instance = null, int count = 1)
+        public static string Tooltip(ItemDefinition item, ItemInstance instance = null, int count = 1,
+            CharacterEquipment compare = null, StatSheet stats = null)
         {
             var text = new StringBuilder();
             text.Append($"<size=16><b>{Colored(item)}</b></size>\n");
             text.Append($"<color=#B0A890>{CategoryName(item.Category)} · {RarityName(item.Rarity)}</color>");
             if (count > 1) text.Append($"\nCantidad: {count}");
+            AppendGear(text, item, compare, stats);
             if (instance != null && item.IsDegradable)
                 text.Append($"\nDurabilidad {instance.Durability.Current}/{instance.Durability.Max}");
             if (ConsumableEffect.TryGet(item.Id, out var effect))

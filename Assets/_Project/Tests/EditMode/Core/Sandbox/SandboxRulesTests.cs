@@ -39,8 +39,9 @@ namespace Specimen.Tests.Core.Sandbox
         public void CommonCreaturesDropOnceAndTheBossDropsMore()
         {
             var random = new Pcg32Random(42UL);
-            Assert.That(SandboxLoot.DropsFor(DefaultBestiary.Find("puglin"), random).Count, Is.EqualTo(1));
-            Assert.That(SandboxLoot.DropsFor(DefaultBestiary.Find(ActOneBoss.Id), random).Count, Is.EqualTo(3));
+            Assert.That(SandboxLoot.DropsFor(DefaultBestiary.Find("puglin"), random).Count, Is.InRange(1, 2));
+            Assert.That(SandboxLoot.DropsFor(DefaultBestiary.Find(ActOneBoss.Id), random).Count, Is.EqualTo(4),
+                "3 materiales + 1 pieza épica");
             Assert.That(SandboxLoot.RingOf(DefaultBestiary.Find(ActOneBoss.Id)), Is.EqualTo(ActOneBoss.Ring));
         }
 

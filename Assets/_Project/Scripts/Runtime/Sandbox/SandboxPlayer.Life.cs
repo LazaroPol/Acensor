@@ -16,7 +16,18 @@ namespace Specimen.Runtime.Sandbox
         {
             if (Kit == null) return;
             Bonuses = _context.Hero.Apply(Kit.Id, Stats);
+            ApplyCrit();
             if (refill && !_dead) Vitals.RefillAll();
+        }
+
+        /// <summary>Equipo del kit actual (arma con su velocidad, armadura…).</summary>
+        public Core.Equipment.CharacterEquipment Gear => _context.Hero.EquipmentFor(Kit.Id);
+
+        private void ApplyCrit()
+        {
+            var crit = Core.Stats.StatType.CritChance;
+            float chance = Stats.Has(crit) ? Mathf.Clamp01(Stats.ValueOf(crit)) : 0f;
+            _context.Hits.Crit = new Core.Combat.CritRules(chance, 2f);
         }
 
         public void Revive(Vector3 position)

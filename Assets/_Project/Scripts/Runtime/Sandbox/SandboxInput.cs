@@ -6,7 +6,8 @@ namespace Specimen.Runtime.Sandbox
 {
     /// <summary>
     /// Entradas propias del Campo de pruebas (mover, esprintar y esquivar las lleva PlayerController):
-    /// ataque, firma, hechizos 1-5, interactuar, ventanas estilo MMO (B/I, C, P, N, M, Esc), cambio de kit (Tab)
+    /// objetivo (Tab / clic), ataque automático con el arma (F / clic derecho), firma (Q), hechizos 1-5, interactuar,
+    /// ventanas estilo MMO (B/I, C, P, N, M, Esc), cambio de kit (K)
     /// y atajos de prueba (reiniciar, dañar/curar, ayuda).
     /// </summary>
     public sealed class SandboxInput : IDisposable
@@ -17,10 +18,12 @@ namespace Specimen.Runtime.Sandbox
 
         public SandboxInput()
         {
-            Attack = Button("Attack", "<Mouse>/leftButton", "<Keyboard>/j", "<Gamepad>/buttonWest");
+            Select = Button("Select", "<Mouse>/leftButton");
+            AutoAttack = Button("AutoAttack", "<Mouse>/rightButton", "<Keyboard>/f", "<Gamepad>/buttonWest");
+            NextTarget = Button("NextTarget", "<Keyboard>/tab", "<Gamepad>/leftShoulder");
             Ability = Button("Ability", "<Keyboard>/q", "<Gamepad>/buttonNorth");
             Interact = Button("Interact", "<Keyboard>/e", "<Gamepad>/buttonSouth");
-            NextClass = Button("NextClass", "<Keyboard>/tab", "<Gamepad>/rightShoulder");
+            NextClass = Button("NextClass", "<Keyboard>/k", "<Gamepad>/rightShoulder");
             Restart = Button("Restart", "<Keyboard>/r", "<Gamepad>/select");
             Hurt = Button("Hurt", "<Keyboard>/f1");
             Heal = Button("Heal", "<Keyboard>/f2");
@@ -37,7 +40,9 @@ namespace Specimen.Runtime.Sandbox
             for (int i = 0; i < SpellKeys; i++) Spells[i] = Button($"Spell{i + 1}", $"<Keyboard>/{i + 1}");
         }
 
-        public InputAction Attack { get; }
+        public InputAction Select { get; }
+        public InputAction AutoAttack { get; }
+        public InputAction NextTarget { get; }
         public InputAction Ability { get; }
         public InputAction Interact { get; }
         public InputAction NextClass { get; }

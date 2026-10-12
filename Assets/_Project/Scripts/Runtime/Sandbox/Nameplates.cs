@@ -2,13 +2,18 @@ using UnityEngine;
 
 namespace Specimen.Runtime.Sandbox
 {
-    /// <summary>Placas de nombre y vida sobre las criaturas, y cuenta atrás de reaparición de las caídas.</summary>
+    /// <summary>Placas sobre las criaturas (nivel y nombre con color de dificultad, vida; «» marca el objetivo) y reaparición.</summary>
     public sealed class Nameplates : MonoBehaviour
     {
         private SandboxContext _context;
+        private PlayerTarget _target;
         private GUIStyle _style;
 
-        public void Init(SandboxContext context) => _context = context;
+        public void Init(SandboxContext context, PlayerTarget target)
+        {
+            _context = context;
+            _target = target;
+        }
 
         private void OnGUI()
         {
@@ -32,8 +37,11 @@ namespace Specimen.Runtime.Sandbox
             var fill = rect;
             fill.width *= enemy.HealthFraction;
             Fill(fill, new Color(0.85f, 0.15f, 0.12f));
-            _style.normal.textColor = new Color(1f, 0.85f, 0.4f);
-            GUI.Label(new Rect(rect.x - 50f, rect.y - 20f, 200f, 20f), enemy.DisplayName, _style);
+            bool targeted = _target != null && _target.Current == enemy;
+            _style.normal.textColor = Ui.HudTargetFrame.ColorOf(
+                Core.Progression.LevelDifficulty.Of(_context.Hero.Level, enemy.Level));
+            string name = $"[{enemy.Level}] {enemy.DisplayName}";
+            GUI.Label(new Rect(rect.x - 50f, rect.y - 20f, 200f, 20f), targeted ? $"» {name} «" : name, _style);
         }
 
         private void Respawn(Camera camera, SandboxEnemy enemy)

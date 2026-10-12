@@ -32,7 +32,6 @@ namespace Specimen.Runtime.Sandbox
         public string DisplayName => Entry.DisplayName;
         public bool IsDead => _health == null || _health.IsDead;
         public float HealthFraction => _health?.Fraction ?? 0f;
-        public DefenseProfile Defense => _enemy.Defense;
         public float Radius => 0.45f * Entry.Scale;
         public float Height => 1.5f * Entry.Scale;
 
@@ -43,7 +42,7 @@ namespace Specimen.Runtime.Sandbox
             _enemy = enemy;
             _target = target;
             _onDeath = onDeath;
-            _health = new EnemyHealth(enemy.Stats.MaxHealth);
+            SetupLevel(entry, enemy);
             _respawn = new RespawnTimer(SandboxRespawn.DelayFor(entry));
             _brain = new EnemyBrain(new EnemyBrainConfig().ScaledBy(entry.Scale));
             _animator = GetComponent<CharacterAnimator>();
@@ -113,7 +112,7 @@ namespace Specimen.Runtime.Sandbox
             if (_windUp < 0f) return;
             _windUp -= dt;
             if (_windUp >= 0f) return;
-            if (distance <= _brain.Config.AttackRange * ReachTolerance) _target.ReceiveHit(_enemy.Attack(), DisplayName);
+            if (distance <= _brain.Config.AttackRange * ReachTolerance) _target.ReceiveHit(Attack(), DisplayName, Level);
         }
     }
 }

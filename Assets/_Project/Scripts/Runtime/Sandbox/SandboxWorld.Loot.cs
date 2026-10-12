@@ -13,8 +13,8 @@ namespace Specimen.Runtime.Sandbox
         private void OnEnemyDeath(SandboxEnemy enemy, Transform player)
         {
             _context.Feed.Add($"{enemy.DisplayName} derrotado. Reaparece en {enemy.RespawnRemaining:0} s.");
-            int ring = SandboxLoot.RingOf(enemy.Entry);
-            _context.GrantXp(XpRewards.ForKill(enemy.Entry, _context.Hero.Level, ring), enemy.DisplayName);
+            _context.GrantXp(XpRewards.ForKill(enemy.Entry, _context.Hero.Level, enemy.Level), enemy.DisplayName,
+                XpSource.Combate);
             var drops = SandboxLoot.DropsFor(enemy.Entry, _context.Random);
             for (int i = 0; i < drops.Count; i++) SpawnLoot(drops[i], enemy.transform.position + Offset(i), player);
         }

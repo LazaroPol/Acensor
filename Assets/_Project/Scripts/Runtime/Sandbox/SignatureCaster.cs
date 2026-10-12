@@ -46,7 +46,9 @@ namespace Specimen.Runtime.Sandbox
             var result = Slot.TryActivate();
             if (result != AbilityResult.Activated)
             {
-                _context.Feed.Add($"{Slot.Definition.DisplayName}: {result}");
+                _context.Events.Fail(result == AbilityResult.OnCooldown
+                    ? $"{Slot.Definition.DisplayName}: en enfriamiento ({Slot.Cooldown.Remaining:0.0} s)"
+                    : $"{Slot.Definition.DisplayName}: recurso insuficiente");
                 return;
             }
             _context.Feed.Add($"¡{Slot.Definition.DisplayName}!");
@@ -66,13 +68,14 @@ namespace Specimen.Runtime.Sandbox
                     _player.Dash(transform.forward * _effect.Magnitude);
                     break;
                 case SignatureKind.Curacion:
-                    _player.Vitals.Health.Restore(_effect.Magnitude);
+                    _context.Events.Heal(transform.position + Vector3.up * 2f, _player.Vitals.Health.Restore(_effect.Magnitude));
                     _player.Animator.Play(AnimSlot.Hechizo);
                     break;
                 case SignatureKind.Orbe:
                     _player.Animator.Play(AnimSlot.Hechizo);
                     Projectile.Launch(transform.position + Vector3.up * 1.2f + transform.forward * 0.6f, transform.forward,
-                        10f, 18f, _effect.Radius, DamageColors.Of(_type), _context.Enemies, e => _context.Hits.Strike(e, hit));
+                        10f, 18f, _effect.Radius, DamageColors.Of(_type), _context.Enemies, e => _context.Hits.Strike(e, hit, HitSource.Habilidad),
+                        GetComponent<PlayerTarget>()?.Current);
                     break;
                 default:
                     _player.Animator.Play(_effect.Kind == SignatureKind.Area ? AnimSlot.Hechizo : AnimSlot.AtaqueMele);
@@ -87,7 +90,7 @@ namespace Specimen.Runtime.Sandbox
             {
                 var offset = enemy.transform.position - transform.position;
                 offset.y = 0f;
-                if (offset.magnitude <= radius + enemy.Radius) _context.Hits.Strike(enemy, hit);
+                if (offset.magnitude <= radius + enemy.Radius) _context.Hits.Strike(enemy, hit, HitSource.Habilidad);
             }
         }
     }

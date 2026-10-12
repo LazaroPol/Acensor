@@ -48,7 +48,7 @@ namespace Specimen.Runtime.Sandbox
             new VillageBuilder(_context).Build();
             _player.Equip(_kits.All[0]);
             _world.SpawnBestiary(_player);
-            gameObject.AddComponent<Nameplates>().Init(_context);
+            gameObject.AddComponent<Nameplates>().Init(_context, _player.GetComponent<PlayerTarget>());
             new GameObject(nameof(SandboxUi)).AddComponent<SandboxUi>().Init(_context, _player, _kits.All, Equip);
             _context.Feed.Add("Sal por la puerta sur de la Armería: el poblado, el bosque y los campamentos te esperan.");
             SandboxLighting.Apply(camera.GetComponent<Camera>());

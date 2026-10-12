@@ -23,8 +23,15 @@ namespace Specimen.Runtime.Sandbox.Ui
                 : $"<color=#F04A3A>Requiere nivel {spell.Level}</color>";
             return $"<size=16><b>{spell.Name}</b></size>\n" +
                    $"<color=#B0A890>{KindName(spell.Kind)} · Coste {spell.Cost:0} · Enfriamiento {spell.Cooldown:0.#} s</color>\n" +
-                   $"{spell.Description}\n{requirement}";
+                   $"{spell.Description}" + TargetNote(spell) + $"\n{requirement}";
         }
+
+        private static string TargetNote(SpellDefinition spell) => spell.Kind switch
+        {
+            SpellKind.Golpe => "\n<color=#FFD040>Requiere objetivo · cuerpo a cuerpo (3 m) · daño basado en tu arma</color>",
+            SpellKind.Proyectil => "\n<color=#FFD040>Requiere objetivo · alcance 25 m</color>",
+            _ => string.Empty
+        };
 
         public static string KindName(SpellKind kind) => kind switch
         {
