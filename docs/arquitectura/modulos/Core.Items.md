@@ -19,5 +19,6 @@ Tests: `Assets/_Project/Tests/EditMode/Core/Items`
 | `ItemDefinition.cs` | class `ItemDefinition` | Plantilla inmutable de un objeto. |
 | `ItemInstance.cs` | class `ItemInstance` | Objeto concreto en el mundo o en un inventario: su plantilla más su propio desgaste. |
 | `ItemStack.cs` | class `ItemStack` | Contenido de una ranura: un objeto y cuántas unidades hay. |
+| `MaterialTags.cs` | enum `MaterialTags` | Etiquetas de material (combinables). |
 | `Rarity.cs` | enum `Rarity` | Rareza de un objeto, de menor a mayor. |
 | `RarityRules.cs` | class `RarityRules` | Reglas por rareza: cuanto más rara, más aguanta el equipo antes de romperse. |

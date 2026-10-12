@@ -1,6 +1,7 @@
 using System;
 using System.Collections.Generic;
 using I = Specimen.Core.Items.Catalog.ItemIds;
+using T = Specimen.Core.Items.MaterialTags;
 
 namespace Specimen.Core.Items.Catalog
 {
@@ -21,18 +22,18 @@ namespace Specimen.Core.Items.Catalog
         private static Dictionary<string, ItemDefinition> Build()
         {
             var list = new List<ItemDefinition>();
-            Material(list, I.Madera, "Madera", Rarity.Common);
-            Material(list, I.Piedra, "Piedra", Rarity.Common);
-            Material(list, I.MineralHierro, "Mineral de hierro", Rarity.Common);
-            Material(list, I.Hierba, "Hierba de ceniza", Rarity.Common);
-            Material(list, I.Cristal, "Cristal resonante", Rarity.Uncommon);
-            Material(list, I.Tela, "Tela raída", Rarity.Common);
-            Material(list, I.Cuero, "Cuero", Rarity.Common);
-            Material(list, I.Carne, "Carne", Rarity.Common);
-            Material(list, I.Chatarra, "Chatarra", Rarity.Common);
-            Material(list, I.Nucleo, "Núcleo inestable", Rarity.Rare);
-            Material(list, I.Reliquia, "Reliquia de ceniza", Rarity.Epic);
-            Material(list, I.Lingote, "Lingote de hierro", Rarity.Uncommon);
+            Material(list, I.Madera, "Madera", Rarity.Common, 1, 1f, T.Madera | T.Combustible);
+            Material(list, I.Piedra, "Piedra", Rarity.Common, 1, 2f, T.Piedra);
+            Material(list, I.MineralHierro, "Mineral de hierro", Rarity.Common, 2, 1.5f, T.Metal | T.Mineral);
+            Material(list, I.Hierba, "Hierba de ceniza", Rarity.Common, 1, 0.1f, T.Hierba);
+            Material(list, I.Cristal, "Cristal resonante", Rarity.Uncommon, 3, 0.3f, T.Mineral | T.Vidrio);
+            Material(list, I.Tela, "Tela raída", Rarity.Common, 1, 0.2f, T.Tela);
+            Material(list, I.Cuero, "Cuero", Rarity.Common, 2, 0.5f, T.Cuero);
+            Material(list, I.Carne, "Carne", Rarity.Common, 1, 0.5f, T.Comida);
+            Material(list, I.Chatarra, "Chatarra", Rarity.Common, 1, 1f, T.Metal);
+            Material(list, I.Nucleo, "Núcleo inestable", Rarity.Rare, 3, 0.5f, T.Mineral | T.Combustible);
+            Material(list, I.Reliquia, "Reliquia de ceniza", Rarity.Epic, 4, 1f, T.Hueso | T.Mineral);
+            Material(list, I.Lingote, "Lingote de hierro", Rarity.Uncommon, 2, 1f, T.Metal);
             Consumable(list, I.Venda, "Venda", Rarity.Common);
             Consumable(list, I.PocionVida, "Poción de vida", Rarity.Uncommon);
             Consumable(list, I.PocionMana, "Poción de maná", Rarity.Uncommon);
@@ -55,8 +56,9 @@ namespace Specimen.Core.Items.Catalog
             return result;
         }
 
-        private static void Material(List<ItemDefinition> list, string id, string name, Rarity rarity)
-            => list.Add(new ItemDefinition(id, name, ItemCategory.Material, rarity, 0, 20));
+        private static void Material(List<ItemDefinition> list, string id, string name, Rarity rarity,
+            int tier, float weight, T tags)
+            => list.Add(new ItemDefinition(id, name, ItemCategory.Material, rarity, 0, 20, tier, weight, tags));
 
         private static void Consumable(List<ItemDefinition> list, string id, string name, Rarity rarity)
             => list.Add(new ItemDefinition(id, name, ItemCategory.Consumable, rarity, 0, 10));

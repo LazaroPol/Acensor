@@ -32,6 +32,17 @@ namespace Specimen.Core.Items
             return total;
         }
 
+        /// <summary>Peso total en kg de todo lo que lleva (unidades × peso por unidad).</summary>
+        public float TotalWeight
+        {
+            get
+            {
+                float total = 0f;
+                foreach (var stack in _stacks) total += stack.Quantity * stack.Definition.Weight;
+                return total;
+            }
+        }
+
         public int SpaceFor(ItemInstance item)
         {
             Guard.NotNull(item, nameof(item));
