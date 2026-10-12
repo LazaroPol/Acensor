@@ -2,14 +2,19 @@
   "id": "F9-01",
   "phase": "F9",
   "title": "Árbol de ADN con ramas y Tier Lock",
-  "status": "todo",
+  "status": "done",
   "type": "feature",
   "labels": [
     "meta"
   ],
   "origin": "backlog",
-  "description": "",
-  "acceptance": [],
-  "pr": null,
-  "session": null
+  "description": "Árbol de ADN (GDD §12): 5 ramas combinables sin restricción de clase, nodos con tier y coste, y Tier Lock por puntos invertidos en la rama.",
+  "acceptance": [
+    "5 ramas: Resistencia, Agilidad, Vitalidad, Potencia, Cognición",
+    "Tier Lock por defecto 0/5/12/20/30 puntos invertidos en la rama",
+    "Desbloquear gasta puntos libres y devuelve motivo si falla (desconocido, repetido, sin puntos, tier bloqueado)",
+    "Tests NUnit"
+  ],
+  "pr": "#65",
+  "session": 91
 }

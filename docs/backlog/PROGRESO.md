@@ -1,7 +1,7 @@
 # Progreso — SPECIMEN
 
 ```
-TOTAL  ██████████████████████░░░░░░░░  74.7%  (59/79 tareas)
+TOTAL  ███████████████████████░░░░░░░  75.9%  (60/79 tareas)
 ```
 
 **Fase en curso:** F8 · **Siguiente tarea:** F8-04
@@ -18,7 +18,7 @@ TOTAL  ██████████████████████░░�
 | [F6 · Combate e IA](fases/F6.md) | `███████████████` | 100% | 5/5 |
 | [F7 · Ecos y decisiones](fases/F7.md) | `███████████████` | 100% | 4/4 |
 | [F8 · Asedio y extracción](fases/F8.md) | `███████████░░░░` | 75% | 3/4 |
-| [F9 · Meta-progresión: Laboratorio](fases/F9.md) | `░░░░░░░░░░░░░░░` | 0% | 0/4 |
+| [F9 · Meta-progresión: Laboratorio](fases/F9.md) | `████░░░░░░░░░░░` | 25% | 1/4 |
 | [F10 · Presentación en Unity](fases/F10.md) | `░░░░░░░░░░░░░░░` | 0% | 0/6 |
 | [F11 · Multijugador cooperativo](fases/F11.md) | `░░░░░░░░░░░░░░░` | 0% | 0/4 |
 | [F12 · Vertical Slice — Acto I](fases/F12.md) | `░░░░░░░░░░░░░░░` | 0% | 0/5 |
@@ -26,7 +26,7 @@ TOTAL  ██████████████████████░░�
 ## Cola de prioridad (tablero)
 
 1. **F8-04** Extracción en Osprey y conversión a puntos de ADN
-2. **F9-01** Árbol de ADN con ramas y Tier Lock
-3. **F9-02** Aplicación de mutaciones al nuevo clon
-4. **F9-03** Fragmentos de memoria y desbloqueo de lore
-5. **F9-04** Guardado y carga del perfil
+2. **F9-02** Aplicación de mutaciones al nuevo clon
+3. **F9-03** Fragmentos de memoria y desbloqueo de lore
+4. **F9-04** Guardado y carga del perfil
+5. **F10-01** Bootstrap de escenas e inyección de dependencias

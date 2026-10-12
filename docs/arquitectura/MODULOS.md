@@ -16,6 +16,7 @@ Un módulo = un namespace C#. Abre solo la página del módulo que vayas a tocar
 | [Core.Combat.Perception](modulos/Core.Combat.Perception.md) | 7 | `EnemyPerception`, `IPerceptionModifiers`, `Observer`, `PerceivedTarget`, `PerceptionConfig` … | Core.Iteration.Presence, Core.Movement |
 | [Core.Common](modulos/Core.Common.md) | 1 | `Guard` | — |
 | [Core.Crafting](modulos/Core.Crafting.md) | 11 | `CraftResult`, `CraftTransaction`, `Crafter`, `IRecipeBook`, `ISynergyRecipeBook` … | Core.Common, Core.Items, Core.Professions |
+| [Core.Dna](modulos/Core.Dna.md) | 7 | `DnaAllocation`, `DnaBranch`, `DnaNode`, `DnaTree`, `ITierLock` … | — |
 | [Core.Echoes](modulos/Core.Echoes.md) | 2 | `EchoDecision`, `EchoRegistry` | Core.Common |
 | [Core.Echoes.Consequences](modulos/Core.Echoes.Consequences.md) | 3 | `EchoConsequence`, `EchoConsequenceTable`, `EchoOmenAdjuster` | Core.Common, Core.Floors.Omens |
 | [Core.Echoes.Secrets](modulos/Core.Echoes.Secrets.md) | 2 | `SecretDecision`, `SecretEchoLedger` | Core.Common |
