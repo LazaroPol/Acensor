@@ -36,7 +36,7 @@ namespace Specimen.Core.Crafting.Queue
             if (!_station.HasFuelSlots || BurnLeft > Epsilon) return true;
             foreach (var stack in _station.Fuel.Stacks)
             {
-                if (!_fuel.IsFuel(stack.Id)) continue;
+                if (!_fuel.CanBurnIn(stack.Id, _station.Type)) continue;
                 var id = stack.Id;
                 _station.Fuel.Remove(id, 1);
                 BurnLeft += CraftTiming.BurnTime(_fuel.BurnSeconds(id), _station.Parts.FuelSaving);

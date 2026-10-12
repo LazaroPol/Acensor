@@ -2,7 +2,7 @@
   "id": "OF-11",
   "phase": "OF",
   "title": "Contenido I: materiales, combustibles, piezas de estación y mods",
-  "status": "review",
+  "status": "done",
   "type": "feature",
   "labels": [
     "oficios",
@@ -16,6 +16,6 @@
     "≥ 15 mods con hueco, compatibilidad y modificadores.",
     "Tests de integridad: ids únicos y estables, cada tag y tier tiene al menos un material."
   ],
-  "pr": null,
-  "session": null
+  "pr": "#115",
+  "session": 113
 }

@@ -51,6 +51,10 @@ namespace Specimen.Core.Items.Catalog
             Gear(list, I.TotemPiedra, "Tótem de piedra", ItemCategory.Tool, Rarity.Uncommon, 0);
             Gear(list, I.Idolo, "Ídolo de ceniza", ItemCategory.Tool, Rarity.Epic, 0);
             AddEquipment(list);
+            AddNaturalMaterials(list);
+            AddMineralMaterials(list);
+            AddOrganicMaterials(list);
+            AddCraftedMaterials(list);
             var result = new Dictionary<string, ItemDefinition>();
             foreach (var item in list) result.Add(item.Id, item);
             return result;
@@ -59,6 +63,13 @@ namespace Specimen.Core.Items.Catalog
         private static void Material(List<ItemDefinition> list, string id, string name, Rarity rarity,
             int tier, float weight, T tags)
             => list.Add(new ItemDefinition(id, name, ItemCategory.Material, rarity, 0, 20, tier, weight, tags));
+
+        /// <summary>Material de §17.5: rareza según tier (1 común … 4 épico).</summary>
+        private static void Mat(List<ItemDefinition> list, string id, string name, int tier, float weight, T tags)
+            => Material(list, id, name, RarityForTier(tier), tier, weight, tags);
+
+        private static Rarity RarityForTier(int tier)
+            => tier >= 4 ? Rarity.Epic : tier == 3 ? Rarity.Rare : tier == 2 ? Rarity.Uncommon : Rarity.Common;
 
         private static void Consumable(List<ItemDefinition> list, string id, string name, Rarity rarity)
             => list.Add(new ItemDefinition(id, name, ItemCategory.Consumable, rarity, 0, 10));
