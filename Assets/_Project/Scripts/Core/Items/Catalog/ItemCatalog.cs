@@ -55,6 +55,8 @@ namespace Specimen.Core.Items.Catalog
             AddMineralMaterials(list);
             AddOrganicMaterials(list);
             AddCraftedMaterials(list);
+            AddProductGear(list);
+            AddProductSupplies(list);
             var result = new Dictionary<string, ItemDefinition>();
             foreach (var item in list) result.Add(item.Id, item);
             return result;
