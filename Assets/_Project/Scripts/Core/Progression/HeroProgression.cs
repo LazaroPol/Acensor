@@ -10,7 +10,7 @@ namespace Specimen.Core.Progression
 {
     /// <summary>
     /// Progresión del personaje: nivel y experiencia compartidos, un reparto de talentos por kit
-    /// (cambiar de kit conserva los talentos de cada uno), equipo por kit y profesiones aprendidas.
+    /// (cambiar de kit conserva los talentos de cada uno), equipo por kit, profesiones aprendidas y nivel de cada oficio.
     /// </summary>
     public sealed class HeroProgression
     {
@@ -22,6 +22,9 @@ namespace Specimen.Core.Progression
 
         public CharacterProgress Progress { get; }
         public LearnedProfessions Professions { get; } = new LearnedProfessions();
+
+        /// <summary>Nivel y XP de cada oficio, aprendido o no (GDD §17.1).</summary>
+        public ProfessionLevels ProfessionLevels { get; } = new ProfessionLevels();
         public int Level => Progress.Level;
 
         public TalentAllocation TalentsFor(ClassKitId kit)
