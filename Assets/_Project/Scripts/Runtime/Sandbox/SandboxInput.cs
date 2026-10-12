@@ -18,8 +18,7 @@ namespace Specimen.Runtime.Sandbox
 
         public SandboxInput()
         {
-            Select = Button("Select", "<Mouse>/leftButton");
-            AutoAttack = Button("AutoAttack", "<Mouse>/rightButton", "<Keyboard>/f", "<Gamepad>/buttonWest");
+            AutoAttack = Button("AutoAttack", "<Keyboard>/f", "<Gamepad>/buttonWest");
             NextTarget = Button("NextTarget", "<Keyboard>/tab", "<Gamepad>/leftShoulder");
             Ability = Button("Ability", "<Keyboard>/q", "<Gamepad>/buttonNorth");
             Interact = Button("Interact", "<Keyboard>/e", "<Gamepad>/buttonSouth");
@@ -40,7 +39,6 @@ namespace Specimen.Runtime.Sandbox
             for (int i = 0; i < SpellKeys; i++) Spells[i] = Button($"Spell{i + 1}", $"<Keyboard>/{i + 1}");
         }
 
-        public InputAction Select { get; }
         public InputAction AutoAttack { get; }
         public InputAction NextTarget { get; }
         public InputAction Ability { get; }

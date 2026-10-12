@@ -28,7 +28,7 @@ namespace Specimen.Runtime.Sandbox.Ui
             float width = (Spells + 2) * Cell + 30f;
             var bar = UiFactory.Panel(root.Rect, "BarraAccion", Vector2.zero, new Vector2(width, Cell + 12f), UiTheme.Background);
             bar.anchorMin = bar.anchorMax = bar.pivot = new Vector2(0.5f, 0f);
-            bar.anchoredPosition = new Vector2(0f, 28f);
+            bar.anchoredPosition = new Vector2(0f, 40f);
             _attackSlot = UiSlot.Create(bar, new Vector2(8f, 6f), Cell - 4f, "F");
             _attackSlot.Hover.Text = () => "<size=16><b>Atacar</b></size>\nAtaque automático con el arma contra tu objetivo " +
                                            "(F o clic derecho sobre un enemigo).\n\n" + ItemView.WeaponLines(_attack.Weapon, _player.Stats);

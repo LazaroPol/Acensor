@@ -20,6 +20,9 @@ namespace Specimen.Core.Combat.Enemies
         public EnemyBrainConfig Config { get; }
         public bool IsEngaged { get; private set; }
 
+        /// <summary>Al recibir daño se engancha aunque el atacante esté fuera del radio de agro (como en WoW).</summary>
+        public void Provoke() => IsEngaged = true;
+
         public EnemyAction Decide(float distance, bool selfAlive, bool targetAlive, float deltaSeconds)
         {
             _cooldown.Tick(deltaSeconds);

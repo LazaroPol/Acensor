@@ -42,7 +42,9 @@ namespace Specimen.Runtime.Sandbox
             _world = new SandboxWorld(_context);
             _world.BuildRoom();
             var camera = EnsureCamera();
+            _context.Mouse = gameObject.AddComponent<MouseGestures>();
             _player = _world.SpawnPlayer(camera);
+            gameObject.AddComponent<WowCamera>().Init(camera, _context.Mouse, _player);
             gameObject.AddComponent<InteractionHub>().Init(_context, _player);
             _world.PlaceBenches(_player);
             new VillageBuilder(_context).Build();

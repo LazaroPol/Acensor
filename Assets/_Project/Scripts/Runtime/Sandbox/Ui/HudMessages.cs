@@ -9,7 +9,8 @@ namespace Specimen.Runtime.Sandbox.Ui
     public sealed class HudMessages : MonoBehaviour
     {
         private const string HelpText =
-            "WASD mover · Tab / clic objetivo · F / clic dcho atacar con el arma · Q firma · 1-5 hechizos · E usar\n" +
+            "Arrastrar con el ratón: cámara (botón dcho también gira al personaje) · Rueda: zoom · WASD mover\n" +
+            "Tab / clic objetivo · F / clic dcho atacar con el arma · Q firma · 1-5 hechizos · E usar\n" +
             "B bolsa · C personaje · P hechizos · N talentos · M mapa · Esc cerrar · K kit · R reiniciar · F3 +PX · F4 materiales · H ayuda";
 
         private SandboxContext _context;
@@ -27,10 +28,10 @@ namespace Specimen.Runtime.Sandbox.Ui
             _context = context;
             var log = UiFactory.Node(root.Rect, "Registro", Vector2.zero, new Vector2(560f, 170f));
             log.anchorMin = log.anchorMax = log.pivot = new Vector2(0f, 0f);
-            log.anchoredPosition = new Vector2(16f, 30f);
+            log.anchoredPosition = new Vector2(16f, 40f);
             _log = UiFactory.Label(log, string.Empty, Vector2.zero, new Vector2(560f, 170f), 14);
             _log.alignment = TextAnchor.LowerLeft;
-            _promptBox = Centered(root, "Aviso", new Vector2(420f, 34f), 128f, true);
+            _promptBox = Centered(root, "Aviso", new Vector2(420f, 34f), 142f, true);
             _prompt = UiFactory.Label(_promptBox, string.Empty, Vector2.zero, new Vector2(420f, 34f), 16, TextAnchor.MiddleCenter);
             var banner = Centered(root, "Anuncio", new Vector2(900f, 90f), 0f, false);
             banner.anchorMin = banner.anchorMax = banner.pivot = new Vector2(0.5f, 1f);
@@ -42,10 +43,10 @@ namespace Specimen.Runtime.Sandbox.Ui
             error.anchoredPosition = new Vector2(0f, -250f);
             _error = UiFactory.Label(error, string.Empty, Vector2.zero, new Vector2(900f, 30f), 20, TextAnchor.MiddleCenter,
                 new Color(1f, 0.15f, 0.1f));
-            var help = Centered(root, "Ayuda", new Vector2(900f, 46f), 0f, true);
+            var help = Centered(root, "Ayuda", new Vector2(900f, 64f), 0f, true);
             help.anchorMin = help.anchorMax = help.pivot = new Vector2(0.5f, 1f);
             help.anchoredPosition = new Vector2(0f, -12f);
-            UiFactory.Label(help, HelpText, new Vector2(8f, 4f), new Vector2(884f, 40f), 13, TextAnchor.MiddleCenter, UiTheme.TextDim);
+            UiFactory.Label(help, HelpText, new Vector2(8f, 4f), new Vector2(884f, 58f), 13, TextAnchor.MiddleCenter, UiTheme.TextDim);
             _help = help.gameObject;
         }
 

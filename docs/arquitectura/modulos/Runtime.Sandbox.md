@@ -21,6 +21,7 @@ Tests: (sin carpeta propia)
 | `IInteractable.cs` | interface `IInteractable` | Algo que se usa con E estando cerca: banco de profesión, árbol, roca, hierba… |
 | `InteractionHub.cs` | class `InteractionHub` | Elige el interactuable más cercano al jugador (para el aviso «E · …») y lo usa al pulsar E. |
 | `LootPickup.cs` | class `LootPickup` | Botín en el suelo: gira y se recoge al pasar cerca (va al inventario del contexto). |
+| `MouseGestures.cs` | class `MouseGestures` | Distingue clic de arrastre con cada botón del ratón (como en WoW): arrastrar mueve la cámara y un clic sin arrastre selecciona/ataca. |
 | `Nameplates.cs` | class `Nameplates` | Placas sobre las criaturas (nivel y nombre con color de dificultad, vida; «» marca el objetivo) y reaparición. |
 | `PlayerTarget.cs` | class `PlayerTarget` | Objetivo del jugador al estilo WoW: Tab recorre los enemigos cercanos, clic izquierdo sobre uno lo selecciona y clic derecho lo selecciona y |
 | `Projectile.cs` | class `Projectile` | Proyectil: avanza en línea recta (o persigue a su objetivo, si lo tiene) y golpea al enemigo que toca. |
@@ -41,3 +42,4 @@ Tests: (sin carpeta propia)
 | `SpellCaster.Effects.cs` | class `SpellCaster` | Efectos de cada tipo de hechizo. |
 | `SpellCaster.cs` | class `SpellCaster` | Barra de hechizos (teclas 1-5): un hueco por hechizo del kit; se desbloquean al subir de nivel. |
 | `VisualFactory.cs` | class `VisualFactory` | Instancia el prefab de arte o, si falta (arte sin generar), una cápsula greybox con el pivote en los pies. |
+| `WowCamera.cs` | class `WowCamera` | Cámara al estilo WoW sobre : arrastrar con el botón izquierdo gira la cámara alrededor del personaje, con el derecho la gira y el personaje  |

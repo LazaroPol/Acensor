@@ -1,8 +1,6 @@
 using System.Collections.Generic;
 using Specimen.Core.Combat.Targeting;
-using Specimen.Runtime.UI;
 using UnityEngine;
-using UnityEngine.InputSystem;
 
 namespace Specimen.Runtime.Sandbox
 {
@@ -20,6 +18,9 @@ namespace Specimen.Runtime.Sandbox
 
         public SandboxEnemy Current { get; private set; }
         public bool HasTarget => Current != null && !Current.IsDead;
+
+        /// <summary>Enemigo sobre el que se ha hecho clic este frame (o null).</summary>
+        public SandboxEnemy ClickedEnemy { get; private set; }
 
         public void Init(SandboxContext context)
         {
@@ -42,11 +43,12 @@ namespace Specimen.Runtime.Sandbox
             var input = _context.Input;
             if (Current != null && Current.IsDead) Current = null;
             if (input.NextTarget.WasPressedThisFrame()) Cycle();
-            bool overUi = UiRoot.PointerOverUi();
-            if (!overUi && (input.Select.WasPressedThisFrame() || input.AutoAttack.WasPressedThisFrame()) && Mouse.current != null)
+            var mouse = _context.Mouse;
+            ClickedEnemy = null;
+            if (mouse != null && (mouse.LeftClicked || mouse.RightClicked))
             {
-                var clicked = UnderMouse(Mouse.current.position.ReadValue());
-                if (clicked != null) Set(clicked);
+                ClickedEnemy = UnderMouse(mouse.ClickPosition);
+                if (ClickedEnemy != null) Set(ClickedEnemy);
             }
             UpdateRing();
         }

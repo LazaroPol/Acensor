@@ -17,5 +17,5 @@ Tests: (sin carpeta propia)
 | `UiSlot.cs` | class `UiSlot` | Hueco cuadrado (bolsa, barra de acción, talento): «icono» de iniciales, cantidad, marco de color y enfriamiento. |
 | `UiSprites.cs` | class `UiSprites` | Sprites de marco generados por código (9-slice): no hacen falta texturas en el proyecto. |
 | `UiTheme.cs` | class `UiTheme` | Paleta y tipografía de la interfaz (estilo MMO clásico: fondo oscuro, marcos dorados, texto pergamino). |
-| `UiTooltip.cs` | class `UiTooltip` | Tooltip único que sigue al ratón (texto enriquecido: nombre coloreado, descripción, costes…). |
+| `UiTooltip.cs` | class `UiTooltip` | Tooltip único que sigue al ratón por encima del cursor (texto enriquecido: nombre, descripción, costes…). |
 | `UiWindow.cs` | class `UiWindow` | Ventana base: fondo, marco dorado, título arrastrable y botón de cerrar. |

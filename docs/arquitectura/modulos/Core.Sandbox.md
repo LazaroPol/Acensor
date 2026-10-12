@@ -5,13 +5,14 @@
 Ensamblado: `Specimen.Core` · Carpeta: `Assets/_Project/Scripts/Core/Sandbox`
 Tests: `Assets/_Project/Tests/EditMode/Core/Sandbox`
 
-**Depende de:** [Core.Bestiary](Core.Bestiary.md), [Core.Classes](Core.Classes.md), [Core.Combat.Bosses](Core.Combat.Bosses.md), [Core.Common](Core.Common.md), [Core.Items.Catalog](Core.Items.Catalog.md), [Core.Loot](Core.Loot.md), [Core.Professions](Core.Professions.md), [Core.Prototype](Core.Prototype.md), [Core.Randomness](Core.Randomness.md), [Core.Visuals](Core.Visuals.md), [Core.Visuals.Packs](Core.Visuals.Packs.md)
+**Depende de:** [Core.Bestiary](Core.Bestiary.md), [Core.Classes](Core.Classes.md), [Core.Combat.Bosses](Core.Combat.Bosses.md), [Core.Combat.Enemies](Core.Combat.Enemies.md), [Core.Common](Core.Common.md), [Core.Items.Catalog](Core.Items.Catalog.md), [Core.Loot](Core.Loot.md), [Core.Professions](Core.Professions.md), [Core.Prototype](Core.Prototype.md), [Core.Randomness](Core.Randomness.md), [Core.Visuals](Core.Visuals.md), [Core.Visuals.Packs](Core.Visuals.Packs.md)
 **Lo usan:** [Runtime.Sandbox](Runtime.Sandbox.md)
 
 | Fichero | Tipo | Resumen |
 |---|---|---|
 | `CreatureLevels.cs` | class `CreatureLevels` | Nivel de cada criatura del poblado y su escalado (vida +25 %, daño +15 % y 40 de armadura por nivel), para que el nivel del jugador, su arma |
 | `RespawnTimer.cs` | class `RespawnTimer` | Cuenta atrás de reaparición: se arma al morir y avisa una sola vez cuando se cumple. |
+| `SandboxAggro.cs` | class `SandboxAggro` | IA más tranquila para el Campo de pruebas: detectan al jugador a 5 m (no a 9), caminan algo más despacio y, si les pegas desde lejos, te per |
 | `SandboxGearLoot.cs` | class `SandboxGearLoot` | Equipo que sueltan las criaturas, aparte de los materiales: los diablillos dejan guantes o dagas, los puglins yelmos, botas o (raro) su hach |
 | `SandboxLayout.cs` | class `SandboxLayout` | Campo de pruebas: sala cerrada con el jugador al sur, el bestiario al norte, los bancos de profesión en los muros este y oeste y algo de dec |
 | `SandboxLoot.cs` | class `SandboxLoot` | Botín del bestiario con los materiales de las profesiones: los diablillos sueltan tela, chatarra y cristal; los puglins, cuero y carne. |
