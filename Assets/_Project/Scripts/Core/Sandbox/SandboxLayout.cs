@@ -1,7 +1,6 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
-using Specimen.Core.Bestiary;
 using Specimen.Core.Professions;
 using Specimen.Core.Prototype;
 using Specimen.Core.Visuals;
@@ -18,23 +17,24 @@ namespace Specimen.Core.Sandbox
         public const int Width = 22;
         public const int Depth = 18;
 
+        /// <summary>Celdas del muro sur que se abren como portón hacia el poblado (3 m de hueco).</summary>
+        public const int GateFirstCell = Width / 2 - 1, GateLastCell = Width / 2 + 1;
+
+        /// <summary>Sala sin el jugador y con el muro sur abierto en el portón (la puerta 1 m no deja pasar).</summary>
         public IReadOnlyList<LevelPlacement> Room()
-            => new GreyboxRoomLayout(Width, Depth).Build().Where(p => p.Id != VisualId.Jugador).ToList();
+            => new GreyboxRoomLayout(Width, Depth).Build()
+                .Where(p => p.Id != VisualId.Jugador && !IsGateCell(p)).ToList();
+
+        /// <summary>Arco del portón sur (centro del hueco).</summary>
+        public SandboxSpot Gate => new SandboxSpot("arco", (GateFirstCell + GateLastCell + 1) / 2f, 0f);
+
+        private static bool IsGateCell(LevelPlacement p)
+            => p.Z == 0f && p.YawDegrees == 0f && p.Id != VisualId.Suelo && p.X >= GateFirstCell && p.X <= GateLastCell;
 
         public SandboxSpot PlayerSpawn => new SandboxSpot("jugador", Width / 2f, 3f);
 
-        public IReadOnlyList<SandboxSpot> Enemies()
-        {
-            var bestiary = DefaultBestiary.All();
-            var spots = new List<SandboxSpot>();
-            for (int i = 0; i < bestiary.Count; i++)
-            {
-                float x = 4f + i * (Width - 8f) / Math.Max(1, bestiary.Count - 1);
-                float z = i % 2 == 0 ? Depth - 4f : Depth - 6.5f;
-                spots.Add(new SandboxSpot(bestiary[i].Id, x, z, 180f));
-            }
-            return spots;
-        }
+        /// <summary>Criaturas dentro de la Armería: ninguna (el bestiario vive en el poblado, ver VillageLayout).</summary>
+        public IReadOnlyList<SandboxSpot> Enemies() => new SandboxSpot[0];
 
         public IReadOnlyList<SandboxSpot> Benches()
         {

@@ -49,7 +49,7 @@ namespace Specimen.Runtime.Sandbox
         {
             if (Attack == null || !_player.IsAlive) return;
             Attack.Tick(Time.deltaTime);
-            if (_context.Input.Attack.WasPressedThisFrame()) TryAttack();
+            if (_context.Input.Attack.WasPressedThisFrame() && !SpellCaster.BlockedByUi()) TryAttack();
             if (_pending < 0f) return;
             _pending -= Time.deltaTime;
             if (_pending < 0f) Release();

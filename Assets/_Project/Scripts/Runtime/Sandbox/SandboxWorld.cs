@@ -44,7 +44,8 @@ namespace Specimen.Runtime.Sandbox
                 var go = VisualFactory.Prop(prefab, At(spot), spot.Yaw, new Vector3(1.4f, 0.8f, 0.7f), new Color(0.55f, 0.35f, 0.2f));
                 go.name = $"Banco_{profession}";
                 var station = go.AddComponent<BenchStation>();
-                station.Init(profession, _context, player);
+                station.Init(profession, _context);
+                _context.Interactions?.Register(station);
                 benches.Add(station);
             }
             return benches.ToArray();
@@ -63,35 +64,9 @@ namespace Specimen.Runtime.Sandbox
             player.Init(_context, camera.transform);
             root.AddComponent<PlayerCombat>().Init(player, _context);
             root.AddComponent<SignatureCaster>().Init(player, _context);
+            root.AddComponent<SpellCaster>().Init(player, _context);
             camera.Follow(root.transform, controller.Input, CameraDistance);
             return player;
-        }
-
-        public void SpawnBestiary(SandboxPlayer player)
-        {
-            foreach (var spot in _layout.Enemies())
-            {
-                var entry = DefaultBestiary.Find(spot.Id);
-                var prefab = _context.Art != null ? _context.Art.EnemyPrefab(entry.Id) : null;
-                var go = prefab != null
-                    ? UnityEngine.Object.Instantiate(prefab, At(spot), Quaternion.Euler(0f, spot.Yaw, 0f))
-                    : Greybox(entry, spot);
-                go.name = entry.DisplayName;
-                var enemy = go.AddComponent<SandboxEnemy>();
-                var core = _factory.Create(entry.Archetype, new EnemyDepth(1, SandboxLoot.RingOf(entry)));
-                enemy.Init(entry, core, player, dead => OnEnemyDeath(dead, player.transform),
-                    _context.Art != null ? _context.Art.monstruo : null);
-                enemy.Respawned += e => _context.Feed.Add($"{e.DisplayName} ha reaparecido.");
-                _context.Enemies.Add(enemy);
-            }
-        }
-
-        private GameObject Greybox(BestiaryEntry entry, SandboxSpot spot)
-        {
-            var root = new GameObject();
-            root.transform.SetPositionAndRotation(At(spot), Quaternion.Euler(0f, spot.Yaw, 0f));
-            VisualFactory.Character(null, root.transform, new Color(0.85f, 0.2f, 0.2f), 1.5f * entry.Scale);
-            return root;
         }
 
         private GameObject Decor(string name)

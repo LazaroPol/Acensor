@@ -21,13 +21,15 @@ namespace Specimen.Tests.Core.Sandbox
         public void RoomHasNoPlayerPlaceholderButHasADoor()
         {
             Assert.That(_layout.Room().Any(p => p.Id == VisualId.Jugador), Is.False);
-            Assert.That(_layout.Room().Count(p => p.Id == VisualId.Puerta), Is.EqualTo(1));
+            Assert.That(_layout.Room().Count(p => p.Id == VisualId.Puerta), Is.EqualTo(0), "el portón sustituye a la puerta");
+            Assert.That(_layout.Room().Count(p => p.Z == 0f && p.YawDegrees == 0f && p.Id == VisualId.Muro), Is.EqualTo(SandboxLayout.Width - 3));
+            Assert.That(_layout.Gate.X, Is.EqualTo(SandboxLayout.Width / 2f + 0.5f));
         }
 
         [Test]
         public void EveryCreatureAndProfessionIsPlaced()
         {
-            Assert.That(_layout.Enemies().Select(s => s.Id), Is.EquivalentTo(DefaultBestiary.All().Select(e => e.Id)));
+            Assert.That(_layout.Enemies(), Is.Empty, "el bestiario vive fuera, en el poblado");
             Assert.That(_layout.Benches().Select(s => s.Id),
                 Is.EquivalentTo(Enum.GetNames(typeof(ProfessionId))));
         }
@@ -52,13 +54,6 @@ namespace Specimen.Tests.Core.Sandbox
                     float dx = spots[i].X - spots[j].X, dz = spots[i].Z - spots[j].Z;
                     Assert.That(Math.Sqrt(dx * dx + dz * dz), Is.GreaterThan(1.5), $"{spots[i].Id} / {spots[j].Id}");
                 }
-        }
-
-        [Test]
-        public void EnemiesStartFarFromThePlayer()
-        {
-            foreach (var enemy in _layout.Enemies())
-                Assert.That(enemy.Z - _layout.PlayerSpawn.Z, Is.GreaterThan(7f), enemy.Id);
         }
     }
 }

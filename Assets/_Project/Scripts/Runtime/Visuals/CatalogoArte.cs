@@ -42,5 +42,8 @@ namespace Specimen.Runtime.Visuals
         public List<Enemigo> enemigos = new List<Enemigo>();
         public List<Banco> bancos = new List<Banco>();
         public List<GameObject> decorado = new List<GameObject>();
+
+        /// <summary>Casas del poblado montadas con piezas modulares (nombre = plantilla «Casa_4x6_Yeso»).</summary>
+        public List<GameObject> casas = new List<GameObject>();
     }
 }

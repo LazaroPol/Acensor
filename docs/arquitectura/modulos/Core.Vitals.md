@@ -6,7 +6,7 @@ Ensamblado: `Specimen.Core` · Carpeta: `Assets/_Project/Scripts/Core/Vitals`
 Tests: `Assets/_Project/Tests/EditMode/Core/Vitals`
 
 **Depende de:** [Core.Common](Core.Common.md), [Core.Stats](Core.Stats.md), [Core.Time](Core.Time.md)
-**Lo usan:** [Core.Abilities](Core.Abilities.md), [Core.Combat.Attacks](Core.Combat.Attacks.md), [Core.Elevator](Core.Elevator.md), [Core.Hud](Core.Hud.md), [Core.Life](Core.Life.md), [Core.Movement](Core.Movement.md), [Core.Prototype](Core.Prototype.md), [Runtime.Atico](Runtime.Atico.md), [Runtime.Combat](Runtime.Combat.md), [Runtime.Incursion](Runtime.Incursion.md), [Runtime.Player](Runtime.Player.md), [Runtime.Prototype](Runtime.Prototype.md), [Runtime.Sandbox](Runtime.Sandbox.md)
+**Lo usan:** [Core.Abilities](Core.Abilities.md), [Core.Combat.Attacks](Core.Combat.Attacks.md), [Core.Elevator](Core.Elevator.md), [Core.Hud](Core.Hud.md), [Core.Items.Catalog](Core.Items.Catalog.md), [Core.Life](Core.Life.md), [Core.Movement](Core.Movement.md), [Core.Progression](Core.Progression.md), [Core.Prototype](Core.Prototype.md), [Runtime.Atico](Runtime.Atico.md), [Runtime.Combat](Runtime.Combat.md), [Runtime.Incursion](Runtime.Incursion.md), [Runtime.Player](Runtime.Player.md), [Runtime.Prototype](Runtime.Prototype.md), [Runtime.Sandbox](Runtime.Sandbox.md), [Runtime.Sandbox.Ui](Runtime.Sandbox.Ui.md)
 
 | Fichero | Tipo | Resumen |
 |---|---|---|
