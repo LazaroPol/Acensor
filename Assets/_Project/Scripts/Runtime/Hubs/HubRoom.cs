@@ -43,6 +43,7 @@ namespace Specimen.Runtime.Hubs
             var (sx, sz) = layout.SpawnPoint;
             var player = IncursionPlayer.Spawn(new Vector3(sx, 1.2f, sz), stats, run, notices);
             _player = player.transform;
+            player.gameObject.AddComponent<KitBadge>().Init(Bootstrap.GameBootstrap.Services);
             PrototypeScenery.EnsureLight();
             return player;
         }

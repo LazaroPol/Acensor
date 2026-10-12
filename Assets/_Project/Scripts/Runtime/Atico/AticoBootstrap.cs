@@ -51,6 +51,7 @@ namespace Specimen.Runtime.Atico
                 new HudNotices(s.Resolve<IEventBus>()));
             player.gameObject.AddComponent<PlayerAttack>().Init(kit.CreateStatSheet());
             _player = player;
+            player.gameObject.AddComponent<KitBadge>().Init(s);
             _siege = gameObject.AddComponent<SiegeController>();
             _siege.Init(_run, player.transform, player.Vitals);
             _pad = gameObject.AddComponent<OspreyPad>();
