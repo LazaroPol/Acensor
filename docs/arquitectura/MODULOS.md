@@ -17,6 +17,7 @@ Un módulo = un namespace C#. Abre solo la página del módulo que vayas a tocar
 | [Core.Common](modulos/Core.Common.md) | 1 | `Guard` | — |
 | [Core.Composition](modulos/Core.Composition.md) | 6 | `GameComposition`, `ISceneLoader`, `IServiceRegistry`, `IServiceResolver`, `SceneChanged` … | Core.Common, Core.Events |
 | [Core.Crafting](modulos/Core.Crafting.md) | 11 | `CraftResult`, `CraftTransaction`, `Crafter`, `IRecipeBook`, `ISynergyRecipeBook` … | Core.Common, Core.Items, Core.Professions |
+| [Core.Dna](modulos/Core.Dna.md) | 7 | `DnaAllocation`, `DnaBranch`, `DnaNode`, `DnaTree`, `ITierLock` … | — |
 | [Core.Echoes](modulos/Core.Echoes.md) | 2 | `EchoDecision`, `EchoRegistry` | Core.Common |
 | [Core.Echoes.Consequences](modulos/Core.Echoes.Consequences.md) | 3 | `EchoConsequence`, `EchoConsequenceTable`, `EchoOmenAdjuster` | Core.Common, Core.Floors.Omens |
 | [Core.Echoes.Secrets](modulos/Core.Echoes.Secrets.md) | 2 | `SecretDecision`, `SecretEchoLedger` | Core.Common |
@@ -44,6 +45,10 @@ Un módulo = un namespace C#. Abre solo la página del módulo que vayas a tocar
 | [Core.Prototype](modulos/Core.Prototype.md) | 7 | `DebugCommands`, `DebugHudPresenter`, `GreyboxRoomLayout`, `HudTime`, `ILevelLayout` … | Core.Common, Core.Physics, Core.Time, Core.Visuals, Core.Vitals |
 | [Core.Randomness](modulos/Core.Randomness.md) | 2 | `IRandom`, `Pcg32Random` | Core.Common |
 | [Core.Repair](modulos/Core.Repair.md) | 6 | `IRepairCatalog`, `RepairCatalog`, `RepairReport`, `RepairResult`, `RepairRule` … | Core.Common, Core.Items |
+| [Core.Siege](modulos/Core.Siege.md) | 3 | `WaveConfig`, `WaveDirector`, `WaveState` | Core.Common |
+| [Core.Siege.Defenses](modulos/Core.Siege.Defenses.md) | 2 | `Fortification`, `Turret` | Core.Common |
+| [Core.Siege.Extraction](modulos/Core.Siege.Extraction.md) | 3 | `DnaConversion`, `ExtractionReport`, `OspreyExtraction` | Core.Common, Core.Siege.Scoring |
+| [Core.Siege.Scoring](modulos/Core.Siege.Scoring.md) | 3 | `IterationScore`, `ScoreConfig`, `ScoreResult` | Core.Common |
 | [Core.StateMachines](modulos/Core.StateMachines.md) | 3 | `IState`, `StateBase`, `StateMachine`, `Transition` | Core.Common, Core.Time |
 | [Core.Stats](modulos/Core.Stats.md) | 7 | `IStatFormula`, `ModifierKind`, `StandardStatFormula`, `Stat`, `StatModifier` … | Core.Common |
 | [Core.Time](modulos/Core.Time.md) | 4 | `IClock`, `ITickable`, `ManualClock`, `PhaseTimer` | Core.Common |
