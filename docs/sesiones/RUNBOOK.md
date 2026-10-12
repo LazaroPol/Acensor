@@ -17,12 +17,15 @@ disparar la siguiente sesión**. Para reanudar a mano una rama que se quedó a m
 Lee la tarjeta `docs/backlog/tareas/<TAREA>.json`. Si no tiene criterios de aceptación, escríbelos
 en la tarjeta (campo `acceptance`) antes de programar. No toques `prioridad.json` (es del tablero).
 ```bash
+tools/session/board_status.sh <TAREA> in_progress   # tarjeta a «En curso» en el tablero (main), YA
 git checkout -b feature/<TAREA>-<slug>
 git push -u origin HEAD           # reclama la tarea: otra sesión la verá y no la duplicará
-python3 -m tools.progress --start <TAREA>
 # si la tarjeta está «En pausa» (status paused), en vez de lo anterior:
-tools/session/resume.sh <TAREA>
+tools/session/resume.sh <TAREA>   # también la pasa a «En curso»
 ```
+**El tablero refleja la sesión en vivo** (cada movimiento se publica en `main` al momento):
+«En curso» al empezar → «⏸ En pausa» si llega una urgente (`pause.sh`) → «Revisión» durante los
+tests finales y la CI (`ship.sh`) → «Hecho» al mergear. Nunca uses `--start` a mano en la rama.
 **Urgencias:** antes de cada commit y antes del paso 3 ejecuta `tools/session/check_urgent.sh <TAREA>`.
 Si imprime una tarea (sale 0): `tools/session/pause.sh <TAREA> <URGENTE>` y sigue el paso 2 con la urgente.
 Código + tests NUnit pequeños. Verifica con `tools/verify.sh 2>&1 | grep -E "error|FAIL|Test Count|VERIF"`.
