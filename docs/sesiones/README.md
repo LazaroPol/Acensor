@@ -52,3 +52,4 @@ Cada sesión finalizada tiene su resumen. Desde la sesión 2, **una sesión = un
 | 46 | F7-02 | 2026-10-11 | [#61](https://github.com/MenaDeFerro/Project-Especimen/pull/61) | 54/79 · 68,4 % | [SESION-46](SESION-46.md) |
 | 47 | F7-03 | 2026-10-12 | [#62](https://github.com/MenaDeFerro/Project-Especimen/pull/62) | 55/79 · 69,6 % | [SESION-47](SESION-47.md) |
 | 48 | F7-04 | 2026-10-12 | [#63](https://github.com/MenaDeFerro/Project-Especimen/pull/63) | 56/79 · 70,9 % | [SESION-48](SESION-48.md) |
+| 91 | F9-01 | 2026-10-12 | [#65](https://github.com/MenaDeFerro/Project-Especimen/pull/65) | 57/79 · 72,2 % | [SESION-91](SESION-91.md) |
