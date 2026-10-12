@@ -25,8 +25,8 @@ TOTAL  ████████████████████████�
 
 ## Cola de prioridad (tablero)
 
-1. **F9-04** Guardado y carga del perfil
-2. **F10-04** UI del Laboratorio Genético
-3. **F10-06** Escena del Ascensor y Armería jugables
-4. **F11-01** Integración de Netcode for GameObjects
-5. **F11-02** Sincronización del estado de iteración (servidor autoritativo)
+1. **F10-04** UI del Laboratorio Genético
+2. **F10-06** Escena del Ascensor y Armería jugables
+3. **F11-01** Integración de Netcode for GameObjects
+4. **F11-02** Sincronización del estado de iteración (servidor autoritativo)
+5. **F11-03** Lobby y conexión

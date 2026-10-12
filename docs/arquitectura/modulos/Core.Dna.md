@@ -6,7 +6,7 @@ Ensamblado: `Specimen.Core` · Carpeta: `Assets/_Project/Scripts/Core/Dna`
 Tests: `Assets/_Project/Tests/EditMode/Core/Dna`
 
 **Depende de:** [Core.Stats](Core.Stats.md)
-**Lo usan:** nadie
+**Lo usan:** [Core.Profile](Core.Profile.md)
 
 | Fichero | Tipo | Resumen |
 |---|---|---|

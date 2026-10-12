@@ -48,7 +48,8 @@ def render_module(modules: dict, ns: str) -> str:
 def mermaid(modules: dict) -> str:
     ids = {ns: f"n{i}" for i, ns in enumerate(sorted(modules))}
     lines = ["```mermaid", "flowchart LR"]
-    lines += [f'  {ids[ns]}["{short(ns)}"]' for ns in sorted(modules)]
+    nodes = [f'{ids[ns]}["{short(ns)}"]' for ns in sorted(modules)]
+    lines += ["  " + "; ".join(nodes[i:i + 4]) for i in range(0, len(nodes), 4)]
     lines += [f"  {ids[ns]} --> " + " & ".join(ids[d] for d in sorted(modules[ns]["deps"]))
               for ns in sorted(modules) if modules[ns]["deps"]]
     return "\n".join(lines + ["```"])
