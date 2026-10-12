@@ -2,7 +2,7 @@
   "id": "OF-13",
   "phase": "OF",
   "title": "Guardado y carga del progreso de oficios e inventario",
-  "status": "review",
+  "status": "done",
   "type": "feature",
   "labels": [
     "oficios",
@@ -16,6 +16,6 @@
     "Round-trip: guardar y cargar reproduce el mismo estado (tests).",
     "Texto corrupto lanza CraftingSaveFormatException sin pisar el guardado anterior."
   ],
-  "pr": null,
-  "session": null
+  "pr": "#117",
+  "session": 115
 }
