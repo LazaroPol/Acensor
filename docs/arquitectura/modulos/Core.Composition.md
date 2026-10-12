@@ -5,8 +5,8 @@
 Ensamblado: `Specimen.Core` · Carpeta: `Assets/_Project/Scripts/Core/Composition`
 Tests: `Assets/_Project/Tests/EditMode/Core/Composition`
 
-**Depende de:** [Core.Common](Core.Common.md), [Core.Events](Core.Events.md)
-**Lo usan:** [Core.Art](Core.Art.md), [Runtime.Bootstrap](Runtime.Bootstrap.md)
+**Depende de:** [Core.Armory](Core.Armory.md), [Core.Classes](Core.Classes.md), [Core.Common](Core.Common.md), [Core.Elevator](Core.Elevator.md), [Core.Events](Core.Events.md), [Core.Iteration](Core.Iteration.md)
+**Lo usan:** [Core.Art](Core.Art.md), [Runtime.Bootstrap](Runtime.Bootstrap.md), [Runtime.Hubs](Runtime.Hubs.md)
 
 | Fichero | Tipo | Resumen |
 |---|---|---|

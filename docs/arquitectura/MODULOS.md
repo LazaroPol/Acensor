@@ -16,7 +16,7 @@ Un módulo = un namespace C#. Abre solo la página del módulo que vayas a tocar
 | [Core.Combat.Enemies](modulos/Core.Combat.Enemies.md) | 8 | `DepthScalingConfig`, `Enemy`, `EnemyArchetype`, `EnemyDepth`, `EnemyFactory` … | Core.Common, Core.Loot |
 | [Core.Combat.Perception](modulos/Core.Combat.Perception.md) | 7 | `EnemyPerception`, `IPerceptionModifiers`, `Observer`, `PerceivedTarget`, `PerceptionConfig` … | Core.Iteration.Presence, Core.Movement |
 | [Core.Common](modulos/Core.Common.md) | 1 | `Guard` | — |
-| [Core.Composition](modulos/Core.Composition.md) | 6 | `GameComposition`, `ISceneLoader`, `IServiceRegistry`, `IServiceResolver`, `SceneChanged` … | Core.Common, Core.Events |
+| [Core.Composition](modulos/Core.Composition.md) | 6 | `GameComposition`, `ISceneLoader`, `IServiceRegistry`, `IServiceResolver`, `SceneChanged` … | Core.Armory, Core.Classes, Core.Common, Core.Elevator, Core.Events, Core.Iteration |
 | [Core.Crafting](modulos/Core.Crafting.md) | 11 | `CraftResult`, `CraftTransaction`, `Crafter`, `IRecipeBook`, `ISynergyRecipeBook` … | Core.Common, Core.Items, Core.Professions |
 | [Core.Dna](modulos/Core.Dna.md) | 11 | `DefaultDnaEffects`, `DnaAllocation`, `DnaBranch`, `DnaEffect`, `DnaMutationApplier` … | Core.Stats |
 | [Core.Echoes](modulos/Core.Echoes.md) | 2 | `EchoDecision`, `EchoRegistry` | Core.Common |
@@ -31,6 +31,7 @@ Un módulo = un namespace C#. Abre solo la página del módulo que vayas a tocar
 | [Core.Floors.Population](modulos/Core.Floors.Population.md) | 5 | `FloorPopulation`, `FloorPopulator`, `RingPopulationRules`, `RingQuota`, `RoomPopulation` | Core.Common, Core.Loot, Core.Randomness |
 | [Core.Floors.Remnants](modulos/Core.Floors.Remnants.md) | 8 | `FloorRemnants`, `FragmentPlacement`, `MemoryFragmentLog`, `Remnant`, `RemnantKind` … | Core.Common, Core.Loot, Core.Randomness |
 | [Core.Floors.Types](modulos/Core.Floors.Types.md) | 9 | `PuzzleFloor`, `DecisionFloor`, `SanctuaryFloor`, `ProfessionFloor`, `LootFloor` … | Core.Common |
+| [Core.Hubs](modulos/Core.Hubs.md) | 3 | `ArmoryPresenter`, `ElevatorPresenter`, `KitAvailability`, `KitEntry` | Core.Armory, Core.Classes, Core.Common, Core.Elevator, Core.Iteration |
 | [Core.Hud](modulos/Core.Hud.md) | 5 | `GameHudPresenter`, `HudBar`, `NoticeSeverity`, `HudNotice`, `HudNotices` … | Core.Common, Core.Events, Core.Iteration, Core.Prototype, Core.Time, Core.Vitals |
 | [Core.Items](modulos/Core.Items.md) | 11 | `Durability`, `IDurability`, `IInventory`, `Inventory`, `ItemCategory` … | Core.Common |
 | [Core.Iteration](modulos/Core.Iteration.md) | 9 | `IterationConfig`, `IterationConfigBuilder`, `IterationContext`, `IterationPhaseChanged`, `FloorReached` … | Core.Common, Core.Events, Core.Iteration.Ending, Core.Iteration.Presence, Core.Iteration.Readiness, Core.Iteration.States, Core.Iteration.Voting, Core.StateMachines, Core.Time |
@@ -61,6 +62,7 @@ Un módulo = un namespace C#. Abre solo la página del módulo que vayas a tocar
 | [Core.Vitals](modulos/Core.Vitals.md) | 6 | `CharacterVitals`, `Fatigue`, `FatigueConfig`, `ResourceKind`, `ResourcePool` … | Core.Common, Core.Stats, Core.Time |
 | [Runtime.Art](modulos/Runtime.Art.md) | 1 | `MoodVolumeDriver` | Core.Art |
 | [Runtime.Bootstrap](modulos/Runtime.Bootstrap.md) | 2 | `GameBootstrap`, `UnitySceneLoader` | Core.Composition |
+| [Runtime.Hubs](modulos/Runtime.Hubs.md) | 3 | `ArmoryScreen`, `ElevatorScreen`, `HubBootstrap` | Core.Armory, Core.Classes, Core.Composition, Core.Elevator, Core.Hubs, Core.Iteration, Runtime.Bootstrap |
 | [Runtime.Hud](modulos/Runtime.Hud.md) | 1 | `GameHud` | Core.Hud |
 | [Runtime.Lab](modulos/Runtime.Lab.md) | 1 | `LabScreen` | Core.Lab |
 | [Runtime.Player](modulos/Runtime.Player.md) | 3 | `GameCamera`, `PlayerController`, `PlayerInput` | Core.Movement, Core.Stats, Core.Vitals |
