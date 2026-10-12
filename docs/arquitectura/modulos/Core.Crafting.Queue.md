@@ -6,7 +6,7 @@ Ensamblado: `Specimen.Core` · Carpeta: `Assets/_Project/Scripts/Core/Crafting/Q
 Tests: `Assets/_Project/Tests/EditMode/Core/Crafting/Queue`
 
 **Depende de:** [Core.Common](Core.Common.md), [Core.Crafting.Definitions](Core.Crafting.Definitions.md), [Core.Crafting.Stations](Core.Crafting.Stations.md), [Core.Items](Core.Items.md), [Core.Items.Catalog](Core.Items.Catalog.md), [Core.Professions](Core.Professions.md), [Core.Time](Core.Time.md)
-**Lo usan:** nadie
+**Lo usan:** [Core.Crafting.Session](Core.Crafting.Session.md), [Runtime.Sandbox.Ui](Runtime.Sandbox.Ui.md)
 
 | Fichero | Tipo | Resumen |
 |---|---|---|

@@ -6,7 +6,7 @@ Ensamblado: `Specimen.Core` · Carpeta: `Assets/_Project/Scripts/Core/Randomness
 Tests: `Assets/_Project/Tests/EditMode/Core/Randomness`
 
 **Depende de:** [Core.Common](Core.Common.md)
-**Lo usan:** [Core.Combat](Core.Combat.md), [Core.Crafting](Core.Crafting.md), [Core.Equipment](Core.Equipment.md), [Core.Floors](Core.Floors.md), [Core.Floors.Omens](Core.Floors.Omens.md), [Core.Floors.Paths](Core.Floors.Paths.md), [Core.Floors.Population](Core.Floors.Population.md), [Core.Floors.Remnants](Core.Floors.Remnants.md), [Core.Gathering](Core.Gathering.md), [Core.Loot](Core.Loot.md), [Core.Sandbox](Core.Sandbox.md), [Core.World](Core.World.md), [Runtime.Combat](Runtime.Combat.md), [Runtime.Sandbox](Runtime.Sandbox.md)
+**Lo usan:** [Core.Combat](Core.Combat.md), [Core.Crafting](Core.Crafting.md), [Core.Crafting.Session](Core.Crafting.Session.md), [Core.Equipment](Core.Equipment.md), [Core.Floors](Core.Floors.md), [Core.Floors.Omens](Core.Floors.Omens.md), [Core.Floors.Paths](Core.Floors.Paths.md), [Core.Floors.Population](Core.Floors.Population.md), [Core.Floors.Remnants](Core.Floors.Remnants.md), [Core.Gathering](Core.Gathering.md), [Core.Loot](Core.Loot.md), [Core.Sandbox](Core.Sandbox.md), [Core.World](Core.World.md), [Runtime.Combat](Runtime.Combat.md), [Runtime.Sandbox](Runtime.Sandbox.md)
 
 | Fichero | Tipo | Resumen |
 |---|---|---|

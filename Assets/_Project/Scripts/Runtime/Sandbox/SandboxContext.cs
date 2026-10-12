@@ -1,4 +1,6 @@
 using Specimen.Core.Crafting;
+using Specimen.Core.Crafting.Authoring;
+using Specimen.Core.Crafting.Session;
 using Specimen.Core.Items;
 using Specimen.Core.Professions;
 using Specimen.Core.Progression;
@@ -24,6 +26,8 @@ namespace Specimen.Runtime.Sandbox
             Feed = new CombatFeed();
             Hits = new HitResolver(Random, Feed, Events) { DamageBonus = () => Fury.Current, PlayerLevel = () => Hero.Level };
             Crafter = new Crafter(Recipes);
+            Crafting = new CraftingProfile(Inventory, curve: CraftingData.Curve);
+            Stations = new StationSessionFactory(CraftingData, Crafting, Random);
         }
 
         public CatalogoArte Art { get; }
@@ -39,15 +43,27 @@ namespace Specimen.Runtime.Sandbox
         public HeroProgression Hero { get; } = new HeroProgression();
         public RecipeBook Recipes { get; } = DefaultRecipes.CreateBook();
         public Crafter Crafter { get; }
+        public ICraftingCatalog CraftingData { get; } = new CraftingCatalog(DefaultCraftingData.Create());
+        public CraftingProfile Crafting { get; }
+        public StationSessionFactory Stations { get; }
         public TimedBonus Fury { get; } = new TimedBonus();
         public VillageLayout Village { get; } = new VillageLayout();
         public InteractionHub Interactions { get; set; }
         public MouseGestures Mouse { get; set; }
 
-        /// <summary>Lo levanta un banco al usarlo con E; la interfaz abre la ventana de profesión.</summary>
-        public event System.Action<ProfessionId> BenchOpened;
+        /// <summary>Lo levanta una estación al usarla con E; la interfaz abre su ventana.</summary>
+        public event System.Action<BenchStation> BenchOpened;
 
-        public void OpenBench(ProfessionId profession) => BenchOpened?.Invoke(profession);
+        public void OpenBench(BenchStation bench) => BenchOpened?.Invoke(bench);
+
+        /// <summary>Trabajo de estación terminado: XP de oficio en el HUD (color de profesión) y en el registro.</summary>
+        public void ReportCraft(CraftCompletion done)
+        {
+            Events.Xp(done.Xp, XpSource.Profesion);
+            string trade = StationLabels.Profession(done.Profession);
+            Feed.Add($"Terminado: {done.Job.Recipe.MainOutput.Item.Name}. +{done.Xp} XP de {trade}" +
+                     (done.LevelsGained > 0 ? $" · ¡{trade} nivel {done.Level}!" : string.Empty));
+        }
 
         /// <summary>Suma experiencia, la anuncia (azul claro combate, verde profesión) y devuelve los niveles ganados.</summary>
         public int GrantXp(int amount, string reason, XpSource source)

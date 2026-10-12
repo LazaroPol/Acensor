@@ -8,7 +8,7 @@ namespace Specimen.Runtime.Sandbox.Ui
 {
     /// <summary>
     /// Interfaz del Campo de pruebas estilo MMO: HUD (marco, barra de acción, PX, minimapa, registro) y ventanas
-    /// (bolsa, personaje, hechizos, talentos, profesión y mapa) con sus atajos de teclado y botones de menú.
+    /// (bolsa, personaje, hechizos, talentos, profesión, estación y mapa) con sus atajos de teclado y botones de menú.
     /// </summary>
     public sealed class SandboxUi : MonoBehaviour
     {
@@ -21,6 +21,7 @@ namespace Specimen.Runtime.Sandbox.Ui
         private SpellbookWindow _spellbook;
         private TalentWindow _talents;
         private ProfessionWindow _profession;
+        private StationWindow _station;
         private MapWindow _map;
 
         public void Init(SandboxContext context, SandboxPlayer player, IReadOnlyList<ClassKit> kits, Action<ClassKit> equip)
@@ -45,12 +46,13 @@ namespace Specimen.Runtime.Sandbox.Ui
             _spellbook = Add(UiWindow.Spawn<SpellbookWindow>(root, new Vector2(520f, 170f), w => { w.Context = context; w.Player = player; }));
             _talents = Add(UiWindow.Spawn<TalentWindow>(root, new Vector2(560f, 120f), w => { w.Context = context; w.Player = player; }));
             _profession = Add(UiWindow.Spawn<ProfessionWindow>(root, new Vector2(640f, 200f), w => { w.Context = context; w.Player = player; }));
+            _station = Add(UiWindow.Spawn<StationWindow>(root, new Vector2(560f, 160f), w => { w.Context = context; w.OpenTrade = _profession.Show; }));
             _map = Add(UiWindow.Spawn<MapWindow>(root, new Vector2(540f, 110f), w => { w.Context = context; w.Player = player; }));
             BuildMenu(root);
             UiTooltip.Create(root);
             root.Windows.SetAsLastSibling();
             root.Overlay.SetAsLastSibling();
-            context.BenchOpened += _profession.Show;
+            context.BenchOpened += _station.Show;
             context.Hero.Progress.LeveledUp += OnLevelUp;
         }
 
@@ -80,19 +82,15 @@ namespace Specimen.Runtime.Sandbox.Ui
         private void OnDestroy()
         {
             if (_context == null) return;
-            _context.BenchOpened -= _profession.Show;
+            _context.BenchOpened -= _station.Show;
             _context.Events.Error -= _messages.Error;
             _context.Hero.Progress.LeveledUp -= OnLevelUp;
         }
 
         private void CloseOrClearTarget()
         {
-            bool any = false;
-            foreach (var window in _windows)
-            {
-                any |= window.IsOpen;
-                window.Close();
-            }
+            bool any = _windows.Exists(w => w.IsOpen);
+            _windows.ForEach(w => w.Close());
             if (!any) _player.GetComponent<PlayerTarget>()?.Clear();
         }
 
@@ -114,7 +112,9 @@ namespace Specimen.Runtime.Sandbox.Ui
             if (input.Map.WasPressedThisFrame()) _map.Toggle();
             if (input.Help.WasPressedThisFrame()) _messages.ToggleHelp();
             if (input.Close.WasPressedThisFrame()) CloseOrClearTarget();
-            if (_profession.IsOpen && _context.Interactions?.Current is not BenchStation) _profession.Close();
+            if (_context.Interactions?.Current is BenchStation) return;
+            if (_profession.IsOpen) _profession.Close();
+            if (_station.IsOpen) _station.Close();
         }
     }
 }

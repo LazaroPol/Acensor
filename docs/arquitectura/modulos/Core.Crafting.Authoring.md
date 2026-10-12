@@ -6,7 +6,7 @@ Ensamblado: `Specimen.Core` · Carpeta: `Assets/_Project/Scripts/Core/Crafting/A
 Tests: `Assets/_Project/Tests/EditMode/Core/Crafting/Authoring`
 
 **Depende de:** [Core.Common](Core.Common.md), [Core.Crafting.Content](Core.Crafting.Content.md), [Core.Crafting.Definitions](Core.Crafting.Definitions.md), [Core.Crafting.Knowledge](Core.Crafting.Knowledge.md), [Core.Crafting.Mods](Core.Crafting.Mods.md), [Core.Crafting.Stations](Core.Crafting.Stations.md), [Core.Items](Core.Items.md), [Core.Items.Catalog](Core.Items.Catalog.md), [Core.Professions](Core.Professions.md)
-**Lo usan:** [Runtime.Crafting.Authoring](Runtime.Crafting.Authoring.md)
+**Lo usan:** [Core.Crafting.Session](Core.Crafting.Session.md), [Runtime.Crafting.Authoring](Runtime.Crafting.Authoring.md), [Runtime.Sandbox](Runtime.Sandbox.md)
 
 | Fichero | Tipo | Resumen |
 |---|---|---|

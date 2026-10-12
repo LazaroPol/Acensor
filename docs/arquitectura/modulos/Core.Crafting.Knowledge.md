@@ -6,7 +6,7 @@ Ensamblado: `Specimen.Core` · Carpeta: `Assets/_Project/Scripts/Core/Crafting/K
 Tests: `Assets/_Project/Tests/EditMode/Core/Crafting/Knowledge`
 
 **Depende de:** [Core.Common](Core.Common.md), [Core.Crafting.Definitions](Core.Crafting.Definitions.md), [Core.Items](Core.Items.md), [Core.Professions](Core.Professions.md)
-**Lo usan:** [Core.Crafting.Authoring](Core.Crafting.Authoring.md), [Core.Crafting.Content](Core.Crafting.Content.md), [Runtime.Crafting.Authoring](Runtime.Crafting.Authoring.md)
+**Lo usan:** [Core.Crafting.Authoring](Core.Crafting.Authoring.md), [Core.Crafting.Content](Core.Crafting.Content.md), [Core.Crafting.Session](Core.Crafting.Session.md), [Runtime.Crafting.Authoring](Runtime.Crafting.Authoring.md)
 
 | Fichero | Tipo | Resumen |
 |---|---|---|
