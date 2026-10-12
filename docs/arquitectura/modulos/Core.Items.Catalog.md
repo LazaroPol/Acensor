@@ -6,7 +6,7 @@ Ensamblado: `Specimen.Core` · Carpeta: `Assets/_Project/Scripts/Core/Items/Cata
 Tests: (sin carpeta propia)
 
 **Depende de:** [Core.Common](Core.Common.md), [Core.Items](Core.Items.md), [Core.Vitals](Core.Vitals.md)
-**Lo usan:** [Core.Crafting](Core.Crafting.md), [Core.Crafting.Content](Core.Crafting.Content.md), [Core.Crafting.Queue](Core.Crafting.Queue.md), [Core.Equipment](Core.Equipment.md), [Core.Gathering](Core.Gathering.md), [Core.Sandbox](Core.Sandbox.md), [Runtime.Sandbox](Runtime.Sandbox.md), [Runtime.Sandbox.Ui](Runtime.Sandbox.Ui.md)
+**Lo usan:** [Core.Crafting](Core.Crafting.md), [Core.Crafting.Authoring](Core.Crafting.Authoring.md), [Core.Crafting.Content](Core.Crafting.Content.md), [Core.Crafting.Queue](Core.Crafting.Queue.md), [Core.Equipment](Core.Equipment.md), [Core.Gathering](Core.Gathering.md), [Core.Sandbox](Core.Sandbox.md), [Runtime.Sandbox](Runtime.Sandbox.md), [Runtime.Sandbox.Ui](Runtime.Sandbox.Ui.md)
 
 | Fichero | Tipo | Resumen |
 |---|---|---|
