@@ -2,7 +2,7 @@
   "id": "OF-15",
   "phase": "OF",
   "title": "Estaciones en el Campo de pruebas: ventana, cola y piezas",
-  "status": "review",
+  "status": "done",
   "type": "feature",
   "labels": [
     "oficios",
@@ -16,6 +16,6 @@
     "La cola avanza con barra de progreso y se pausa sin combustible.",
     "XP de oficio visible en el HUD al terminar cada trabajo."
   ],
-  "pr": null,
-  "session": null
+  "pr": "#119",
+  "session": 117
 }
